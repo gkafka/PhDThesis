@@ -2,9 +2,14 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dissertation.aux
 A level-1 auxiliary file: chapters/introduction.aux
-A level-1 auxiliary file: chapters/chapter1.aux
-A level-1 auxiliary file: chapters/chapter2.aux
-A level-1 auxiliary file: chapters/chapter3.aux
+A level-1 auxiliary file: chapters/chHistory.aux
+A level-1 auxiliary file: chapters/chTheory.aux
+A level-1 auxiliary file: chapters/chNOvA.aux
+A level-1 auxiliary file: chapters/chSimulation.aux
+A level-1 auxiliary file: chapters/chReconstruction.aux
+A level-1 auxiliary file: chapters/chSelection.aux
+A level-1 auxiliary file: chapters/chAnalysis.aux
+A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
 The style file: apalike2.bst
 A level-1 auxiliary file: endmatter/colophon.aux
@@ -12,7 +17,7 @@ I found no \citation commands---while reading file dissertation.aux
 Database file #1: references.bib
 You've used 0 entries,
             2229 wiz_defined-function locations,
-            517 strings with 4108 characters,
+            522 strings with 4230 characters,
 and the built_in function-call counts, 17 in all, are:
 = -- 0
 > -- 0
