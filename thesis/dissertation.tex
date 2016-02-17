@@ -11,17 +11,8 @@
 % the front matter
 \input{frontmatter/personalize}
 \input{nomenclature}
-\maketitle
-\copyrightpage
-%\frontmatter
+\frontmatter
 \setstretch{1.2}
-\abstractpage
-\tableofcontents
-%\authorlist
-\listoffigures
-\listoftables
-\dedicationpage
-\acknowledgments
 
 \doublespacing
 
@@ -46,7 +37,7 @@
 % the back matter
 \clearpage
 \bibliography{references}
-\addcontentsline{toc}{chapter}{References}
+\addcontentsline{toc}{chapter}{\bibname}
 \bibliographystyle{apalike2}
 
 \include{endmatter/colophon}

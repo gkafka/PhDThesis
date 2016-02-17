@@ -1,3 +1,8 @@
+\contentsline {chapter}{Abstract}{iii}{Doc-Start}
+\contentsline {chapter}{List of Figures}{v}{chapter*.2}
+\contentsline {chapter}{List of Tables}{vi}{chapter*.3}
+\contentsline {chapter}{Dedication}{vi}{chapter*.3}
+\contentsline {chapter}{Acknowledgments}{viii}{chapter*.4}
 \contentsline {chapter}{\numberline {0}Introduction}{1}{chapter.0}
 \contentsline {chapter}{\numberline {1}A Brief History of Neutrinos}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Possible Evidence of Sterile Neutrinos}{2}{section.1.1}

@@ -62,8 +62,8 @@
 \usepackage[titletoc]{appendix}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftchapfont}{\normalsize \scshape}
-\renewcommand\listfigurename{Listing of figures}
-\renewcommand\listtablename{Listing of tables}
+\renewcommand\listfigurename{List of Figures}
+\renewcommand\listtablename{List of Tables}
 
 % Endmatter
 \renewcommand{\setthesection}{\arabic{chapter}.A\arabic{section}}
@@ -148,7 +148,10 @@
 	\copyrightpage
 	\abstractpage
 	\tableofcontents
-	% \listoffigures % optional
+	\listoffigures
+	\addcontentsline{toc}{chapter}{\listfigurename}
+	\listoftables
+	\addcontentsline{toc}{chapter}{\listtablename}
 	\dedicationpage
 	\acknowledgments
 }
@@ -176,7 +179,7 @@
 	\newpage
 	\thispagestyle{empty}
 	\vspace*{\fill}
-	\scshape \noindent \small \copyright \small 2014\hspace{3pt}-- \theauthor \\
+	\scshape \noindent \small \copyright \small 2016\hspace{3pt}-- \theauthor \\
 	\noindent all rights reserved.
 	\vspace*{\fill}
 	\newpage
@@ -184,6 +187,7 @@
 }
 
 \newcommand{\abstractpage}{
+	\addcontentsline{toc}{chapter}{Abstract}
 	\newpage
 	\pagenumbering{roman}
 	\setcounter{page}{3}
@@ -203,6 +207,7 @@
 }
 
 \newcommand{\dedicationpage}{
+	\addcontentsline{toc}{chapter}{Dedication}
 	\newpage \thispagestyle{fancy} \vspace*{\fill}
 	\scshape \noindent \input{frontmatter/dedication}
 	\vspace*{\fill} \newpage \rm
@@ -210,6 +215,7 @@
 
 \newcommand{\acknowledgments}{
 	\chapter*{Acknowledgments}
+	\addcontentsline{toc}{chapter}{Acknowledgments}
 	\noindent
 	\input{frontmatter/thanks}
 	\vspace*{\fill} \newpage
