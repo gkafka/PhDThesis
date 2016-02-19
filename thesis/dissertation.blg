@@ -1,7 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dissertation.aux
-A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/chHistory.aux
 A level-1 auxiliary file: chapters/chTheory.aux
 A level-1 auxiliary file: chapters/chNOvA.aux
@@ -17,7 +16,7 @@ I found no \citation commands---while reading file dissertation.aux
 Database file #1: references.bib
 You've used 0 entries,
             2229 wiz_defined-function locations,
-            522 strings with 4230 characters,
+            521 strings with 4205 characters,
 and the built_in function-call counts, 17 in all, are:
 = -- 0
 > -- 0
