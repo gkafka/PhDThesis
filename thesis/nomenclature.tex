@@ -10,6 +10,7 @@
 %
 % Table of contents
 % =================
+% - Basic commands
 % - Commands with arguments
 %
 % - Math
@@ -29,8 +30,14 @@
 %
 
 % -----------------------------------------------------------------------------
-% Commands with arguments
+% Basic commands
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+\newcommand{\n}{\noindent}
 
+% Commands with arguments
 \newcommand\ABS  [1]{|\,{#1}\,|}            % absolute value
 \newcommand\CEN  [1]{C_{#1}}                % centrality
 \newcommand\MBF  [1]{\hbox{\bm{$#1$}}} % boldface lower-case Greek
