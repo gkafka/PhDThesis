@@ -17,11 +17,11 @@
 %   . Standard
 %   . Units
 %   . Stats
-%   . Bent arrow
 %
 % - Variables
+%   . Abbreviations
 %   . MC generators
-%
+%   . Oscillation Parameters
 %
 % - Documentation
 %   . Horizontal lines
@@ -46,7 +46,6 @@
 \newcommand\MCOL[2]{\multicolumn{#1}{l}{#2}}
 \newcommand\MCOLc[2]{\multicolumn{#1}{c}{#2}}
 \newcommand\MROW[2]{\multirow{#1}{*}{#2}}
-%
 \newcommand\mcolz{\multicolumn{2}{c}{~-}}
 
 % -----------------------------------------------------------------------------
@@ -114,27 +113,15 @@
 % Derivative is upright
 \newcommand\D      {{\rm d}}
 
-% Arrows
-%   The original macro was written by Chris Quigg -> modified by tmhong.
-%   This creates bent arrows to write sequential decays 
-%   1 --> 2 3
-%         | |--> 4
-%         |--> 5
-\newcommand\bentarrow{\mbox{$\:\raisebox{1.4ex}{\rlap{$\big\vert$}}\!\rightarrow\,$}}
-\newcommand\bothdk[5]{
-  \begin{array}{r c l}
-    #1 & \!\rightarrow\! & #2 #3 \\
-    & & \:\raisebox{1.4ex}{\rlap{$\big\vert$}}\raisebox{-0.5ex}{$\big\vert$}%
-    \! \phantom{#2}\!\bentarrow #4 \\
-    & & \:\raisebox{1.4ex}{\rlap{$\big\vert$}}\!\rightarrow #5
-  \end{array}
-}
-
 % -----------------------------------------------------------------------------
 % Variables
 
 % Abbreviation
 \newcommand\nova{NO$\nu$A~}
+\newcommand\NU[1]{\nu_{#1}}
+\newcommand\ANU[1]{\bar{\nu}_{#1}}
+
+% Oscillation Parameters
 
 % MC generators
 \newcommand\GEANT        {{\sc geant}}
