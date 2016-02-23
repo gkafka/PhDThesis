@@ -1,7 +1,38 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 
-\bibitem[Pauli, 1930]{Pauli}
-Pauli, W. (1930).
-\newblock Letter to a physicists' gathering at tubingen.
+\bibitem{ref:Pauli}
+W.~Pauli.
+\newblock Letter to a physicists' gathering at tubingen, 1930.
+
+\bibitem{ref:Chadwick}
+J.~Chadwick.
+\newblock Possible existence of a neutron.
+\newblock {\em Nature}, 192:312, 1932.
+
+\bibitem{ref:Fermi}
+E.~Fermi.
+\newblock Versuch einer theorie der $\beta$-strahlen.
+\newblock {\em Zeitschrift f\"{u}r Physik}, 88:161--177, 1934.
+
+\bibitem{ref:1953}
+F.~Reines and C.~L. Cowan.
+\newblock Detection of the free neutrino.
+\newblock {\em Physical Review}, 92:830--831, 1953.
+
+\bibitem{ref:1956}
+C.~L. Cowan, F.~Reines, F.~B. Harrison, H.~W. Kruse, and A.~D. McGuire.
+\newblock Detection of the free neutrino: A confirmation.
+\newblock {\em Science}, 124:103--104, 1956.
+
+\bibitem{ref:BNL}
+G.~et~al Danby.
+\newblock Observation of high-energy neutrino reactions and the existence of
+  two kinds of neutrinos.
+\newblock {\em Physical Review Letters}, 9:36--44, 1962.
+
+\bibitem{ref:DONUT}
+DONUT Collaboration and K.~et~al Kodama.
+\newblock Observation of tau neutrino interactions.
+\newblock {\em Physics Letters B}, 504:218--224, 2001.
 
 \end{thebibliography}
