@@ -11,7 +11,7 @@ A level-1 auxiliary file: chapters/chSelection.aux
 A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 42 of file dissertation.aux
+Illegal, another \bibstyle command---line 44 of file dissertation.aux
  : \bibstyle
  :          {apalike2}
 I'm skipping whatever remains of this command
@@ -19,7 +19,7 @@ A level-1 auxiliary file: endmatter/colophon.aux
 Database file #1: references.bib
 You've used 7 entries,
             1791 wiz_defined-function locations,
-            506 strings with 4560 characters,
+            506 strings with 4558 characters,
 and the built_in function-call counts, 1416 in all, are:
 = -- 124
 > -- 49
