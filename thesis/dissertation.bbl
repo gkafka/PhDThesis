@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{ref:Pauli}
 W.~Pauli.
@@ -34,6 +34,28 @@ G.~Danby et~al.
 {DONUT Collaboration, K. Kodama et al}.
 \newblock Observation of tau neutrino interactions.
 \newblock {\em Physics Letters B}, 504:218--224, 2001.
+
+\bibitem{ref:Pontecorvo1}
+B.~Pontecorvo.
+\newblock Mesonium and anti-mesonium.
+\newblock {\em Soviet Journal of Experimental and Theoretical Physics}, 6:429,
+  1957.
+
+\bibitem{ref:Davis}
+{R. Davis, Jr.}, D.~S. Harmer, and K.~C. Hoffman.
+\newblock Search for neutrinos from the sun.
+\newblock {\em Physical Review Letters}, 20:1205--1209, 1968.
+
+\bibitem{ref:Bahcall}
+J.~N. Bahcall, N.~A. Bahcall, and G.~Shaviv.
+\newblock Present status of the theoretical predictions for the
+  \textsuperscript{37}cl solar-neutrino experiment.
+\newblock {\em Physical Review Letters}, 20:1209--1212, 1968.
+
+\bibitem{ref:Pontecorvo2}
+V.~Gribov and B.~Pontecorvo.
+\newblock Neutrino astronomy and lepton charge.
+\newblock {\em Physics Letters B}, 28:493--496, 1969.
 
 \bibitem{ref:LEP}
 {ALEPH Collaboration, DELPHI Collaboration, L3 Collaboration, OPAL
