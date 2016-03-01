@@ -57,6 +57,33 @@ V.~Gribov and B.~Pontecorvo.
 \newblock Neutrino astronomy and lepton charge.
 \newblock {\em Physics Letters B}, 28:493--496, 1969.
 
+\bibitem{ref:Kamiokande}
+K.S.~Hirata et~al.
+\newblock Observation of b-8 solar neutrinos in the kamiokande-ii detector.
+\newblock {\em Physical Review Letters}, 63:16--19, 1989.
+
+\bibitem{ref:SAGE}
+A.~I.~Abazov et~al.
+\newblock Search for neutrinos from the sun using the reaction
+  \textsuperscript{71}ga (nu\textsubscript{e}, e\textsuperscript{-})
+  \textsuperscript{71}ge.
+\newblock {\em Physical Review Letters}, 67:3332--3335, 1991.
+
+\bibitem{ref:GALLEX}
+P.~Anselmann et~al.
+\newblock Solar neutrinos observed by gallex at gran sasso.
+\newblock {\em Physics Letters B}, 285:376--389, 1992.
+
+\bibitem{ref:KamioAtm}
+K.S.~Hirata et~al.
+\newblock Observation of a small atmospheric numu/nue ratio in kamiokande.
+\newblock {\em Physical Letters B}, 280:146--152, 1992.
+
+\bibitem{ref:SuperKAtm}
+Y.~Fukuda et~al.
+\newblock Evidence for oscillation of atmospheric neutrinos.
+\newblock {\em Physical Review Letters}, 81:1562--1567, 1998.
+
 \bibitem{ref:LEP}
 {ALEPH Collaboration, DELPHI Collaboration, L3 Collaboration, OPAL
   Collaboration, SID Collaboration, LEP Electroweak Working Group, SID

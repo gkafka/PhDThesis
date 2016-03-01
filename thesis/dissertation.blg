@@ -11,51 +11,61 @@ A level-1 auxiliary file: chapters/chSelection.aux
 A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 49 of file dissertation.aux
+Illegal, another \bibstyle command---line 53 of file dissertation.aux
  : \bibstyle
  :          {apalike2}
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: endmatter/colophon.aux
 Database file #1: references.bib
-You've used 12 entries,
+I was expecting a `,' or a `}'---line 199 of file references.bib
+ :   
+ :   year={2001}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 211 of file references.bib
+ :   
+ :   year={2002}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 17 entries,
             1791 wiz_defined-function locations,
-            540 strings with 5354 characters,
-and the built_in function-call counts, 2512 in all, are:
-= -- 225
-> -- 83
+            574 strings with 5985 characters,
+and the built_in function-call counts, 3565 in all, are:
+= -- 327
+> -- 103
 < -- 0
-+ -- 34
-- -- 22
-* -- 163
-:= -- 415
-add.period$ -- 35
-call.type$ -- 12
-change.case$ -- 12
++ -- 44
+- -- 27
+* -- 230
+:= -- 582
+add.period$ -- 50
+call.type$ -- 17
+change.case$ -- 17
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 104
-empty$ -- 266
-format.name$ -- 22
-if$ -- 560
+cite$ -- 17
+duplicate$ -- 149
+empty$ -- 383
+format.name$ -- 27
+if$ -- 799
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 11
-newline$ -- 62
-num.names$ -- 12
-pop$ -- 18
+int.to.str$ -- 17
+missing$ -- 16
+newline$ -- 87
+num.names$ -- 17
+pop$ -- 23
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 38
+skip$ -- 53
 stack$ -- 0
-substring$ -- 213
-swap$ -- 12
+substring$ -- 324
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 23
-width$ -- 14
-write$ -- 131
-(There was 1 error message)
+while$ -- 33
+width$ -- 19
+write$ -- 186
+(There were 3 error messages)
