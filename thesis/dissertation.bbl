@@ -49,7 +49,7 @@ B.~Pontecorvo.
 \bibitem{ref:Bahcall}
 J.~N. Bahcall, N.~A. Bahcall, and G.~Shaviv.
 \newblock Present status of the theoretical predictions for the
-  \textsuperscript{37}cl solar-neutrino experiment.
+  \textsuperscript{37}{Cl} solar-neutrino experiment.
 \newblock {\em Physical Review Letters}, 20:1209--1212, 1968.
 
 \bibitem{ref:Pontecorvo2}
@@ -59,30 +59,36 @@ V.~Gribov and B.~Pontecorvo.
 
 \bibitem{ref:Kamiokande}
 K.S.~Hirata et~al.
-\newblock Observation of b-8 solar neutrinos in the kamiokande-ii detector.
+\newblock Observation of {B-8} solar neutrinos in the {Kamiokande-II} detector.
 \newblock {\em Physical Review Letters}, 63:16--19, 1989.
 
 \bibitem{ref:SAGE}
 A.~I.~Abazov et~al.
 \newblock Search for neutrinos from the sun using the reaction
-  \textsuperscript{71}ga (nu\textsubscript{e}, e\textsuperscript{-})
-  \textsuperscript{71}ge.
+  \textsuperscript{71}{Ga} (nu\textsubscript{e}, e\textsuperscript{-})
+  \textsuperscript{71}{Ge}.
 \newblock {\em Physical Review Letters}, 67:3332--3335, 1991.
 
 \bibitem{ref:GALLEX}
 P.~Anselmann et~al.
-\newblock Solar neutrinos observed by gallex at gran sasso.
+\newblock Solar neutrinos observed by {GALLEX} at {Gran} {Sasso}.
 \newblock {\em Physics Letters B}, 285:376--389, 1992.
 
 \bibitem{ref:KamioAtm}
 K.S.~Hirata et~al.
-\newblock Observation of a small atmospheric numu/nue ratio in kamiokande.
+\newblock Observation of a small atmospheric numu/nue ratio in {Kamiokande}.
 \newblock {\em Physical Letters B}, 280:146--152, 1992.
 
 \bibitem{ref:SuperKAtm}
 Y.~Fukuda et~al.
 \newblock Evidence for oscillation of atmospheric neutrinos.
 \newblock {\em Physical Review Letters}, 81:1562--1567, 1998.
+
+\bibitem{ref:SNO02}
+Q.~R.~Ahmad et~al.
+\newblock Direct evidence for neutrino flavor transformation from
+  neutral-current interactions in the sudbury neutrino observatory.
+\newblock {\em Physical Review Letters}, 89:011301.
 
 \bibitem{ref:LEP}
 {ALEPH Collaboration, DELPHI Collaboration, L3 Collaboration, OPAL

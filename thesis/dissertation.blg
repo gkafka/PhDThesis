@@ -11,61 +11,62 @@ A level-1 auxiliary file: chapters/chSelection.aux
 A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 53 of file dissertation.aux
+Illegal, another \bibstyle command---line 55 of file dissertation.aux
  : \bibstyle
  :          {apalike2}
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: endmatter/colophon.aux
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 199 of file references.bib
- :   
- :   year={2001}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 211 of file references.bib
+I was expecting a `,' or a `}'---line 177 of file references.bib
  :   
  :   year={2002}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 17 entries,
+I was expecting a `,' or a `}'---line 232 of file references.bib
+ :   
+ :   year={2001}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty year in ref:SNO02
+You've used 18 entries,
             1791 wiz_defined-function locations,
-            574 strings with 5985 characters,
-and the built_in function-call counts, 3565 in all, are:
-= -- 327
-> -- 103
+            580 strings with 6166 characters,
+and the built_in function-call counts, 3761 in all, are:
+= -- 344
+> -- 107
 < -- 0
-+ -- 44
-- -- 27
-* -- 230
-:= -- 582
-add.period$ -- 50
-call.type$ -- 17
-change.case$ -- 17
++ -- 46
+- -- 28
+* -- 244
+:= -- 613
+add.period$ -- 53
+call.type$ -- 18
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 149
-empty$ -- 383
-format.name$ -- 27
-if$ -- 799
+cite$ -- 19
+duplicate$ -- 158
+empty$ -- 405
+format.name$ -- 28
+if$ -- 841
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 16
-newline$ -- 87
-num.names$ -- 17
-pop$ -- 23
+int.to.str$ -- 18
+missing$ -- 17
+newline$ -- 92
+num.names$ -- 18
+pop$ -- 25
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 53
+skip$ -- 56
 stack$ -- 0
-substring$ -- 324
-swap$ -- 17
+substring$ -- 342
+swap$ -- 18
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 33
-width$ -- 19
-write$ -- 186
+warning$ -- 1
+while$ -- 35
+width$ -- 20
+write$ -- 196
 (There were 3 error messages)
