@@ -11,7 +11,7 @@ A level-1 auxiliary file: chapters/chSelection.aux
 A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 55 of file dissertation.aux
+Illegal, another \bibstyle command---line 56 of file dissertation.aux
  : \bibstyle
  :          {apalike2}
 I'm skipping whatever remains of this command
@@ -22,51 +22,57 @@ I was expecting a `,' or a `}'---line 177 of file references.bib
  :   year={2002}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 232 of file references.bib
+I was expecting a `,' or a `}'---line 200 of file references.bib
+ :   
+ :   year={1995}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 243 of file references.bib
  :   
  :   year={2001}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty year in ref:SNO02
-You've used 18 entries,
+Warning--empty year in ref:LSND
+You've used 19 entries,
             1791 wiz_defined-function locations,
-            580 strings with 6166 characters,
-and the built_in function-call counts, 3761 in all, are:
-= -- 344
-> -- 107
+            586 strings with 6308 characters,
+and the built_in function-call counts, 3987 in all, are:
+= -- 365
+> -- 111
 < -- 0
-+ -- 46
-- -- 28
-* -- 244
-:= -- 613
-add.period$ -- 53
-call.type$ -- 18
-change.case$ -- 18
++ -- 48
+- -- 29
+* -- 261
+:= -- 647
+add.period$ -- 56
+call.type$ -- 19
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 158
-empty$ -- 405
-format.name$ -- 28
-if$ -- 841
+cite$ -- 21
+duplicate$ -- 167
+empty$ -- 430
+format.name$ -- 29
+if$ -- 891
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 17
-newline$ -- 92
-num.names$ -- 18
-pop$ -- 25
+int.to.str$ -- 19
+missing$ -- 18
+newline$ -- 97
+num.names$ -- 19
+pop$ -- 27
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 56
+skip$ -- 59
 stack$ -- 0
-substring$ -- 342
-swap$ -- 18
+substring$ -- 369
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 35
-width$ -- 20
-write$ -- 196
-(There were 3 error messages)
+warning$ -- 2
+while$ -- 37
+width$ -- 21
+write$ -- 206
+(There were 4 error messages)
