@@ -65,8 +65,7 @@ K.S.~Hirata et~al.
 \bibitem{ref:SAGE}
 A.~I.~Abazov et~al.
 \newblock Search for neutrinos from the sun using the reaction
-  \textsuperscript{71}{Ga} (nu\textsubscript{e}, e\textsuperscript{-})
-  \textsuperscript{71}{Ge}.
+  \textsuperscript{71}{Ga} ($\nue$, $e^{-}$) \textsuperscript{71}{Ge}.
 \newblock {\em Physical Review Letters}, 67:3332--3335, 1991.
 
 \bibitem{ref:GALLEX}
@@ -76,7 +75,8 @@ P.~Anselmann et~al.
 
 \bibitem{ref:KamioAtm}
 K.S.~Hirata et~al.
-\newblock Observation of a small atmospheric numu/nue ratio in {Kamiokande}.
+\newblock Observation of a small atmospheric $\numu$/$\nue$ ratio in
+  {Kamiokande}.
 \newblock {\em Physical Letters B}, 280:146--152, 1992.
 
 \bibitem{ref:SuperKAtm}
@@ -88,7 +88,7 @@ Y.~Fukuda et~al.
 Q.~R.~Ahmad et~al.
 \newblock Direct evidence for neutrino flavor transformation from
   neutral-current interactions in the sudbury neutrino observatory.
-\newblock {\em Physical Review Letters}, 89:011301.
+\newblock {\em Physical Review Letters}, 89:011301, 2002.
 
 \bibitem{ref:LEP}
 {ALEPH Collaboration, DELPHI Collaboration, L3 Collaboration, OPAL
@@ -101,6 +101,47 @@ Q.~R.~Ahmad et~al.
 C.~Athanassopoulos et~al.
 \newblock Candidate events in a search for anti-muon-neutrino -->
   anti-electron-neutrino oscillations.
-\newblock {\em Physical Review Letters}, 75:2650--2653.
+\newblock {\em Physical Review Letters}, 75:2650--2653, 1995.
+
+\bibitem{ref:Mini2007}
+A.~A. Aguilar-Arevalo et~al.
+\newblock A search for electron neutrino appearance at the {$\Delta m^{2} \sim
+  1\evsq$} scale.
+\newblock {\em Physical Review Letters}, 98:231801, 2007.
+
+\bibitem{ref:Mini2013}
+A.~A. Aguilar-Arevalo et~al.
+\newblock Improved search for $\anumu \rightarrow \anue$ oscillations in the
+  {MiniBooNE} experiment.
+\newblock {\em Physical Review Letters}, 110:161801, 2013.
+
+\bibitem{ref:KARMEN}
+B.~Armbruster et~al.
+\newblock Upper limits for neutrino oscillations $\anumu \rightarrow \anue$
+  from muon decay at rest.
+\newblock {\em Physical Review D}, 65:112001, 2002.
+
+\bibitem{ref:NOMAD}
+P.~Astier et~al.
+\newblock Search for $\numu \rightarrow \nue$ oscillations in the {NOMAD}
+  experiment.
+\newblock {\em Physics Letters B}, 570:19--31, 2003.
+
+\bibitem{ref:DayaSterile}
+F.~P.~An et~al.
+\newblock Search for a light sterile neutrino at {Daya Bay}.
+\newblock {\em Physical Review Letters}, 113:141802, 2014.
+
+\bibitem{ref:T2KSterile}
+K.~Abe et~al.
+\newblock Search for short baseline $\nue$ disappearance with the {T2K} near
+  detector.
+\newblock {\em Physical Review D}, 91:051102, 2015.
+
+\bibitem{ref:MINOSSterile}
+P.~Adamson et~al.
+\newblock Active to sterile neutrino mixing limits from neutral-current
+  interactions in minos.
+\newblock {\em Physical Review Letters}, 107:011802, 2011.
 
 \end{thebibliography}
