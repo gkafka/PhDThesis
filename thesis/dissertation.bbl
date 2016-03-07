@@ -127,6 +127,12 @@ P.~Astier et~al.
   experiment.
 \newblock {\em Physics Letters B}, 570:19--31, 2003.
 
+\bibitem{ref:SuperKSterile}
+K.~Abe et~al.
+\newblock Limits on sterile neutrino mixing using atmospheric neutrinos in
+  {Super-Kamiokande}.
+\newblock {\em Physical Review D}, 91:052019, 2015.
+
 \bibitem{ref:DayaSterile}
 F.~P.~An et~al.
 \newblock Search for a light sterile neutrino at {Daya Bay}.
@@ -143,5 +149,10 @@ P.~Adamson et~al.
 \newblock Active to sterile neutrino mixing limits from neutral-current
   interactions in minos.
 \newblock {\em Physical Review Letters}, 107:011802, 2011.
+
+\bibitem{ref:MNS}
+Z.~Maki, M.~Nakagawa, and S.~Sakata.
+\newblock Remarks on the unified model of elementary particles.
+\newblock {\em Progress of Theoretical Physics}, 28:870--880, 1962.
 
 \end{thebibliography}
