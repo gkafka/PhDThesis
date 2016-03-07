@@ -37,42 +37,8 @@
 \newcommand{\eeqa}{\end{eqnarray}}
 \newcommand{\n}{\noindent}
 
-% Commands with arguments
-\newcommand\ABS  [1]{|\,{#1}\,|}            % absolute value
-\newcommand\CEN  [1]{C_{#1}}                % centrality
-\newcommand\MBF  [1]{\hbox{\bm{$#1$}}} % boldface lower-case Greek
-\newcommand\SPACE[1]{\,{#1}\,}              % small space around
-\newcommand\MBFr[1]{\multicolumn{1}{r}{\MBF{#1}}}
-\newcommand\MCOL[2]{\multicolumn{#1}{l}{#2}}
-\newcommand\MCOLc[2]{\multicolumn{#1}{c}{#2}}
-\newcommand\MROW[2]{\multirow{#1}{*}{#2}}
-\newcommand\mcolz{\multicolumn{2}{c}{~-}}
-
 % -----------------------------------------------------------------------------
 % Math
-
-% Standard symbols
-\newcommand\TO     {\SPACE{\rightarrow}}
-\newcommand\MINUS  {\SPACE{-}}
-\newcommand\PLUS   {\SPACE{+}}
-\newcommand\OTIMES {\SPACE{\otimes}}
-\newcommand\CDOT   {\SPACE{\cdot}}
-\newcommand\CAP    {\SPACE{\cap}}
-\newcommand\CUP    {\SPACE{\cup}}
-\newcommand\PM     {\SPACE{\pm}}
-\newcommand\EQUIV  {\SPACE{\equiv}}
-\newcommand\EQ     {\SPACE{=}}
-\newcommand\APPROX {\SPACE{\approx}}
-\newcommand\GT     {\SPACE{>}}
-\newcommand\LT     {\SPACE{<}}
-\newcommand\GE     {\SPACE{\ge}}
-\newcommand\LE     {\SPACE{\le}}
-\newcommand\GG     {\SPACE{\gg}}
-\newcommand\LL     {\SPACE{\mathchar"321C}}
-\newcommand\GTRSIM {\SPACE{\gtrsim}}
-\newcommand\TIMES  {\SPACE{\times}}
-\newcommand\data   {\rm data}
-%	\newcommand\RTO    {\,{\raisebox{7px}{\rotatebox{180}{$\Lsh$}}}\,} % angled right arrow
 
 % Units
 \newcommand\evsq{\mbox{\,eV\textsuperscript{2}}}
@@ -127,6 +93,7 @@
 % Oscillation Parameters
 \newcommand\Uxy[2]{U_{#1#2}}
 \newcommand\Usqxy[2]{\lvert \Uxy{#1}{#2} \rvert^2}
+\newcommand\Ustxy[2]{\Uxy{#1}{#2}^{*}}
 \newcommand\dmxy[2]{\Delta m^2_{#2#1}}
 \newcommand\thxy[2]{\theta_{#1#2}}
 
