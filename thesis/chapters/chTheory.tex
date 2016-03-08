@@ -9,7 +9,7 @@ The idea of neutrino oscillations was first proposed by Pontecorvo in 1957 \cite
 In the Standard Model, neutrinos only interact via the W and Z bosons as shown by the Feynman diagrams in Fig.~\ref{fig:WZ}. From these diagrams, it is clear that neutrinos always interact in a definite flavor eigenstate, $\ket{\nu_\alpha}$. Furthermore, when a neutrino is produced from a W boson, the flavor is always determined by the associated charged lepton shown in eq.~\ref{eq:NuLepPairs}.
 
 \beqa
-\nue \numu \nutau
+\left( \begin{array}{c} \nue \\ e \end{array} \right), \quad \left( \begin{array}{c} \numu \\ \mu \end{array} \right), \quad \left( \begin{array}{c} \nutau \\ \tau \end{array} \right)
 \label{eq:NuLepPairs}
 \eeqa
 
@@ -24,11 +24,42 @@ In the Standard Model, neutrinos only interact via the W and Z bosons as shown b
 
 \section{Vacuum Oscillations}
 
-Solve the Hamiltonian
+Consider a neutrino in a state of definite flavor $\alpha$ at time $t = 0$, $\ket{\nu(0)} = \ket{\nu_\alpha}$. This state is in a superposition of mass eigenstates. The time evolution of this neutrino is simply the time evolution of the individual mass states. In a vacuum, this adds a phase factor to each mass state.
 
-Make ultrarelativistic assumptions
+\beq
+\ket{\nu_\alpha(t)} = \sum_{i} \Ustxy{\alpha}{i} e^{-i(E_i t - \mathbf{p_i \cdot x})} \ket{\nu_i}
+\label{eq:NuAtT}
+\eeq
 
-Hit ket with bra.
+\n With the neutrino at position $\mathbf{x} = L$ at time $t$, the dot product evaluates to $\mathbf{p_i \cdot x} = p_i L$. Eq~\ref{eq:NuAtT} can then simplified by making use of the fact that neutrinos are ultra-relativistic, allowing for several assumptions. First, the time, $t$, is replaced by the distance, $L$. Next, the energy of each mass state is approximated to be the same energy, $E_i = E$. Last, the momentum is expanded as $p_i = \sqrt{E^2 - m_i^2} \approx E - m_i^2/2E$. With these assumptions, eq.~\ref{eq:NuAtT} simplifies as:
+
+\beq
+\ket{\nu_\alpha(L)} = \sum_{i} \Ustxy{\alpha}{i} e^{-i m_i^2 L/2E} \ket{\nu_i}.
+\label{eq:NuAtTRel}
+\eeq
+
+Eq.~\ref{eq:NuAtTRel} can be used to find the probability that the original neutrino in flavor state $\alpha$ has transitioned (or survived) as flavor state $\beta$. Using the conjugate of eq.~\ref{eq:massflav}, this state can be rewritten in terms of the mass eigenstates:
+
+\beq
+\bra{\nu_\beta} = \sum_{j = 1}^n \Uxy{\beta}{j} \bra{\nu_j}.
+\label{eq:NuBra}
+\eeq
+
+\n Eq.~\ref{eq:NuBra} is then applied to eq.~\ref{eq:NuAtTRel}:
+
+\beq
+\braket{\nu_\beta | \nu_\alpha( L ) } = \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{j} e^{-i m_i^2 L/2E} \braket{\nu_j | \nu_i}
+= \sum_i \Ustxy{\alpha}{i} \Uxy{\beta}{i} e^{-i m_i^2 L/2E}
+\label{eq:nuAB}
+\eeq
+
+\n where the last equality follows from the orthogonality of individual mass eigenstates. The probability of the flavor transition is then the amplitude of this matrix element.
+
+\beq
+P(\nu_\alpha \rightarrow \nu_\beta) = \vert \braket{\nu_\beta | \nu_\alpha(L)} \vert^2
+= \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} e^{-i (m_i^2 - m_j^2) L/2E}
+\label{eq:nuABsq}
+\eeq
 
 Do some expansions.
 
