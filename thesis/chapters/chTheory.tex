@@ -24,6 +24,8 @@ In the Standard Model, neutrinos only interact via the W and Z bosons as shown b
 
 \section{Vacuum Oscillations}
 
+In this section, the basics of neutrino oscillations are developed by considering oscillations in a vacuum. The neutrinos are treated as plane waves, as in \cite{ref:PlaneWaves}, with the assumption that the neutrino is actually localized in space put in by hand. A careful, rigorous analysis treating the neutrinos as plane waves in \cite{ref:WavePackets} reproduces the same results.
+
 Consider a neutrino in a state of definite flavor $\alpha$ at time $t = 0$, $\ket{\nu(0)} = \ket{\nu_\alpha}$. This state is in a superposition of mass eigenstates. The time evolution of this neutrino is simply the time evolution of the individual mass states. In a vacuum, this adds a phase factor to each mass state.
 
 \beq
@@ -38,22 +40,22 @@ Consider a neutrino in a state of definite flavor $\alpha$ at time $t = 0$, $\ke
 \label{eq:NuAtTRel}
 \eeq
 
-Eq.~\ref{eq:NuAtTRel} can be used to find the probability that the original neutrino in flavor state $\alpha$ has transitioned (or survived) as flavor state $\beta$. Using the conjugate of eq.~\ref{eq:massflav}, this state can be rewritten in terms of the mass eigenstates:
+\n The mass eigenstate inside the sum is then re-expressed in terms of flavor eigenstates using the inverse of eq.~\ref{eq:massflav} and unitarity of $U$.
 
 \beq
-\bra{\nu_\beta} = \sum_{j = 1}^n \Uxy{\beta}{j} \bra{\nu_j}.
-\label{eq:NuBra}
+\ket{\nu_\alpha(L)} = \sum_{\alpha'} \sum_{i} \Ustxy{\alpha}{i} \Uxy{\alpha'}{i} e^{-i m_i^2 L/2E} \ket{\nu_\alpha'}.
+\label{eq:NuAtL}
 \eeq
 
-\n Eq.~\ref{eq:NuBra} is then applied to eq.~\ref{eq:NuAtTRel}:
+Eq.~\ref{eq:NuAtL} can then be used to find the probability that the original neutrino in flavor state $\alpha$ has transitioned (or survived) as flavor state $\beta$. First, the matrix element $\braket{\nu_\beta | \nu_\alpha (L)}$ is computed.
 
 \beq
-\braket{\nu_\beta | \nu_\alpha( L ) } = \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{j} e^{-i m_i^2 L/2E} \braket{\nu_j | \nu_i}
+\braket{\nu_\beta | \nu_\alpha( L ) } = \sum_{\alpha'} \sum_{i} \Ustxy{\alpha}{i} \Uxy{\alpha'}{i} e^{-i m_i^2 L/2E} \braket{\nu_\beta | \nu_\alpha'}
 = \sum_i \Ustxy{\alpha}{i} \Uxy{\beta}{i} e^{-i m_i^2 L/2E}
 \label{eq:nuAB}
 \eeq
 
-\n where the last equality follows from the orthogonality of individual mass eigenstates. The probability of the flavor transition is then the amplitude of this matrix element.
+\n The last equality in eq.~\ref{eq:nuAB} follows from the orthogonality of individual flavor eigenstates. The probability of the flavor transition is then the square of this matrix element.
 
 \beq
 P(\nu_\alpha \rightarrow \nu_\beta) = \vert \braket{\nu_\beta | \nu_\alpha(L)} \vert^2
@@ -61,7 +63,60 @@ P(\nu_\alpha \rightarrow \nu_\beta) = \vert \braket{\nu_\beta | \nu_\alpha(L)} \
 \label{eq:nuABsq}
 \eeq
 
-Do some expansions.
+\n It is standard to rewrite the mass squared difference as $\dmxy{j}{i} \equiv m_i^2 - m_j^2$. Eq.~\ref{eq:nuABsq} is then manipulated using the properties of unitary matrices.
+
+\beqa
+P(\nu_\alpha \rightarrow \nu_\beta) & = & \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} + \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \nonumber \\
+& = & \delta_{\alpha\beta} + \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1)
+\label{eq:nuAB1minus}
+\eeqa
+
+\n The remaining summed term is further simplified making use of two facts. When $i = j$, the complex phase is 0 as $\dmxy{i}{i} = 0$, and thus these terms vanish. Second, the terms with $i < j$ are complex conjugates of those with $i > j$, and $z + z^* = 2\Re(z)$ for any complex number $z$.
+
+\beqa
+P(\nu_\alpha \rightarrow \nu_\beta) & = & \delta_{\alpha\beta} + 2\sum_{i > j} \Re \left[ \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \right]
+\label{eq:nuABiGrj}
+\eeqa
+
+\n Both pieces of this term are split into their real and imaginary parts, and simplified using the trigonometric identity $\cos2\theta - 1 = -2\sin^2\theta$. Defining\hspace{0.5em}$\mathcal{U} \equiv \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1)$ and $\phi \equiv \dmxy{j}{i} L/2E$:
+
+\beqa
+\Re ( \mathcal{U} ) & = & \Re \left[ \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \right] \\
+& = & \Re \left\{ \left[ \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) + i \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \right] \left[ \cos\phi - i\sin\phi - 1\right] \right\} \\
+& = & \Re \left\{ \left[ \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) + i \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \right] \left[ -2\sin^2 (\phi/2) - i\sin\phi \right] \right\} \\
+& = & \Re \left\{ -2 \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 (\phi/2) + \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin\phi \right. \nonumber \\
+&& \quad\quad \left. -i \left[ \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin\phi + 2\Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 (\phi/2) \right] \right\} \\
+& = & -2 \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 (\phi/2) + \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin\phi
+\label{eq:ExpandUUUUe1}
+\eeqa
+
+\n Inserting the expression from eq.~\ref{eq:ExpandUUUUe1} into eq.~\ref{eq:nuABiGrj}, we find:
+
+\beqa
+P(\nu_\alpha \rightarrow \nu_\beta) = \delta_{\alpha\beta} & - & 4\sum_{i > j} \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 \left( \frac{\dmxy{j}{i} L}{4E} \right) \nonumber \\
+& + & 2\sum_{i > j} \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin \left( \frac{\dmxy{j}{i} L}{2E} \right),
+\label{eq:nuOsc}
+\eeqa
+
+\n which is the standard equation for neutrino oscillations. It can now be seen that the distance the neutrino travels, its energy, and the different mass splittings all affect the frequency of oscillation. Ideally, neutrino oscillations would be studied by having neutrinos with a fixed energy profile (preferably monoenergetic) and varying the baseline. However, neutrino detectors are incredibly large, so in practice the baseline is fixed and the oscillation probability is studied as a function of neutrino energy. 
+
+For the case of survival probability, $\alpha = \beta$ and eq.~\ref{eq:nuOsc} simplifies further. The imaginary piece from eq.~\ref{eq:nuOsc} drops out, as
+
+\beq
+\Im ( \Ustxy{\alpha}{i} \Uxy{\alpha}{i} \Ustxy{\alpha}{j} \Uxy{\alpha}{j} ) = \Im ( \Usqxy{\alpha}{i} \Usqxy{\alpha}{j} ) = 0.
+\label{eq:survIm}
+\eeq
+
+\n The survival probability is then given by:
+
+\beq
+P(\nu_\alpha \rightarrow \nu_\alpha) = 1 - 4 \sum_{i > j} \Usqxy{\alpha}{i} \Usqxy{\alpha}{j} \sin^2 \left( \frac{\dmxy{j}{i} L}{4E} \right).
+\label{eq:nuSurv}
+\eeq
+
+Add simplification for 2 neutrino model
+
+Comment on mixing parameter as amplitude
 
 \section{Standard 3-Flavor Oscillations}
 \label{sec:Theory3}
