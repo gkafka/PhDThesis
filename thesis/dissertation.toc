@@ -8,41 +8,41 @@
 \contentsline {section}{\numberline {1.2}First Detection of Neutrinos}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Evidence of Neutrino Oscillations}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Possible Evidence of Sterile Neutrinos}{4}{section.1.4}
-\contentsline {chapter}{\numberline {2}Theory of Neutrino Oscillations}{8}{chapter.2}
-\contentsline {section}{\numberline {2.1}The PMNS Matrix}{8}{section.2.1}
-\contentsline {section}{\numberline {2.2}Vacuum Oscillations}{9}{section.2.2}
+\contentsline {chapter}{\numberline {2}Theory of Neutrino Oscillations}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}The PMNS Matrix}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Vacuum Oscillations}{8}{section.2.2}
 \contentsline {section}{\numberline {2.3}Standard 3-Flavor Oscillations}{12}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Matter Effects}{12}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Current Measurements}{12}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Sterile Neutrinos}{12}{section.2.4}
-\contentsline {section}{\numberline {2.5}Neutrino Mass in the Standard Model}{12}{section.2.5}
-\contentsline {chapter}{\numberline {3}The NO$\nu $A\nobreakspace {}Experiment}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}The NuMI Beam}{13}{section.3.2}
-\contentsline {section}{\numberline {3.3}The NO$\nu $A\nobreakspace {}Detectors}{13}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Near Detector}{13}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Far Detector}{13}{subsection.3.3.2}
-\contentsline {chapter}{\numberline {4}Experiment Simulation}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{14}{section.4.1}
-\contentsline {section}{\numberline {4.2}Flux Simulation}{14}{section.4.2}
-\contentsline {section}{\numberline {4.3}Detector Simulation}{14}{section.4.3}
-\contentsline {chapter}{\numberline {5}Event Reconstruction}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Reconstruction Chain}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Calibration}{15}{section.5.2}
-\contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{16}{chapter.6}
-\contentsline {section}{\numberline {6.1}Preselection}{16}{section.6.1}
-\contentsline {section}{\numberline {6.2}CVN Based Selection}{16}{section.6.2}
-\contentsline {section}{\numberline {6.3}Standard PID Cross Check}{16}{section.6.3}
-\contentsline {chapter}{\numberline {7}Neutral Current Disappearance Analysis}{17}{chapter.7}
-\contentsline {section}{\numberline {7.1}The Analysis Chain}{17}{section.7.1}
-\contentsline {section}{\numberline {7.2}Near Detector Decomposition}{17}{section.7.2}
-\contentsline {section}{\numberline {7.3}Extrapolation}{17}{section.7.3}
-\contentsline {section}{\numberline {7.4}Far Detector Prediction}{17}{section.7.4}
-\contentsline {chapter}{\numberline {8}Analysis Results and Systematic Errors}{18}{chapter.8}
-\contentsline {section}{\numberline {8.1}Fitting Method}{18}{section.8.1}
-\contentsline {section}{\numberline {8.2}Systematic Errors}{18}{section.8.2}
-\contentsline {section}{\numberline {8.3}Results}{18}{section.8.3}
-\contentsline {chapter}{\numberline {9}Conclusions and Future Improvements}{19}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusions}{19}{section.9.1}
-\contentsline {section}{\numberline {9.2}Future Improvements}{19}{section.9.2}
-\contentsline {chapter}{References}{22}{chapter*.6}
+\contentsline {subsection}{\numberline {2.3.1}Matter Effects}{13}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Current Measurements}{13}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Sterile Neutrinos}{13}{section.2.4}
+\contentsline {section}{\numberline {2.5}Neutrino Mass in the Standard Model}{13}{section.2.5}
+\contentsline {chapter}{\numberline {3}The NO$\nu $A\nobreakspace {}Experiment}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{14}{section.3.1}
+\contentsline {section}{\numberline {3.2}The NuMI Beam}{14}{section.3.2}
+\contentsline {section}{\numberline {3.3}The NO$\nu $A\nobreakspace {}Detectors}{14}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Near Detector}{14}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Far Detector}{14}{subsection.3.3.2}
+\contentsline {chapter}{\numberline {4}Experiment Simulation}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{15}{section.4.1}
+\contentsline {section}{\numberline {4.2}Flux Simulation}{15}{section.4.2}
+\contentsline {section}{\numberline {4.3}Detector Simulation}{15}{section.4.3}
+\contentsline {chapter}{\numberline {5}Event Reconstruction}{16}{chapter.5}
+\contentsline {section}{\numberline {5.1}Reconstruction Chain}{16}{section.5.1}
+\contentsline {section}{\numberline {5.2}Calibration}{16}{section.5.2}
+\contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{17}{chapter.6}
+\contentsline {section}{\numberline {6.1}Preselection}{17}{section.6.1}
+\contentsline {section}{\numberline {6.2}CVN Based Selection}{17}{section.6.2}
+\contentsline {section}{\numberline {6.3}Standard PID Cross Check}{17}{section.6.3}
+\contentsline {chapter}{\numberline {7}Neutral Current Disappearance Analysis}{18}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Analysis Chain}{18}{section.7.1}
+\contentsline {section}{\numberline {7.2}Near Detector Decomposition}{18}{section.7.2}
+\contentsline {section}{\numberline {7.3}Extrapolation}{18}{section.7.3}
+\contentsline {section}{\numberline {7.4}Far Detector Prediction}{18}{section.7.4}
+\contentsline {chapter}{\numberline {8}Analysis Results and Systematic Errors}{19}{chapter.8}
+\contentsline {section}{\numberline {8.1}Fitting Method}{19}{section.8.1}
+\contentsline {section}{\numberline {8.2}Systematic Errors}{19}{section.8.2}
+\contentsline {section}{\numberline {8.3}Results}{19}{section.8.3}
+\contentsline {chapter}{\numberline {9}Conclusions and Future Improvements}{20}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusions}{20}{section.9.1}
+\contentsline {section}{\numberline {9.2}Future Improvements}{20}{section.9.2}
+\contentsline {chapter}{References}{23}{chapter*.7}
