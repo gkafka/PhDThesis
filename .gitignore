@@ -1,3 +1,9 @@
 *.DS_Store*
 *.aux
 *.logged*
+
+# FeynMP Output
+*.1
+*.log
+*.mp
+*.t1
