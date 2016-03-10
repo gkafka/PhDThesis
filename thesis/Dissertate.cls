@@ -31,7 +31,6 @@
 \RequirePackage{url}
 \RequirePackage{amssymb}
 \usepackage{amsmath}
-\usepackage{braket}
 \RequirePackage{mathspec}
 %\setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{EB Garamond}
 %\setmathrm{EB Garamond}
@@ -56,6 +55,10 @@
 \setlength{\headheight}{15pt}
 \pagestyle{plain}
 \RequirePackage{titling}
+
+% Misc packages
+\usepackage{braket}
+\usepackage{feynmp-auto}
 
 % Front matter.
 \setcounter{tocdepth}{2}
