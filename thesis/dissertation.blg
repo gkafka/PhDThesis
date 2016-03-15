@@ -11,51 +11,51 @@ A level-1 auxiliary file: chapters/chSelection.aux
 A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 68 of file dissertation.aux
+Illegal, another \bibstyle command---line 70 of file dissertation.aux
  : \bibstyle
  :          {apalike2}
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: endmatter/colophon.aux
 Database file #1: references.bib
-You've used 31 entries,
+You've used 33 entries,
             1791 wiz_defined-function locations,
-            667 strings with 7755 characters,
-and the built_in function-call counts, 6404 in all, are:
-= -- 592
-> -- 166
+            679 strings with 8005 characters,
+and the built_in function-call counts, 6739 in all, are:
+= -- 623
+> -- 178
 < -- 0
-+ -- 74
-- -- 43
-* -- 410
-:= -- 1043
-add.period$ -- 92
-call.type$ -- 31
-change.case$ -- 31
++ -- 79
+- -- 46
+* -- 428
+:= -- 1103
+add.period$ -- 98
+call.type$ -- 33
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 275
-empty$ -- 698
-format.name$ -- 43
-if$ -- 1431
+cite$ -- 33
+duplicate$ -- 291
+empty$ -- 731
+format.name$ -- 46
+if$ -- 1503
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 30
-newline$ -- 157
-num.names$ -- 31
-pop$ -- 37
+int.to.str$ -- 33
+missing$ -- 31
+newline$ -- 167
+num.names$ -- 33
+pop$ -- 40
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 95
+skip$ -- 101
 stack$ -- 0
-substring$ -- 597
-swap$ -- 31
+substring$ -- 615
+swap$ -- 33
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 61
-width$ -- 33
-write$ -- 340
+while$ -- 64
+width$ -- 35
+write$ -- 362
 (There was 1 error message)

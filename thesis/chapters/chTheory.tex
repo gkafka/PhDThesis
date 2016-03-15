@@ -148,9 +148,8 @@ U = \begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pma
 
 \n As this matrix is entirely real, the imaginary piece of eq.~\ref{eq:nuOsc} drops out. Plugging the matrix elements into the remaining term directly and simplifying slightly, we find the following forms for the survival and appearance probabilities.
 \beqa
-P(\nu_\alpha \rightarrow \nu_\alpha) & = & 1 - \sin^2 2\theta \sin^2 \left( \frac{\Delta m^2 L}{4E} \right) \\
-P(\nu_\alpha \nrightarrow \nu_\alpha) & = & \sin^2 2\theta \sin^2 \left( \frac{\Delta m^2 L}{4E} \right)
-\label{eq:2NuProb}
+P(\nu_\alpha \rightarrow \nu_\alpha) & = & 1 - \sin^2 2\theta \sin^2 \left( \frac{\Delta m^2 L}{4E} \right) \label{eq:2NuSurv} \\
+P(\nu_\alpha \nrightarrow \nu_\alpha) & = & \sin^2 2\theta \sin^2 \left( \frac{\Delta m^2 L}{4E} \right) \label{eq:2NuApp}
 \eeqa
 
 \n From these equations it is clear that the mixing matrix parameters control the amplitude of neutrino oscillations. For small angles, most neutrinos will not change flavor, while larger angles can cause most of the neutrinos to change flavor. The case where $\theta = 45^\circ$ is called maximal mixing as at specific baseline lengths the probability of oscillation becomes 1.
@@ -172,6 +171,37 @@ U & = & \begin{bmatrix} c_{12} c_{13} & s_{12} c_{13} & s_{13} e^{-i\delta} \\ -
 \eeqa
 
 \n where $c_{ij} \equiv \cos\theta_{ij}$ and $s_{ij} \equiv \sin\theta_{ij}$.
+
+With three neutrinos, the expanded forms of eq.s \ref{eq:nuOsc} and \ref{eq:nuSurv} can still balloon into unwieldy messes. Fortunately, based on current knowledge of the mass splittings, it is usually the case that only one mass splitting scale matters and other terms can be dropped. Fig.~\ref{fig:MassSplit} shows a schematic of the mass splittings. For historic reasons, $\dmxy{1}{2}$ is known as the solar mass splitting and the larger mass splitting is called the atmospheric mass splitting. The atmospheric mass splitting is about 30 times the solar mass splitting. The sign of the solar mass splitting is known, while that of the atmospheric mass splitting is not. A positive value of $\dmxy{2}{3}$ is called the normal hierarchy; a negative value is called the inverted hierarchy.
+
+\begin{figure}[h]
+  \includegraphics[width=\textwidth]{figures/MassSplitting.png}
+  \caption[Neutrino Mass Splitting Schematic]{A schematic of the mass splittings between the three known neutrino mass states and how much they couple to each of the flavor states \cite{ref:MassSplitRef}.}
+  \label{fig:MassSplit}
+\end{figure}
+
+Two oscillation probabilities that are of interest to \nova~are the muon neutrino survival probability and electron neutrino appearance from a muon neutrino beam. Since $\vert\dmxy{1}{2}\vert$ is so much smaller than $\vert\dmxy{2}{3}\vert$, the solar oscillation baseline is much longer, thus the oscillation probability is first dominated by terms containing $\dmxy{2}{3}$. This is the case for \nova. Furthermore, the probability can be simplified by making making the assumption that $\vert \dmxy{2}{3} \vert \approx \vert \dmxy{1}{3} \vert$. Under these conditions, the survival probability of muon neutrinos is calculated as follows:
+\beqa
+P(\numu \rightarrow \numu) & \approx & 1 - 4\Usqxy{\mu}{3} (\Usqxy{\mu}{1} + \Usqxy{\mu}{2}) \sin^2 \frac{\dmxy{2}{3} L}{4E} \label{eq:3MuToMu1} \\
+& \approx & 1 - 4 s^2_{23} (1 - s^2_{13}) (c^2_{23} + s^2_{23} s^2_{13}) \sin^2 \frac{\dmxy{2}{3} L}{4E} \label{eq:3MuToMu2} \\
+& \approx & 1 - 4 s^2_{23} c^2_{23} \sin^2 \frac{\dmxy{2}{3} L}{4E} + 4 s^2_{23} s^2_{13} (c^2_{23} - s^2_{23}) \sin^2 \frac{\dmxy{2}{3} L}{4E} \label{eq:3MuToMu3} \\
+& = & 1 - \sin^2 2\thxy{2}{3} \sin^2 \frac{\dmxy{2}{3} L}{4E} + 4 \sin^2 \thxy{2}{3} \sin^2 \thxy{1}{3} \cos^2 2\thxy{2}{3} \sin^2 \frac{\dmxy{2}{3} L}{4E} \quad\quad
+\label{eq:3MuToMu}
+\eeqa
+
+\n Between eq.s \ref{eq:3MuToMu2} and \ref{eq:3MuToMu3}, the term proportional to $s^4_{13}$ was dropped using the current knowledge that $s^2_{13}$ is small \cite{ref:PDG}. Note that if $\theta_{13}$ were 0, then eq.~\ref{eq:3MuToMu} would reduce to eq.~\ref{eq:2NuSurv}, the two neutrino survival probability.
+
+The full 3 flavor electron neutrino appearance from muon neutrino oscillation probability is often written in the form \cite{ref:Evan}:
+\beq
+P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P_{atm} + 2\sqrt{P_{atm}}\sqrt{P_{sol}} \left(\cos\delta \cos\frac{\dmxy{2}{3}L}{4E}\, \varmp\, \sin\delta \sin\frac{\dmxy{2}{3}L}{4E} \right) + P_{sol}
+\label{eq:3MuToE}
+\eeq
+
+\n where
+\beqa
+\sqrt{P_{atm}} & \equiv & \sin \thxy{2}{3} \sin 2\thxy{1}{3} \sin \frac{\dmxy{2}{3} L}{4E} \label{eq:Patm} \\
+\sqrt{P_{sol}} & \equiv & \cos \thxy{2}{3} \sin 2\thxy{1}{2} \sin \frac{\dmxy{1}{2} L}{4E} \label{eq:Psol}
+\eeqa
 
 \subsection{Matter Effects}
 \label{sec:TheoryMatter}

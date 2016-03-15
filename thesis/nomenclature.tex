@@ -40,6 +40,17 @@
 % -----------------------------------------------------------------------------
 % Math
 
+\newcommand\varpm{\mathbin{\vcenter{\hbox{%
+  \oalign{\hfil$\scriptstyle+$\hfil\cr
+          \noalign{\kern-.3ex}
+          $\scriptscriptstyle({-})$\cr}%
+}}}}
+\newcommand\varmp{\mathbin{\vcenter{\hbox{%
+  \oalign{$\scriptstyle({+})$\cr
+          \noalign{\kern-.3ex}
+          \hfil$\scriptscriptstyle-$\hfil\cr}%
+}}}}
+
 % Units
 \newcommand\evsq{\mbox{\,eV\textsuperscript{2}}}
 \newcommand\rad    {\mbox{\,rad}}
@@ -47,9 +58,6 @@
 \newcommand\mm     {\mbox{\,mm}}
 \newcommand\ns     {\mbox{\,ns}}
 \newcommand\seconds{\mbox{\,s}}
-\newcommand\iab    {\mbox{\,ab$^{-1}$}}
-\newcommand\ifb    {\mbox{\,fb$^{-1}$}}
-\newcommand\inb    {\mbox{\,nb$^{-1}$}}
 \newcommand\Hz     {\ifmmode{\,\mathrm{Hz}}\else
                       \,\textrm{Hz}\fi}%
 \newcommand\TeV    {\ifmmode{\,\mathrm{Te\kern -0.1em V}}\else
