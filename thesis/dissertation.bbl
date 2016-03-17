@@ -181,4 +181,15 @@ E.~Niner.
   with the NO$\nu$A Experiment}.
 \newblock PhD thesis, Indiana University, 2015.
 
+\bibitem{ref:Wolfenstein}
+L.~Wolfenstein.
+\newblock Neutrino oscillations in matter.
+\newblock {\em Physical Review D}, 17:2369--2374, 1978.
+
+\bibitem{ref:MSW}
+S.~P. Mikheev and A.~Y. Smirnov.
+\newblock Resonance enhancement of oscillations in matter and solar neutrino
+  spectroscopy.
+\newblock {\em Soviet Journal of Nuclear Physics}, 42:913--917, 1985.
+
 \end{thebibliography}

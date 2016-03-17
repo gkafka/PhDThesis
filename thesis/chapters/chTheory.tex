@@ -208,7 +208,50 @@ P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P_{atm} + 2\sqrt{P_{atm}}\sqrt{P_{sol}
 \section{Matter Effects}
 \label{sec:TheoryMatter}
 
-So far, the oscillation formalism has been developed only considering neutrinos in a vacuum. 
+So far, the oscillation formalism has been developed only considering neutrinos in a vacuum. However, most neutrino oscillation experiments involve neutrinos traveling through matter, be it the Sun or the Earth. This affects the oscillation probabilities in a process called the Mikheyev-Smirnov-Wolfenstein effect, or MSW effect. The phenomenon was first proposed by Wolfenstein in 1978 \cite{ref:Wolfenstein}; Mikheyev and Smirnov built upon that work in 1985 \cite{ref:MSW} as a possible solution for the solar neutrino problem.
+
+\begin{figure}[t]
+  \begin{center} $
+  \begin{array}{c c}
+    {
+    \begin{fmffile}{MSWnue}
+      \begin{fmfgraph*}(150,120)
+        \fmfleft{n1,l2}
+        \fmfright{l1,n2}
+        \fmf{fermion}{n1,v1,l1}
+        \fmf{fermion}{l2,v2,n2}
+        \fmf{photon, tension=.75, label=$W^-$}{v1,v2}
+        \fmflabel{$\nue$}{n1}
+        \fmflabel{$e$}{l1}
+        \fmflabel{$\nue$}{n2}
+        \fmflabel{$e$}{l2}
+      \end{fmfgraph*}
+    \end{fmffile}
+    }
+    \quad \quad & \quad \quad
+    {
+    \begin{fmffile}{MSWanue}
+      \begin{fmfgraph*}(150,120)
+        \fmfleft{n1,l1}
+        \fmfright{n2,l2}
+        \fmf{fermion}{l1,v1,n1}
+        \fmf{fermion}{n2,v2,l2}
+        \fmf{photon, tension=.75, label=$W^-$}{v1,v2}
+        \fmflabel{$\nue$}{n1}
+        \fmflabel{$e$}{l1}
+        \fmflabel{$\nue$}{n2}
+        \fmflabel{$e$}{l2}
+      \end{fmfgraph*}
+    \end{fmffile}
+    }
+  \end{array} $
+  \vspace{3 mm}
+  \caption[MSW Effect Interactions]{Coherent forward scattering interactions involved in the MSW effect. Left: Scattering of electron neutrinos on electrons. Right: Scattering of anti-electron neutrinos on electrons.}
+  \label{fig:MSW}
+  \end{center}
+\end{figure}
+
+The MSW effect is the coherent forward scattering of neutrinos off of the electrons in ordinary matter, a channel only available to electron flavor neutrinos and anti-neutrinos. Fig.~\ref{fig:MSW} illustrates the interactions.
 
 \subsection{Current Measurements}
 \label{sec:BestMeasures}
