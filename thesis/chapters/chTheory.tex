@@ -121,12 +121,12 @@ P(\nu_\alpha \rightarrow \nu_\beta) & = & \delta_{\alpha\beta} + 2\sum_{i > j} \
 
 \n Inserting the expression from eq.~\ref{eq:ExpandUUUUe1} into eq.~\ref{eq:nuABiGrj}, we find:
 \beqa
-P(\nu_\alpha \rightarrow \nu_\beta) = \delta_{\alpha\beta} & - & 4\sum_{i > j} \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 \left( \frac{\dmxy{j}{i} L}{4E} \right) \nonumber \\
-& + & 2\sum_{i > j} \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin \left( \frac{\dmxy{j}{i} L}{2E} \right),
+P(\nu_\alpha \rightarrow \nu_\beta) = \delta_{\alpha\beta} & - & 4\sum_{i > j} \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 \Delta_{ij} \nonumber \\
+& + & 2\sum_{i > j} \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin 2\Delta_{ij},
 \label{eq:nuOsc}
 \eeqa
 
-\n which is the standard equation for neutrino oscillations. It can now be seen that the distance the neutrino travels, its energy, and the different mass splittings all affect the frequency of oscillation. Ideally, neutrino oscillations would be studied by having neutrinos with a fixed energy profile (preferably monoenergetic) and varying the baseline. However, neutrino detectors are incredibly large, so in practice the baseline is fixed and the oscillation probability is studied as a function of neutrino energy. 
+\n where $\Delta_{ij} \equiv \Delta m^2_{ij} L / 4E$. It can now be seen that the distance the neutrino travels, its energy, and the different mass splittings all affect the frequency of oscillation. Ideally, neutrino oscillations would be studied by having neutrinos with a fixed energy profile (preferably monoenergetic) and varying the baseline. However, neutrino detectors are incredibly large, so in practice the baseline is fixed and the oscillation probability is studied as a function of neutrino energy. 
 
 For the case of survival probability, $\alpha = \beta$ and eq.~\ref{eq:nuOsc} simplifies further. The imaginary piece from eq.~\ref{eq:nuOsc} drops out, as
 \beq
@@ -136,7 +136,7 @@ For the case of survival probability, $\alpha = \beta$ and eq.~\ref{eq:nuOsc} si
 
 \n The survival probability is then given by:
 \beq
-P(\nu_\alpha \rightarrow \nu_\alpha) = 1 - 4 \sum_{i > j} \Usqxy{\alpha}{i} \Usqxy{\alpha}{j} \sin^2 \left( \frac{\dmxy{j}{i} L}{4E} \right).
+P(\nu_\alpha \rightarrow \nu_\alpha) = 1 - 4 \sum_{i > j} \Usqxy{\alpha}{i} \Usqxy{\alpha}{j} \sin^2 \Delta_{ij}.
 \label{eq:nuSurv}
 \eeq
 
@@ -182,10 +182,10 @@ With three neutrinos, the expanded forms of eq.s \ref{eq:nuOsc} and \ref{eq:nuSu
 
 Two oscillation probabilities that are of interest to \nova~are the muon neutrino survival probability and electron neutrino appearance from a muon neutrino beam. Since $\vert\dmxy{1}{2}\vert$ is so much smaller than $\vert\dmxy{2}{3}\vert$, the solar oscillation baseline is much longer, thus the oscillation probability is first dominated by terms containing $\dmxy{2}{3}$. This is the case for \nova. Furthermore, the probability can be simplified by making making the assumption that $\vert \dmxy{2}{3} \vert \approx \vert \dmxy{1}{3} \vert$. Under these conditions, the survival probability of muon neutrinos is calculated as follows:
 \beqa
-P(\numu \rightarrow \numu) & \approx & 1 - 4\Usqxy{\mu}{3} (\Usqxy{\mu}{1} + \Usqxy{\mu}{2}) \sin^2 \frac{\dmxy{2}{3} L}{4E} \label{eq:3MuToMu1} \\
-& \approx & 1 - 4 s^2_{23} (1 - s^2_{13}) (c^2_{23} + s^2_{23} s^2_{13}) \sin^2 \frac{\dmxy{2}{3} L}{4E} \label{eq:3MuToMu2} \\
-& \approx & 1 - 4 s^2_{23} c^2_{23} \sin^2 \frac{\dmxy{2}{3} L}{4E} + 4 s^2_{23} s^2_{13} (c^2_{23} - s^2_{23}) \sin^2 \frac{\dmxy{2}{3} L}{4E} \label{eq:3MuToMu3} \\
-& = & 1 - \sin^2 2\thxy{2}{3} \sin^2 \frac{\dmxy{2}{3} L}{4E} + 4 \sin^2 \thxy{2}{3} \sin^2 \thxy{1}{3} \cos^2 2\thxy{2}{3} \sin^2 \frac{\dmxy{2}{3} L}{4E} \quad\quad
+P(\numu \rightarrow \numu) & \approx & 1 - 4\Usqxy{\mu}{3} (\Usqxy{\mu}{1} + \Usqxy{\mu}{2}) \sin^2 \Delta_{32} \label{eq:3MuToMu1} \\
+& \approx & 1 - 4 s^2_{23} (1 - s^2_{13}) (c^2_{23} + s^2_{23} s^2_{13}) \sin^2 \Delta_{32} \label{eq:3MuToMu2} \\
+& \approx & 1 - 4 s^2_{23} c^2_{23} \sin^2 \Delta_{32} + 4 s^2_{23} s^2_{13} (c^2_{23} - s^2_{23}) \sin^2 \Delta_{32} \label{eq:3MuToMu3} \\
+& = & 1 - \sin^2 2\thxy{2}{3} \sin^2 \Delta_{32} + 4 \sin^2 \thxy{2}{3} \sin^2 \thxy{1}{3} \cos^2 2\thxy{2}{3} \sin^2 \Delta_{32} \quad\quad
 \label{eq:3MuToMu}
 \eeqa
 
@@ -193,14 +193,14 @@ P(\numu \rightarrow \numu) & \approx & 1 - 4\Usqxy{\mu}{3} (\Usqxy{\mu}{1} + \Us
 
 The full 3 flavor electron neutrino appearance from muon neutrino oscillation probability is often written in the form \cite{ref:Evan}:
 \beq
-P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P_{atm} + 2\sqrt{P_{atm}}\sqrt{P_{sol}} \left(\cos\delta \cos\frac{\dmxy{2}{3}L}{4E}\, \varmp\, \sin\delta \sin\frac{\dmxy{2}{3}L}{4E} \right) + P_{sol}
+P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P_{atm} + 2\sqrt{P_{atm}}\sqrt{P_{sol}} \left(\cos\delta \cos\Delta_{32}\, \varmp\, \sin\delta \sin\Delta_{32} \right) + P_{sol}
 \label{eq:3MuToE}
 \eeq
 
 \n where
 \beqa
-\sqrt{P_{atm}} & \equiv & \sin \thxy{2}{3} \sin 2\thxy{1}{3} \sin \frac{\dmxy{2}{3} L}{4E} \label{eq:Patm} \\
-\sqrt{P_{sol}} & \equiv & \cos \thxy{2}{3} \sin 2\thxy{1}{2} \sin \frac{\dmxy{1}{2} L}{4E} \label{eq:Psol}
+\sqrt{P_{atm}} & \equiv & \sin \thxy{2}{3} \sin 2\thxy{1}{3} \sin \Delta_{32} \label{eq:Patm} \\
+\sqrt{P_{sol}} & \equiv & \cos \thxy{2}{3} \sin 2\thxy{1}{2} \sin \Delta_{21} \label{eq:Psol}
 \eeqa
 
 \n where the approximation $\vert \dmxy{2}{3} \vert \approx \vert \dmxy{1}{3} \vert$ has been made and higher order terms of $s^2_{13}$ been dropped. For an experiment at a short enough baseline such as \nova, the $P_{sol}$ term is negligible as it depends on a higher order term of the solar mass splitting. The cross term is also not the dominant effect as it also depends upon the solar mass splitting, but it demonstrates interesting behavior. The $\cos\delta$ term is $CP$ conserving, but the $\sin\delta$ term exhibits $CP$ violation. This is why $\delta$ is called the $CP$ violating phase angle.
@@ -251,18 +251,58 @@ So far, the oscillation formalism has been developed only considering neutrinos 
   \end{center}
 \end{figure}
 
-The MSW effect is the coherent forward scattering of neutrinos off of the electrons in ordinary matter, a channel only available to electron flavor neutrinos and anti-neutrinos. Fig.~\ref{fig:MSW} illustrates the interactions. The electrons contribute an additional potential term, $V_e = \sqrt{2}G_F N_e$, where $G_F$ is Fermi's constant and $N_e$ is the electron number density. Neutrinos also forward scatter off the neutrons and protons in matter via neutral current interactions, but this only provides an overall phase as all neutrino flavors participate in these interactions equally. The matter induced potential adds an additional term to the Schr\"{o}dinger equation, affecting the time evolution of the flavor states and thus changing the oscillation probabilities.
+The MSW effect is the coherent forward scattering of neutrinos off of the electrons in ordinary matter, a channel only available to electron flavor neutrinos and anti-neutrinos. Fig.~\ref{fig:MSW} illustrates the interactions. The electrons contribute an additional potential term, $V_e = \pm \sqrt{2}G_F N_e$, where $G_F$ is Fermi's constant, $N_e$ is the electron number density, the positive sign is for neutrinos, and the negative for anti-neutrinos. Neutrinos also forward scatter off the neutrons and protons in matter via neutral current interactions, but this only provides an overall phase as all neutrino flavors participate in these interactions equally. The matter induced potential adds an additional term to the Schr\"{o}dinger equation, affecting the time evolution of the flavor states and thus changing the oscillation probabilities.
 
 The following derivation will consider the MSW effect in the case of two neutrino flavors. The time evolution of the flavor states is written as follows:
-
 \beq
-i \begin{pmatrix} \nue \\ \numu \end{pmatrix} = \left[ U \begin{pmatrix} \frac{m^2_1}{2E} & 0 \\ 0 & \frac{m^2_2}{2E} \end{pmatrix} U^* + \begin{pmatrix} V_e & 0 \\ 0 & 0 \end{pmatrix} \right] \begin{pmatrix} \nue \\ \numu \end{pmatrix}
+i \begin{pmatrix} \nue \\ \numu \end{pmatrix} = \left[ U \begin{pmatrix} \frac{m^2_1}{2E} & 0 \\ 0 & \frac{m^2_2}{2E} \end{pmatrix} U^\dagger + \begin{pmatrix} \pm V_e & 0 \\ 0 & 0 \end{pmatrix} \right] \begin{pmatrix} \nue \\ \numu \end{pmatrix}
 \label{eq:2NuSchro}
 \eeq
 
+\n Inserting the 2 flavor PMNS matrix from eq.~\ref{eq:2NuU}, applying some trigonometric identites, and dropping common diagonal terms, eq.~\ref{eq:2NuSchro} simplifies to
+\beq
+i \begin{pmatrix} \nue \\ \numu \end{pmatrix} = \frac{1}{4E} \begin{pmatrix} -\dmxy{1}{2} \cos 2\theta \pm 4E V_e & \dmxy{1}{2} \sin 2\theta \\ \dmxy{1}{2} \sin 2\theta & \dmxy{1}{2} \cos 2\theta \end{pmatrix} \begin{pmatrix} \nue \\ \numu \end{pmatrix}.
+\label{eq:2NuSchroNoDiag}
+\eeq
 
+\n The diagonal terms are dropped because they can be absorbed by the phase convention of the neutrino states. This Hamiltonian can be re-diagonalized with another unitary transformation, $H_{M} = U_{M}^\dagger H U_{M}$, with the following results:
+\beqa
+H_{M} & = & \frac{1}{2} \begin{pmatrix} -\frac{\Delta m^2_{M}}{2E} & 0 \\ 0 & \frac{\Delta m^2_{M}}{2E} \end{pmatrix} \label{eq:HMSW} \\
+U_{M} & = & \begin{pmatrix} \cos \theta_{M} & \sin \theta_{M} \\ -\sin \theta_{M} & \cos\theta_{M} \end{pmatrix}, \label{eq:UMSW}
+\eeqa
 
-\subsection{Current Measurements}
+\n where
+\beqa
+\sin 2\theta_{M} & \equiv & \frac{\sin 2\theta}{A_{M}} \label{eq:thetaMSW} \\
+\Delta m^2_{M} & \equiv & \dmxy{1}{2} A_{M} \label{eq:msqMSW} \\
+A_{M} & \equiv & \sqrt{ \left( \cos 2\theta \mp \frac{2EV_e}{\dmxy{1}{2}} \right)^2 + \sin^2 2\theta } \label{eq:AMSW},
+\eeqa
+
+\n and now the negative sign in $A_M$ is for neutrinos and the positive sign for anti-neutrinos. As the electron number density goes to 0, so too does $V_e$ and the vacuum solution is recovered.
+
+From the form of this solution, it can be seen that the Hamiltonian takes the same form as that in vacuum oscillations, but with modified effective masses. Likewise, $U_M$ has the same form as the 2 neutrino PMNS matrix, so $\theta_M$ can be considered the effective mixing angle. In the absence of neutrino oscillations (when $\theta = 0$), matter effects cannot ``create'' them. However, even for small angles $\theta$, the matter effect can create a resonant effect pushing the effective mixing angle, $\theta_M$, maximally to $45^\circ$. This occurs when the term in parenthesis in the definition of $A_M$ is $0$ (eq.~\ref{eq:AMSW}).
+\beq
+N_e^{res} = \frac{\dmxy{1}{2} \cos 2\theta}{2\sqrt{2} G_F E}
+\label{eq:MSWres}
+\eeq
+
+In the case of 3 neutrinos, the same procedure is followed to diagonalize the Hamilton and obtain effective values for the various oscillation parameters. The effects are considerably more complicated, but the general effect is the same--matter changes the effective neutrino mass and alters the oscillation probability curves differently for neutrinos and anti-neutrinos. Under the same conditions that were used to calculate $P(\nuanu_\mu \rightarrow \nuanu_e)$ in sec.~\ref{sec:Theory3}, the results can be simplified to a few basic replacements \cite{ref:3NuMatter}.
+\beq
+P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P^M_{atm} + 2\sqrt{P^M_{atm}}\sqrt{P^M_{sol}} \left(\cos\delta \cos\Delta_{32}\, \varmp\, \sin\delta \sin\Delta_{32} \right) + P^M_{sol}
+\label{eq:3MuToEMSW}
+\eeq
+
+\n This is exactly the same form as eq.~\ref{eq:3MuToE}. The interesting effects are seen with how $P^M_{atm}$ and $P^M_{sol}$ differ from their respective vacuum counterparts.
+\beqa
+\sqrt{P^M_{atm}} & \equiv & \sin \thxy{2}{3} \sin 2\thxy{1}{3} \frac{\sin (\Delta_{31} - aL)}{\Delta_{31} - aL} \Delta_{31} \label{eq:PatmMSW} \\
+\sqrt{P_{sol}} & \equiv & \cos \thxy{2}{3} \sin 2\thxy{1}{2} \frac{\sin(aL)}{aL} \Delta_{21} \label{eq:PsolMSW}
+\eeqa
+
+\n Here, $a \equiv \pm G_F N_e / \sqrt{2}$ where the positive sign is for neutrinos and the negative sign for anti-neutrinos. For the Earth, $\vert a \vert \approx 1/3500\, km$.
+
+The combined effect that appears in eq.s \ref{eq:3MuToEMSW}, \ref{eq:PatmMSW}, and \ref{eq:PsolMSW} due to the presence of matter plays an interesting role in the search for CP violation. The MSW effect by itself mimics CP violation as it alters oscillation probabilities for neutrinos and anti-neutrinos differently. Depending on the value of $\delta$ that nature has chosen, the differences in oscillation probabilities due to the CP violation angle and the MSW effect can either compound or cancel out.
+
+\section{Current Measurements}
 \label{sec:BestMeasures}
 
 \section{Sterile Neutrinos}
