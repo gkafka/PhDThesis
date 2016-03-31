@@ -300,19 +300,37 @@ P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P^M_{atm} + 2\sqrt{P^M_{atm}}\sqrt{P^M
 
 \n Here, $a \equiv \pm G_F N_e / \sqrt{2}$ where the positive sign is for neutrinos and the negative sign for anti-neutrinos. For the Earth, $\vert a \vert \approx 1/3500\, km$.
 
-The combined effect that appears in eq.s \ref{eq:3MuToEMSW}, \ref{eq:PatmMSW}, and \ref{eq:PsolMSW} due to the presence of matter plays an interesting role in the search for CP violation. The MSW effect by itself mimics CP violation as it alters oscillation probabilities for neutrinos and anti-neutrinos differently. Depending on the value of $\delta$ that nature has chosen, the differences in oscillation probabilities due to the CP violation angle and the MSW effect can either compound or cancel out.
+The combined effect that appears in eq.s \ref{eq:3MuToEMSW}, \ref{eq:PatmMSW}, and \ref{eq:PsolMSW} due to the presence of matter plays an interesting role in the search for CP violation. The MSW effect by itself mimics CP violation as it alters oscillation probabilities for neutrinos and anti-neutrinos differently. Depending on the value of $\delta$ that nature has chosen, the differences in oscillation probabilities due to the CP violation angle and the MSW effect can either compound or cancel out. This effect is shown in Fig.~\ref{fig:BiProb}.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/BiProbability.png}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/BiProbabilityVary23.png}
+  \end{subfigure}
+  \caption[Bi-Probability Plots for $\nue$ Appearance]{Probability of $\nue$ appearance versus $\anue$ appearance at \nova. The blue ellipses are for the normal hierarchy; the red ellipses are for the inverted hierarchy. The starred points show a possible measurement \nova~could make. The matter effect can either constructively or destructively combine with the CP violation effect. A larger matter effect, further separates the two mass hierarchy ellipses. This corresponds to neutrinos passing through more matter. On the left, $\theta_{23}$ is assumed to be $45^\circ$ for maximal mixing, purely showcasing the interference between the matter and CP violation effects. On the right, $\theta_{23}$ is non-maximal, showing how the dependence on $\theta_{23}$ affects both ellipses in the same way.}
+  \label{fig:BiProb}
+\end{figure}
 
 \section{Current Measurements}
 \label{sec:BestMeasures}
 
-Most of the free parameters in the PMNS matrix have been measured by various solar, atmospheric, accelerator, and reactor neutrino experiments. The two mass splittings and three real mixing angles all have reported values, while the CP violating phase angle and mass hierarchy have not been measured with precision. Global fits to the combined data of these experiments have been performed and summarized in \cite{ref:PDG, ref:BestFits3}; the best fit values are shown in Table \ref{tab:BestFits3}.
+Most of the free parameters in the PMNS matrix have been measured by various solar, atmospheric, accelerator, and reactor neutrino experiments. However, any given neutrino experiment does not have sensitivity to all of the oscillation parameters. Instead, experiments are sensitive to specific angles based on their baseline and the energies of the neutrinos they observe. To date, the two mass splittings and three real mixing angles all have reported values, while the CP violating phase angle and mass hierarchy have not been measured with precision.
+
+Current best measurements
+
+Global fits to the combined data of these (and other) neutrino experiments have been performed and summarized in \cite{ref:PDG, ref:BestFits3}; the best fit values are shown in Table \ref{tab:BestFits3}. While most of the parameters have been measured with good precision, there are still a few lingering questions. From the table it is clear that a much better measurement on the CP violation angle is needed. The mass hierarchy still needs to be definitively measured as well. The other main point is whether $\theta_{23}$ is maximal, and if not, whether it is in the lower or upper octant.
 \begin{table}[h]
   \begin{center}
-    \caption[Best Fit Parameters for Three Neutrino Oscillation Model]{Here they are.}
+    \caption[Best Fit Parameters for Three Neutrino Oscillation Model]{Current status of best fit oscillation parameters, from \cite{ref:PDG, ref:BestFits3}. The last column shows the allowed values within a $3\sigma$ range, with the exception of $\delta$, which is shown at a $2\sigma$ range. This is because the current global best fit for $\delta$ still allows the full range from $0$ to $2\pi$ at $3\sigma$. \nova~should vastly improve the limits on $\delta$.}
     \label{tab:BestFits3}
     \begin{tabular}{l c l l}
       \hline\hline
-      \multicolumn{2}{c}{Parameter} & \multicolumn{1}{c}{Best-Fit $(\pm 1\sigma)$} & \multicolumn{1}{c}{$3\sigma$} \\
+      \multicolumn{2}{c}{Parameter} & \multicolumn{1}{c}{Best-Fit $(\pm 1\sigma)$} & \multicolumn{1}{c}{$3\sigma$ Range} \\
       \hline
       $\dmxy{1}{2} \left[10^{-5}\evsq\right]$ && $7.54^{+0.26}_{-0.22}$ & $6.99 - 8.18$ \\
       \multirow{2}{*}{$\vert \Delta m^2 \vert \left[10^{-3}\evsq\right]$} & NH & $2.43 \pm 0.06$ & $2.23 - 2.61$ \\
@@ -328,7 +346,8 @@ Most of the free parameters in the PMNS matrix have been measured by various sol
     \end{tabular}
   \end{center}
 \end{table}
-  
+
+Current experiments to answer questions.
 
 \section{Sterile Neutrinos}
 \label{sec:Theory3+1}

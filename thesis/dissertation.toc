@@ -14,35 +14,35 @@
 \contentsline {section}{\numberline {2.3}Standard 3-Flavor Oscillations}{12}{section.2.3}
 \contentsline {section}{\numberline {2.4}Matter Effects}{15}{section.2.4}
 \contentsline {section}{\numberline {2.5}Current Measurements}{18}{section.2.5}
-\contentsline {section}{\numberline {2.6}Sterile Neutrinos}{18}{section.2.6}
-\contentsline {section}{\numberline {2.7}Neutrino Mass in the Standard Model}{18}{section.2.7}
-\contentsline {chapter}{\numberline {3}The NO$\nu $AExperiment}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}The NuMI Beam}{19}{section.3.2}
-\contentsline {section}{\numberline {3.3}The NO$\nu $ADetectors}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Near Detector}{19}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Far Detector}{19}{subsection.3.3.2}
-\contentsline {chapter}{\numberline {4}Experiment Simulation}{20}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{20}{section.4.1}
-\contentsline {section}{\numberline {4.2}Flux Simulation}{20}{section.4.2}
-\contentsline {section}{\numberline {4.3}Detector Simulation}{20}{section.4.3}
-\contentsline {chapter}{\numberline {5}Event Reconstruction}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}Reconstruction Chain}{21}{section.5.1}
-\contentsline {section}{\numberline {5.2}Calibration}{21}{section.5.2}
-\contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{22}{chapter.6}
-\contentsline {section}{\numberline {6.1}Preselection}{22}{section.6.1}
-\contentsline {section}{\numberline {6.2}CVN Based Selection}{22}{section.6.2}
-\contentsline {section}{\numberline {6.3}Standard PID Cross Check}{22}{section.6.3}
-\contentsline {chapter}{\numberline {7}Neutral Current Disappearance Analysis}{23}{chapter.7}
-\contentsline {section}{\numberline {7.1}The Analysis Chain}{23}{section.7.1}
-\contentsline {section}{\numberline {7.2}Near Detector Decomposition}{23}{section.7.2}
-\contentsline {section}{\numberline {7.3}Extrapolation}{23}{section.7.3}
-\contentsline {section}{\numberline {7.4}Far Detector Prediction}{23}{section.7.4}
-\contentsline {chapter}{\numberline {8}Analysis Results and Systematic Errors}{24}{chapter.8}
-\contentsline {section}{\numberline {8.1}Fitting Method}{24}{section.8.1}
-\contentsline {section}{\numberline {8.2}Systematic Errors}{24}{section.8.2}
-\contentsline {section}{\numberline {8.3}Results}{24}{section.8.3}
-\contentsline {chapter}{\numberline {9}Conclusions and Future Improvements}{25}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusions}{25}{section.9.1}
-\contentsline {section}{\numberline {9.2}Future Improvements}{25}{section.9.2}
-\contentsline {chapter}{References}{28}{chapter*.10}
+\contentsline {section}{\numberline {2.6}Sterile Neutrinos}{19}{section.2.6}
+\contentsline {section}{\numberline {2.7}Neutrino Mass in the Standard Model}{19}{section.2.7}
+\contentsline {chapter}{\numberline {3}The NO$\nu $AExperiment}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}The NuMI Beam}{20}{section.3.2}
+\contentsline {section}{\numberline {3.3}The NO$\nu $ADetectors}{20}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Near Detector}{20}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Far Detector}{20}{subsection.3.3.2}
+\contentsline {chapter}{\numberline {4}Experiment Simulation}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Flux Simulation}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}Detector Simulation}{21}{section.4.3}
+\contentsline {chapter}{\numberline {5}Event Reconstruction}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}Reconstruction Chain}{22}{section.5.1}
+\contentsline {section}{\numberline {5.2}Calibration}{22}{section.5.2}
+\contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Preselection}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}CVN Based Selection}{23}{section.6.2}
+\contentsline {section}{\numberline {6.3}Standard PID Cross Check}{23}{section.6.3}
+\contentsline {chapter}{\numberline {7}Neutral Current Disappearance Analysis}{24}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Analysis Chain}{24}{section.7.1}
+\contentsline {section}{\numberline {7.2}Near Detector Decomposition}{24}{section.7.2}
+\contentsline {section}{\numberline {7.3}Extrapolation}{24}{section.7.3}
+\contentsline {section}{\numberline {7.4}Far Detector Prediction}{24}{section.7.4}
+\contentsline {chapter}{\numberline {8}Analysis Results and Systematic Errors}{25}{chapter.8}
+\contentsline {section}{\numberline {8.1}Fitting Method}{25}{section.8.1}
+\contentsline {section}{\numberline {8.2}Systematic Errors}{25}{section.8.2}
+\contentsline {section}{\numberline {8.3}Results}{25}{section.8.3}
+\contentsline {chapter}{\numberline {9}Conclusions and Future Improvements}{26}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusions}{26}{section.9.1}
+\contentsline {section}{\numberline {9.2}Future Improvements}{26}{section.9.2}
+\contentsline {chapter}{References}{29}{chapter*.11}
