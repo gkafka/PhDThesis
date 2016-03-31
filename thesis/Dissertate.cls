@@ -59,6 +59,7 @@
 % Misc packages
 \usepackage{braket}
 \usepackage{feynmp-auto}
+\usepackage{subcaption}
 
 % Front matter.
 \setcounter{tocdepth}{2}
