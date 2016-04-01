@@ -194,12 +194,27 @@ S.~P. Mikheev and A.~Y. Smirnov.
 
 \bibitem{ref:3NuMatter}
 H.~Nunokawa, S.~Parke, and J.~W.~F. Valle.
-\newblock Cp violation and neutrino oscillations.
+\newblock {CP} violation and neutrino oscillations.
 \newblock {\em Progress in Particle and Nuclear Physics}, 60:338--402, 2008.
+
+\bibitem{ref:DayaBay2012}
+F.~P.~An et~al.
+\newblock Observation of electron-antineutrino disappearance at {Daya Bay}.
+\newblock {\em Physical Review Letters}, 108:171803, 2012.
 
 \bibitem{ref:BestFits3}
 F.~Capozzi et~al.
 \newblock Status of three-neutrino oscillation parameters, circa 2013.
 \newblock {\em Physical Review D}, 89:093018, 2014.
+
+\bibitem{ref:NOvAFANuE}
+P.~Adamson et~al.
+\newblock First measurement of electron-neutrino appearance in {NOvA}.
+\newblock {\em Physical Review Letters}, 2016.
+
+\bibitem{ref:NOvAFANuMu}
+P.~Adamson et~al.
+\newblock First measurement of muon-neutrino disappearance in {NOvA}.
+\newblock {\em Physical Review D Rapid Communications}, 93:051104, 2016.
 
 \end{thebibliography}

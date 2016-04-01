@@ -126,7 +126,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) = \delta_{\alpha\beta} & - & 4\sum_{i > j} \
 \label{eq:nuOsc}
 \eeqa
 
-\n where $\Delta_{ij} \equiv \Delta m^2_{ij} L / 4E$. It can now be seen that the distance the neutrino travels, its energy, and the different mass splittings all affect the frequency of oscillation. Ideally, neutrino oscillations would be studied by having neutrinos with a fixed energy profile (preferably monoenergetic) and varying the baseline. However, neutrino detectors are incredibly large, so in practice the baseline is fixed and the oscillation probability is studied as a function of neutrino energy. 
+\n where $\Delta_{ij} \equiv \Delta m^2_{ij} L / 4E = 1.267 \Delta m^2_{ij} L\mbox{ (km)} / E\mbox{ (GeV)}$. It can now be seen that the distance the neutrino travels, its energy, and the different mass splittings all affect the frequency of oscillation. Ideally, neutrino oscillations would be studied by having neutrinos with a fixed energy profile (preferably monoenergetic) and varying the baseline. However, neutrino detectors are incredibly large, so in practice the baseline is fixed and the oscillation probability is studied as a function of neutrino energy. 
 
 For the case of survival probability, $\alpha = \beta$ and eq.~\ref{eq:nuOsc} simplifies further. The imaginary piece from eq.~\ref{eq:nuOsc} drops out, as
 \beq
@@ -300,30 +300,31 @@ P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P^M_{atm} + 2\sqrt{P^M_{atm}}\sqrt{P^M
 
 \n Here, $a \equiv \pm G_F N_e / \sqrt{2}$ where the positive sign is for neutrinos and the negative sign for anti-neutrinos. For the Earth, $\vert a \vert \approx 1/3500\, km$.
 
-The combined effect that appears in eq.s \ref{eq:3MuToEMSW}, \ref{eq:PatmMSW}, and \ref{eq:PsolMSW} due to the presence of matter plays an interesting role in the search for CP violation. The MSW effect by itself mimics CP violation as it alters oscillation probabilities for neutrinos and anti-neutrinos differently. Depending on the value of $\delta$ that nature has chosen, the differences in oscillation probabilities due to the CP violation angle and the MSW effect can either compound or cancel out. This effect is shown in Fig.~\ref{fig:BiProb}.
-
-\begin{figure}[h]
-  \centering
-  \begin{subfigure}{.48\textwidth}
-    \centering
-    \includegraphics[width=1\linewidth]{figures/BiProbability.png}
-  \end{subfigure}
-  \begin{subfigure}{.48\textwidth}
-    \centering
-    \includegraphics[width=1\linewidth]{figures/BiProbabilityVary23.png}
-  \end{subfigure}
-  \caption[Bi-Probability Plots for $\nue$ Appearance]{Probability of $\nue$ appearance versus $\anue$ appearance at \nova. The blue ellipses are for the normal hierarchy; the red ellipses are for the inverted hierarchy. The starred points show a possible measurement \nova~could make. The matter effect can either constructively or destructively combine with the CP violation effect. A larger matter effect, further separates the two mass hierarchy ellipses. This corresponds to neutrinos passing through more matter. On the left, $\theta_{23}$ is assumed to be $45^\circ$ for maximal mixing, purely showcasing the interference between the matter and CP violation effects. On the right, $\theta_{23}$ is non-maximal, showing how the dependence on $\theta_{23}$ affects both ellipses in the same way.}
-  \label{fig:BiProb}
-\end{figure}
+The combined effect that appears in eq.s \ref{eq:3MuToEMSW}, \ref{eq:PatmMSW}, and \ref{eq:PsolMSW} due to the presence of matter plays an interesting role in the search for CP violation. The MSW effect by itself mimics CP violation as it alters oscillation probabilities for neutrinos and anti-neutrinos differently. Depending on the value of $\delta$ that nature has chosen, the differences in oscillation probabilities due to the CP violation angle and the MSW effect can either compound or cancel out.
 
 \section{Current Measurements}
 \label{sec:BestMeasures}
 
-Most of the free parameters in the PMNS matrix have been measured by various solar, atmospheric, accelerator, and reactor neutrino experiments. However, any given neutrino experiment does not have sensitivity to all of the oscillation parameters. Instead, experiments are sensitive to specific angles based on their baseline and the energies of the neutrinos they observe. To date, the two mass splittings and three real mixing angles all have reported values, while the CP violating phase angle and mass hierarchy have not been measured with precision.
+Most of the free parameters in the PMNS matrix have been measured by various solar, atmospheric, accelerator, and reactor neutrino experiments. However, any given neutrino experiment does not have sensitivity to all of the oscillation parameters. Instead, experiments are sensitive to specific angles based on their baseline and the energies of the neutrinos they observe. Solar neutrino experiments, such as GALLEX, SAGE, Super-K, and SNO, measure neutrinos with energies on the order of several MeV after a very long baseline, and are most sensitive to $\theta_{12}$ and $\dmxy{1}{2}$. Due to the strong MSW effect within the Sun, solar neutrino experiments also determined the ordering of mass states $\nu_1$ and $\nu_2$; $\nu_2$ is defined as the heavier state. Atmospheric neutrino experiments, such as Super-K, SNO, and MINOS, measure neutrinos generated by cosmic ray collisions with the Earth's atmosphere, and are sensitive to $\theta_{23}$ and $\dmxy{2}{3}$.
 
-Current best measurements
+Reactor neutrino experiments, such as Chooz, Double Chooz, RENO, and Daya Bay, measure $\anue$ generated by nearby nuclear reactors. Like solar neutrinos, reactor neutrinos have energies on the order of a few MeV. By measuring these neutrinos with a short baseline ($O(1 km)$), the 2 neutrino approximation is valid, so the oscillation probability can be approximated as:
+\beq
+P(\anue \rightarrow \anue) \approx 1 - \sin^2 2\theta_{13} \sin^2 \Delta_{31}.
+\label{eq:2NuReactor}
+\eeq
 
-Global fits to the combined data of these (and other) neutrino experiments have been performed and summarized in \cite{ref:PDG, ref:BestFits3}; the best fit values are shown in Table \ref{tab:BestFits3}. While most of the parameters have been measured with good precision, there are still a few lingering questions. From the table it is clear that a much better measurement on the CP violation angle is needed. The mass hierarchy still needs to be definitively measured as well. The other main point is whether $\theta_{23}$ is maximal, and if not, whether it is in the lower or upper octant.
+\n Daya Bay made the first nonzero measurement of $\theta_{13}$ in 2012, reporting a value of $\sin^2 2\theta_{13} = 0.092 \pm 0.016\mbox{ (stat)} \pm 0.005\mbox{ (syst)}$ after taking just 55 days of data \cite{ref:DayaBay2012}. This result excluded a zero value for $\theta_{13}$ at $5.2\sigma$ and is shown in Fig.~\ref{fig:DayaBay2012}. Since that result, the limits have only continued to improve, and the leading measurement still comes from Daya Bay.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/DayaBay2012.png}
+  \caption[First Measurement of $\theta_{13}$ from Daya Bay]{First measurement of $\theta_{13}$ from Daya Bay \cite{ref:DayaBay2012}. The points show the ratio of observed to expected events assuming $\theta_{13} = 0$. Each point is a measurement at a different detector. The inset in the upper corner shows the $\chi^2$ value vs value of $\sin^2 2\theta_{13}$, and excludes $\theta_{13} = 0$ at greater than $5\sigma$.}
+  \label{fig:DayaBay2012}
+\end{figure}
+
+Accelerator neutrino experiments, such as MINOS, T2K, and \nova, begin with a beam of nearly pure $\nuanu_\mu$ and search for both a disappearance of $\nuanu_\mu$ and appearance of other neutrino flavors. These experiments are sensitive to $\theta_{13}$, $\theta_{23}$, $\dmxy{2}{3}$, and $\delta$. The experiments that have the largest matter effect are the most sensitive to $\delta$ and the mass hierarchy.
+
+Global fits to the combined data of these (and other) neutrino experiments have been performed and summarized in \cite{ref:PDG, ref:BestFits3}; the best fit values are shown in Table \ref{tab:BestFits3}. While most of the parameters have been measured with good precision, there are still a few lingering questions. From the table it is clear that a much better measurement on the CP violation angle is needed. The mass hierarchy still needs to be definitively measured as well. The other main question is whether $\theta_{23}$ is maximal, and if not, whether it is in the lower or upper octant.
 \begin{table}[h]
   \begin{center}
     \caption[Best Fit Parameters for Three Neutrino Oscillation Model]{Current status of best fit oscillation parameters, from \cite{ref:PDG, ref:BestFits3}. The last column shows the allowed values within a $3\sigma$ range, with the exception of $\delta$, which is shown at a $2\sigma$ range. This is because the current global best fit for $\delta$ still allows the full range from $0$ to $2\pi$ at $3\sigma$. \nova~should vastly improve the limits on $\delta$.}
@@ -347,7 +348,28 @@ Global fits to the combined data of these (and other) neutrino experiments have 
   \end{center}
 \end{table}
 
-Current experiments to answer questions.
+Current and next generation reactor experiments have a great outlook to answer these outstanding questions. Making use of the MSW effect, the $\nue$ and $\anue$ appearance results from experiments like T2K and \nova~could simultaneously measure $\delta$, the mass hierarchy, and $\theta_{23}$ octant. The prospects for \nova to make these measurements are shown in Fig.~\ref{fig:BiProb}. The first analysis results from \nova~\cite{ref:NOvAFANuE, ref:NOvAFANuMu} were published after taking about 10\% of the experiments design statistics and already show promise. The \nova~measurement for $\delta$, shown in Fig.~\ref{fig:NOvAFADelta}, provide a hint toward the normal hierarchy and eliminate portions of $\delta$ space at 90\% confidence.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/BiProbability.png}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/BiProbabilityVary23.png}
+  \end{subfigure}
+  \caption[Bi-Probability Plots for $\nue$ Appearance]{Probability of $\nue$ appearance versus $\anue$ appearance at \nova. The blue ellipses are for the normal hierarchy; the red ellipses are for the inverted hierarchy. The starred points show a possible measurement \nova~could make. The matter effect can either constructively or destructively combine with the CP violation effect. A larger matter effect, further separates the two mass hierarchy ellipses. This corresponds to neutrinos passing through more matter. On the left, $\theta_{23}$ is assumed to be $45^\circ$ for maximal mixing, purely showcasing the interference between the matter and CP violation effects. On the right, $\theta_{23}$ is non-maximal, showing how the dependence on $\theta_{23}$ affects both ellipses in the same way.}
+  \label{fig:BiProb}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/NOvAFADelta.png}
+  \caption[First Measurement of $\delta$ by \nova]{First measurement of $\delta$ from \nova~\cite{ref:NOvAFANuE}. The plot shows the significance of the difference between the observed and predicted number of events as a function of delta. \nova~used a primary and secondary selection technique, the primary (secondary) technique is shown as the solid (dotted) line. The secondary selection disfavors the inverted hierarchy for all values of $\delta$.}
+  \label{fig:NOvAFADelta}
+\end{figure}
 
 \section{Sterile Neutrinos}
 \label{sec:Theory3+1}
