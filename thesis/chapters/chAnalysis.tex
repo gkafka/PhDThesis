@@ -1,6 +1,13 @@
-\chapter{Neutral Current Disappearance Analysis}
+\chapter{Neutral Current Spectrum Prediction}
+\label{ch:Prediction}
 
-\section{The Analysis Chain}
+Any rigorous scientific analysis must have a well defined analysis procedure. This chapter describes the bulk of that procedure for the FD NC disappearance analysis. The methods presented use the NC event selection discussed in ch.~\ref{ch:Selection} to predict the FD energy spectrum.
+
+\section{The CAFAna Analysis Chain}
+
+The analysis presented in this thesis was performed in a software framework called CAFAna that analyzes Common Analysis Format files, or CAFs. The design principles of CAFAna recognize that all neutrino analyses have to perform essentially the same tasks, such as decomposing a detector spectrum into different components or applying oscillation weights to a particular event spectrum. A given task might have multiple implementations, but while the inner details are different, the number and type of end products are the same. Thus CAFAna has a fixed general analysis chain with the ability to easily swap specific implementations of any given piece of the chain.
+
+The general analysis chain shown in Fig.~\ref{fig:CAFAnaChain} illustrates how a near to far detector analysis can be neatly separated into smaller components that 
 
 \section{Near Detector Decomposition}
 
