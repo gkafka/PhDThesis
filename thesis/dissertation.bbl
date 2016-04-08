@@ -217,4 +217,26 @@ P.~Adamson et~al.
 \newblock First measurement of muon-neutrino disappearance in {NOvA}.
 \newblock {\em Physical Review D Rapid Communications}, 93:051104, 2016.
 
+\bibitem{ref:TNBeam}
+H.~Duyang et~al.
+\newblock A technote describing the derivation and size of numi flux
+  uncertainties used in the first analyses.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13584}{\nova~Internal
+  Document 13584}.
+
+\bibitem{ref:MassError}
+N.~Raddatz.
+\newblock Fiducial mass systematic.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13237}{\nova~Internal
+  Document 13237}.
+
+\bibitem{ref:NDDataMCRecoEff}
+A.~Markowitz.
+\newblock Todo.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=TODO}{\nova~Internal
+  Document TODO}.
+
 \end{thebibliography}

@@ -4,4 +4,42 @@
 
 \section{Systematic Errors}
 
+As with any experiment, \nova~is sensitive to a number of systematic effects. To combat this, \nova~was designed with two functionally identical detectors, so that Near Detector data can be used to constrain or correct the Far Detector prediction. Since many effects such as beam and cross section uncertainties affect the spectra at both detectors in a similar or the same way, this two detector technique leads to the reduction of these systematic errors. Other effects, such as Near Detector rock event contamination, require a data driven technique to quantify.
+
+The general technique for analyzing systematic errors was to run the full extrapolation chain and generate a predicted spectrum with and without a systematic effect applied. Each given systematic effect was used to shift the MC simulation at one or both detectors as appropriate. The resulting difference between the shifted and nominal spectra was quantified as a systematic error.
+
+The systematic effects analyzed included uncertainties arising from the beam, GENIE simulation, Birks-Chou light yield simulation, calibration, detector geometry simulation, light level effects, bias from the ND containment, ND rock event contamination, ND data/MC spectrum and hadronic energy differences, MC statistics, and overall normalization. The rest of this section discusses each of these effects in greater detail.
+
+\subsection{Beam}
+
+\subsection{Birks-Chou Light Yield Simulation}
+
+\subsection{Calibration}
+
+\subsection{Detector Geometry}
+
+\subsection{GENIE}
+
+\subsection{Light Level Effects}
+
+\subsection{ND Containment}
+
+\subsection{ND Rock Event Contamination}
+
+The MC simulation does include neutrino interactions that occur in the rock that surrounds the ND. These events often leak into the detector volume, and while most of them are cut away by fiducial and containment cuts, there are some that remain. Those events that do remain cannot be reconstructed properly as their origins are outside of the detector. 
+
+The systematic error that is incurred due to the rock event contamination was estimated by predicting the FD event spectrum from an extrapolation with rock events removed by MC truth and comparing to the nominal predicted spectrum. The events were only removed from the ND MC sample, requiring that the true neutrino vertex was inside the detector to remain.
+
+\subsection{ND Data/MC}
+
+\subsection{MC Statistics}
+
+In a perfect world, there would be enough MC statistics that this section would be unnecessary, but alas, a perfect world this is not. To estimate the systematic error due to MC statistics, the MC was split into five uniformly sized samples, and each was used to extrapolate the same set of ND data. One of the resultant predicted FD spectra was labeled as nominal, and the other four were compared to this. The bin by bin differences were taken as the error between the nominal spectrum and the 'shifted' spectrum. To come up with an overall uncertainty, all of the errors were added in quadrature and the result was divided by the square root of the number of samples, or $\sqrt{4} = 2$.
+
+\subsection{Overall Normalization}
+
+Several independent effects contribute to an overall normalization systematic error. A 0.5\% error on the POT counting comes from a small difference in the two toroids that determine the POT in a spill \cite{ref:TNBeam}. Uncertainties in the masses of the various parts of the \nova~detectors contributes another error of 0.7\% \cite{ref:MassError}. Finally, a study of the reconstruction efficiency between ND data and MC showed a TODO\% difference \cite{ref:NDDataMCRecoEff}, which is taken directly as a contribution to the normalization error. These three effects are combined in quadrature and constitute a TODO\% systematic error.
+
+\subsection{Systematic Error Summary}
+
 \section{Results}
