@@ -12,13 +12,66 @@ The systematic effects analyzed included uncertainties arising from the beam, GE
 
 \subsection{Beam}
 
+The \nova~MC simulation involves a fully detailed model of the NuMI beam process in an attempt to create the most realistic MC possible, but systematic errors can result from any mismatch between simulation and reality. The \nova~Beam Working Group performed studies to assess the effect that uncertainties in the simulation can have on the neutrino flux \cite{ref:TNBeam}. These studies included the effects of incorrectly modeling various parts of the beam transport and the effects of uncertainties in hadron production arising from fixed target experiments.
+
+To quantify the systematic error caused by these beam uncertainties, a sample flux was generated using a systematic shift and compared to the nominal flux via a simple ratio. Results were generated separately for each neutrino flavor and for each detector. The ratios were used to modify the MC from the full simulation used as inputs to the extrapolated prediction. Finally, the shifted FD prediction was compared to the nominal prediction, with any differences being taken as the systematic error. At the end of this process, the individual errors were added in quadrature. Errors were calculated for the following systematics:
+\begin{itemize}
+  \item Beam position on target varied by $\pm 0.5\,mm$ in X
+  \item Beam position on target varied by $\pm 0.5\,mm$ in Y
+  \item Beam spot size varied by $\pm 0.2\,mm$ in both X and Y
+  \item Target position varied by $+ 2\, mm$ in Z
+  \item Horn current varied $\pm 1\,kA$
+  \item Horn 1 position varied by $\pm 2\,mm$ in both X and Y
+  \item Horn 2 position varied by $\pm 2\,mm$ in both X and Y
+  \item Horn magnetic field changed from linear to exponential distribution
+  \item Comparison between FLUKA and G4NuMI
+  \item Comparison between FLUKA and NA49
+\end{itemize}
+\n Hadron production uncertainties were combined in quadrature before being provided as weights, so this is evaluated as single systematic error. The percentage difference due to each systematic is shown in Table \ref{tab:SystBeam}, and the full error envelopes for NC signal and background are shown in Fig.~\ref{fig:SystBeam}.
+\begin{table}[h]
+  \begin{center}
+    \caption[Beam Systematic Errors]{The percentage difference between the shifted and nominal predictions for the number of FD events due to beam systematics.}
+    \label{tab:SystBeam}
+    \begin{tabular}{r c c}
+      \hline\hline
+      Systematic & NC Difference (\%) & Background Difference (\%) \\
+      \hline
+      Beam Position, X & & \\
+      Beam Position, Y & & \\
+      Beam Spot Size & & \\
+      Target Position & & \\
+      Horn Current & & \\
+      Horn 1 Position & & \\
+      Horn 2 Position & & \\
+      Horn B Field & & \\
+      Hadron Productions & & \\
+      Combined & & \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/cNCEXBeamSysts.png}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/cBGEXBeamSysts.png}
+  \end{subfigure}
+  \caption[Beam Systematic Error Envelopes]{Systematic error envelope on the NC signal (left) and background (right) event spectra, after extrapolation.}
+  \label{fig:SystBeam}
+\end{figure}
+
 \subsection{Birks-Chou Light Yield Simulation}
 
 \subsection{Calibration}
 
 \subsection{Detector Geometry}
 
-\subsection{GENIE}
+\subsection{GENIE Simulation}
 
 \subsection{Light Level Effects}
 
@@ -28,7 +81,21 @@ The systematic effects analyzed included uncertainties arising from the beam, GE
 
 The MC simulation does include neutrino interactions that occur in the rock that surrounds the ND. These events often leak into the detector volume, and while most of them are cut away by fiducial and containment cuts, there are some that remain. Those events that do remain cannot be reconstructed properly as their origins are outside of the detector. 
 
-The systematic error that is incurred due to the rock event contamination was estimated by predicting the FD event spectrum from an extrapolation with rock events removed by MC truth and comparing to the nominal predicted spectrum. The events were only removed from the ND MC sample, requiring that the true neutrino vertex was inside the detector to remain.
+The systematic error that is incurred due to the rock event contamination was estimated by predicting the FD event spectrum from an extrapolation with rock events removed by MC truth and comparing to the nominal predicted spectrum. The events were only removed from the ND MC sample, requiring that the true neutrino vertex was inside the detector to remain. The shifted spectra are shown in Fig.~\ref{fig:SystNDRock}. This systematic amounted to an overall $TODO\%$ shift on the NC signal spectrum and a $TODO\%$ shift on the background spectrum.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/cNCEXNDRockSysts.png}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/cBGEXNDRockSysts.png}
+  \end{subfigure}
+  \caption[ND Rock Contamination Shifted Spectra]{Shifted vs nominal spectra for the NC signal (left) and background (right). The shifted spectra are extrapolated after removal of rock events in the ND MC by truth.}
+  \label{fig:SystNDRock}
+\end{figure}
 
 \subsection{ND Data/MC}
 
@@ -38,7 +105,7 @@ In a perfect world, there would be enough MC statistics that this section would 
 
 \subsection{Overall Normalization}
 
-Several independent effects contribute to an overall normalization systematic error. A 0.5\% error on the POT counting comes from a small difference in the two toroids that determine the POT in a spill \cite{ref:TNBeam}. Uncertainties in the masses of the various parts of the \nova~detectors contributes another error of 0.7\% \cite{ref:MassError}. Finally, a study of the reconstruction efficiency between ND data and MC showed a TODO\% difference \cite{ref:NDDataMCRecoEff}, which is taken directly as a contribution to the normalization error. These three effects are combined in quadrature and constitute a TODO\% systematic error.
+Several independent effects contribute to an overall normalization systematic error. A $0.5\%$ error on the POT counting comes from a small difference in the two toroids that determine the POT in a spill \cite{ref:TNBeam}. Uncertainties in the masses of the various parts of the \nova~detectors contributes another error of $0.7\%$ \cite{ref:MassError}. Finally, a study of the reconstruction efficiency between ND data and MC showed a $TODO\%$ difference \cite{ref:NDDataMCRecoEff}, which is taken directly as a contribution to the normalization error. These three effects are combined in quadrature and constitute a $TODO\%$ systematic error.
 
 \subsection{Systematic Error Summary}
 

@@ -43,19 +43,19 @@
 \contentsline {section}{\numberline {8.1}Fitting Method}{28}{section.8.1}
 \contentsline {section}{\numberline {8.2}Systematic Errors}{28}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Beam}{29}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Birks-Chou Light Yield Simulation}{29}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Calibration}{29}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Detector Geometry}{29}{subsection.8.2.4}
-\contentsline {subsection}{\numberline {8.2.5}GENIE}{29}{subsection.8.2.5}
-\contentsline {subsection}{\numberline {8.2.6}Light Level Effects}{29}{subsection.8.2.6}
-\contentsline {subsection}{\numberline {8.2.7}ND Containment}{29}{subsection.8.2.7}
-\contentsline {subsection}{\numberline {8.2.8}ND Rock Event Contamination}{29}{subsection.8.2.8}
-\contentsline {subsection}{\numberline {8.2.9}ND Data/MC}{30}{subsection.8.2.9}
-\contentsline {subsection}{\numberline {8.2.10}MC Statistics}{30}{subsection.8.2.10}
-\contentsline {subsection}{\numberline {8.2.11}Overall Normalization}{30}{subsection.8.2.11}
-\contentsline {subsection}{\numberline {8.2.12}Systematic Error Summary}{30}{subsection.8.2.12}
-\contentsline {section}{\numberline {8.3}Results}{30}{section.8.3}
-\contentsline {chapter}{\numberline {9}Conclusions and Future Improvements}{31}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusions}{31}{section.9.1}
-\contentsline {section}{\numberline {9.2}Future Improvements}{31}{section.9.2}
-\contentsline {chapter}{References}{34}{chapter*.13}
+\contentsline {subsection}{\numberline {8.2.2}Birks-Chou Light Yield Simulation}{31}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Calibration}{31}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Detector Geometry}{31}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.5}GENIE Simulation}{31}{subsection.8.2.5}
+\contentsline {subsection}{\numberline {8.2.6}Light Level Effects}{31}{subsection.8.2.6}
+\contentsline {subsection}{\numberline {8.2.7}ND Containment}{31}{subsection.8.2.7}
+\contentsline {subsection}{\numberline {8.2.8}ND Rock Event Contamination}{31}{subsection.8.2.8}
+\contentsline {subsection}{\numberline {8.2.9}ND Data/MC}{32}{subsection.8.2.9}
+\contentsline {subsection}{\numberline {8.2.10}MC Statistics}{32}{subsection.8.2.10}
+\contentsline {subsection}{\numberline {8.2.11}Overall Normalization}{33}{subsection.8.2.11}
+\contentsline {subsection}{\numberline {8.2.12}Systematic Error Summary}{33}{subsection.8.2.12}
+\contentsline {section}{\numberline {8.3}Results}{33}{section.8.3}
+\contentsline {chapter}{\numberline {9}Conclusions and Future Improvements}{34}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusions}{34}{section.9.1}
+\contentsline {section}{\numberline {9.2}Future Improvements}{34}{section.9.2}
+\contentsline {chapter}{References}{37}{chapter*.16}
