@@ -11,7 +11,7 @@ A level-1 auxiliary file: chapters/chSelection.aux
 A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 82 of file dissertation.aux
+Illegal, another \bibstyle command---line 83 of file dissertation.aux
  : \bibstyle
  :          {apalike2}
 I'm skipping whatever remains of this command
@@ -22,37 +22,42 @@ I was expecting a `,' or a `}'---line 443 of file references.bib
  :   volume={87}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+You're missing a field name---line 465 of file references.bib
+ : 
+ : %  title={As-Build Near Detector Locations,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty year in ref:BirksChou
-You've used 45 entries,
+You've used 46 entries,
             1791 wiz_defined-function locations,
-            747 strings with 9680 characters,
-and the built_in function-call counts, 8651 in all, are:
-= -- 798
-> -- 237
+            752 strings with 9823 characters,
+and the built_in function-call counts, 8746 in all, are:
+= -- 807
+> -- 241
 < -- 0
-+ -- 106
-- -- 61
++ -- 108
+- -- 62
 * -- 520
-:= -- 1440
-add.period$ -- 134
-call.type$ -- 45
-change.case$ -- 44
+:= -- 1461
+add.period$ -- 137
+call.type$ -- 46
+change.case$ -- 45
 chr.to.int$ -- 0
-cite$ -- 46
-duplicate$ -- 377
-empty$ -- 928
-format.name$ -- 61
-if$ -- 1918
+cite$ -- 47
+duplicate$ -- 381
+empty$ -- 936
+format.name$ -- 62
+if$ -- 1937
 int.to.chr$ -- 0
-int.to.str$ -- 45
+int.to.str$ -- 46
 missing$ -- 39
-newline$ -- 227
-num.names$ -- 45
-pop$ -- 57
+newline$ -- 232
+num.names$ -- 46
+pop$ -- 58
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 130
+skip$ -- 131
 stack$ -- 0
 substring$ -- 738
 swap$ -- 41
@@ -61,7 +66,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 82
-width$ -- 47
-write$ -- 483
-(There were 2 error messages)
+while$ -- 83
+width$ -- 48
+write$ -- 492
+(There were 3 error messages)
