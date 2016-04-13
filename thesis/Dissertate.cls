@@ -59,6 +59,7 @@
 % Misc packages
 \usepackage{braket}
 \usepackage{feynmp-auto}
+\usepackage{longtable}
 \usepackage{subcaption}
 
 % Front matter.
