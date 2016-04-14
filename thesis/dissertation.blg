@@ -17,56 +17,50 @@ Illegal, another \bibstyle command---line 83 of file dissertation.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: endmatter/colophon.aux
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 443 of file references.bib
- :   
- :   volume={87}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 You're missing a field name---line 465 of file references.bib
  : 
  : %  title={As-Build Near Detector Locations,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--empty year in ref:BirksChou
 You've used 46 entries,
             1791 wiz_defined-function locations,
-            752 strings with 9823 characters,
-and the built_in function-call counts, 8746 in all, are:
-= -- 807
+            755 strings with 9836 characters,
+and the built_in function-call counts, 8823 in all, are:
+= -- 817
 > -- 241
 < -- 0
 + -- 108
 - -- 62
-* -- 520
-:= -- 1461
+* -- 528
+:= -- 1471
 add.period$ -- 137
 call.type$ -- 46
 change.case$ -- 45
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 381
-empty$ -- 936
+cite$ -- 46
+duplicate$ -- 382
+empty$ -- 945
 format.name$ -- 62
-if$ -- 1937
+if$ -- 1957
 int.to.chr$ -- 0
 int.to.str$ -- 46
 missing$ -- 39
 newline$ -- 232
 num.names$ -- 46
-pop$ -- 58
+pop$ -- 55
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 131
 stack$ -- 0
-substring$ -- 738
+substring$ -- 759
 swap$ -- 41
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 83
+warning$ -- 0
+while$ -- 84
 width$ -- 48
-write$ -- 492
-(There were 3 error messages)
+write$ -- 494
+(There were 2 error messages)
