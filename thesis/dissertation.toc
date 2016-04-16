@@ -45,18 +45,16 @@
 \contentsline {subsection}{\numberline {8.2.1}Beam}{29}{subsection.8.2.1}
 \contentsline {subsection}{\numberline {8.2.2}Birks-Chou Light Yield Simulation}{30}{subsection.8.2.2}
 \contentsline {subsection}{\numberline {8.2.3}Calibration}{32}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Detector Alignment}{33}{subsection.8.2.4}
-\contentsline {subsection}{\numberline {8.2.5}GENIE Simulation}{34}{subsection.8.2.5}
-\contentsline {subsection}{\numberline {8.2.6}Light Level Effects}{36}{subsection.8.2.6}
-\contentsline {subsection}{\numberline {8.2.7}ND Containment}{36}{subsection.8.2.7}
-\contentsline {subsection}{\numberline {8.2.8}ND Rock Event Contamination}{37}{subsection.8.2.8}
-\contentsline {subsection}{\numberline {8.2.9}ND Data/MC}{37}{subsection.8.2.9}
-\contentsline {subsection}{\numberline {8.2.10}Noise Model}{37}{subsection.8.2.10}
-\contentsline {subsection}{\numberline {8.2.11}MC Statistics}{37}{subsection.8.2.11}
-\contentsline {subsection}{\numberline {8.2.12}Overall Normalization}{38}{subsection.8.2.12}
-\contentsline {subsection}{\numberline {8.2.13}Systematic Error Summary}{39}{subsection.8.2.13}
-\contentsline {section}{\numberline {8.3}Results}{39}{section.8.3}
-\contentsline {chapter}{\numberline {9}Conclusions and Future Improvements}{41}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusions}{41}{section.9.1}
-\contentsline {section}{\numberline {9.2}Future Improvements}{41}{section.9.2}
-\contentsline {chapter}{References}{44}{chapter*.23}
+\contentsline {subsection}{\numberline {8.2.4}GENIE Simulation}{33}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.5}ND Containment}{35}{subsection.8.2.5}
+\contentsline {subsection}{\numberline {8.2.6}ND Rock Event Contamination}{36}{subsection.8.2.6}
+\contentsline {subsection}{\numberline {8.2.7}ND Data/MC and CC Background}{37}{subsection.8.2.7}
+\contentsline {subsection}{\numberline {8.2.8}MC Statistics}{39}{subsection.8.2.8}
+\contentsline {subsection}{\numberline {8.2.9}Noise Model}{39}{subsection.8.2.9}
+\contentsline {subsection}{\numberline {8.2.10}Overall Normalization}{40}{subsection.8.2.10}
+\contentsline {subsection}{\numberline {8.2.11}Systematic Error Summary}{40}{subsection.8.2.11}
+\contentsline {section}{\numberline {8.3}Results}{40}{section.8.3}
+\contentsline {chapter}{\numberline {9}Conclusions and Future Improvements}{42}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusions}{42}{section.9.1}
+\contentsline {section}{\numberline {9.2}Future Improvements}{42}{section.9.2}
+\contentsline {chapter}{References}{46}{chapter*.26}

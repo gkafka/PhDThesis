@@ -11,47 +11,42 @@ A level-1 auxiliary file: chapters/chSelection.aux
 A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 83 of file dissertation.aux
+Illegal, another \bibstyle command---line 84 of file dissertation.aux
  : \bibstyle
  :          {apalike2}
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: endmatter/colophon.aux
 Database file #1: references.bib
-You're missing a field name---line 465 of file references.bib
- : 
- : %  title={As-Build Near Detector Locations,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You've used 46 entries,
+You've used 47 entries,
             1791 wiz_defined-function locations,
-            755 strings with 9836 characters,
-and the built_in function-call counts, 8823 in all, are:
-= -- 817
-> -- 241
+            759 strings with 10019 characters,
+and the built_in function-call counts, 8918 in all, are:
+= -- 826
+> -- 245
 < -- 0
-+ -- 108
-- -- 62
++ -- 110
+- -- 63
 * -- 528
-:= -- 1471
-add.period$ -- 137
-call.type$ -- 46
-change.case$ -- 45
+:= -- 1492
+add.period$ -- 140
+call.type$ -- 47
+change.case$ -- 46
 chr.to.int$ -- 0
-cite$ -- 46
-duplicate$ -- 382
-empty$ -- 945
-format.name$ -- 62
-if$ -- 1957
+cite$ -- 47
+duplicate$ -- 386
+empty$ -- 953
+format.name$ -- 63
+if$ -- 1976
 int.to.chr$ -- 0
-int.to.str$ -- 46
+int.to.str$ -- 47
 missing$ -- 39
-newline$ -- 232
-num.names$ -- 46
-pop$ -- 55
+newline$ -- 237
+num.names$ -- 47
+pop$ -- 56
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 131
+skip$ -- 132
 stack$ -- 0
 substring$ -- 759
 swap$ -- 41
@@ -60,7 +55,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 84
-width$ -- 48
-write$ -- 494
-(There were 2 error messages)
+while$ -- 85
+width$ -- 49
+write$ -- 503
+(There was 1 error message)

@@ -133,10 +133,6 @@ The systematic error was evaluated in two regimes. The first applied the same mi
   \end{center}
 \end{table}
 
-\subsection{Detector Alignment}
-
-The \nova~simulation involves a detailed model of the detectors that uses survey data to place individual planes. Of course, there is always some uncertainty in any measurement. In the past, \nova~MC was generated using an `ideal' geometry that had planes lined up in a perfect fashion. To quantify the systematic error due to detector alignment uncertainty, a small sample of FD MC was generated with these ideal conditions, and a shifted prediction was created using this MC. The percentage difference was taken as the systematic error, for a $TODO\%$ effect on the NC signal and a $TODO\%$ effect on the background.
-
 \subsection{GENIE Simulation}
 
 Neutrino interactions in the \nova~simulation are generated using GENIE \cite{ref:GENIE}, a generator that involves a detailed physics modeling of cross sections, hadronization, and final state interactions. GENIE includes a plethora of parameters that alter individual physics input quantities, with the parameters themselves acting as systematic uncertainties, either dialing up or down a particular quantity by a standard deviation recommended by the GENIE authors.
@@ -227,8 +223,6 @@ The systematic uncertainties from physics modeling were evaluated by using the G
   \label{fig:SystGENIE}
 \end{figure}
 
-\subsection{Light Level Effects}
-
 \subsection{ND Containment}
 
 The ND does not see an effective point source of neutrinos like the FD due to its proximity to the beam source. As a result, the neutrino flux is not uniform across the detector, and so the energy spectrum of neutrinos seen by the two \nova~detectors is slightly different. To study the effect this has on the extrapolated prediction, multiple predicted FD spectra were generated using subsamples of the ND. The fiducial volume of the ND was split in half along each axis, and split into an inner and outer half (the overall containment criteria was left in tact). The extrapolation was performed using each of these `half detectors.' The error was taken as the percentage difference from the shifted prediction to the nominal. Table \ref{tab:SystFidCont} shows the results from each of these extrapolations and fig.~\ref{fig:SystFidCont} show the shifted spectra. Like the Birks-Chou systematic, the largest overall difference was taken as the systematic error for a $TODO\%$ effect on the NC signal and a $TODO\%$ effect on the background.
@@ -287,13 +281,60 @@ The systematic error that is incurred due to the rock event contamination was es
   \label{fig:SystNDRock}
 \end{figure}
 
-\subsection{ND Data/MC}
+\subsection{ND Data/MC Difference and CC Background}
 
-\subsection{Noise Model}
+To assess the results over the MC simulation, data was compared to MC at the ND, and the event spectra were found to be an imperfect match; see fig.~\ref{fig:NDDataMC}. The FD prediction is made by decomposing ND data into NC, $\numu$ CC and $\nue$ CC components proportional to the amounts in the MC, so a data/MC difference can cause a systematic effect. This error was treated as a hybrid decomposition and CC background error, and as such, was quantified using a hybrid method.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/NDDaﬂtaMC.png}
+  \caption[ND Data/MC Energy Spectrum Comparison]{Energy spectra for data and MC at the ND, from ref.~\cite{ref:NDDataMC}}
+  \label{fig:NDDataMC}
+\end{figure}
+
+For the first \nova~$\numu$ disappearance and $\nue$ appearance analyses, the two groups used different methods to estimate their background uncertainties. The $\numu$ analysis noted that their backgrounds were small and thus placed a $100\%$ uncertainty on each \cite{ref:NOvAFANuMu}. The $\nue$ analysis assigned any discrepancy between ND data and MC to each of the three ND background components, used each shifted decomposition to perform an extrapolation, compared the shifted predictions to nominal, and took the shift with the largest difference as the systematic error \cite{ref:NOvAFANuE}.
+
+The NC disappearance analysis used a combination of the above techniques to evaluate the ND data/MC and CC background systematic error. The background from the beam $\nue$ component was calculated to be small, so this component was allowed to vary by $\pm100\%$. The shifted spectrum was used for extrapolation, and the percentage difference between the nominal and shifted predictions was taken as the error. For both the NC and $\numu$ CC components, the error was taken following the same procedure as the $\nue$ analysis. Results from both these two studies were then combined in quadrature. Shifting the beam $\nue$ component up and down produced the same net change in event numbers, albeit in opposite directions. Assigning the data/MC difference to the NC component caused the larger overall difference, compared to assignment to the $\numu$ CC component. The overall error was thus calculated by combining in quadrature the errors from assigning the data/MC difference to the NC component and shifting the beam $\nue$ component by $\vert 100\% \vert$, for a result of a $TODO\%$ effect on the NC signal and a $TODO\%$ effect on the CC background. Table \ref{tab:SystNDDataMC} summarizes the results from these studies, and fig.~\ref{fig:SystNDDataMC} shows the overall error envelopes.
+\begin{table}[h]
+  \begin{center}
+    \caption[ND Data/MC and CC Background Errors]{Systematic error covering ND data/MC discrepancy and CC backgrounds. The percentage differences were calculated by shifting the ND decomposition using the listed error method, performing an extrapolation, and comparing the predicted results to nominal.}
+    \label{tab:SystNDDataMC}
+    \begin{tabular}{c c c}
+      \hline\hline
+      Error Method & NC Difference (\%) & Background Difference (\%) \\
+      \hline
+      Beam $\nue$ $+100\%$ & & \\
+      Beam $\nue$ $-100\%$ & & \\
+      ND Data/MC difference & \multirow{2}{*}{} & \multirow{2}{*}{} \\
+      assigned to NC component \\
+      ND Data/MC difference & \multirow{2}{*}{} & \multirow{2}{*}{} \\
+      assigned to $\numu$ CC component \\
+      Overall & & \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/cNCEXDecompSysts.png}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/cBGEXDecompSysts.png}
+  \end{subfigure}
+  \caption[Systematic Error Due to ND Data/MC Discrepancy and CC Background Uncertainty]{Overall systematic error envelopes from studies to quantify ND data/MC difference and CC background uncertainties. The envelopes on the NC spectrum (left) and lower energy half of the CC background (right) are driven by the ND data/MC difference, while the high energy tail of the CC background is driven by shifting the beam $\nue$ background.}
+  \label{fig:SystNDDataMC}
+\end{figure}
 
 \subsection{MC Statistics}
 
 In a perfect world, there would be enough MC statistics that this section would be unnecessary, but alas, a perfect world this is not. To estimate the systematic error due to MC statistics, the MC was split into five uniformly sized samples, and each was used to extrapolate the same set of ND data. One of the resultant predicted FD spectra was labeled as nominal, and the other four were compared to this. The bin by bin differences were taken as the error between the nominal spectrum and the `shifted' spectrum. To come up with an overall uncertainty, all of the errors were added in quadrature and the result was divided by the square root of the number of samples, or $\sqrt{4} = 2$. The result was a $TODO\%$ error on the NC signal spectrum and a $TODO\%$ error on the background spectrum.
+
+\subsection{Noise Model}
+
+A sample of MC was generated for the FD using a different model of noise to study the systematic error caused by the noise model. To quantify the error, the FD event spectra from the nominal and alternative MC samples were compared against each other using two methods, both after applying the standard NC selection cuts and applying normal three flavor oscillation weights. First, the raw FD spectra were compared to each other. Second, the extrapolated predictions were compared against each other. For both comparisons, the differences were indistinguishable from statistical fluctuations, so this systematic error was dropped from consideration and assumed to be covered by the MC Statistics error.
 
 \subsection{Overall Normalization}
 
@@ -313,9 +354,7 @@ Table \ref{tab:SystSummary} shows a summary of all of the systematics, as well a
       Beam & & \\
       Birks-Chou & & \\
       Calibration & & \\
-      Detector Alignment & & \\
       GENIE & & \\
-      Light Levels & & \\
       ND Containment & & \\
       ND Rock Contamination & & \\
       ND Data/MC & & \\
