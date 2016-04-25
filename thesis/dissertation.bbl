@@ -217,6 +217,84 @@ P.~Adamson et~al.
 \newblock First measurement of muon-neutrino disappearance in {NOvA}.
 \newblock {\em Physical Review D Rapid Communications}, 93:051104, 2016.
 
+\bibitem{ref:TNCosmic}
+S.~Yang.
+\newblock Cosmic technote title.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=TODO}{\nova~Internal
+  Document TODO}.
+
+\bibitem{ref:TNBeamQual}
+L.~Goodenough and S.~R. Phan-Budd.
+\newblock Technical note on the {NOvA} beam monitoring for 2015 summer
+  analysis.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13572}{\nova~Internal
+  Document 13572}.
+
+\bibitem{ref:DQND}
+X.~Bu and K.~Sachdev.
+\newblock Spill level data quality- technical note.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=12437}{\nova~Internal
+  Document 12437}.
+
+\bibitem{ref:DQFDDCMLiveGeo}
+K.~Bays.
+\newblock Livegeometry tech note.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11470}{\nova~Internal
+  Document 11470}.
+
+\bibitem{ref:DQFDDCMEdgeFrac}
+S.~Lein.
+\newblock {DCM} edge metric.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13527}{\nova~Internal
+  Document 13527}.
+
+\bibitem{ref:EQNuEND}
+C.~Backhouse et~al.
+\newblock Near detector data/{MC} comparisons for the nue analysis.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13587}{\nova~Internal
+  Document 13587}.
+
+\bibitem{ref:EQNuEFD}
+J.~Bian and T.~Xin.
+\newblock Note of selection cuts for {Nue} first analysis.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13592}{\nova~Internal
+  Document 13592}.
+
+\bibitem{ref:EQNuMu}
+K.~Bays et~al.
+\newblock Executive summary for the first numu {CC} analysis.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13641}{\nova~Internal
+  Document 13641}.
+
+\bibitem{ref:TNRemID}
+N.~J. Raddatz.
+\newblock {ReMID} technical note.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11206}{\nova~Internal
+  Document 11206}.
+
+\bibitem{ref:TNLID}
+K.~Sachdev, J.~Bian, and E.~Niner.
+\newblock Likelihood based nue identifier (lid).
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13590}{\nova~Internal
+  Document 13590}.
+
+\bibitem{ref:TNCVN}
+A.~Aurisano.
+\newblock Todo.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=TODO}{\nova~Internal
+  Document TODO}.
+
 \bibitem{ref:TNBeam}
 H.~Duyang et~al.
 \newblock A technote describing the derivation and size of numi flux

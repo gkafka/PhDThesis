@@ -17,36 +17,36 @@ Illegal, another \bibstyle command---line 84 of file dissertation.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: endmatter/colophon.aux
 Database file #1: references.bib
-You've used 47 entries,
+You've used 58 entries,
             1791 wiz_defined-function locations,
-            759 strings with 10019 characters,
-and the built_in function-call counts, 8918 in all, are:
-= -- 826
-> -- 245
+            811 strings with 11764 characters,
+and the built_in function-call counts, 10048 in all, are:
+= -- 929
+> -- 308
 < -- 0
-+ -- 110
-- -- 63
-* -- 528
-:= -- 1492
-add.period$ -- 140
-call.type$ -- 47
-change.case$ -- 46
++ -- 137
+- -- 79
+* -- 539
+:= -- 1738
+add.period$ -- 173
+call.type$ -- 58
+change.case$ -- 57
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 386
-empty$ -- 953
-format.name$ -- 63
-if$ -- 1976
+cite$ -- 58
+duplicate$ -- 430
+empty$ -- 1041
+format.name$ -- 79
+if$ -- 2203
 int.to.chr$ -- 0
-int.to.str$ -- 47
+int.to.str$ -- 58
 missing$ -- 39
-newline$ -- 237
-num.names$ -- 47
-pop$ -- 56
+newline$ -- 292
+num.names$ -- 58
+pop$ -- 67
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 132
+skip$ -- 146
 stack$ -- 0
 substring$ -- 759
 swap$ -- 41
@@ -55,7 +55,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 85
-width$ -- 49
-write$ -- 503
+while$ -- 96
+width$ -- 60
+write$ -- 602
 (There was 1 error message)
