@@ -31,13 +31,13 @@
 \contentsline {section}{\numberline {5.2}Calibration}{24}{section.5.2}
 \contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{25}{chapter.6}
 \contentsline {section}{\numberline {6.1}Data Quality}{26}{section.6.1}
-\contentsline {section}{\numberline {6.2}Event Quality}{27}{section.6.2}
-\contentsline {section}{\numberline {6.3}Fiducial Volume and Containment}{28}{section.6.3}
+\contentsline {section}{\numberline {6.2}Event Quality}{26}{section.6.2}
+\contentsline {section}{\numberline {6.3}Fiducial Volume and Containment}{27}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Far Detector}{28}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Near Detector}{30}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}NC Selection}{31}{section.6.4}
-\contentsline {section}{\numberline {6.5}Cosmic Rejection}{32}{section.6.5}
-\contentsline {section}{\numberline {6.6}Summary}{32}{section.6.6}
+\contentsline {subsection}{\numberline {6.3.2}Near Detector}{29}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}NC Selection}{30}{section.6.4}
+\contentsline {section}{\numberline {6.5}Cosmic Rejection}{31}{section.6.5}
+\contentsline {section}{\numberline {6.6}Summary}{31}{section.6.6}
 \contentsline {chapter}{\numberline {7}Neutral Current Spectrum Prediction}{35}{chapter.7}
 \contentsline {section}{\numberline {7.1}The CAFAna Analysis Chain}{35}{section.7.1}
 \contentsline {section}{\numberline {7.2}Near Detector Decomposition}{36}{section.7.2}
@@ -61,4 +61,4 @@
 \contentsline {chapter}{\numberline {9}Conclusions and Future Improvements}{51}{chapter.9}
 \contentsline {section}{\numberline {9.1}Conclusions}{51}{section.9.1}
 \contentsline {section}{\numberline {9.2}Future Improvements}{51}{section.9.2}
-\contentsline {chapter}{References}{55}{chapter*.47}
+\contentsline {chapter}{References}{55}{chapter*.48}

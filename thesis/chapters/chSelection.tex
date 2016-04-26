@@ -1,14 +1,34 @@
-\chapter{Neutral Current Event Selection}
+n\chapter{Neutral Current Event Selection}
 \label{ch:Selection}
 
-The NC disappearance analysis is performed by comparing the observed FD spectrum of NC events to the predicted number of events after extrapolation. This requires a largely pure sample of NC signal events. There are three main backgrounds for this sample, $\nue$ CC interactions, $\numu$ CC interactions, and cosmic ray events. This note describes the full process for selecting a sample of NC events and eliminating backgrounds, briefly discussing data quality and event quality metrics, and fully detailing the fiducial, containment, NC selection. The cosmic rejection cuts are discussed in ref.~\cite{ref:TNCosmic}.
+The NC disappearance analysis is performed by comparing the observed FD spectrum of NC events to the predicted number of events after extrapolation. This requires a largely pure sample of NC signal events. There are three main backgrounds for this sample, $\nue$ CC interactions, $\numu$ CC interactions, and cosmic ray events. This chapter describes the full process for selecting a sample of NC events and eliminating backgrounds, briefly discussing data quality and event quality metrics, and fully detailing the fiducial, containment, NC selection, and cosmic rejection.
 
-The analysis specific cuts were chosen based on the official SA files. These files were produced in tag R16-03-03, and NuS group specific DeCAF files were produced in tag $S16-04-08$. For normalization simplicity, only 14 diblock MC and data were studied. After applying this criterion, all beam spectra were scaled to \pot{6}, and the cosmic spectra were scaled to $120\unit{s}$. The remainder of this note describes each level of event cut and the data/MC comparison spectra from the ND as validation.
-%The cuts were trained on cosmic data from the cosmic trigger. These files had a modest veto motivated by the $\nue$ appearance analysis baked directly into the files. This veto was designed to trim cosmics while leaving GENIE events relatively untouched, so while it affects the NC spectrum slightly, there is no reason to assume that the cosmic rejection described here should fail on a fully intact cosmic sample. The cuts trained on the cosmic 
+The analysis specific cuts were chosen based on the official SA files. These files were produced in tag R16-03-03, and NuS group specific DeCAF files were produced in tag S16-04-08. The cuts were trained on cosmic data from the cosmic trigger so that the actual cosmic prediction could come from the NuMI timing sideband. Beam events were oscillated assuming three flavor oscillations with the parameters listed in Table \ref{tab:3FlavParams}. For normalization simplicity, only 14 diblock MC and data were studied. After applying this criterion, all beam spectra were scaled to \pot{6}, and the cosmic spectra were scaled to $120\unit{s}$. The remainder of this note describes each level of event cut and the data/MC comparison spectra from the ND as validation.
+\begin{table}[h]
+  \begin{center}
+    \caption[Assumed Oscillation Parameters]{The three flavor oscillation parameters assumed for studying the NC selection cuts}
+    \label{tab:3FlavParams}
+    \begin{tabular}{c c}
+      \hline\hline
+      Oscillation Parameter & Value \\
+      \hline
+      $\rho$ & $2.84\unit{g/cm\textsuperscript{3}}$ \\
+      $\Delta m^2_{21}$ & $7.53 \times 10^{-5}\evsq$ \\
+      $\sin^2 2\theta_{12}$ & $0.846$ \\
+      $\Delta m^2_{32}$ & $2.40 \times 10^{-3}\evsq$ \\
+      $\theta_{23}$ & $\pi/4$ \\
+      $\sin^2 2\theta_{13}$ & $0.084$ \\
+      $\delta$ & $0$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
 
 \section{Data Quality}
 
-Data quality cuts were developed well before the first \nova~results to ensure proper data taking conditions, and all analysis groups apply them as standard. These cuts are applied per spill, and spills that fail these cuts are not included in POT accounting. The cuts can be categorized into three main groups, beam quality, data quality, and timing. The beam quality cuts were studied and set as described in ref.~\cite{ref:TNBeamQual}. To be included, spills must meet all of the criteria listed in Table \ref{tab:BeamQual}. Two event quality cuts were applied to data from each detector. These cuts were motivated and set as described in \cite{ref:DQND, ref:DQFDDCMLiveGeo, ref:DQFDDCMEdgeFrac}, and are summarized in Table \ref{tab:DataQual}. Finally, a timing cut is applied to cosmic data to ensure that the data is not too close to the edge of the data taking window. For cosmic events within a given $500\,\mu s$ trigger window, only events between $25\,\mu{\mbox{s}} < t < 475\,\mu{\mbox{s}}$ are kept. Table \ref{tab:NP1DataQual} shows the number of events that pass these data quality cuts, and fig.~\ref{fig:NP1DataQual} shows the energy spectra at the ND and FD.
+Data quality cuts were developed well before the first \nova~results to ensure proper data taking conditions, and all analysis groups apply them as standard. These cuts are applied per spill, and spills that fail these cuts are not included in POT accounting. The cuts can be categorized into three main groups, beam quality, data quality, and timing.
+
+The beam quality cuts were studied and set as described in ref.~\cite{ref:TNBeamQual}. These cuts ensure that the data was collected during acceptable conditions by cutting on metrics such as the beam position on the target, and the horn current. To be included, spills must meet all of the criteria listed in Table \ref{tab:BeamQual}.
 \begin{table}[h]
   \begin{center}
     \caption[Beam Quality Cuts]{Beam quality cuts applied to each spill to ensure proper data taking conditions. Taken from ref.~\cite{ref:TNBeamQual}.}
@@ -27,6 +47,7 @@ Data quality cuts were developed well before the first \nova~results to ensure p
   \end{center}
 \end{table}
 
+Two data quality cuts were applied to data from each detector. These cuts were motivated and set as described in \cite{ref:DQND, ref:DQFDDCMLiveGeo, ref:DQFDDCMEdgeFrac}, and are summarized in Table \ref{tab:DataQual}. The ND observes a higher level of noise when lights are on in the detector hall, so a cut is placed on one of the particularly noisy DCMs. Also at the ND, data is only considered good if all of the DCMs are active. A similar cut at the FD is made, but as the detector conditions were changing during commissioning, the cut is made using the LiveGeometry package that properly handles a changing detector. The other cut applied at the FD is an `edge metric' that looks for tracks matching across DCM boundaries and cuts spills where the fraction of matches is too low, cutting spills where the DCMs were out of sync relatively to one another.
 \begin{table}[h]
   \begin{center}
     \caption[Data Quality Cuts]{Data quality cuts applied to each spill to ensure proper data taking conditions.}
@@ -44,6 +65,9 @@ Data quality cuts were developed well before the first \nova~results to ensure p
   \end{center}
 \end{table}
 
+Finally, a timing cut is applied to cosmic data to ensure that the data is not too close to the edge of the data taking window. For cosmic events within a given $500\,\mu s$ trigger window, only events between $25\,\mu{\mbox{s}} < t < 475\,\mu{\mbox{s}}$ are kept.
+
+Table \ref{tab:NP1DataQual} shows the number of events that pass these data quality cuts, and fig.~\ref{fig:NP1DataQual} shows the energy spectra at the ND and FD.
 \begin{table}[h]
   \begin{center}
     \caption[Event Table: Data Quality Cuts]{The number of events that pass the data quality cuts, at both detectors.}
@@ -77,7 +101,7 @@ Data quality cuts were developed well before the first \nova~results to ensure p
 
 \section{Event Quality}
 
-Event quality cuts are the first applied to individual events and ensure that there is enough reconstructed information to be properly analyzed and that there were no obvious reconstruction failures. As with the data quality cuts above, these cuts were taken directly from the $\nue$ \cite{ref:EQNuEND, ref:EQNuEFD} and $\numu$ \cite{ref:EQNuMu} analyses. Two of the cuts within this suite simply require the presence of a reconstructed vertex and a shower object. These reconstructed objects are used more extensively in later stages, so the event quality cuts make sure they are available. Other quantities considered are the number of hits per plane, distance between the reconstructed vertex and leading shower, and number of contiguous planes. Events with a high number of hits per plane are cut to remove so called `FEB Flashers,' an event most often triggered by high energy cosmic rays. Likewise, events with a low number of contiguous planes are most often associated with very vertical cosmic rays. Finally, the a large distance between a vertex and leading shower is considered a reconstruction failure. These cuts are summarized with the exact parameters used for the cuts in Table \ref{tab:EventQual}. The number of events before and after the event quality cuts are listed in Table \ref{tab:NP1EventQual}, and fig.~\ref{fig:NP1EventQual} shows the energy spectra of the events that pass these cuts.
+Event quality cuts are the first applied to individual events and ensure that there is enough reconstructed information to be properly analyzed and that there were no obvious reconstruction failures. As with the data quality cuts above, these cuts were taken directly from the $\nue$ \cite{ref:EQNuEND, ref:EQNuEFD} and $\numu$ \cite{ref:EQNuMu} analyses. Two of the cuts within this suite simply require the presence of a reconstructed vertex and a shower object. These reconstructed objects are used more extensively in later stages, so the event quality cuts make sure they are available. Other quantities considered are the number of hits per plane, distance between the reconstructed vertex and leading shower, and number of contiguous planes. Events with a high number of hits per plane are cut to remove so called `FEB Flashers,' an event most often triggered by high energy cosmic rays. The events have a signature where all of the cells read out by an FEB appear to be triggered. Events with a low number of contiguous planes are most often associated with very vertical cosmic rays, so events with a low number of planes are cut. Finally, a large distance between a vertex and leading shower is considered a reconstruction failure. These cuts are summarized with the exact parameters used for the cuts in Table \ref{tab:EventQual}. The number of events before and after the event quality cuts are listed in Table \ref{tab:NP1EventQual}, and fig.~\ref{fig:NP1EventQual} shows the energy spectra of the events that pass these cuts.
 \begin{table}[h]
   \begin{center}
     \caption[Event Quality Cuts]{Quality cuts applied to individual events to ensure properly reconstructed quantities.}
@@ -135,7 +159,7 @@ Fiducial volume and containment cuts are applied to remove events originating ou
 
 \subsection{Far Detector}
 
-For the FD, the fiducial and containment cuts have the largest effect on the cosmic background. Since cosmic ray events originate above the detector, there are many more cosmic events with reconstructed vertices in the upper portion of the detector. The fiducial volume cut in $Y$ is thus applied in an asymmetric way to eliminate more of the cosmic background. The fiducial volume cut on $Z$ (the beam direction) is also asymmetric to account for cosmic rays entering the back of the detector hall where there is a smaller amount of rock overburden to shield these events. The fiducial volume cut on $X$ is also applied slightly asymmetrically for a slight performance gain. Events that pass these fiducial cuts must still pass the containment cuts. For the FD, the leading prong must neither start nor stop within $10\unit{cm}$ of any detector face. Fig.~\ref{fig:FidCont} shows the distributions of these variables before application of the fiducial or containment cuts. Table \ref{tab:NP1FidContFD} summarizes the event rates before and after applying fiducial and containment cuts; fig.~\ref{fig:NP1FidContFD} show the energy spectra of events that pass these cuts.
+For the FD, the fiducial and containment cuts are the first major step in reducing the cosmic background. Since cosmic ray events originate above the detector, there are many more cosmic events with reconstructed vertices in the upper portion of the detector. The fiducial volume cut in $Y$ is thus applied in an asymmetric way to eliminate more of the cosmic background. The fiducial volume cut on $Z$ (the beam direction) is also asymmetric to account for cosmic rays entering the back of the detector hall where there is a smaller amount of rock overburden to shield these events. The fiducial volume cut on $X$ is also applied slightly asymmetrically for a slight performance gain. Events that pass these fiducial cuts must still pass the containment cuts. For the FD, the start and stop points of the leading prong must be further than $10\unit{cm}$ of any detector face. Fig.~\ref{fig:FidCont} shows the distributions of these variables before application of the fiducial or containment cuts. Table \ref{tab:NP1FidContFD} summarizes the event rates before and after applying fiducial and containment cuts; fig.~\ref{fig:NP1FidContFD} show the energy spectra of events that pass these cuts.
 \begin{figure}[h]
   \centering
   \begin{tabular}{c c}
@@ -248,7 +272,7 @@ While the ND does not have a large cosmic background to eliminate, there are man
 
 \section{NC Selection}
 
-All of the cuts discussed to this point ensure that the remaining sample of events are well reconstructed, contained events. These events should all be representative of their respective types, i.e., NC, $\nue$ CC, and $\numu$ CC. The NC selection cuts are designed to select a largely pure sample of NC events from amongst the CC backgrounds. The LID, RemID, and CVN PID distributions all have power to complete this goal. RemID, discussed in detail in ref.~\cite{ref:TNRemID}, is specifically designed to identify muons, and provides separation power to remove $\numu$ CC events that score highly under this PID. Likewise, LID, described in ref.~\cite{ref:TNLID}, has the power to remove $\nue$ CC events. CVN, discussed in detail in ref.~\cite{ref:TNCVN}, does not attempt to identify a single event type; rather, it gives the most likely event type among all possibilities. Any residual events that score lowly in this PID can be removed; particularly we see a spike of cosmics near 0. Finally, we use a cut on the number of hits for a small performance gain. The distributions of these variables at the FD are shown in fig.~\ref{fig:NCSel}. Table \ref{tab:NCSel} summarizes the cuts used, table \ref{tab:NP1NCSel} lists the event rates before and after the selection cuts are applied, and fig.~\ref{fig:NP1NCSel} shows the energy distributions of events that pass these cuts.
+All of the cuts discussed to this point ensure that the remaining sample of events are well reconstructed, contained events. The remaining events should all be representative of their respective types, i.e., NC, $\nue$ CC, and $\numu$ CC. The NC selection cuts are designed to select a relatively pure sample of NC events from amongst the CC backgrounds. The LID, RemID, and CVN PID distributions all have power to complete this goal. RemID, discussed in detail in ref.~\cite{ref:TNRemID}, is specifically designed to identify muons, and provides separation power to remove $\numu$ CC events that score highly under this PID. Likewise, LID, described in ref.~\cite{ref:TNLID}, has the power to remove $\nue$ CC events. CVN, discussed in detail in ref.~\cite{ref:TNCVN}, does not attempt to identify a single event type; rather, it gives the most likely event type among all possibilities. Any residual events that score lowly in this PID can be removed; particularly there is a spike of cosmics near 0. Finally, we use a cut on the number of hits for a small performance gain at the ND. The distributions of these variables at the FD are shown in fig.~\ref{fig:NCSel}. Table \ref{tab:NCSel} summarizes the cuts used, table \ref{tab:NP1NCSel} lists the event rates before and after the selection cuts are applied, and fig.~\ref{fig:NP1NCSel} shows the energy distributions of events that pass these cuts.
 \begin{figure}[h]
   \centering
   \begin{tabular}{c c}
@@ -313,9 +337,11 @@ All of the cuts discussed to this point ensure that the remaining sample of even
 
 \section{Cosmic Rejection}
 
+
+
 \section{Summary}
 
-The final selection combines all of the previous sections with the cosmic rejection cuts described in ref.~\cite{ref:TNCosmic}. The event rates at each level of cut are summarized for the FD in Table \ref{tab:FDSel}, and in Table \ref{tab:NDSel} for the ND. The final energy spectra are shown in fig.~\ref{fig:Sel}.
+The final selection combines all of the cuts from the previous sections. The event rates at each level of cut are summarized for the FD in Table \ref{tab:FDSel}, and in Table \ref{tab:NDSel} for the ND. The final energy spectra are shown in fig.~\ref{fig:Sel}.
 \begin{table}[h]
   \begin{center}
     \caption[Event Table: FD Selection Cuts]{The number of events after each cut level at the FD.}
