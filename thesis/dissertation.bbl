@@ -217,13 +217,6 @@ P.~Adamson et~al.
 \newblock First measurement of muon-neutrino disappearance in {NOvA}.
 \newblock {\em Physical Review D Rapid Communications}, 93:051104, 2016.
 
-\bibitem{ref:TNCosmic}
-S.~Yang.
-\newblock Cosmic technote title.
-\newblock
-  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=TODO}{\nova~Internal
-  Document TODO}.
-
 \bibitem{ref:TNBeamQual}
 L.~Goodenough and S.~R. Phan-Budd.
 \newblock Technical note on the {NOvA} beam monitoring for 2015 summer
@@ -315,10 +308,45 @@ D.~Pershey.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13158}{\nova~Internal
   Document 13158}.
 
+\bibitem{ref:TNCalib}
+L.~Vinton.
+\newblock First analysis calibration technotes.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13579}{\nova~Internal
+  Document 13579}.
+
+\bibitem{ref:CalibMESA}
+D.~Pershey.
+\newblock {ME} check with {SA} rock muons in {ND}.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=14959}{\nova~Internal
+  Document 14959}.
+
+\bibitem{ref:CalibPi0SA}
+G.~Davies.
+\newblock pi0 invariant mass in {SA} files.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15005}{\nova~Internal
+  Document 15005}.
+
+\bibitem{ref:CalibSA}
+K.~Matera et~al.
+\newblock Calibration status for second analysis.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15127}{\nova~Internal
+  Document 15127}.
+
 \bibitem{ref:GENIE}
 C.~Andreopoulos et~al.
 \newblock The {GENIE} neutrino monte carlo generator: Physics and user manual.
 \newblock \url{http://arxiv.org/abs/1510.05494}.
+
+\bibitem{ref:TNGENIE}
+H.~Gallagher et~al.
+\newblock {GENIE} tune and uncertainty band for second analysis.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15214}{\nova~Internal
+  Document 15214}.
 
 \bibitem{ref:NDDataMC}
 A.~Markowitz.
