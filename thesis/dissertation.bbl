@@ -281,20 +281,20 @@ K.~Sachdev, J.~Bian, and E.~Niner.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13590}{\nova~Internal
   Document 13590}.
 
-\bibitem{ref:TNCVN}
-A.~Aurisano.
-\newblock Todo.
+\bibitem{ref:TNNumuContPID}
+K.~Bays.
+\newblock Cosmic rejection technical note.
 \newblock
-  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=TODO}{\nova~Internal
-  Document TODO}.
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11205}{\nova~Internal
+  Document 11205}.
 
 \bibitem{ref:TNBeam}
 H.~Duyang et~al.
-\newblock A technote describing the derivation and size of numi flux
-  uncertainties used in the first analyses.
+\newblock A technote describing the derivation and size of {NuMI} flux
+  uncertainties used in the second {NOvA} analyses.
 \newblock
-  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13584}{\nova~Internal
-  Document 13584}.
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15296}{\nova~Internal
+  Document 15296}.
 
 \bibitem{ref:BirksChou}
 C.~N. Chou.
@@ -324,7 +324,7 @@ D.~Pershey.
 
 \bibitem{ref:CalibPi0SA}
 G.~Davies.
-\newblock pi0 invariant mass in {SA} files.
+\newblock pi$0$ invariant mass in {SA} files.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15005}{\nova~Internal
   Document 15005}.

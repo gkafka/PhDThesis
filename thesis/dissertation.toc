@@ -36,30 +36,30 @@
 \contentsline {subsection}{\numberline {6.3.1}Far Detector}{29}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Near Detector}{31}{subsection.6.3.2}
 \contentsline {section}{\numberline {6.4}NC Selection}{32}{section.6.4}
-\contentsline {section}{\numberline {6.5}Cosmic Rejection}{33}{section.6.5}
-\contentsline {section}{\numberline {6.6}Summary}{33}{section.6.6}
-\contentsline {chapter}{\numberline {7}Neutral Current Spectrum Prediction}{36}{chapter.7}
-\contentsline {section}{\numberline {7.1}The CAFAna Analysis Chain}{36}{section.7.1}
-\contentsline {section}{\numberline {7.2}Near Detector Decomposition}{37}{section.7.2}
-\contentsline {section}{\numberline {7.3}Extrapolation}{37}{section.7.3}
-\contentsline {section}{\numberline {7.4}Far Detector Prediction}{37}{section.7.4}
-\contentsline {chapter}{\numberline {8}Systematic Error Analysis}{38}{chapter.8}
-\contentsline {section}{\numberline {8.1}Beam}{39}{section.8.1}
-\contentsline {section}{\numberline {8.2}Birks-Chou Light Yield Simulation}{40}{section.8.2}
-\contentsline {section}{\numberline {8.3}Calibration}{42}{section.8.3}
-\contentsline {section}{\numberline {8.4}GENIE Simulation}{43}{section.8.4}
-\contentsline {section}{\numberline {8.5}ND Containment}{46}{section.8.5}
-\contentsline {section}{\numberline {8.6}ND Rock Event Contamination}{46}{section.8.6}
-\contentsline {section}{\numberline {8.7}ND Data/MC Difference and CC Background}{47}{section.8.7}
-\contentsline {section}{\numberline {8.8}MC Statistics}{49}{section.8.8}
-\contentsline {section}{\numberline {8.9}Noise Model}{49}{section.8.9}
-\contentsline {section}{\numberline {8.10}Overall Normalization}{50}{section.8.10}
-\contentsline {section}{\numberline {8.11}Systematic Error Summary}{50}{section.8.11}
-\contentsline {chapter}{\numberline {9}Analysis Results}{53}{chapter.9}
-\contentsline {section}{\numberline {9.1}Fitting Method}{53}{section.9.1}
-\contentsline {section}{\numberline {9.2}Sideband Study}{53}{section.9.2}
-\contentsline {section}{\numberline {9.3}Results}{53}{section.9.3}
-\contentsline {chapter}{\numberline {10}Conclusions and Future Improvements}{54}{chapter.10}
-\contentsline {section}{\numberline {10.1}Conclusions}{54}{section.10.1}
-\contentsline {section}{\numberline {10.2}Future Improvements}{54}{section.10.2}
-\contentsline {chapter}{References}{58}{chapter*.48}
+\contentsline {section}{\numberline {6.5}Cosmic Rejection}{34}{section.6.5}
+\contentsline {section}{\numberline {6.6}Summary}{35}{section.6.6}
+\contentsline {chapter}{\numberline {7}Neutral Current Spectrum Prediction}{38}{chapter.7}
+\contentsline {section}{\numberline {7.1}The CAFAna Analysis Chain}{38}{section.7.1}
+\contentsline {section}{\numberline {7.2}Near Detector Decomposition}{39}{section.7.2}
+\contentsline {section}{\numberline {7.3}Extrapolation}{39}{section.7.3}
+\contentsline {section}{\numberline {7.4}Far Detector Prediction}{39}{section.7.4}
+\contentsline {chapter}{\numberline {8}Systematic Error Analysis}{40}{chapter.8}
+\contentsline {section}{\numberline {8.1}Beam}{41}{section.8.1}
+\contentsline {section}{\numberline {8.2}Birks-Chou Light Yield Simulation}{43}{section.8.2}
+\contentsline {section}{\numberline {8.3}Calibration}{44}{section.8.3}
+\contentsline {section}{\numberline {8.4}GENIE Simulation}{46}{section.8.4}
+\contentsline {section}{\numberline {8.5}ND Containment}{48}{section.8.5}
+\contentsline {section}{\numberline {8.6}ND Rock Event Contamination}{49}{section.8.6}
+\contentsline {section}{\numberline {8.7}ND Data/MC Difference and CC Background}{50}{section.8.7}
+\contentsline {section}{\numberline {8.8}MC Statistics}{53}{section.8.8}
+\contentsline {section}{\numberline {8.9}Noise Model}{53}{section.8.9}
+\contentsline {section}{\numberline {8.10}Overall Normalization}{53}{section.8.10}
+\contentsline {section}{\numberline {8.11}Systematic Error Summary}{54}{section.8.11}
+\contentsline {chapter}{\numberline {9}Analysis Results}{55}{chapter.9}
+\contentsline {section}{\numberline {9.1}Fitting Method}{55}{section.9.1}
+\contentsline {section}{\numberline {9.2}Sideband Study}{55}{section.9.2}
+\contentsline {section}{\numberline {9.3}Results}{55}{section.9.3}
+\contentsline {chapter}{\numberline {10}Conclusions and Future Improvements}{56}{chapter.10}
+\contentsline {section}{\numberline {10.1}Conclusions}{56}{section.10.1}
+\contentsline {section}{\numberline {10.2}Future Improvements}{56}{section.10.2}
+\contentsline {chapter}{References}{60}{chapter*.51}

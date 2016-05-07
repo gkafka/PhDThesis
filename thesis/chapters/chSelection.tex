@@ -77,9 +77,9 @@ Table \ref{tab:NP1DataQual} shows the number of events that pass these data qual
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
       \hline
       \multicolumn{5}{l}{FD:} \\
-      Data Quality & 194.8 & 107.3 & 54.0 & 66148.4 \\
+      Data Quality & 363.1 & 298.1 & 65.0 & 14.4 $\times 10^{6}$ \\
       \multicolumn{5}{l}{ND $(\times 10^{3})$:} \\
-      Data Quality & 3934 & 13904 & 246 & \\
+      Data Quality & 12260 & 86703 & 1085 & \\
       \hline
     \end{tabular}
   \end{center}
@@ -129,11 +129,11 @@ Event quality cuts are the first applied to individual events and ensure that th
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
       \hline
       \multicolumn{5}{l}{FD:} \\
-      Data Quality & 194.8 & 107.3 & 54.0 & 66148.4 \\
-      $+$Event Quality & 194.8 & 107.3 & 54.0 & 66148.4 \\
+      Data Quality & 363.1 & 298.1 & 65.0 & 14.4 $\times 10^{6}$ \\
+      $+$Event Quality & 226.6 & 121.7 & 59.7 & 0.176 $\times 10^{6}$ \\
       \multicolumn{5}{l}{ND $(\times 10^{3})$:} \\
-      Data Quality & 3934 & 13904 & 246 & \\
-      $+$Event Quality & 3934 & 13904 & 246 & \\
+      Data Quality & 12260 & 86703 & 1085 & \\
+      $+$Event Quality & 7518 & 45752 & 658 & \\
       \hline
     \end{tabular}
   \end{center}
@@ -197,9 +197,9 @@ For the FD, the fiducial and containment cuts are the first major step in reduci
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
       \hline
-      ...Event Quality & 194.8 & 107.3 & 54.0 & 66148.4 \\
-      $+$ Fiducial & 116.7 & 45.5 & 32.2 & 8164.7 \\
-      $+$ Containment & 113.2 & 39.7 & 31.0 & 580.0 \\
+      ...Event Quality & 226.6 & 121.7 & 59.7 & 175900 \\
+      $+$ Fiducial & 142.2 & 49.2 & 37.2 & 13550 \\
+      $+$ Containment & 139.5 & 44.9 & 36.5 & 2295 \\
       \hline
     \end{tabular}
   \end{center}
@@ -248,9 +248,9 @@ While the ND does not have a large cosmic background to eliminate, there are man
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC \\
       \hline
-      ...Event Quality & 3934 & 13904 & 246 \\
-      $+$ Fiducial & 1377 & 3490 & 64 \\
-      $+$ Containment & 686.0 & 809.7 & 26.8 \\
+      ...Event Quality & 7518 & 45752 & 658 \\
+      $+$ Fiducial & 619.3 & 1437.1 & 30.8 \\
+      $+$ Containment & 343.6 & 382.0 & 15.4 \\
       \hline
     \end{tabular}
   \end{center}
@@ -312,9 +312,7 @@ The distributions of CVN and the number of hits at the FD are shown in fig.~\ref
       \hline\hline
       Selection Parameter & Metric for Event to Pass \\
       \hline
-      RemID distribution score & $\leq 0.6$ \\
-      LID distribution score & $\leq 0.5$ \\
-      CVN NC distribution score & $\geq 0.03$ \\
+      CVN NC distribution score & $\geq 0.2$ \\
       Number of Hits & $\leq 200$ \\
       \hline
     \end{tabular}
@@ -330,11 +328,11 @@ The distributions of CVN and the number of hits at the FD are shown in fig.~\ref
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
       \hline
       \multicolumn{5}{l}{FD:} \\
-      ...Containment & 113.2 & 39.7 & 31.0 & 580.0 \\
-      $+$NC Selection & 94.8 & 12.1 & 7.8 & 200.0 \\
+      ...Containment & 139.5 & 44.9 & 36.5 & 2295 \\
+      $+$NC Selection & 132.9 & 12.8 & 6.7 & 339.0 \\
       \multicolumn{5}{l}{ND $(\times 10^{3})$:} \\
-      ...Containment & 686.0 & 809.7 & 26.8 & \\
-      $+$NC Selection & 593.5 & 360.9 & 9.7 & \\
+      ...Containment & 343.6 & 382.0 & 15.4 & \\
+      $+$NC Selection & 296.9 & 136.0 & 4.2 & \\
       \hline
     \end{tabular}
   \end{center}
@@ -344,11 +342,11 @@ The distributions of CVN and the number of hits at the FD are shown in fig.~\ref
   \centering
   \begin{subfigure}{.48\textwidth}
     \centering
-    \includegraphics[width=1\linewidth]{figures/RecoE5FD.png}
+    \includegraphics[width=1\linewidth]{figures/RecoE4FD.png}
   \end{subfigure}
   \begin{subfigure}{.48\textwidth}
     \centering
-    \includegraphics[width=1\linewidth]{figures/RecoE5ND.png}
+    \includegraphics[width=1\linewidth]{figures/RecoE4ND.png}
   \end{subfigure}
   \caption[Energy Spectra After NC Selection Cuts]{Energy spectra after NC selection cuts for the FD (left) and ND (right).}
   \label{fig:NP1NCSel}
@@ -360,10 +358,11 @@ The final set of cuts applied to the events is cosmic rejection. While there are
 \begin{figure}[h]
   \centering
   \begin{tabular}{c c}
-    \includegraphics[width=.48\textwidth]{figures/NP1RmID.png} &
-    \includegraphics[width=.48\textwidth]{figures/NP1ELID.png} \\
-    \includegraphics[width=.48\textwidth]{figures/NP1CVNC.png} &
-    \includegraphics[width=.48\textwidth]{figures/NP1NHit.png} \\
+    \includegraphics[width=.48\textwidth]{figures/NP1NmCP.png} &
+    \includegraphics[width=.48\textwidth]{figures/NP1PPTP.png} \\
+    \includegraphics[width=.48\textwidth]{figures/NP1EHit.png} &
+    \includegraphics[width=.48\textwidth]{figures/NP1DistTop.png} \\
+    \includegraphics[width=.48\textwidth]{figures/NP1IsMu.png} & \\
   \end{tabular}
   \caption[Cosmic Rejection Variable Distributions]{Distributions of variables used for cosmic rejection at the FD.}
   \label{fig:CosRej}
@@ -378,11 +377,11 @@ The final set of cuts applied to the events is cosmic rejection. While there are
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
       \hline
       \multicolumn{5}{l}{FD:} \\
-      ...NC Selection & 113.2 & 39.7 & 31.0 & 580.0 \\
-      $+$Cosmic Rejection & 94.8 & 12.1 & 7.8 & 200.0 \\
+      ...NC Selection & 132.9 & 12.8 & 6.7 & 339.0 \\
+      $+$ Cosmic Rejection & 73.1 & 6.3 & 4.3 & 6.0 \\
       \multicolumn{5}{l}{ND $(\times 10^{3})$:} \\
-      ...NC Selection & 686.0 & 809.7 & 26.8 & \\
-      $+$Cosmic Rejection & 593.5 & 360.9 & 9.7 & \\
+      ...NC Selection 296.9 & 136.0 & 4.2 & \\
+      $+$ Cosmic Rejection & 235.9 & 88.1 & 3.4 & \\
       \hline
       \hline
     \end{tabular}
@@ -393,11 +392,11 @@ The final set of cuts applied to the events is cosmic rejection. While there are
   \centering
   \begin{subfigure}{.48\textwidth}
     \centering
-    \includegraphics[width=1\linewidth]{figures/RecoE6FD.png}
+    \includegraphics[width=1\linewidth]{figures/RecoE5FD.png}
   \end{subfigure}
   \begin{subfigure}{.48\textwidth}
     \centering
-    \includegraphics[width=1\linewidth]{figures/RecoE6ND.png}
+    \includegraphics[width=1\linewidth]{figures/RecoE5ND.png}
   \end{subfigure}
   \caption[Energy Spectra After All Cuts]{Energy spectra after all cuts for the FD (left) and ND (right).}
   \label{fig:Sel}
@@ -414,12 +413,12 @@ The final selection combines all of the cuts from the previous sections. The eve
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
       \hline
-      Data Quality & 194.8 & 107.3 & 54.0 & 66148.4 \\
-      $+$ Event Quality & 194.8 & 107.3 & 54.0 & 66148.4 \\
-      $+$ Fiducial & 116.7 & 45.5 & 32.2 & 8164.7 \\
-      $+$ Containment & 113.2 & 39.7 & 31.0 & 580.0 \\
-      $+$ NC Selection & 94.8 & 12.1 & 7.8 & 200.0 \\
-      $+$ Cosmic Rejection & 66.6 & 7.8 & 6.1 & 10.6 \\
+      Data Quality & 363.1 & 298.1 & 65.0 & 14.40 $\times 10^{6}$ \\
+      $+$ Event Quality & 226.6 & 121.7 & 59.7 & 175900 \\
+      $+$ Fiducial & 142.2 & 49.2 & 37.2 & 13550 \\
+      $+$ Containment & 139.5 & 44.9 & 36.5 & 2295 \\
+      $+$ NC Selection & 132.9 & 12.8 & 6.7 & 339.0 \\
+      $+$ Cosmic Rejection & 73.1 & 6.3 & 4.3 & 6.0 \\
       \hline
     \end{tabular}
   \end{center}
@@ -433,12 +432,12 @@ The final selection combines all of the cuts from the previous sections. The eve
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC \\
       \hline
-      Data Quality & 3934 & 13904 & 246 \\
-      $+$Event Quality & 3934 & 13904 & 246 \\
-      $+$ Fiducial & 1377 & 3490 & 64 \\
-      $+$ Containment & 686.0 & 809.7 & 26.8 \\
-      $+$ NC Selection & 593.5 & 360.9 & 9.7 \\
-      $+$ Cosmic Rejection & ? & ? & ? \\
+      Data Quality & 12260 & 86703 & 1085 \\
+      $+$Event Quality & 7518 & 45752 & 658 \\
+      $+$ Fiducial & 619.3 & 1437.1 & 30.8 \\
+      $+$ Containment & 343.6 & 382.0 & 15.4 \\
+      $+$ NC Selection 296.9 & 136.0 & 4.2 \\
+      $+$ Cosmic Rejection & 235.9 & 88.1 & 3.4 \\
       \hline
     \end{tabular}
   \end{center}

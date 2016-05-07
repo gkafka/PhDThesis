@@ -3,7 +3,7 @@
 
 As with any analysis, the NC disappearance analysis is sensitive to a number of systematic effects. \nova~was designed with two functionally identical detectors, so that Near Detector data can be used to constrain or correct the Far Detector prediction. Since many effects such as beam and cross section uncertainties affect the spectra at both detectors in a similar or the same way, this two detector technique leads to the reduction of these systematic errors. Other effects, such as Near Detector rock event contamination, require a data driven technique to quantify.
 
-The general technique for analyzing systematic errors was to run the full extrapolation chain and generate a predicted spectrum with and without a systematic effect applied. The prediction assumed the same three flavor oscillation parameters as in ch.~\ref{ch:Selection}, listed in Table \ref{tab:3FlavParams}. Each given systematic effect was used to shift the MC simulation at one or both detectors as appropriate. The resulting difference between the shifted and nominal spectra was quantified as a systematic error.
+The general technique for analyzing systematic errors was to run the full extrapolation chain and generate a predicted spectrum with and without a systematic effect applied. As in ch.~\ref{ch:Selection}, the prediction assumed the same three flavor oscillation parameters listed in Table \ref{tab:3FlavParams}, and for normalization simplicity, only 14 diblock MC and data were studied. All spectra were then scaled to \pot{6}. Each given systematic effect was used to shift the MC simulation at one or both detectors as appropriate. The resulting difference between the shifted and nominal spectra was quantified as a systematic error.
 
 The systematic effects analyzed included uncertainties arising from the beam, GENIE simulation, Birks-Chou light yield simulation, calibration, bias from the ND containment, ND rock event contamination, ND data/MC spectrum and hadronic energy differences, noise model, MC statistics, and overall normalization. The rest of this chapter discusses each of these effects in greater detail.
 
@@ -22,6 +22,8 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
   \item Horn 1 position varied by $\pm 2\,mm$ in both X and Y
   \item Horn 2 position varied by $\pm 2\,mm$ in both X and Y
   \item Horn magnetic field changed from linear to exponential distribution
+  \item Changes to MC beamline simulation
+  \item Comparison between versions of FLUKA
   \item Comparison between FLUKA and G4NuMI
   \item Comparison between FLUKA and NA49
 \end{itemize}
@@ -35,17 +37,20 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
       \hline\hline
       Systematic & NC Difference (\%) & Background Difference (\%) \\
       \hline
-      Beam Position, X & 0.5 & 0.5 \\
+      Beam Position, X & 0.5 & 0.7 \\
       Beam Position, Y & 0.2 & 0.3 \\
-      Beam Spot Size & 0.1 & 0.4 \\
-      Target Position & 0.03 & 0.1 \\
+      Beam Spot Size & 0.2 & 0.8 \\
+      Target Position & 0.1 & 0.2 \\
       Horn Current & 0.1 & 0.1 \\
-      Horn 1 Position & 0.8 & 0.9 \\
-      Horn 2 Position & 0.3 & 0.4 \\
-      Horn B Field & 0.1 & 1.6 \\
-      Hadron Productions & 3.2 & 8.4 \\
+      Horn 1 Position & 0.7 & 1.0 \\
+      Horn 2 Position & 0.2 & 0.4 \\
+      Horn B Field & 0.1 & 0.1 \\
+      Geometry Simulation Change & 0.4 & 2.1 \\
+      FLUKA Versions & 0.04 & 0.6 \\
+      FLUKA v G4NuMI & 0.4 & 3.0 \\
+      FLUKA v NA49 & 3.3 & 9.3 \\
       \hline
-      Combined & 3.4 & 8.7 \\
+      Combined & 3.6 & 10.4 \\
       \hline
     \end{tabular}
   \end{center}
@@ -332,15 +337,15 @@ The NC disappearance analysis used a combination of the above techniques to eval
 
 \section{MC Statistics}
 
-In a perfect world, there would be enough MC statistics that this section would be unnecessary, but alas, a perfect world this is not. To estimate the systematic error due to MC statistics, the MC was split into five uniformly sized samples, and each was used to extrapolate the same set of ND data. One of the resultant predicted FD spectra was labeled as nominal, and the other four were compared to this. The bin by bin differences were taken as the error between the nominal spectrum and the `shifted' spectrum. To come up with an overall uncertainty, all of the errors were added in quadrature and the result was divided by the square root of the number of samples, or $\sqrt{4} = 2$. The result was a $2.2\%$ error on the NC signal spectrum and a $4.9\%$ error on the background spectrum.
+In a perfect world, there would be enough MC statistics that this section would be unnecessary, but alas, a perfect world this is not. To estimate the systematic error due to MC statistics, the MC was split into five uniformly sized samples, and each was used to extrapolate the same set of ND data. One of the resultant predicted FD spectra was labeled as nominal, and the other four were compared to this. The bin by bin differences were taken as the error between the nominal spectrum and the `shifted' spectrum. To come up with an overall uncertainty, all of the errors were added in quadrature and the result was divided by the square root of the number of samples, or $\sqrt{4} = 2$. The result was a $3.2\%$ error on the NC signal spectrum and a $5.8\%$ error on the background spectrum.
 
 \section{Noise Model}
 
-A sample of MC was generated for the FD using a different model of noise to study the systematic error caused by the noise model. To quantify the error, the predicted FD event spectra from the nominal and alternative MC samples were compared against each other after applying normal three flavor oscillation weights. The difference seen was $1.4\%$ for the NC signal, and $1.8\%$ for the background. As the shifted sample was only generated for the FD MC and the error was comparatively small, this systematic was added into the overall normalization.
+A sample of MC was generated for the FD using a different model of noise to study the systematic error caused by the noise model. To quantify the error, the predicted FD event spectra from the nominal and alternative MC samples were compared against each other after applying normal three flavor oscillation weights. The difference seen was $1.2\%$ for the NC signal, and $1.6\%$ for the background. As the shifted sample was only generated for the FD MC and the error was comparatively small, this systematic was added into the overall normalization.
 
 \section{Overall Normalization}
 
-Several independent effects contributed to an overall normalization systematic error. A $0.5\%$ error on the POT counting came from a small difference in the two toroids that determine the POT in a spill \cite{ref:TNBeam}. Uncertainties in the masses of the various parts of the \nova~detectors contributed another error of $0.7\%$ \cite{ref:MassError}. Finally, a study of the reconstruction efficiency between ND data and MC showed a $1.6\%$ difference between the number of events that get fully reconstructed \cite{ref:NDDataMCRecoEff}, which was taken directly as a contribution to the normalization error. These three effects and the noise systematic were combined in quadrature and constituted a systematic error of $2.3\%$ on the NC signal and $2.5\%$ on the background.
+Several independent effects contributed to an overall normalization systematic error. A $0.5\%$ error on the POT counting came from a small difference in the two toroids that determine the POT in a spill \cite{ref:TNBeam}. Uncertainties in the masses of the various parts of the \nova~detectors contributed another error of $0.7\%$ \cite{ref:MassError}. Finally, a study of the reconstruction efficiency between ND data and MC showed a $1.6\%$ difference between the number of events that get fully reconstructed \cite{ref:NDDataMCRecoEff}, which was taken directly as a contribution to the normalization error. These three effects and the noise systematic were combined in quadrature and constituted a systematic error of $2.2\%$ on the NC signal and $2.4\%$ on the background.
 
 \section{Systematic Error Summary}
 
@@ -357,11 +362,11 @@ Table \ref{tab:SystSummary} shows a summary of all of the systematics, as well a
       Birks-Chou & 2.9 & 3.1 \\
       Calibration & & \\
       GENIE & 11.3 & 12.8 \\
-      ND Containment & 3.6 & 3.0 \\
-      ND Rock Contamination & 4.4 & 1.5 \\
+      ND Containment & 0.8 & 0.7 \\
+      ND Rock Contamination & 4.1 & 1.5 \\
       ND Data/MC & 6.6 & 14.8 \\
-      MC Statistics & 2.2 & 4.9 \\
-      Overall Normalization & 2.3 & 2.5 \\
+      MC Statistics & 3.2 & 5.8 \\
+      Overall Normalization & 2.2 & 2.4 \\
       \hline
       Combined & & \\
       \hline
