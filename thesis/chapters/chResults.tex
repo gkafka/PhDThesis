@@ -1,8 +1,98 @@
 \chapter{Analysis Results}
 \label{ch:Results}
 
+The analysis presented in this dissertation was designed to make several measurements. As this dissertation was written alongside the first \nova~NC analysis, one primary goal of the analysis was to demonstrate the successful ability of \nova~to identify NC events and measure the ratio of observed to predicted NC events, $R$.
+\beq
+R \equiv \frac{ N_{Obs} - N_{Pred}^{Bkg} }{ N_{Pred}^{NC} }
+\label{eq:R}
+\eeq
+
+\n The other (arguably more important) goal was to start contributing to the global data on the sterile mixing parameters by extracting measurements on the mixing angles $\theta_{24}$, $\theta_{34}$ and matrix elements $\Usqxy{\mu}{4}$ and $\Usqxy{\tau}{4}$.
+
+The first section in this chapter describes the fitting methods used to make the mixing angle and matrix element measurements. Before presenting the results, the next two sections discuss preliminary tests to demonstrate satisfactory performance of the analysis. The final section in this chapter presents the ultimate results.
+
 \section{Fitting Method}
 
-\section{Sideband Study}
+It was decided to make rate only measurements for the first \nova~NC disappearance analysis. Thus, even though the extrapolation and prediction were performed using shape information, only the integrated event totals were input to the fitting framework.
+
+\section{ND Data/MC Comparisons}
+
+Before diving head first into the FD data, the first necessary analysis benchmark was ND data/MC comparisons. Fig~TODO shows the event energy distributions and fig.s TODO show the distributions for all of the variables used for selection discussed in ch.~\ref{ch:Selection}.
+
+\n While most of the distributions differ by at most a small normalization, a few have an apparent shift, notably the energy and number of hits distributions. These particular discrepancies were actually expected due to a known mismodeling of NC interactions.
+
+Very recently there was experimental evidence for a new `mode' of interaction. A systematic scale for this event type was added to and evaluated with the GENIE systematics discussed in sec.~\ref{sec:SystGENIE}.
+
+The inclusion of these effects drastically improved the data/MC agreement for the \nova~CC analyses. Unfortunately, while the experimental data was available allowing for study of these effects on CC events, the data for NC events is largely nonexistent. Consequently the \nova~simulation does not include these effects for NC events despite widespread belief that similar effects should be seen. This would largely explain the data/MC differences seen in the energy and number of hits distributions.
+
+Two sanity checks were performed to ensure that the data/MC difference would not negatively impact the analysis. First, the ND data/MC energy distribution was shown with a full systematic error band to show the difference is covered by systematics. This is shown in fig.~TODO. Secondly, the effect of shifting the data in relation to the MC on the predicted event rate and 1D angle sensitivities was studied. This was by shifting the data up by the ratio of the means of the energy distributions for MC and data, $1.39\unit{GeV} / 1.33\unit{GeV} \approx 4.5\%$ and also for a much larger shift of $10\%$. The event counts are shown in Table \ref{tab:FDShift} and the angle sensitivities are shown in fig.~TODO. Due to the nature of a counting experiment, since the overall event rates are essentially unchanged, the effect of these rather large shifts is negligible. As a result, it was decided to take the data and MC as is push for model improvements for future analyses.
+\begin{table}[h]
+  \begin{center}
+    \caption[FD Event Rates for Shifted Energy Spectra]{The number of predicted events at the FD after applying an energy shift to the ND data.}
+    \label{tab:FDShift}
+    \begin{tabular}{c c c c c c}
+      \hline\hline
+      Shift & All & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
+      \hline
+      None &  &  &  &  &  \\
+      $4.5 \%$ &  &  &  &  &  \\
+      $10 \%$ &  &  &  &  &  \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%\begin{figure}[h]
+%  \centering
+%  \begin{tabular}{c c}
+%    \includegraphics[width=.48\textwidth]{figures/c24Shift.png} &
+%    \includegraphics[width=.48\textwidth]{figures/c34Shift.png} \\
+%  \end{tabular}
+%  \caption[Angle Sensitivities for Shifted Energy Spectra]{Angle sensitivities after applying an energy shift to the ND data. Left: $\theta_{24}$, Right: $\theta_{34}$.}
+%  \label{fig:1D2434Shift}
+%\end{figure}
+
+\section{Sideband Studies}
+
+Three different sidebands were studied to test the performance of the analysis, a high energy sideband, a low CVN sideband, and mid cosmic BDT sideband. The predicted and observed event rates for each sideband are shown in Table \ref{tab:Sideband}.
+\begin{table}[h]
+  \begin{center}
+    \caption[Sideband Event Rates]{The observed and predicted events at the FD for each sideband.}
+    \label{tab:Sideband}
+    \begin{tabular}{c c c c c c c}
+      \hline\hline
+      Sideband & Data & Total MC & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
+      \hline
+      High Energy & 15 &  &  &  &  &  \\
+      Low CVN & 35 &  &  &  &  &  \\
+      Mid BDT & 17 &  &  &  &  &  \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+The high energy sideband applied the standard selection and considered events between $4$ and $6\unit{GeV}$, a region chosen due to its high purity of NC events. The predicted and observed event distributions are shown in fig.~TODO, $TODO$ events were predicted and $15 \pm 4$ were observed in data. While the observed rate is slightly high, the low statistics means that the observation is within $2\sigma$ of the prediction. Furthermore, the discrepancy is largely driven by a single bin rather than a systematic offset. This result was thus interpreted as validation for the general analysis procedure.
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=1\textwidth]{figures/.png}
+%  \caption[High Energy Sideband]{The observed and predicted FD event rates for the high energy sideband.}
+%  \label{fig:SidebandHighE}
+%\end{figure}
+
+The low CVN sideband considered events that fail the CVN cut, or those with a CVN NC score below $0.2$. This region was used as validation for the CVN selector. The predicted and observed event distributions are shown in fig.~TODO, $TODO$ events were predicted and $35 \pm 6$ were observed in data. The overall agreement in both shape and rate for this sideband provided great confidence in the performance of CVN.
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=1\textwidth]{figures/.png}
+%  \caption[Low CVN Sideband]{The observed and predicted FD event rates for the low CVN sideband.}
+%  \label{fig:SidebandLowCVN}
+%\end{figure}
+
+The mid cosmic BDT sideband considers events with a BDT score between $0.42$ and $0.5$, a region which fails the standard selection cuts but still has NC events. The predicted and observed event distributions are shown in fig.~TODO, $TODO$ events were predicted and $17 \pm 4$ were observed in data. This sideband also showed excellent agreement in both shape and rate, providing further validation for the general analysis procedure, and specifically for the main cosmic rejection variable.
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=1\textwidth]{figures/.png}
+%  \caption[Mid Cosmic BDT Sideband]{The observed and predicted FD event rates for the mid cosmic BDT sideband.}
+%  \label{fig:SidebandMidBDT}
+%\end{figure}
 
 \section{Results}
