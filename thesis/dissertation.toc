@@ -45,22 +45,22 @@
 \contentsline {section}{\numberline {7.4}Far Detector Prediction}{40}{section.7.4}
 \contentsline {chapter}{\numberline {8}Systematic Error Analysis}{41}{chapter.8}
 \contentsline {section}{\numberline {8.1}Beam}{42}{section.8.1}
-\contentsline {section}{\numberline {8.2}Birks-Chou Light Yield Simulation}{44}{section.8.2}
+\contentsline {section}{\numberline {8.2}Birks-Chou Light Yield Simulation}{43}{section.8.2}
 \contentsline {section}{\numberline {8.3}Calibration}{45}{section.8.3}
-\contentsline {section}{\numberline {8.4}GENIE Simulation}{47}{section.8.4}
-\contentsline {section}{\numberline {8.5}ND Containment}{49}{section.8.5}
+\contentsline {section}{\numberline {8.4}GENIE Simulation}{46}{section.8.4}
+\contentsline {section}{\numberline {8.5}ND Containment}{50}{section.8.5}
 \contentsline {section}{\numberline {8.6}ND Rock Event Contamination}{50}{section.8.6}
-\contentsline {section}{\numberline {8.7}ND Data/MC Difference and CC Background}{51}{section.8.7}
-\contentsline {section}{\numberline {8.8}MC Statistics}{54}{section.8.8}
+\contentsline {section}{\numberline {8.7}ND Data/MC Difference and CC Background}{52}{section.8.7}
+\contentsline {section}{\numberline {8.8}MC Statistics}{53}{section.8.8}
 \contentsline {section}{\numberline {8.9}Noise Model}{54}{section.8.9}
-\contentsline {section}{\numberline {8.10}Overall Normalization}{54}{section.8.10}
+\contentsline {section}{\numberline {8.10}Overall Normalization}{55}{section.8.10}
 \contentsline {section}{\numberline {8.11}Systematic Error Summary}{55}{section.8.11}
-\contentsline {chapter}{\numberline {9}Analysis Results}{56}{chapter.9}
-\contentsline {section}{\numberline {9.1}Fitting Method}{57}{section.9.1}
-\contentsline {section}{\numberline {9.2}ND Data/MC Comparisons}{57}{section.9.2}
-\contentsline {section}{\numberline {9.3}Sideband Studies}{58}{section.9.3}
-\contentsline {section}{\numberline {9.4}Results}{59}{section.9.4}
-\contentsline {chapter}{\numberline {10}Conclusions and Future Improvements}{60}{chapter.10}
-\contentsline {section}{\numberline {10.1}Conclusions}{60}{section.10.1}
-\contentsline {section}{\numberline {10.2}Future Improvements}{60}{section.10.2}
-\contentsline {chapter}{References}{64}{chapter*.53}
+\contentsline {chapter}{\numberline {9}Analysis Results}{57}{chapter.9}
+\contentsline {section}{\numberline {9.1}Fitting Method}{58}{section.9.1}
+\contentsline {section}{\numberline {9.2}ND Data/MC Comparisons}{58}{section.9.2}
+\contentsline {section}{\numberline {9.3}Sideband Studies}{59}{section.9.3}
+\contentsline {section}{\numberline {9.4}Results}{60}{section.9.4}
+\contentsline {chapter}{\numberline {10}Conclusions and Future Improvements}{61}{chapter.10}
+\contentsline {section}{\numberline {10.1}Conclusions}{61}{section.10.1}
+\contentsline {section}{\numberline {10.2}Future Improvements}{61}{section.10.2}
+\contentsline {chapter}{References}{65}{chapter*.56}

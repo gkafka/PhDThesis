@@ -25,10 +25,13 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Beam Systematic Error Envelopes}}{44}{figure.caption.39}
 \contentsline {figure}{\numberline {8.2}{\ignorespaces Birks-Chou Shifted FD Predictions}}{45}{figure.caption.41}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces GENIE Systematic Error Envelopes}}{49}{figure.caption.43}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Shifted FD Predictions from Extrapolation of Halves of the ND}}{50}{figure.caption.45}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces ND Rock Contamination Shifted Spectra}}{51}{figure.caption.46}
-\contentsline {figure}{\numberline {8.6}{\ignorespaces ND Data/MC Energy Spectrum Comparison}}{52}{figure.caption.47}
-\contentsline {figure}{\numberline {8.7}{\ignorespaces Systematic Error Due to ND Data/MC Discrepancy and CC Background Uncertainty}}{53}{figure.caption.49}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Shifted FD Predictions Due to Miscalibration at Both Detectors}}{47}{figure.caption.43}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Shifted FD Predictions Due to Miscalibration at One Detector}}{47}{figure.caption.44}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces GENIE Systematic Error Envelopes}}{50}{figure.caption.45}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Shifted FD Predictions from Extrapolation of Halves of the ND}}{51}{figure.caption.47}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces ND Rock Contamination Shifted Spectra}}{52}{figure.caption.48}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces ND Data/MC Energy Spectrum Comparison}}{53}{figure.caption.49}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Systematic Error Due to ND Data/MC Discrepancy and CC Background Uncertainty}}{54}{figure.caption.51}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces ND Data/MC Spectra with Systematics}}{56}{figure.caption.53}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
