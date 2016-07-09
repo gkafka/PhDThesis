@@ -12,52 +12,57 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 100 of file dissertation.aux
+Illegal, another \bibstyle command---line 101 of file dissertation.aux
  : \bibstyle
  :          {apalike2}
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: endmatter/colophon.aux
 Database file #1: references.bib
+I was expecting a `,' or a `}'---line 390 of file references.bib
+ : 
+ : %
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ref:TNCVN"
-You've used 62 entries,
+You've used 63 entries,
             1791 wiz_defined-function locations,
-            835 strings with 12785 characters,
-and the built_in function-call counts, 10428 in all, are:
-= -- 965
-> -- 324
+            839 strings with 12994 characters,
+and the built_in function-call counts, 10623 in all, are:
+= -- 983
+> -- 328
 < -- 0
-+ -- 145
-- -- 83
-* -- 539
-:= -- 1822
-add.period$ -- 185
-call.type$ -- 62
-change.case$ -- 61
++ -- 147
+- -- 84
+* -- 551
+:= -- 1854
+add.period$ -- 188
+call.type$ -- 63
+change.case$ -- 62
 chr.to.int$ -- 0
-cite$ -- 62
-duplicate$ -- 446
-empty$ -- 1073
-format.name$ -- 83
-if$ -- 2279
+cite$ -- 63
+duplicate$ -- 455
+empty$ -- 1095
+format.name$ -- 84
+if$ -- 2322
 int.to.chr$ -- 0
-int.to.str$ -- 62
-missing$ -- 39
-newline$ -- 312
-num.names$ -- 62
-pop$ -- 71
+int.to.str$ -- 63
+missing$ -- 40
+newline$ -- 317
+num.names$ -- 63
+pop$ -- 72
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 150
+skip$ -- 153
 stack$ -- 0
-substring$ -- 759
-swap$ -- 41
+substring$ -- 777
+swap$ -- 42
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 100
-width$ -- 64
-write$ -- 638
-(There was 1 error message)
+while$ -- 102
+width$ -- 65
+write$ -- 649
+(There were 2 error messages)
