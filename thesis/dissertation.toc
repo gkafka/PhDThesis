@@ -1,8 +1,8 @@
 \contentsline {chapter}{Abstract}{iii}{Doc-Start}
 \contentsline {chapter}{List of Figures}{vii}{chapter*.2}
-\contentsline {chapter}{List of Tables}{vii}{chapter*.3}
-\contentsline {chapter}{Dedication}{vii}{chapter*.3}
-\contentsline {chapter}{Acknowledgments}{ix}{chapter*.4}
+\contentsline {chapter}{List of Tables}{viii}{chapter*.3}
+\contentsline {chapter}{Dedication}{viii}{chapter*.3}
+\contentsline {chapter}{Acknowledgments}{x}{chapter*.4}
 \contentsline {chapter}{\numberline {1}A Brief History of Neutrinos}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}First Detection of Neutrinos}{2}{section.1.2}
@@ -58,9 +58,9 @@
 \contentsline {chapter}{\numberline {9}Analysis Results}{57}{chapter.9}
 \contentsline {section}{\numberline {9.1}Fitting Method}{58}{section.9.1}
 \contentsline {section}{\numberline {9.2}ND Data/MC Comparisons}{59}{section.9.2}
-\contentsline {section}{\numberline {9.3}Sideband Studies}{60}{section.9.3}
-\contentsline {section}{\numberline {9.4}Results}{65}{section.9.4}
-\contentsline {chapter}{\numberline {10}Conclusions and Future Improvements}{66}{chapter.10}
-\contentsline {section}{\numberline {10.1}Conclusions}{66}{section.10.1}
-\contentsline {section}{\numberline {10.2}Future Improvements}{66}{section.10.2}
-\contentsline {chapter}{References}{70}{chapter*.65}
+\contentsline {section}{\numberline {9.3}Sideband Studies}{64}{section.9.3}
+\contentsline {section}{\numberline {9.4}Results}{66}{section.9.4}
+\contentsline {chapter}{\numberline {10}Conclusions and Future Improvements}{69}{chapter.10}
+\contentsline {section}{\numberline {10.1}Conclusions}{69}{section.10.1}
+\contentsline {section}{\numberline {10.2}Future Improvements}{69}{section.10.2}
+\contentsline {chapter}{References}{73}{chapter*.69}
