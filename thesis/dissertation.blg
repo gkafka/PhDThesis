@@ -14,9 +14,8 @@ A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
 Illegal, another \bibstyle command---line 104 of file dissertation.aux
  : \bibstyle
- :          {apalike2}
+ :          {unsrtnat}
 I'm skipping whatever remains of this command
-A level-1 auxiliary file: endmatter/colophon.aux
 Database file #1: references.bib
 I was expecting a `,' or a `}'---line 412 of file references.bib
  : 
@@ -26,7 +25,7 @@ I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ref:TNCVN"
 You've used 66 entries,
             1791 wiz_defined-function locations,
-            861 strings with 13483 characters,
+            860 strings with 13461 characters,
 and the built_in function-call counts, 11214 in all, are:
 = -- 1039
 > -- 340
