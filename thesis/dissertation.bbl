@@ -127,22 +127,40 @@ P.~Astier et~al.
   experiment.
 \newblock {\em Physics Letters B}, 570:19--31, 2003.
 
-\bibitem{ref:SuperKSterile}
-K.~Abe et~al.
-\newblock Limits on sterile neutrino mixing using atmospheric neutrinos in
-  {Super-Kamiokande}.
-\newblock {\em Physical Review D}, 91:052019, 2015.
+\bibitem{ref:GALLEXSterile}
+F.~Kaether et~al.
+\newblock Reanalysis of the {GALLEX} solar neutrino flux and source
+  experiments.
+\newblock {\em Physics Letters B}, 685:47--54, 2010.
+
+\bibitem{ref:SageSterile}
+J.~Abdurashitov et~al.
+\newblock Measurement of the response of a {Ga} solar neutrino experiment to
+  neutrinos from an \textsuperscript{37}{Ar} source.
+\newblock {\em Physical Review C}, 73:045805, 2006.
+
+\bibitem{ref:Bugey}
+B.~Achkar et~al.
+\newblock Search for neutrino oscillations at 15, 40 and 95 meters from a
+  nuclear power reactor at bugey.
+\newblock {\em Nuclear Physics B}, 434:503--532, 1995.
+
+\bibitem{ref:RENO}
+J.~Ahn et~al.
+\newblock Observation of reactor electron antineutrino disappearance in the
+  reno experiment.
+\newblock {\em Physical Review Letters}, 108:191802, 2012.
 
 \bibitem{ref:DayaSterile}
 F.~P.~An et~al.
 \newblock Search for a light sterile neutrino at {Daya Bay}.
 \newblock {\em Physical Review Letters}, 113:141802, 2014.
 
-\bibitem{ref:T2KSterile}
+\bibitem{ref:SuperKSterile}
 K.~Abe et~al.
-\newblock Search for short baseline $\nue$ disappearance with the {T2K} near
-  detector.
-\newblock {\em Physical Review D}, 91:051102, 2015.
+\newblock Limits on sterile neutrino mixing using atmospheric neutrinos in
+  {Super-Kamiokande}.
+\newblock {\em Physical Review D}, 91:052019, 2015.
 
 \bibitem{ref:MINOSSterile}
 P.~Adamson et~al.
