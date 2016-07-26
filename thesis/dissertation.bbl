@@ -235,6 +235,23 @@ P.~Adamson et~al.
 \newblock First measurement of muon-neutrino disappearance in {NOvA}.
 \newblock {\em Physical Review D Rapid Communications}, 93:051104, 2016.
 
+\bibitem{ref:Planck}
+P.~A. R.~Ade et~al.
+\newblock Planck 2015 results. {XIII}. {Cosmological} parameters.
+\newblock \href{http://arxiv.org/abs/1502.01589}{arXiv:1502.01589}
+  [astro-ph.CO].
+
+\bibitem{ref:GlobalFit}
+J.~Kopp, P.~A.~N. Machado, M.~Maltoni, and T.~Schwetz.
+\newblock Sterile neutrino oscillations: The global picture.
+\newblock {\em Journal of High Energy Physics}, 2013:050, 2013.
+
+\bibitem{ref:Th14Con}
+A.~Palazzo.
+\newblock Estimate of $\theta_{14}$ independent of the reactor antineutrino
+  flux determinations.
+\newblock {\em Physical Review D}, 85:077301, 2012.
+
 \bibitem{ref:TNBeamQual}
 L.~Goodenough and S.~R. Phan-Budd.
 \newblock Technical note on the {NOvA} beam monitoring for 2015 summer

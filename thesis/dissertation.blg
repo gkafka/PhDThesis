@@ -12,56 +12,56 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 104 of file dissertation.aux
+Illegal, another \bibstyle command---line 107 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 412 of file references.bib
+I was expecting a `,' or a `}'---line 423 of file references.bib
  : 
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ref:TNCVN"
-You've used 66 entries,
+You've used 69 entries,
             1791 wiz_defined-function locations,
-            860 strings with 13461 characters,
-and the built_in function-call counts, 11214 in all, are:
-= -- 1039
-> -- 340
+            877 strings with 13914 characters,
+and the built_in function-call counts, 11716 in all, are:
+= -- 1082
+> -- 362
 < -- 0
-+ -- 153
-- -- 87
-* -- 587
-:= -- 1950
-add.period$ -- 197
-call.type$ -- 66
-change.case$ -- 65
++ -- 162
+- -- 93
+* -- 615
+:= -- 2041
+add.period$ -- 206
+call.type$ -- 69
+change.case$ -- 68
 chr.to.int$ -- 0
-cite$ -- 66
-duplicate$ -- 482
-empty$ -- 1161
-format.name$ -- 87
-if$ -- 2455
+cite$ -- 69
+duplicate$ -- 504
+empty$ -- 1210
+format.name$ -- 93
+if$ -- 2562
 int.to.chr$ -- 0
-int.to.str$ -- 66
-missing$ -- 43
-newline$ -- 332
-num.names$ -- 66
-pop$ -- 75
+int.to.str$ -- 69
+missing$ -- 45
+newline$ -- 347
+num.names$ -- 69
+pop$ -- 78
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 162
+skip$ -- 169
 stack$ -- 0
-substring$ -- 831
-swap$ -- 45
+substring$ -- 858
+swap$ -- 47
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 108
-width$ -- 68
-write$ -- 682
+while$ -- 113
+width$ -- 71
+write$ -- 713
 (There were 2 error messages)

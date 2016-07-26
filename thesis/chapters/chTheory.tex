@@ -6,7 +6,7 @@ The idea of neutrino oscillations was first proposed by Pontecorvo in 1957 \cite
 \section{The PMNS Matrix}
 \label{sec:TheoryPMNS}
 
-\begin{figure}[h]
+\begin{figure}[!htb]
   \begin{center} $
   \begin{array}{c c}
     {
@@ -81,48 +81,48 @@ Consider a neutrino in a state of definite flavor $\alpha$ at time $t = 0$, $\ke
 \label{eq:NuAtL}
 \eeq
 
-Eq.~\ref{eq:NuAtL} can then be used to find the probability that the original neutrino in flavor state $\alpha$ has transitioned (or survived) as flavor state $\beta$. First, the matrix element $\braket{\nu_\beta | \nu_\alpha (L)}$ is computed.
+Eq.~\ref{eq:NuAtL} can then be used to find the probability that the original neutrino in flavor state $\alpha$ has transitioned (or survived) as flavor state $\beta$. First, the matrix element $\braket{\nu_\alpha | \nu_\beta (L)}$ is computed.
 \beq
-\braket{\nu_\beta | \nu_\alpha( L ) } = \sum_{\alpha'} \sum_{i} \Ustxy{\alpha}{i} \Uxy{\alpha'}{i} e^{-i m_i^2 L/2E} \braket{\nu_\beta | \nu_\alpha'}
-= \sum_i \Ustxy{\alpha}{i} \Uxy{\beta}{i} e^{-i m_i^2 L/2E}
+\braket{\nu_\alpha | \nu_\beta( L ) } = \sum_{\beta'} \sum_{i} \Uxy{\beta'}{i} \Ustxy{\beta}{i} e^{-i m_i^2 L/2E} \braket{\nu_\alpha | \nu_\beta'}
+= \sum_i \Uxy{\alpha}{i} \Ustxy{\beta}{i} e^{-i m_i^2 L/2E}
 \label{eq:nuAB}
 \eeq
 
 \n The last equality in eq.~\ref{eq:nuAB} follows from the orthogonality of individual flavor eigenstates. The probability of the flavor transition is then the square of this matrix element.
 \beq
-P(\nu_\alpha \rightarrow \nu_\beta) = \vert \braket{\nu_\beta | \nu_\alpha(L)} \vert^2
-= \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} e^{-i (m_i^2 - m_j^2) L/2E}
+P(\nu_\alpha \rightarrow \nu_\beta) = \vert \braket{\nu_\alpha | \nu_\beta(L)} \vert^2
+= \sum_{i, j} \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} e^{-i (m_i^2 - m_j^2) L/2E}
 \label{eq:nuABsq}
 \eeq
 
 \n It is standard to rewrite the mass squared difference as $\dmxy{j}{i} \equiv m_i^2 - m_j^2$. Eq.~\ref{eq:nuABsq} is then manipulated using the properties of unitary matrices.
 \beqa
-P(\nu_\alpha \rightarrow \nu_\beta) & = & \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} + \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \nonumber \\
-& = & \delta_{\alpha\beta} + \sum_{i, j} \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1)
+P(\nu_\alpha \rightarrow \nu_\beta) & = & \sum_{i, j} \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} + \sum_{i, j} \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \nonumber \\
+& = & \delta_{\alpha\beta} + \sum_{i, j} \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1)
 \label{eq:nuAB1minus}
 \eeqa
 
 \n The remaining summed term is further simplified making use of two facts. When $i = j$, the complex phase is 0 as $\dmxy{i}{i} = 0$, and thus these terms vanish. Second, the terms with $i < j$ are complex conjugates of those with $i > j$, and $z + z^* = 2\Re(z)$ for any complex number $z$.
 \beqa
-P(\nu_\alpha \rightarrow \nu_\beta) & = & \delta_{\alpha\beta} + 2\sum_{i > j} \Re \left[ \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \right]
+P(\nu_\alpha \rightarrow \nu_\beta) & = & \delta_{\alpha\beta} + 2\sum_{i > j} \Re \left[ \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \right]
 \label{eq:nuABiGrj}
 \eeqa
 
-\n Both pieces of this term are split into their real and imaginary parts, and simplified using the trigonometric identity $\cos2\theta - 1 = -2\sin^2\theta$. Defining\hspace{0.5em}$\mathcal{U} \equiv \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1)$ and $\phi \equiv \dmxy{j}{i} L/2E$:
+\n Both pieces of this term are split into their real and imaginary parts, and simplified using the trigonometric identity $\cos2\theta - 1 = -2\sin^2\theta$. Defining\hspace{0.5em}$\mathcal{U} \equiv \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1)$ and $\phi \equiv \dmxy{j}{i} L/2E$:
 \beqa
-\Re ( \mathcal{U} ) & = & \Re \left[ \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \right] \\
-%& = & \Re \left\{ \left[ \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) + i \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \right] \left[ \cos\phi - i\sin\phi - 1\right] \right\} \\
-& = & \Re \left\{ \left[ \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) + i \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \right] \left[ -2\sin^2 (\phi/2) - i\sin\phi \right] \right\} \\
-%& = & \Re \left\{ -2 \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 (\phi/2) + \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin\phi \right. \nonumber \\
-%&& \quad\quad \left. -i \left[ \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin\phi + 2\Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 (\phi/2) \right] \right\} \\
-& = & -2 \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 (\phi/2) + \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin\phi
+\Re ( \mathcal{U} ) & = & \Re \left[ \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \right] \\
+%& = & \Re \left\{ \left[ \Re ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) + i \Im ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \right] \left[ \cos\phi - i\sin\phi - 1\right] \right\} \\
+& = & \Re \left\{ \left[ \Re ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) + i \Im ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \right] \left[ -2\sin^2 (\phi/2) - i\sin\phi \right] \right\} \\
+%& = & \Re \left\{ -2 \Re ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin^2 (\phi/2) + \Im ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin\phi \right. \nonumber \\
+%&& \quad\quad \left. -i \left[ \Re ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin\phi + 2\Im ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin^2 (\phi/2) \right] \right\} \\
+& = & -2 \Re ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin^2 (\phi/2) + \Im ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin\phi
 \label{eq:ExpandUUUUe1}
 \eeqa
 
 \n Inserting the expression from eq.~\ref{eq:ExpandUUUUe1} into eq.~\ref{eq:nuABiGrj}, we find:
 \beqa
-P(\nu_\alpha \rightarrow \nu_\beta) = \delta_{\alpha\beta} & - & 4\sum_{i > j} \Re ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin^2 \Delta_{ij} \nonumber \\
-& + & 2\sum_{i > j} \Im ( \Ustxy{\alpha}{i} \Uxy{\beta}{i} \Ustxy{\beta}{j} \Uxy{\alpha}{j} ) \sin 2\Delta_{ij},
+P(\nu_\alpha \rightarrow \nu_\beta) = \delta_{\alpha\beta} & - & 4\sum_{i > j} \Re ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin^2 \Delta_{ij} \nonumber \\
+& + & 2\sum_{i > j} \Im ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin 2\Delta_{ij},
 \label{eq:nuOsc}
 \eeqa
 
@@ -130,7 +130,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) = \delta_{\alpha\beta} & - & 4\sum_{i > j} \
 
 For the case of survival probability, $\alpha = \beta$ and eq.~\ref{eq:nuOsc} simplifies further. The imaginary piece from eq.~\ref{eq:nuOsc} drops out, as
 \beq
-\Im ( \Ustxy{\alpha}{i} \Uxy{\alpha}{i} \Ustxy{\alpha}{j} \Uxy{\alpha}{j} ) = \Im ( \Usqxy{\alpha}{i} \Usqxy{\alpha}{j} ) = 0.
+\Im ( \Uxy{\alpha}{i} \Ustxy{\alpha}{i} \Uxy{\alpha}{j} \Ustxy{\alpha}{j} ) = \Im ( \Usqxy{\alpha}{i} \Usqxy{\alpha}{j} ) = 0.
 \label{eq:survIm}
 \eeq
 
@@ -174,7 +174,7 @@ U & = & \begin{bmatrix} c_{12} c_{13} & s_{12} c_{13} & s_{13} e^{-i\delta} \\ -
 
 With three neutrinos, the expanded forms of eq.s \ref{eq:nuOsc} and \ref{eq:nuSurv} can still balloon into unwieldy messes. Fortunately, based on current knowledge of the mass splittings, it is usually the case that only one mass splitting scale matters and other terms can be dropped. Fig.~\ref{fig:MassSplit} shows a schematic of the mass splittings. For historic reasons, $\dmxy{1}{2}$ is known as the solar mass splitting and the larger mass splitting is called the atmospheric mass splitting. The atmospheric mass splitting is about 30 times the solar mass splitting. The sign of the solar mass splitting is known, while that of the atmospheric mass splitting is not. A positive value of $\dmxy{2}{3}$ is called the normal hierarchy; a negative value is called the inverted hierarchy.
 
-\begin{figure}[h]
+\begin{figure}[!htb]
   \includegraphics[width=\textwidth]{figures/MassSplitting.png}
   \caption[Neutrino Mass Splitting Schematic]{A schematic of the mass splittings between the three known neutrino mass states and how much they couple to each of the flavor states \cite{ref:MassSplitRef}.}
   \label{fig:MassSplit}
@@ -315,7 +315,7 @@ P(\anue \rightarrow \anue) \approx 1 - \sin^2 2\theta_{13} \sin^2 \Delta_{31}.
 
 \n Daya Bay made the first nonzero measurement of $\theta_{13}$ in 2012, reporting a value of $\sin^2 2\theta_{13} = 0.092 \pm 0.016\mbox{ (stat)} \pm 0.005\mbox{ (syst)}$ after taking just 55 days of data \cite{ref:DayaBay2012}. This result excluded a zero value for $\theta_{13}$ at $5.2\sigma$ and is shown in Fig.~\ref{fig:DayaBay2012}. Since that result, the limits have only continued to improve, and the leading measurement still comes from Daya Bay.
 
-\begin{figure}[h]
+\begin{figure}[!htb]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/DayaBay2012.png}
   \caption[First Measurement of $\theta_{13}$ from Daya Bay]{First measurement of $\theta_{13}$ from Daya Bay \cite{ref:DayaBay2012}. The points show the ratio of observed to expected events assuming $\theta_{13} = 0$. Each point is a measurement at a different detector. The inset in the upper corner shows the $\chi^2$ value vs value of $\sin^2 2\theta_{13}$, and excludes $\theta_{13} = 0$ at greater than $5\sigma$.}
@@ -325,7 +325,7 @@ P(\anue \rightarrow \anue) \approx 1 - \sin^2 2\theta_{13} \sin^2 \Delta_{31}.
 Accelerator neutrino experiments, such as MINOS, T2K, and \nova, begin with a beam of nearly pure $\nuanu_\mu$ and search for both a disappearance of $\nuanu_\mu$ and appearance of other neutrino flavors. These experiments are sensitive to $\theta_{13}$, $\theta_{23}$, $\dmxy{2}{3}$, and $\delta$. The experiments that have the largest matter effect are the most sensitive to $\delta$ and the mass hierarchy.
 
 Global fits to the combined data of these (and other) neutrino experiments have been performed and summarized in \cite{ref:PDG, ref:BestFits3}; the best fit values are shown in Table \ref{tab:BestFits3}. While most of the parameters have been measured with good precision, there are still a few lingering questions. From the table it is clear that a much better measurement on the CP violation angle is needed. The mass hierarchy still needs to be definitively measured as well. The other main question is whether $\theta_{23}$ is maximal, and if not, whether it is in the lower or upper octant.
-\begin{table}[h]
+\begin{table}[!htb]
   \begin{center}
     \caption[Best Fit Parameters for Three Neutrino Oscillation Model]{Current status of best fit oscillation parameters, from \cite{ref:PDG, ref:BestFits3}. The last column shows the allowed values within a $3\sigma$ range, with the exception of $\delta$, which is shown at a $2\sigma$ range. This is because the current global best fit for $\delta$ still allows the full range from $0$ to $2\pi$ at $3\sigma$. \nova~should vastly improve the limits on $\delta$.}
     \label{tab:BestFits3}
@@ -350,7 +350,7 @@ Global fits to the combined data of these (and other) neutrino experiments have 
 
 Current and next generation reactor experiments have a great outlook to answer these outstanding questions. Making use of the MSW effect, the $\nue$ and $\anue$ appearance results from experiments like T2K and \nova~could simultaneously measure $\delta$, the mass hierarchy, and $\theta_{23}$ octant. The prospects for \nova to make these measurements are shown in Fig.~\ref{fig:BiProb}. The first analysis results from \nova~\cite{ref:NOvAFANuE, ref:NOvAFANuMu} were published after taking about 10\% of the experiments design statistics and already show promise. The \nova~measurement for $\delta$, shown in Fig.~\ref{fig:NOvAFADelta}, provide a hint toward the normal hierarchy and eliminate portions of $\delta$ space at 90\% confidence.
 
-\begin{figure}[h]
+\begin{figure}[!htb]
   \centering
   \begin{subfigure}{.48\textwidth}
     \centering
@@ -364,7 +364,7 @@ Current and next generation reactor experiments have a great outlook to answer t
   \label{fig:BiProb}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[!htb]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/NOvAFADelta.png}
   \caption[First Measurement of $\delta$ by \nova]{First measurement of $\delta$ from \nova~\cite{ref:NOvAFANuE}. The plot shows the significance of the difference between the observed and predicted number of events as a function of delta. \nova~used a primary and secondary selection technique, the primary (secondary) technique is shown as the solid (dotted) line. The secondary selection disfavors the inverted hierarchy for all values of $\delta$.}
@@ -374,4 +374,220 @@ Current and next generation reactor experiments have a great outlook to answer t
 \section{Sterile Neutrinos}
 \label{sec:Theory3+1}
 
-\section{Neutrino Mass in the Standard Model}
+The analysis presented in this dissertation considers sterile neutrinos in a $3 + 1$ model. This adds a fourth neutrino flavor state, $\nu_s$, and mass state, $\nu_4$, and the PMNS matrix becomes a $4\times4$ matrix. Given that standard three flavor oscillations explain solar, atmospheric, and long-baseline oscillations so well, this fourth state must be mostly sterile, i.e., $\vert \Uxy{\alpha}{4} \vert \ll 1$ for $\alpha \in \{e, \mu, \tau\}$.
+
+The mass splitting suggested by the experimental evidence discussed in section \ref{sec:SterHist} is $\Delta m^2 \sim O(1\unit{eV}^2)$. If the fourth neutrino mass state were the lightest, then all of the other mass states would have absolute masses $m \gtrsim 1\unit{eV}$. However, the sum of the active neutrino masses is well constrained by cosmology; the most recent Planck results reported $\sum m_\nu < 0.23\unit{eV}$ \cite{ref:Planck}. Consequently, it is assumed that the additional neutrino mass state is heavier than the other three. Furthermore, since $\dmxy{i}{4} \gg \vert \dmxy{i}{j} \vert$ for $i, j < 4$, it is assumed that $\Delta_{41} \approx \Delta_{42} \approx \Delta_{43}$.
+
+As mentioned above, adding a fourth neutrino state expands the PMNS matrix into a $4\times4$ matrix. It can be written as the product of individual (complex) rotation matrices, as in the second line of equation \ref{eq:3NuU}. This adds an additional 3 real rotation angles and 2 complex phases. It is a matter of convention on how exactly to add these mixing angles into the PMNS matrix, but as physical results cannot be affected by a particular parametrization, it is best to choose the most convenient one. Following the parametrization in \cite{ref:GlobalFit}, $U$ takes the form:
+\beq
+U = R_{34} C_{24} R_{23} R_{14} C_{13} C_{12},
+\label{eq:4NuU}
+\eeq
+
+\n where $R_{ij}$ is a real matrix parametrized by a single mixing angle, $\theta_{ij}$, and $C_{ij}$ is a complex matrix parametrized by a real mixing angle $\theta_{ij}$ and complex phase $\delta_{ij}$. This parametrization is convenient because as was the case in section \ref{sec:Theory3}, the solar mass scale $\Delta_{21}$ is negligible, thus mixing angles parametrized by $C_{12}$ drop out of the oscillation probabilities. Based on this, equation \ref{eq:4NuU} can be expanded in terms of the mixing angles:
+\beq
+U = \begin{bmatrix} U_{e1} & U_{e2} & c_{14} s_{13} e^{-i\delta_{13}} & s_{14} \\ U_{\mu1} & U_{\mu2} & -s_{14} s_{13} e^{-i\delta_{13}} s_{24} e^{-i\delta_{24}} + c_{13} s_{23} c_{24} & c_{14} s_{24} e^{-i\delta_{24}} \\ U_{\tau1} & U_{\tau2} & -s_{14} c_{24} s_{34} s_{13} e^{-i\delta_{13}} - c_{13} s_{23} s_{34} s_{24} e^{i\delta_{24}} + c_{13} c_{23} c_{34} & c_{14} c_{24} s_{34} \\ U_{s1} & U_{s2} & -s_{14} c_{24} c_{34} s_{13} e^{-i\delta_{13}} - c_{13} s_{23} c_{34} s_{24} e^{i\delta_{24}} - c_{13} c_{23} s_{34} & c_{14} c_{24} c_{34} \end{bmatrix}
+\label{eq:4NuUExpand}
+\eeq
+
+\n Above, only the columns that appear in the oscillation probabilities have been expanded. Before using these expanded forms, however, it is useful to write the oscillation probability formulae in terms of the matrix elements first.
+
+For \nova, which starts with a nearly pure $\numu$ beam, the two most important oscillation probabilities are the $\numu$ survival probability, $P(\numu \rightarrow \numu)$ and the probability that a $\numu$ will not oscillate to a sterile neutrino, $1 - P(\numu \rightarrow \nu_s)$. Starting with equations \ref{eq:nuSurv} and \ref{eq:nuOsc}, these probabilities are calculated as follows, using the unitarity of $U$ to remove elements found in its the first two columns.
+\beqa
+P(\numu \rightarrow \numu) \approx 1 & - & 4 \Usqxy{\mu}{4} ( \Usqxy{\mu}{1} + \Usqxy{\mu}{2} + \Usqxy{\mu}{3} ) \sin^2 \Delta_{41} \nonumber \\
+& - & 4 \Usqxy{\mu}{3} ( \Usqxy{\mu}{1} + \Usqxy{\mu}{2} ) \sin^2 \Delta_{31} \nonumber \\
+\approx 1 & - & 4 \Usqxy{\mu}{4} ( 1 - \Usqxy{\mu}{4} ) \sin^2 \Delta_{41} \nonumber \\
+& - & 4 \Usqxy{\mu}{3} ( 1 - \Usqxy{\mu}{3} - \Usqxy{\mu}{4} ) \sin^2 \Delta_{31}
+\label{eq:4MuToMu}
+\eeqa
+
+\beqa
+1 - P(\numu \rightarrow \nu_s) = 1 & + & 4 \sum_{i > j} \Re ( \Uxy{\mu}{i} \Ustxy{s}{i} \Uxy{s}{j} \Ustxy{\mu}{j} ) \sin^2 \Delta_{ij} \nonumber \\
+& - & 2\sum_{i > j} \Im ( \Uxy{\mu}{i} \Ustxy{s}{i} \Uxy{s}{j} \Ustxy{\mu}{j} ) \sin 2\Delta_{ij} \nonumber \\
+\approx 1 & + & 4 \Re ( C_{41, 42, 43} ) \sin^2 \Delta_{41} + 4 \Re ( C_{31, 32} ) \sin^2 \Delta_{31} \nonumber \\
+& - & 2\Im ( C_{41, 42, 43} ) \sin 2\Delta_{41} - 2 \Im ( C_{31, 32} ) \sin 2\Delta_{31}
+\label{eq:4MuToSStart}
+\eeqa
+
+\n In equation \ref{eq:4MuToSStart}, $C_{41, 42,43}$ and $C_{31,32}$ are sums of products of PMNS matrix elements.
+\beqa
+C_{41, 42, 43} & = & \Uxy{\mu}{4} \Ustxy{s}{4} ( \Uxy{s}{1} \Ustxy{\mu}{1} + \Uxy{s}{2} \Ustxy{\mu}{2} + \Uxy{s}{3} \Ustxy{\mu}{3} ) \nonumber \\
+& = & \Uxy{\mu}{4} \Ustxy{s}{4} ( - \Uxy{s}{4} \Ustxy{\mu}{4} ) \nonumber \\
+& = & -\Usqxy{\mu}{4} \Usqxy{s}{4}
+\label{eq:C414243}
+\eeqa
+
+\n Note that this term is real, thus the term with $\Im(C_{41,42,43})$ in equation \ref{eq:4MuToSStart} drops out.
+\beqa
+C_{31, 32} & = & \Uxy{\mu}{3} \Ustxy{s}{3} ( \Uxy{s}{1} \Ustxy{\mu}{1} + \Uxy{s}{2} \Ustxy{\mu}{2} ) \nonumber \\
+& = & -\Uxy{\mu}{3} \Ustxy{s}{3} ( \Uxy{s}{4} \Ustxy{\mu}{4} + \Uxy{s}{3} \Ustxy{\mu}{3}) \nonumber \\
+& = & -\Usqxy{\mu}{3} \Usqxy{s}{3} - \Uxy{\mu}{3} \Ustxy{\mu}{4} \Ustxy{s}{3} \Uxy{s}{4} \nonumber \\
+& = & -\Usqxy{\mu}{3} \Usqxy{s}{3} - \Re (\Uxy{\mu}{3} \Ustxy{\mu}{4} \Ustxy{s}{3} \Uxy{s}{4} ) - i \Im(\Uxy{\mu}{3} \Ustxy{\mu}{4} \Ustxy{s}{3} \Uxy{s}{4} ) \nonumber \\
+& = & -\Usqxy{\mu}{3} \Usqxy{s}{3} - \Re (\Ustxy{\mu}{3} \Uxy{\mu}{4} \Uxy{s}{3} \Ustxy{s}{4} ) + i \Im(\Ustxy{\mu}{3} \Uxy{\mu}{4} \Uxy{s}{3} \Ustxy{s}{4} )
+\label{eq:C3132}
+\eeqa
+
+\n The last equality in \ref{eq:C3132} was done so that all terms in the oscillation probability are subtracted from $1$. Using these results, equation \ref{eq:4MuToSStart} becomes
+\beqa
+1 - P(\numu \rightarrow \nu_s) \approx 1 & - & 4 \Usqxy{\mu}{4} \Usqxy{s}{4} \sin^2 \Delta_{41} \nonumber \\
+& - & 4( \Usqxy{\mu}{3} \Usqxy{s}{3} + \Re( \Ustxy{\mu}{3} \Uxy{\mu}{4} \Uxy{s}{3} \Ustxy{s}{4} ) ) \sin^2 \Delta_{31} \nonumber \\
+& - & 2 \Im ( \Ustxy{\mu}{3} \Uxy{\mu}{4} \Uxy{s}{3} \Ustxy{s}{4} ) \sin 2\Delta_{31}.
+\label{eq:4MuToS}
+\eeqa
+
+Equations \ref{eq:4MuToMu} and \ref{eq:4MuToS} are the probabilities that a $\numu$ will survive as a $\numu$ and survive as one of the active neutrino flavors, respectively. These can now be written in terms of the mixing angles. However, several approximations make the expressions much more bearable. First, based on the best value reported in section \ref{sec:BestMeasures}, the value of $s_{13}$ is taken as $0$. This has the fortunate side effect of removing any dependence on $\delta_{13}$ as well. Second, the value of $s_{14}$ is also taken as $0$, based on reactor and other constraints, e.g. \cite{ref:DayaSterile, ref:Th14Con}. Note that in the relevant matrix elements, $s_{13}$ and $s_{14}$ always appear together as a product, further justifying the approximation. The matrix element products that appear in the oscillation probabilities are calculated below.
+\beqa
+\Usqxy{\mu}{4} & = & s^2_{24} \label{eq:Usqmu4} \\
+\Usqxy{s}{4} & = & c^2_{24} c^2_{34} \label{eq:Usqs4} \\
+\Usqxy{\mu}{3} & = & s^2_{23} c^2_{24} \label{eq:Usqmu3} \\
+\Usqxy{s}{3} & = & c^2_{23} s^2_{34} + s^2_{23} s^2_{24} c^2_{34} + 2c_{23} s_{23} s_{24} c_{34} s_{34} \cos \delta_{24} \label{eq:Usqs3} \\
+\Ustxy{\mu}{3} \Uxy{\mu}{4} \Uxy{s}{3} \Ustxy{s}{4} & = & - s_{23} c^2_{24} s_{24} c_{34} (s_{23} s_{24} c_{34} + c_{23} s_{34} e^{-i\delta_{24}}) \label{eq:ReImUUUU} \\
+\Re( \Ustxy{\mu}{3} \Uxy{\mu}{4} \Uxy{s}{3} \Ustxy{s}{4} ) & = & - s_{23} c^2_{24} s_{24} c_{34} (s_{23} s_{24} c_{34} + c_{23} s_{34} \cos \delta_{24}) \label{eq:ReUUUU} \\
+\Im( \Ustxy{\mu}{3} \Uxy{\mu}{4} \Uxy{s}{3} \Ustxy{s}{4} ) & = & c_{23} s_{23} c^2_{24} s_{24} c_{34} s_{34} \sin \delta_{24} \label{eq:ImUUUU}
+\eeqa
+
+\n These results can be substituted into equations \ref{eq:4MuToMu} and \ref{eq:4MuToS}.
+\beqa
+P(\numu \rightarrow \numu) \approx 1 & - & 4 \Usqxy{\mu}{4} ( 1 - \Usqxy{\mu}{4} ) \sin^2 \Delta_{41} \nonumber \\
+& - & 4 \Usqxy{\mu}{3} ( 1 - \Usqxy{\mu}{3} - \Usqxy{\mu}{4} ) \sin^2 \Delta_{31} \nonumber \\
+\approx 1 & - & 4 s^2_{24} (1 - s^2_{24}) \sin^2 \Delta_{41} \nonumber \\
+& - & 4 s^2_{23} c^2_{24} (1 - s^2_{23} c^2_{24} - s^2_{24}) \sin^2 \Delta_{31} \nonumber \\
+\approx 1 & - & 4 c^2_{24} s^2_{24} \sin^2 \Delta_{41} - 4 c^4_{24} s^2_{23} (1 - s^2_{23}) \sin^2 \Delta_{31} \nonumber \\
+\approx 1 & - & \sin^2 2\theta_{24} \sin^2 \Delta_{41} - c^4_{24} \sin^2 2\theta_{23} \sin^2 \Delta_{31}
+\label{eq:4MuToMuAngles}
+\eeqa
+
+\beqa
+1 - P(\numu \rightarrow \nu_s) \approx 1 & - & 4 \Usqxy{\mu}{4} \Usqxy{s}{4} \sin^2 \Delta_{41} \nonumber \\
+& - & 4( \Usqxy{\mu}{3} \Usqxy{s}{3} + \Re( \Ustxy{\mu}{3} \Uxy{\mu}{4} \Uxy{s}{3} \Ustxy{s}{4} ) ) \sin^2 \Delta_{31} \nonumber \\
+& - & 2 \Im ( \Ustxy{\mu}{3} \Uxy{\mu}{4} \Uxy{s}{3} \Ustxy{s}{4} ) \sin 2\Delta_{31} \nonumber \\
+\approx 1 & - & 4 c^2_{24} s^2_{24} c^2_{34} \sin^2 \Delta_{41} \nonumber \\
+& - & 4\left[ s^2_{23} c^2_{24} (c^2_{23} s^2_{34} + s^2_{23} s^2_{24} c^2_{34} + 2 c_{23} s_{23} s_{24}  c_{34} s_{34} \cos \delta_{24}) \right. \nonumber \\
+&& \left. - s_{23} c^2_{24} s_{24} c_{34} ( s_{23} s_{24} c_{34} + c_{23} s_{34} \cos \delta_{24} ) \right] \sin^2 \Delta_{31} \nonumber \\
+& - & 2 c_{23} s_{23} c^2_{24} s_{24} c_{34} s_{34} \sin \delta_{24} \sin 2\Delta_{31} \nonumber \\
+\approx 1 & - & c^2_{34} \sin^2 2\theta_{24} \sin^2 \Delta_{41} \nonumber \\
+& - & 4 \left[c^2_{23} s^2_{23} c^2_{24} s^2_{34} - s^2_{23} c^2_{24} s^2_{24} c^2_{34}(1 - s^2_{23}) \right. \nonumber \\
+&& \left. + c_{23} s_{23} c^2_{24} s_{24} c_{34} s_{34} (2 s^2_{23} - 1) \cos \delta_{24} \right] \sin^2 \Delta_{31} \nonumber \\
+& - & \frac{1}{4} c_{24} \sin 2\theta_{23} \sin 2\theta_{24} \sin 2\theta_{34} \sin \delta_{24} \sin 2\Delta_{31} \nonumber \\
+\approx 1 & - & c^2_{34} \sin^2 2\theta_{24} \sin^2 \Delta_{41} - c^2_{24} (s^2_{34} - s^2_{24} c^2_{34}) \sin^2 2\theta_{23} \sin^2 \Delta_{31} \nonumber \\
+& - & \frac{1}{4} c_{24} \sin 2\theta_{23} \sin 2\theta_{24} \sin 2\theta_{34} \sin \delta_{24} \sin 2\Delta_{31}
+\label{eq:4MuToSAngles}
+\eeqa
+
+\n In the last equality, the term proportional to $\cos\delta_{24}$ was dropped noting that $2s^2_{23} - 1 \approx 0$. Even if it is not exact, there is already an additional factor of $s_{24} s_{34}$. Both $s_{24}$ and $s_{34}$ must be small in order to satisfy $\vert \Uxy{\mu}{4} \vert, \vert \Uxy{\tau}{4} \vert \ll 1$, thus the term proportional to $s_{24} s_{34} (2s^2_{23} - 1)$ can be considered higher order than the remaining terms.
+
+The effect of each of the oscillation parameters can be seen in the figures below. Each page shows the $\numu$ survival probability followed by the active neutrino survival probability and uses the exact oscillation probabilities. Figures \ref{fig:LOverEDm41}-\ref{fig:LOverECP24} show how the mixing parameters that appear in equations \ref{eq:4MuToMuAngles} and \ref{eq:4MuToSAngles} affect the oscillation probabilities. Figures \ref{fig:LOverETh14}-\ref{fig:LOverECP13} are similar but show the much smaller effects of the parameters that dropped out of these equations due to approximations. (Solar mixing parameters are not shown.) The individual plots show different probabilities curves while varying a single oscillation parameter over a set of representative values; the mixing parameters that are not varied in a particular figure are held fixed to the values in table \ref{tab:LOverEValues}. In the figures, the bottom axis shows the neutrino $L/E$, thus the plots show oscillation probabilities at both the near and far detectors. The top axis shows the neutrino energy at each \nova detector, the dashed line separates the Near Detector (ND) on the left from the Far Detector (FD) on the right. Finally, the grey bands show the neutrino energies each detector is sensitive to; a darker color means a higher intensity of neutrinos at that energy.
+\begin{table}[h]
+  \begin{center}
+    \caption[Four Flavor Fixed Oscillation Parameters]{The four flavor oscillation parameters assumed for studying the effects of different parameters on the oscillation probabilities.}
+    \label{tab:LOverEValues}
+    \begin{tabular}{c c}
+      \hline\hline
+      Oscillation Parameter & Value \\
+      \hline
+      $\rho$ & $2.84\unit{g/cm\textsuperscript{3}}$ \\
+      $\Delta m^2_{21}$ & $7.53 \times 10^{-5}\evsq$ \\
+      $\Delta m^2_{32}$ & $2.44 \times 10^{-3}\evsq$ \\
+      $\Delta m^2_{41}$ & $0.5 \evsq$ \\
+      $\sin^2 2\theta_{12}$ & $0.846$ \\
+      $\sin^2 2\theta_{13}$ & $0.085$ \\
+      $\theta_{23}$ & $\pi/4$ \\
+      $\theta_{14}$ & $0$ \\
+      $\theta_{24}$ & $10^\circ$ \\
+      $\theta_{34}$ & $35^\circ$ \\
+      $\delta_{13}$ & $0$ \\
+      $\delta_{24}$ & $0$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSDm41.png} \\
+    \\ \\
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuDm41.png} \\
+  \end{tabular}
+  \caption[Oscillation Probabilities for Values of $\dmxy{1}{4}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\dmxy{1}{4}$. Above $\dmxy{1}{4} = 0.5\unit{eV}^2$, oscillations start to affect the ND. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
+  \label{fig:LOverEDm41}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh34.png} \\
+    \\ \\
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh34.png} \\
+  \end{tabular}
+  \caption[Oscillation Probabilities for Values of $\theta_{34}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{34}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
+  \label{fig:LOverETh34}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh24.png} \\
+    \\ \\
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh24.png} \\
+  \end{tabular}
+  \caption[Oscillation Probabilities for Values of $\theta_{24}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{24}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
+  \label{fig:LOverETh24}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh23.png} \\
+    \\ \\
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh23.png} \\
+  \end{tabular}
+  \caption[Oscillation Probabilities for Values of $\theta_{23}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{23}$. Shifts in $\theta_{23}$ have a modest effect at the \nova~peak energy. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
+  \label{fig:LOverETh23}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSCP24.png} \\
+    \\ \\
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuCP24.png} \\
+  \end{tabular}
+  \caption[Oscillation Probabilities for Values of $\delta_{24}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\delta_{24}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
+  \label{fig:LOverECP24}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh14.png} \\
+    \\ \\
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh14.png} \\
+  \end{tabular}
+  \caption[Oscillation Probabilities for Values of $\theta_{14}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{14}$. The values shown are well outside of experimental bounds, but even these large shifts have only a small effect on the oscillation probabilities that is largely degenerate with $\theta_{23}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
+  \label{fig:LOverETh14}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh13.png} \\
+    \\ \\
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh13.png} \\
+  \end{tabular}
+  \caption[Oscillation Probabilities for Values of $\theta_{13}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{13}$. The values shown are well outside of experimental bounds, but even these large shifts have only a small effect on the oscillation probabilities that is largely degenerate with $\theta_{23}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
+  \label{fig:LOverETh13}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSCP13.png} \\
+    \\ \\
+    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuCP13.png} \\
+  \end{tabular}
+  \caption[Oscillation Probabilities for Values of $\delta_{13}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\delta_{13}$. The effects of $\delta_{13}$ are negligible on the oscillation probabilities. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
+  \label{fig:LOverECP13}
+\end{figure}
+
+For the analysis presented in the rest of this dissertation, it is assumed that there are no Near Detector oscillations. Thus, the analysis will make measurements of $\theta_{24}$, $\theta_{34}$, and these will be translated into measurements of $\Usqxy{\mu}{4}$ and $\Usqxy{\tau}{4}$, and the results will be valid in the range $0.05 < \dmxy{1}{4} < 0.5\unit{eV}^2$.

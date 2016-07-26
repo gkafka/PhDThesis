@@ -5,45 +5,53 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Neutrino Mass Splitting Schematic}}{14}{figure.caption.7}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces MSW Effect Interactions}}{16}{figure.caption.8}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces First Measurement of $\theta _{13}$ from Daya Bay}}{20}{figure.caption.9}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Bi-Probability Plots for $\nu _{e}$ Appearance}}{22}{figure.caption.11}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Bi-Probability Plots for $\nu _{e}$ Appearance}}{21}{figure.caption.11}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces First Measurement of $\delta $ by NO$\nu $A}}{22}{figure.caption.12}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Oscillation Probabilities for Values of $\Delta m^2_{41}$}}{28}{figure.caption.14}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Oscillation Probabilities for Values of $\theta _{34}$}}{29}{figure.caption.15}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Oscillation Probabilities for Values of $\theta _{24}$}}{30}{figure.caption.16}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Oscillation Probabilities for Values of $\theta _{23}$}}{31}{figure.caption.17}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Oscillation Probabilities for Values of $\delta _{24}$}}{32}{figure.caption.18}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Oscillation Probabilities for Values of $\theta _{14}$}}{33}{figure.caption.19}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Oscillation Probabilities for Values of $\theta _{13}$}}{34}{figure.caption.20}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Oscillation Probabilities for Values of $\delta _{13}$}}{35}{figure.caption.21}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Energy Spectra After Data Quality Cuts}}{29}{figure.caption.17}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Energy Spectra After Event Quality Cuts}}{30}{figure.caption.20}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Fiducial and Containment Variable Distributions}}{31}{figure.caption.21}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Energy Spectra After Fiducial and Containment Cuts, FD}}{32}{figure.caption.24}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Energy Spectra After Fiducial and Containment Cuts, ND}}{34}{figure.caption.27}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces RemID and LID Distributions}}{35}{figure.caption.28}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces NC Selection Variable Distributions}}{35}{figure.caption.29}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Energy Spectra After NC Selection Cuts}}{37}{figure.caption.32}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Cosmic Rejection Variable Distributions}}{38}{figure.caption.33}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Energy Spectra After All Cuts}}{38}{figure.caption.35}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Energy Spectra After Data Quality Cuts}}{42}{figure.caption.26}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Energy Spectra After Event Quality Cuts}}{43}{figure.caption.29}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Fiducial and Containment Variable Distributions}}{44}{figure.caption.30}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Energy Spectra After Fiducial and Containment Cuts, FD}}{45}{figure.caption.33}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Energy Spectra After Fiducial and Containment Cuts, ND}}{47}{figure.caption.36}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces RemID and LID Distributions}}{48}{figure.caption.37}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces NC Selection Variable Distributions}}{48}{figure.caption.38}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Energy Spectra After NC Selection Cuts}}{50}{figure.caption.41}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Cosmic Rejection Variable Distributions}}{51}{figure.caption.42}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Energy Spectra After All Cuts}}{51}{figure.caption.44}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Beam Systematic Error Envelopes}}{45}{figure.caption.39}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Birks-Chou Shifted FD Predictions}}{46}{figure.caption.41}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Shifted FD Predictions Due to Miscalibration at Both Detectors}}{48}{figure.caption.43}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Shifted FD Predictions Due to Miscalibration at One Detector}}{48}{figure.caption.44}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces GENIE Systematic Error Envelopes}}{51}{figure.caption.45}
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Shifted FD Predictions from Extrapolation of Halves of the ND}}{52}{figure.caption.47}
-\contentsline {figure}{\numberline {8.7}{\ignorespaces ND Rock Contamination Shifted Spectra}}{53}{figure.caption.48}
-\contentsline {figure}{\numberline {8.8}{\ignorespaces ND Data/MC Energy Spectrum Comparison}}{54}{figure.caption.49}
-\contentsline {figure}{\numberline {8.9}{\ignorespaces Systematic Error Due to ND Data/MC Discrepancy and CC Background Uncertainty}}{55}{figure.caption.51}
-\contentsline {figure}{\numberline {8.10}{\ignorespaces ND Data/MC Spectra with Systematics}}{57}{figure.caption.53}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Beam Systematic Error Envelopes}}{58}{figure.caption.48}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Birks-Chou Shifted FD Predictions}}{59}{figure.caption.50}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Shifted FD Predictions Due to Miscalibration at Both Detectors}}{61}{figure.caption.52}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Shifted FD Predictions Due to Miscalibration at One Detector}}{61}{figure.caption.53}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces GENIE Systematic Error Envelopes}}{64}{figure.caption.54}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Shifted FD Predictions from Extrapolation of Halves of the ND}}{65}{figure.caption.56}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces ND Rock Contamination Shifted Spectra}}{66}{figure.caption.57}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces ND Data/MC Energy Spectrum Comparison}}{67}{figure.caption.58}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Systematic Error Due to ND Data/MC Discrepancy and CC Background Uncertainty}}{68}{figure.caption.60}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces ND Data/MC Spectra with Systematics}}{70}{figure.caption.62}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces ND Data/MC Comparison: Energy Distribution}}{61}{figure.caption.55}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces ND Data/MC Comparison: Fiducial and Containment Variable Distributions}}{62}{figure.caption.56}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces ND Data/MC Comparison: NC Selection Variable Distributions}}{63}{figure.caption.57}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces ND Data/MC Comparison: Cosmic Rejection Variable Distribution}}{63}{figure.caption.58}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Angle Sensitivities for Shifted Energy Spectra}}{64}{figure.caption.60}
-\contentsline {figure}{\numberline {9.6}{\ignorespaces High Energy Sideband}}{66}{figure.caption.62}
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Low CVN Sideband}}{66}{figure.caption.63}
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Mid Cosmic BDT Sideband}}{67}{figure.caption.64}
-\contentsline {figure}{\numberline {9.9}{\ignorespaces FD Data and MC Energy Distribution}}{68}{figure.caption.65}
-\contentsline {figure}{\numberline {9.10}{\ignorespaces FD Data/MC Comparison: Fiducial Variable Distributions}}{68}{figure.caption.66}
-\contentsline {figure}{\numberline {9.11}{\ignorespaces FD Data/MC Comparison: CVN Distribution}}{69}{figure.caption.67}
-\contentsline {figure}{\numberline {9.12}{\ignorespaces FD Data/MC Comparison: Cosmic Rejection Variable Distributions}}{69}{figure.caption.68}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces ND Data/MC Comparison: Energy Distribution}}{74}{figure.caption.64}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces ND Data/MC Comparison: Fiducial and Containment Variable Distributions}}{75}{figure.caption.65}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces ND Data/MC Comparison: NC Selection Variable Distributions}}{76}{figure.caption.66}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces ND Data/MC Comparison: Cosmic Rejection Variable Distribution}}{76}{figure.caption.67}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Angle Sensitivities for Shifted Energy Spectra}}{77}{figure.caption.69}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces High Energy Sideband}}{79}{figure.caption.71}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Low CVN Sideband}}{79}{figure.caption.72}
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Mid Cosmic BDT Sideband}}{80}{figure.caption.73}
+\contentsline {figure}{\numberline {9.9}{\ignorespaces FD Data and MC Energy Distribution}}{81}{figure.caption.74}
+\contentsline {figure}{\numberline {9.10}{\ignorespaces FD Data/MC Comparison: Fiducial Variable Distributions}}{81}{figure.caption.75}
+\contentsline {figure}{\numberline {9.11}{\ignorespaces FD Data/MC Comparison: CVN Distribution}}{82}{figure.caption.76}
+\contentsline {figure}{\numberline {9.12}{\ignorespaces FD Data/MC Comparison: Cosmic Rejection Variable Distributions}}{82}{figure.caption.77}
 \addvspace {10\p@ }
