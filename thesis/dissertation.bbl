@@ -302,6 +302,13 @@ K.~Bays et~al.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13641}{\nova~Internal
   Document 13641}.
 
+\bibitem{ref:CVN}
+A.~Aurisano et~al.
+\newblock A convolutional neural network neutrino event classifier.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=14905}{\nova~Internal
+  Document 14905}.
+
 \bibitem{ref:TNRemID}
 N.~J. Raddatz.
 \newblock {ReMID} technical note.

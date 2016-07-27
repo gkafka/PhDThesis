@@ -22,37 +22,36 @@ I was expecting a `,' or a `}'---line 423 of file references.bib
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "ref:TNCVN"
-You've used 69 entries,
+You've used 70 entries,
             1791 wiz_defined-function locations,
-            877 strings with 13914 characters,
-and the built_in function-call counts, 11716 in all, are:
-= -- 1082
-> -- 362
+            880 strings with 14085 characters,
+and the built_in function-call counts, 11811 in all, are:
+= -- 1091
+> -- 366
 < -- 0
-+ -- 162
-- -- 93
++ -- 164
+- -- 94
 * -- 615
-:= -- 2041
-add.period$ -- 206
-call.type$ -- 69
-change.case$ -- 68
+:= -- 2062
+add.period$ -- 209
+call.type$ -- 70
+change.case$ -- 69
 chr.to.int$ -- 0
-cite$ -- 69
-duplicate$ -- 504
-empty$ -- 1210
-format.name$ -- 93
-if$ -- 2562
+cite$ -- 70
+duplicate$ -- 508
+empty$ -- 1218
+format.name$ -- 94
+if$ -- 2581
 int.to.chr$ -- 0
-int.to.str$ -- 69
+int.to.str$ -- 70
 missing$ -- 45
-newline$ -- 347
-num.names$ -- 69
-pop$ -- 78
+newline$ -- 352
+num.names$ -- 70
+pop$ -- 79
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 169
+skip$ -- 170
 stack$ -- 0
 substring$ -- 858
 swap$ -- 47
@@ -61,7 +60,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 113
-width$ -- 71
-write$ -- 713
+while$ -- 114
+width$ -- 72
+write$ -- 722
 (There were 2 error messages)
