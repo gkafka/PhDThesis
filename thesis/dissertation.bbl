@@ -252,6 +252,36 @@ A.~Palazzo.
   flux determinations.
 \newblock {\em Physical Review D}, 85:077301, 2012.
 
+\bibitem{ref:TDRNOvA}
+D.~S.~Ayers et~al.
+\newblock \nova~technical design handbook.
+\newblock Technical report, Fermilab, Batavia, IL, 2007.
+
+\bibitem{ref:TDRNuMI}
+{NuMI} technical design handbook.
+\newblock Technical report, Fermilab, Batavia, IL, 2004.
+
+\bibitem{ref:IntensitykW}
+P.~Vahle.
+\newblock New results from {\nova}.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15688}{\nova~Internal
+  Document 15688}.
+
+\bibitem{ref:IntensitySlip}
+M.~Strait.
+\newblock Operations plenary {June} 2016.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15489}{\nova~Internal
+  Document 15489}.
+
+\bibitem{ref:Intensity700}
+J.~Zalesak.
+\newblock Operations status.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15654}{\nova~Internal
+  Document 15654}.
+
 \bibitem{ref:TNBeamQual}
 L.~Goodenough and S.~R. Phan-Budd.
 \newblock Technical note on the {NOvA} beam monitoring for 2015 summer
