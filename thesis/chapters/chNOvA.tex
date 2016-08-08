@@ -5,9 +5,9 @@ The \nova~experiment, or the NuMI Off-Axis $\nue$ Appearance experiment, is a lo
 
 \section{The NuMI Beam}
 
-The NuMI beam is a $\numu$ beam generated at Fermi National Accelerator Laboratory, or Fermilab, in Batavia, IL, and the source of neutrinos for the \nova~experiment. The neutrino beam is created by accelerating protons to $120\unit{GeV}$, colliding them with a fixed target, and allowing the products to decay to neutrinos.
+The NuMI beam is a $\numu$ beam generated at Fermi National Accelerator Laboratory, or Fermilab, in Batavia, IL, and the source of neutrinos for the \nova~experiment. The neutrino beam is created by accelerating protons to $120\unit{GeV}$, colliding them with a graphite target, and allowing the products to decay to neutrinos.
 
-The NuMI beam originates with the $120\unit{GeV}$ protons, and these are accelerated in the complex shown in figure \ref{fig:FNAL_AC}. First, negatively charged hydrogen atoms are accelerated to $400\unit{MeV}$ in the Linac. These atoms next enter the Booster synchrotron where the electrons are removed and the protons are accelerated to $8\unit{GeV}$. The output of from the booster is $13$ bunches, $12$ which are extracted into the Recycler Ring, each with approximately $4\times10^{12}$ protons. In a procedure called slip stacking, additional bunches are used to double the intensity of each bunch. The first bunches in the Recycler are decelerated slightly while $6$ new bunches enter the ring. As the two sets of bunches have slightly different energies, they slip relative to each other. When two bunches overlap they are captured with a special RF pulse, creating $6$ larger bunches that are extracted into the Main Injector (MI) and accelerated to $120\unit{GeV}$. Finally, these protons are directed to the fixed target for neutrino production. At this point, the 6 bunches, or the spill, total about $5\times10^{13}$ protons. With a cycle time of $1.333\unit{s}$, the NuMI beam reaches $700\unit{kW}$, which is the most powerful beam in the world \cite{ref:TDRNOvA}.
+The NuMI beam originates with the $120\unit{GeV}$ protons, and these are accelerated in the complex shown in figure \ref{fig:FNAL_AC}. First, negatively charged hydrogen atoms are accelerated to $400\unit{MeV}$ in the Linac. These atoms next enter the Booster synchrotron where the electrons are removed and the protons are accelerated to $8\unit{GeV}$. The output of from the booster is $13$ bunches, $12$ which are extracted into the Recycler Ring, each with approximately $4\times10^{12}$ protons. In a procedure called slip stacking, additional bunches are used to double the intensity of each bunch. The first bunches in the Recycler are decelerated slightly while $6$ new bunches enter the ring. As the two sets of bunches have slightly different energies, they slip relative to each other. When two bunches overlap they are captured with a special RF pulse, creating $6$ larger bunches that are extracted into the Main Injector (MI) and accelerated to $120\unit{GeV}$. Finally, these protons are directed to a target for neutrino production. At this point, the 6 bunches, or the spill, total about $5\times10^{13}$ protons. With a cycle time of $1.333\unit{s}$, the NuMI beam reaches $700\unit{kW}$, which is the most powerful beam in the world \cite{ref:TDRNOvA}.
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/FNAL_AC.png}
@@ -22,6 +22,16 @@ In truth, the above is the design goal of the NuMI beam upgrades. The NuMI beam 
   \caption[Beam Power vs Time]{Beam power vs time since \nova~began collecting data. The average beam power is shown as purple points, and the integrated POT is shown in the black curve.}
   \label{fig:BeamPower}
 \end{figure}
+
+To generation of the actual neutrino beam begins with the extraction of the $120\unit{GeV}$ protons from the MI into the complex shown as a schematic in figure \ref{fig:FNAL_NuMI}. The protons are directed $3.3^\circ$ downward into the earth so the NuMI beam points directly toward the MINOS FD in Soudan, MN. First the protons collide with atoms inside a long, thin target. The target consists of 47 graphite `fins' that are each $20.0\unit{mm}$ long, $6.4\unit{mm}$ wide, and spaced $0.3\unit{mm}$ apart for a total length of $95.4\unit{cm}$. The beam size at the target is $1\unit{mm} \times 1\unit{mm}$, and the length of the target corresponds to ${\sim}2$ interaction lengths for the protons \cite{ref:TDRNuMI}. The interactions in the target produce a large number of secondary hadrons consisting mainly of charged pions with a smaller contribution of kaons. These particles next pass through two magnetic, parabolic horns. A current of $200\unit{kA}$ is passed through the horns creating a $1/r$ magnetic field that focuses the charged particles. Next, the refocused beam travels through a decay pipe where the hadrons decay into neutrinos and tertiary charged leptons. The decay pipe is $675\unit{m}$ long, has a $1\unit{m}$ radius \cite{ref:TDRNOvA}, and is filled with helium at $0.9\unit{atm}$ \cite{ref:Helium}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1\textwidth]{figures/FNAL_NuMI.png}
+  \caption[NuMI Beam Schematic]{Schematic of the NuMI beam.}
+  \label{fig:FNAL_NuMI}
+\end{figure}
+
+
 
 \section{The \nova~Detectors}
 
