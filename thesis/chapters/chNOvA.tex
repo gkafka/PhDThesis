@@ -23,7 +23,7 @@ In truth, the above is the design goal of the NuMI beam upgrades. The NuMI beam 
   \label{fig:BeamPower}
 \end{figure}
 
-To generation of the actual neutrino beam begins with the extraction of the $120\unit{GeV}$ protons from the MI into the complex shown as a schematic in figure \ref{fig:FNAL_NuMI}. The protons are directed $3.3^\circ$ downward into the earth so the NuMI beam points directly toward the MINOS FD in Soudan, MN. First the protons collide with atoms inside a long, thin target. The target consists of 47 graphite `fins' that are each $20.0\unit{mm}$ long, $6.4\unit{mm}$ wide, and spaced $0.3\unit{mm}$ apart for a total length of $95.4\unit{cm}$. The beam size at the target is $1\unit{mm} \times 1\unit{mm}$, and the length of the target corresponds to ${\sim}2$ interaction lengths for the protons \cite{ref:TDRNuMI}. The interactions in the target produce a large number of secondary hadrons consisting mainly of charged pions with a smaller contribution of kaons. These particles next pass through two magnetic, parabolic horns. A current of $200\unit{kA}$ is passed through the horns creating a $1/r$ magnetic field that focuses the charged particles. Next, the refocused beam travels through a decay pipe where the hadrons decay into neutrinos and tertiary charged leptons. The decay pipe is $675\unit{m}$ long, has a $1\unit{m}$ radius \cite{ref:TDRNOvA}, and is filled with helium at $0.9\unit{atm}$ \cite{ref:Helium}.
+To generation of the actual neutrino beam begins with the extraction of the $120\unit{GeV}$ protons from the MI into the complex shown as a schematic in figure \ref{fig:FNAL_NuMI}. The protons are directed $3.3^\circ$ downward into the earth so the NuMI beam points directly toward the MINOS FD in Soudan, MN. First the protons collide with atoms inside a long, thin target. The target consists of 47 graphite `fins' that are each $20.0\unit{mm}$ long, $6.4\unit{mm}$ wide, and spaced $0.3\unit{mm}$ apart for a total length of $95.4\unit{cm}$. The beam size at the target is $1\unit{mm} \times 1\unit{mm}$, and the length of the target corresponds to ${\sim}2$ interaction lengths for the protons \cite{ref:TDRNuMI}. \nova~performs its data accounting by summing the protons on target, or POT. The interactions in the target produce a large number of secondary hadrons consisting mainly of charged pions with a smaller contribution of kaons. These particles next pass through two magnetic, parabolic horns. A current of $200\unit{kA}$ is passed through the horns creating a $1/r$ magnetic field that focuses a one sign of the charged particles and defocuses the opposite sign. The current in the horns can be reversed, which allows the NuMI beam to run in either neutrino or antineutrino mode. When positively charged particles are focused, they decay into neutrinos, and similar for negatively charged particles and antineutrinos. Next, the focused charged particles travels through a $675\unit{m}$ long, $1\unit{m}$ radius decay pipe where the hadrons decay into neutrinos and tertiary charged leptons \cite{ref:TDRNOvA}. Finally, everything passes through a hadron monitor and absorber followed by three muon monitors spaced between sections of rock, leaving only the neutrinos to reach the ND hall.
 \begin{figure}[htb]
   \centering
   \includegraphics[width=1\textwidth]{figures/FNAL_NuMI.png}
@@ -31,10 +31,49 @@ To generation of the actual neutrino beam begins with the extraction of the $120
   \label{fig:FNAL_NuMI}
 \end{figure}
 
+As a final note for this section, all of the data analyzed in this dissertation was taken during neutrino mode running, so the anti-neutrino mode is not considered further.
 
+\section{Off-Axis Detectors}
+
+The \nova~experiment was designed to have its detectors located $14.6\unit{mrad}$ off-axis from the NuMI beam, and this greatly affects the observed neutrino energy spectrum. The main decay mode for charged pions ($99.98770\%$) and kaons ($63.56\%$) is the two body decay into a muon and muon-neutrino \cite{ref:PDG}. In the center of mass frame of the decaying meson, this is a deterministic, isotropic decay. However, the lab frame is highly boosted resulting in the following neutrino flux and energy spectrum for a detector with cross section area $A$ located a distance $L$ from the decay point.
+\beqa
+\phi_\nu & = & \left( \frac{2\gamma_m}{ 1 + \gamma^2_m \theta^2 } \right)^2 \frac{A}{4\pi L^2} \label{eq:OffAxisFlux} \\
+E_\nu & = & \left(1 - \frac{m^2_\mu}{m^2_m} \right) \frac{E_m}{1 + \gamma^2_m \theta^2} \label{eq:OffAxisE}
+\eeqa
+
+\n Above, $\theta$ is the angle between the neutrino and meson, and the subscript $m$ refers to the decaying meson, i.e., $E_m$ is the meson energy, $m_m$ is the meson mass, and $\gamma_m$ is $E_m / m_m$. The effects of an off-axis location is shown in figure \ref{fig:OffAxis}. There are two competing effects that occur. While the flux of neutrinos is drastically reduced, the neutrino energy is highly constrained, with a net result of a very narrow band beam of neutrinos.
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/OffAxisFlux.png} &
+    \includegraphics[width=.47\textwidth]{figures/OffAxisE.png} \\
+  \end{tabular}
+  \caption[Off-Axis Flux and Energy]{The neutrino flux (left) and energy (right) as a function of the decaying pion energy for several different off-axis angles. The on axis values are shown in black, and the red curves show the values for \nova. Plots from \cite{ref:TDRNOvA}}
+  \label{fig:OffAxis}
+\end{figure}
+
+The narrow energy band result is shown in figure \ref{fig:BeamEComp}, which compares the energy spectrum for several off-axis angles and shows composition of the neutrino beam observed by \nova, both for the FD and without considering oscillations. The small contamination of $\anumu$, $\nue$, and $\anue$ components come from several effects. The focusing horns discussed in the previous section are unable to defocus the most energetic wrong sign mesons, which mostly contributes to the $\anumu$ component through the decay $\pi^- \rightarrow \anumu + \mu^-$. In the decay pipe, some of the muons from pion decay also decay, contributing to both the $\anumu$ and $\nue$ components. While most $K^+$ decay to $\numu$, a small fraction (5.07\% \cite{ref:PDG}) decay via $K^+ \rightarrow \pi^0 + e^+ + \nue$. There is a very small $\anue$ component that is largely due to $K_L$ decay.
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/BeamE.png} &
+    \includegraphics[width=.47\textwidth]{figures/BeamComp.png} \\
+  \end{tabular}
+  \caption[Beam Energy and Composition]{The neutrino flux (left) and energy (right) as a function of the decaying pion energy for several different off-axis angles. The on axis values are shown in black, and the red curves show the values for \nova.}
+  \label{fig:BeamEComp}
+\end{figure}
+
+\nova~was designed to be off-axis in an attempt to optimize the amount of observed $\nue$ appearance, as the experiment name would suggest. At the \nova~FD, with $L = 810\unit{km}$, the neutrino energy range observed due to the particular off-axis angle falls right within the first oscillation maximum for $\nue$ appearance. Figure \ref{fig:PMuEFluxXSec} shows the oscillation probability for $\nue$ appearance and the event predictions for the dominant components, both as a function of the true neutrino energy. The narrow band beam and first oscillation peaks match quite well, allowing for the best possible measurement of $\nue$ appearance, one of \nova's two main analyses \cite{ref:NOvAFANuE}. Furthermore, the probability of $\numu$ disappearance (shown only in the event component predictions) highly suppresses the number of expected $\numu$ CC events, allowing for precision measurements of $\numu$ disappearance, the other main \nova~analysis \cite{ref:NOvAFANuMu}.
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/MuE.png} &
+    \includegraphics[width=.47\textwidth]{figures/BeamFluxXSec.png} \\
+  \end{tabular}
+  \caption[Probability of $\nue$ Appearance and Expected Event Rates for \nova]{Left: the probability of $\nue$ appearance. The probabilities are calculated assuming standard three flavor oscillations using the relevant values shown in table \ref{tab:LOverEValues}, except for $\delta_{CP}$ which is here set to $3\pi/2$. Right: The expected number of events as a function of true neutrino energy (with the exception of NCs), for individual components. The NC component is shown as a function of true visible energy $E_{vis} \equiv E_\nu \times y_{Bj}$, where $y_{Bj}$ is the fractional energy loss Bjorken scaling variable.}
+  \label{fig:PMuEFluxXSec}
+\end{figure}
+
+As with the main \nova~analyses, the off-axis nature of the experiment has both pros and cons when searching for sterile oscillations via NC disappearance. Obviously a reduced neutrino flux is not great when searching for neutrino interactions. However, the CC backgrounds are highly suppressed due to oscillations, even with the $\nue$ appearance. This makes the selection of a relatively pure sample of NC events at the FD a much easier task.
 
 \section{The \nova~Detectors}
-
-\subsection{Near Detector}
-
-\subsection{Far Detector}
