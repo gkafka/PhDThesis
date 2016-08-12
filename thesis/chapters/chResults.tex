@@ -44,11 +44,11 @@ The best fit values were found by calculating the minimum $\chi^2$ value and all
 \chi^2 = 2 \left( N_{Pred} - N_{Obs} + N_{Obs} \ln \frac{N_{Obs}}{N_{Pred}} \right) + \left( \frac{ \theta_{23} - \mu_{23} }{ \sigma_{23} } \right)^2 + \sum_{i=1}^{N} \left( \frac{ \sigma_i^{BF} }{\sigma_i} \right)^2,
 \label{eq:Chisq}
 \eeq
-\n where $\mu_{23}$ and $\sigma_{23}$ are the mean and standard deviation used in the Gaussian constraint on the value of $\theta_{23}$, $\sigma_i^{BF}$ is the number of standard deviations the $i$th systematic error is shifted in the best fit, and $\sigma_i$ is one standard deviation for the $i$th systematic error. Eq.~\ref{eq:Chisq} is the standard formula for calculating $\chi^2$ with penalty terms, where the first term is the basic value for $\chi^2$, and the second and third terms add a unit for each shift of $\theta_{23}$ and the systematic errors by their respective variances. For one and two dimensional $\chi^2$ surfaces, the remaining angles not shown were profiled.
+\n where $\mu_{23}$ and $\sigma_{23}$ are the mean and standard deviation used in the Gaussian constraint on the value of $\theta_{23}$, $\sigma_i^{BF}$ is the number of standard deviations the $i$th systematic error is shifted in the best fit, and $\sigma_i$ is one standard deviation for the $i$th systematic error. Equation \ref{eq:Chisq} is the standard formula for calculating $\chi^2$ with penalty terms, where the first term is the basic value for $\chi^2$, and the second and third terms add a unit for each shift of $\theta_{23}$ and the systematic errors by their respective variances. For one and two dimensional $\chi^2$ surfaces, the remaining angles not shown were profiled.
 
 \section{ND Data/MC Comparisons}
 
-Before diving head first into the FD data, the first necessary analysis benchmark was ND data/MC comparisons. Fig~\ref{fig:NDDataMCECal} shows the event energy distributions and fig.s \ref{fig:NDDataMCFidCont}, \ref{fig:NDDataMCNCSel}, and \ref{fig:NDDataMCCosRej} show the distributions for all of the variables used for selection discussed in ch.~\ref{ch:Selection}.
+Before diving head first into the FD data, the first necessary analysis benchmark was ND data/MC comparisons. Fig~\ref{fig:NDDataMCECal} shows the event energy distributions and fig.s \ref{fig:NDDataMCFidCont}, \ref{fig:NDDataMCNCSel}, and \ref{fig:NDDataMCCosRej} show the distributions for all of the variables used for selection discussed in chapter \ref{ch:Selection}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{figures/NDDataMC/ECalNusNDRat.png}
@@ -59,10 +59,10 @@ Before diving head first into the FD data, the first necessary analysis benchmar
 \begin{figure}[htbp]
   \centering
   \begin{tabular}{c c}
-    \includegraphics[width=.48\textwidth]{figures/NDDataMC/VtxXNusNDRat.png} &
-    \includegraphics[width=.48\textwidth]{figures/NDDataMC/VtxYNusNDRat.png} \\
-    \includegraphics[width=.48\textwidth]{figures/NDDataMC/VtxZNusNDRat.png} &
-    \includegraphics[width=.48\textwidth]{figures/NDDataMC/ContNusNDRat.png} \\
+    \includegraphics[width=.47\textwidth]{figures/NDDataMC/VtxXNusNDRat.png} &
+    \includegraphics[width=.47\textwidth]{figures/NDDataMC/VtxYNusNDRat.png} \\
+    \includegraphics[width=.47\textwidth]{figures/NDDataMC/VtxZNusNDRat.png} &
+    \includegraphics[width=.47\textwidth]{figures/NDDataMC/ContNusNDRat.png} \\
   \end{tabular}
   \caption[ND Data/MC Comparison: Fiducial and Containment Variable Distributions]{ND data/MC comparison of the reconstructed vertex position and containment distributions.}
   \label{fig:NDDataMCFidCont}
@@ -71,8 +71,8 @@ Before diving head first into the FD data, the first necessary analysis benchmar
 \begin{figure}[p]
   \centering
   \begin{tabular}{c c}
-    \includegraphics[width=.48\textwidth]{figures/NDDataMC/CVNNusNDRat.png} &
-    \includegraphics[width=.48\textwidth]{figures/NDDataMC/NHitNusNDRat.png} \\
+    \includegraphics[width=.47\textwidth]{figures/NDDataMC/CVNNusNDRat.png} &
+    \includegraphics[width=.47\textwidth]{figures/NDDataMC/NHitNusNDRat.png} \\
   \end{tabular}
   \caption[ND Data/MC Comparison: NC Selection Variable Distributions]{ND data/MC comparison of the CVN and number of hits distributions.}
   \label{fig:NDDataMCNCSel}
@@ -81,8 +81,8 @@ Before diving head first into the FD data, the first necessary analysis benchmar
 \begin{figure}[p]
   \centering
   \begin{tabular}{c c}
-    \includegraphics[width=.48\textwidth]{figures/NDDataMC/PTPNusNDRat.png} &
-    \includegraphics[width=.48\textwidth]{figures/NDDataMC/EpHNusNDRat.png} \\
+    \includegraphics[width=.47\textwidth]{figures/NDDataMC/PTPNusNDRat.png} &
+    \includegraphics[width=.47\textwidth]{figures/NDDataMC/EpHNusNDRat.png} \\
   \end{tabular}
   \caption[ND Data/MC Comparison: Cosmic Rejection Variable Distribution]{ND data/MC comparison of particle transverse momentum and energy per hit distributions.}
   \label{fig:NDDataMCCosRej}
@@ -90,9 +90,9 @@ Before diving head first into the FD data, the first necessary analysis benchmar
 
 \n While most of the distributions differ by at most a small normalization, a few have an apparent shift, notably the energy and number of hits distributions. These particular discrepancies were actually expected due to a known mismodeling of NC interactions.
 
-Very recently there was experimental evidence for a new `mode' of interaction. A systematic scale for this event type was added to and evaluated with the GENIE systematics discussed in sec.~\ref{sec:SystGENIE}. The inclusion of these effects drastically improved the data/MC agreement for the \nova~CC analyses. Unfortunately, while the experimental data was available allowing for study of these effects on CC events, the data for NC events is largely nonexistent. Consequently the \nova~simulation does not include these effects for NC events despite widespread belief that similar effects should be seen. This would largely explain the data/MC differences seen in the energy and number of hits distributions.
+Very recently there was experimental evidence for a new `mode' of interaction. A systematic scale for this event type was added to and evaluated with the GENIE systematics discussed in section \ref{sec:SystGENIE}. The inclusion of these effects drastically improved the data/MC agreement for the \nova~CC analyses. Unfortunately, while the experimental data was available allowing for study of these effects on CC events, the data for NC events is largely nonexistent. Consequently the \nova~simulation does not include these effects for NC events despite widespread belief that similar effects should be seen. This would largely explain the data/MC differences seen in the energy and number of hits distributions.
 
-Two sanity checks were performed to ensure that the data/MC difference would not negatively impact the analysis. First, the ND data/MC energy distribution was shown with a full systematic error band to show the difference is covered by systematics. This was shown in fig.~\ref{fig:NDSystBand}. Secondly, the effect of shifting either the data or MC in relation to the other on the predicted event rate and 1D angle sensitivities was studied. This was done by shifting the data up or the MC down by the ratio of the means of the energy distributions for MC and data, $1.39\unit{GeV} / 1.33\unit{GeV} \approx 4.5\%$ and also for a much larger shift of $10\%$. The event counts are shown in Table \ref{tab:FDShift} and the angle sensitivities are shown in fig.~\ref{fig:1D2434Shift}. Due to the nature of a counting experiment, since the overall event rates are essentially unchanged, the effect of these rather large shifts is negligible. As a result, it was decided to take the data and MC as is and push for model improvements for future analyses.
+Two sanity checks were performed to ensure that the data/MC difference would not negatively impact the analysis. First, the ND data/MC energy distribution was shown with a full systematic error band to show the difference is covered by systematics. This was shown in figure \ref{fig:NDSystBand}. Secondly, the effect of shifting either the data or MC in relation to the other on the predicted event rate and 1D angle sensitivities was studied. This was done by shifting the data up or the MC down by the ratio of the means of the energy distributions for MC and data, $1.39\unit{GeV} / 1.33\unit{GeV} \approx 4.5\%$ and also for a much larger shift of $10\%$. The event counts are shown in table \ref{tab:FDShift} and the angle sensitivities are shown in figure \ref{fig:1D2434Shift}. Due to the nature of a counting experiment, since the overall event rates are essentially unchanged, the effect of these rather large shifts is negligible. As a result, it was decided to take the data and MC as is and push for model improvements for future analyses.
 \begin{table}[htb]
   \begin{center}
     \caption[FD Event Rates for Shifted Energy Spectra]{The number of predicted events at the FD after applying an energy shift to data or MC.}
@@ -114,8 +114,8 @@ Two sanity checks were performed to ensure that the data/MC difference would not
 \begin{figure}[htb]
   \centering
   \begin{tabular}{c c}
-    \includegraphics[width=.48\textwidth]{figures/EShift24.png} &
-    \includegraphics[width=.48\textwidth]{figures/EShift34.png} \\
+    \includegraphics[width=.47\textwidth]{figures/EShift24.png} &
+    \includegraphics[width=.47\textwidth]{figures/EShift34.png} \\
   \end{tabular}
   \caption[Angle Sensitivities for Shifted Energy Spectra]{Angle sensitivities after applying an energy shift to either MC or data. Left: $\theta_{24}$, Right: $\theta_{34}$. The fits are statistics only and do not include any systematic errors.}
   \label{fig:1D2434Shift}
@@ -123,7 +123,7 @@ Two sanity checks were performed to ensure that the data/MC difference would not
 
 \section{Sideband Studies}
 
-Three different sidebands were studied to test the performance of the analysis, a high energy sideband, a low CVN sideband, and mid cosmic BDT sideband. The predicted and observed event rates for each sideband are shown in Table \ref{tab:Sideband}.
+Three different sidebands were studied to test the performance of the analysis, a high energy sideband, a low CVN sideband, and mid cosmic BDT sideband. The predicted and observed event rates for each sideband are shown in table \ref{tab:Sideband}.
 \begin{table}[htbp]
   \begin{center}
     \caption[Sideband Event Rates]{The observed and predicted events at the FD for each sideband.}
@@ -140,7 +140,7 @@ Three different sidebands were studied to test the performance of the analysis, 
   \end{center}
 \end{table}
 
-The high energy sideband applied the standard selection and considered events between $4$ and $6\unit{GeV}$, a region chosen due to its high purity of NC events. The predicted and observed event distributions are shown in fig.~\ref{fig:SidebandHighE}, $8.2$ events were predicted and $15 \pm 4$ were observed in data. While the observed rate is slightly high, the low statistics means that the observation is within $2\sigma$ of the prediction. Furthermore, the discrepancy is largely driven by a single bin rather than a systematic offset. This result was thus interpreted as validation for the general analysis procedure.
+The high energy sideband applied the standard selection and considered events between $4$ and $6\unit{GeV}$, a region chosen due to its high purity of NC events. The predicted and observed event distributions are shown in figure \ref{fig:SidebandHighE}, $8.2$ events were predicted and $15 \pm 4$ were observed in data. While the observed rate is slightly high, the low statistics means that the observation is within $2\sigma$ of the prediction. Furthermore, the discrepancy is largely driven by a single bin rather than a systematic offset. This result was thus interpreted as validation for the general analysis procedure.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{figures/Ana01Results/FDHighECalEDataMCStack.png}
@@ -148,7 +148,7 @@ The high energy sideband applied the standard selection and considered events be
   \label{fig:SidebandHighE}
 \end{figure}
 
-The low CVN sideband considered events that fail the CVN cut, or those with a CVN NC score below $0.2$. This region was used as validation for the CVN selector. The predicted and observed event distributions are shown in fig.~\ref{fig:SidebandLowCVN}, $32.7$ events were predicted and $35 \pm 6$ were observed in data. The overall agreement in both shape and rate for this sideband provided great confidence in the performance of CVN.
+The low CVN sideband considered events that fail the CVN cut, or those with a CVN NC score below $0.2$. This region was used as validation for the CVN selector. The predicted and observed event distributions are shown in figure \ref{fig:SidebandLowCVN}, $32.7$ events were predicted and $35 \pm 6$ were observed in data. The overall agreement in both shape and rate for this sideband provided great confidence in the performance of CVN.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{figures/Ana01Results/FDLowCVNCalEDataMCStack.png}
@@ -156,7 +156,7 @@ The low CVN sideband considered events that fail the CVN cut, or those with a CV
   \label{fig:SidebandLowCVN}
 \end{figure}
 
-The mid cosmic BDT sideband considers events with a BDT score between $0.42$ and $0.5$, a region which fails the standard selection cuts but still has NC events. The predicted and observed event distributions are shown in fig.~\ref{fig:SidebandMidBDT}, $14.5$ events were predicted and $17 \pm 4$ were observed in data. This sideband also showed excellent agreement in both shape and rate, providing further validation for the general analysis procedure, and specifically for the main cosmic rejection variable.
+The mid cosmic BDT sideband considers events with a BDT score between $0.42$ and $0.5$, a region which fails the standard selection cuts but still has NC events. The predicted and observed event distributions are shown in figure \ref{fig:SidebandMidBDT}, $14.5$ events were predicted and $17 \pm 4$ were observed in data. This sideband also showed excellent agreement in both shape and rate, providing further validation for the general analysis procedure, and specifically for the main cosmic rejection variable.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{figures/Ana01Results/FDMidBDTCalEDataMCStack.png}
@@ -168,7 +168,7 @@ The mid cosmic BDT sideband considers events with a BDT score between $0.42$ and
 
 This analysis predicted that there would be $83.8 \pm a.b \mbox{(stat.)} ^{+c.d}_{-e.f} \mbox{(syst.)}$ NC-like events selected in the FD data. $95 \pm 9.7$ were observed, corresponding to a measurement of $R_{NC} = 1.186 \pm 0.161 \mbox{(stat.)} ^{+0.081}_{-0.129} \mbox{(syst.)}$ If active neutrinos mixed with sterile neutrinos, the number of observed events would be depleted, causing $R_{NC}$ to be less than one. Thus, the measurement of $R_{NC}$ is consistent with the no sterile mixing hypothesis.
 
-The energy distribution of the predicted and observed events is shown in fig.~\ref{fig:FDDataMCECal}. The $\chi^2$ of this distribution is $23.31$ for $14$ bins, or $1.665$/bin. To better assess the understanding of the observed data, data/MC comparisons distributions were studied for many of the variables used for selection, including regions cut for the analysis. These can be seen in fig.s \ref{fig:FDDataMCFidCont}, \ref{fig:FDDataMCNCSel}, and \ref{fig:FDDataMCCosRej}.
+The energy distribution of the predicted and observed events is shown in figure \ref{fig:FDDataMCECal}. The $\chi^2$ of this distribution is $23.31$ for $14$ bins, or $1.665$/bin. To better assess the understanding of the observed data, data/MC comparisons distributions were studied for many of the variables used for selection, including regions cut for the analysis. These can be seen in fig.s \ref{fig:FDDataMCFidCont}, \ref{fig:FDDataMCNCSel}, and \ref{fig:FDDataMCCosRej}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{figures/FDDataMC/cCalEFDAllStSy.png}
@@ -179,9 +179,9 @@ The energy distribution of the predicted and observed events is shown in fig.~\r
 \begin{figure}[htbp]
   \centering
   \begin{tabular}{c c}
-    \includegraphics[width=.48\textwidth]{figures/FDDataMC/FDVtxXStack.png} &
-    \includegraphics[width=.48\textwidth]{figures/FDDataMC/FDVtxYStack.png} \\
-    \multicolumn{2}{c}{\includegraphics[width=.48\textwidth]{figures/FDDataMC/FDVtxZStack.png}} \\
+    \includegraphics[width=.47\textwidth]{figures/FDDataMC/FDVtxXStack.png} &
+    \includegraphics[width=.47\textwidth]{figures/FDDataMC/FDVtxYStack.png} \\
+    \multicolumn{2}{c}{\includegraphics[width=.47\textwidth]{figures/FDDataMC/FDVtxZStack.png}} \\
   \end{tabular}
   \caption[FD Data/MC Comparison: Fiducial Variable Distributions]{FD data/MC comparison of the reconstructed vertex position distributions. The dashed lines and arrows indicate the regions kept for the analysis.}
   \label{fig:FDDataMCFidCont}
@@ -190,7 +190,7 @@ The energy distribution of the predicted and observed events is shown in fig.~\r
 \begin{figure}[htbp]
   \centering
   \begin{tabular}{c c}
-    \multicolumn{2}{c}{\includegraphics[width=.48\textwidth]{figures/FDDataMC/FDCVNStack.png}} \\
+    \multicolumn{2}{c}{\includegraphics[width=.47\textwidth]{figures/FDDataMC/FDCVNStack.png}} \\
   \end{tabular}
   \caption[FD Data/MC Comparison: CVN Distribution]{FD data/MC comparison of the CVN distribution. The dashed line and arrow indicate the region kept for the analysis.}
   \label{fig:FDDataMCNCSel}
@@ -199,10 +199,10 @@ The energy distribution of the predicted and observed events is shown in fig.~\r
 \begin{figure}[htbp]
   \centering
   \begin{tabular}{c c}
-    \includegraphics[width=.48\textwidth]{figures/FDDataMC/FDCosBDTStack.png} &
-    \includegraphics[width=.48\textwidth]{figures/FDDataMC/FDPTPStack.png} \\
-    \includegraphics[width=.48\textwidth]{figures/FDDataMC/FDEperHitStack.png} &
-    \includegraphics[width=.48\textwidth]{figures/FDDataMC/FDDistTopStack.png} \\
+    \includegraphics[width=.47\textwidth]{figures/FDDataMC/FDCosBDTStack.png} &
+    \includegraphics[width=.47\textwidth]{figures/FDDataMC/FDPTPStack.png} \\
+    \includegraphics[width=.47\textwidth]{figures/FDDataMC/FDEperHitStack.png} &
+    \includegraphics[width=.47\textwidth]{figures/FDDataMC/FDDistTopStack.png} \\
   \end{tabular}
   \caption[FD Data/MC Comparison: Cosmic Rejection Variable Distributions]{FD data/MC comparisons of the variables used for cosmic rejection. The dashed lines and arrows indicate the regions kept for the analysis.}
   \label{fig:FDDataMCCosRej}

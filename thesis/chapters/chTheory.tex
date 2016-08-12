@@ -45,7 +45,7 @@ The idea of neutrino oscillations was first proposed by Pontecorvo in 1957 \cite
   \end{center}
 \end{figure}
 
-In the Standard Model, neutrinos only interact via the W and Z bosons as shown by the Feynman diagrams in Fig.~\ref{fig:WZ}. From these diagrams, it is clear that neutrinos always interact in a definite flavor eigenstate, $\ket{\nu_\alpha}$. Furthermore, when a neutrino is produced from a W boson, the flavor is always determined by the associated charged lepton shown in eq.~\ref{eq:NuLepPairs}.
+In the Standard Model, neutrinos only interact via the W and Z bosons as shown by the Feynman diagrams in figure \ref{fig:WZ}. From these diagrams, it is clear that neutrinos always interact in a definite flavor eigenstate, $\ket{\nu_\alpha}$. Furthermore, when a neutrino is produced from a W boson, the flavor is always determined by the associated charged lepton shown in equation \ref{eq:NuLepPairs}.
 \beq
 \begin{pmatrix} \nue \\ e \end{pmatrix}, \quad \begin{pmatrix} \numu \\ \mu \end{pmatrix}, \quad \begin{pmatrix} \nutau \\ \tau \end{pmatrix}
 \label{eq:NuLepPairs}
@@ -69,33 +69,33 @@ Consider a neutrino in a state of definite flavor $\alpha$ at time $t = 0$, $\ke
 \label{eq:NuAtT}
 \eeq
 
-\n With the neutrino at position $\mathbf{x} = L$ at time $t$, the dot product evaluates to $\mathbf{p_i \cdot x} = p_i L$. Eq~\ref{eq:NuAtT} can then simplified by making use of the fact that neutrinos are ultra-relativistic, allowing for several assumptions. First, the time, $t$, is replaced by the distance, $L$. Next, the energy of each mass state is approximated to be the same energy, $E_i = E$. Last, the momentum is expanded as $p_i = \sqrt{E^2 - m_i^2} \approx E - m_i^2/2E$. With these assumptions, eq.~\ref{eq:NuAtT} simplifies as:
+\n With the neutrino at position $\mathbf{x} = L$ at time $t$, the dot product evaluates to $\mathbf{p_i \cdot x} = p_i L$. Eq~\ref{eq:NuAtT} can then simplified by making use of the fact that neutrinos are ultra-relativistic, allowing for several assumptions. First, the time, $t$, is replaced by the distance, $L$. Next, the energy of each mass state is approximated to be the same energy, $E_i = E$. Last, the momentum is expanded as $p_i = \sqrt{E^2 - m_i^2} \approx E - m_i^2/2E$. With these assumptions, equation \ref{eq:NuAtT} simplifies as:
 \beq
 \ket{\nu_\alpha(L)} = \sum_{i} \Ustxy{\alpha}{i} e^{-i m_i^2 L/2E} \ket{\nu_i}.
 \label{eq:NuAtTRel}
 \eeq
 
-\n The mass eigenstate inside the sum is then re-expressed in terms of flavor eigenstates using the inverse of eq.~\ref{eq:massflav} and unitarity of $U$.
+\n The mass eigenstate inside the sum is then re-expressed in terms of flavor eigenstates using the inverse of equation \ref{eq:massflav} and unitarity of $U$.
 \beq
 \ket{\nu_\alpha(L)} = \sum_{\alpha'} \sum_{i} \Ustxy{\alpha}{i} \Uxy{\alpha'}{i} e^{-i m_i^2 L/2E} \ket{\nu_\alpha'}.
 \label{eq:NuAtL}
 \eeq
 
-Eq.~\ref{eq:NuAtL} can then be used to find the probability that the original neutrino in flavor state $\alpha$ has transitioned (or survived) as flavor state $\beta$. First, the matrix element $\braket{\nu_\alpha | \nu_\beta (L)}$ is computed.
+Equation \ref{eq:NuAtL} can then be used to find the probability that the original neutrino in flavor state $\alpha$ has transitioned (or survived) as flavor state $\beta$. First, the matrix element $\braket{\nu_\alpha | \nu_\beta (L)}$ is computed.
 \beq
 \braket{\nu_\alpha | \nu_\beta( L ) } = \sum_{\beta'} \sum_{i} \Uxy{\beta'}{i} \Ustxy{\beta}{i} e^{-i m_i^2 L/2E} \braket{\nu_\alpha | \nu_\beta'}
 = \sum_i \Uxy{\alpha}{i} \Ustxy{\beta}{i} e^{-i m_i^2 L/2E}
 \label{eq:nuAB}
 \eeq
 
-\n The last equality in eq.~\ref{eq:nuAB} follows from the orthogonality of individual flavor eigenstates. The probability of the flavor transition is then the square of this matrix element.
+\n The last equality in equation \ref{eq:nuAB} follows from the orthogonality of individual flavor eigenstates. The probability of the flavor transition is then the square of this matrix element.
 \beq
 P(\nu_\alpha \rightarrow \nu_\beta) = \vert \braket{\nu_\alpha | \nu_\beta(L)} \vert^2
 = \sum_{i, j} \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} e^{-i (m_i^2 - m_j^2) L/2E}
 \label{eq:nuABsq}
 \eeq
 
-\n It is standard to rewrite the mass squared difference as $\dmxy{j}{i} \equiv m_i^2 - m_j^2$. Eq.~\ref{eq:nuABsq} is then manipulated using the properties of unitary matrices.
+\n It is standard to rewrite the mass squared difference as $\dmxy{j}{i} \equiv m_i^2 - m_j^2$. Equation \ref{eq:nuABsq} is then manipulated using the properties of unitary matrices.
 \beqa
 P(\nu_\alpha \rightarrow \nu_\beta) & = & \sum_{i, j} \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} + \sum_{i, j} \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \nonumber \\
 & = & \delta_{\alpha\beta} + \sum_{i, j} \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1)
@@ -119,7 +119,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) & = & \delta_{\alpha\beta} + 2\sum_{i > j} \
 \label{eq:ExpandUUUUe1}
 \eeqa
 
-\n Inserting the expression from eq.~\ref{eq:ExpandUUUUe1} into eq.~\ref{eq:nuABiGrj}, we find:
+\n Inserting the expression from equation \ref{eq:ExpandUUUUe1} into equation \ref{eq:nuABiGrj}, we find:
 \beqa
 P(\nu_\alpha \rightarrow \nu_\beta) = \delta_{\alpha\beta} & - & 4\sum_{i > j} \Re ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin^2 \Delta_{ij} \nonumber \\
 & + & 2\sum_{i > j} \Im ( \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} ) \sin 2\Delta_{ij},
@@ -128,7 +128,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) = \delta_{\alpha\beta} & - & 4\sum_{i > j} \
 
 \n where $\Delta_{ij} \equiv \Delta m^2_{ij} L / 4E = 1.267 \Delta m^2_{ij} L\mbox{ (km)} / E\mbox{ (GeV)}$. It can now be seen that the distance the neutrino travels, its energy, and the different mass splittings all affect the frequency of oscillation. Ideally, neutrino oscillations would be studied by having neutrinos with a fixed energy profile (preferably monoenergetic) and varying the baseline. However, neutrino detectors are incredibly large, so in practice the baseline is fixed and the oscillation probability is studied as a function of neutrino energy. 
 
-For the case of survival probability, $\alpha = \beta$ and eq.~\ref{eq:nuOsc} simplifies further. The imaginary piece from eq.~\ref{eq:nuOsc} drops out, as
+For the case of survival probability, $\alpha = \beta$ and equation \ref{eq:nuOsc} simplifies further. The imaginary piece from equation \ref{eq:nuOsc} drops out, as
 \beq
 \Im ( \Uxy{\alpha}{i} \Ustxy{\alpha}{i} \Uxy{\alpha}{j} \Ustxy{\alpha}{j} ) = \Im ( \Usqxy{\alpha}{i} \Usqxy{\alpha}{j} ) = 0.
 \label{eq:survIm}
@@ -140,13 +140,13 @@ P(\nu_\alpha \rightarrow \nu_\alpha) = 1 - 4 \sum_{i > j} \Usqxy{\alpha}{i} \Usq
 \label{eq:nuSurv}
 \eeq
 
-Due to the combined influence of mass splitting, oscillation baseline, and neutrino energy on the oscillation probability, it is often the case that only one term contributes to the sums in eq.s~\ref{eq:nuOsc} and \ref{eq:nuSurv}. The two neutrino approximation can be instructive in this instance. For this model, the mixing matrix simplifies to the two dimensional rotation matrix:
+Due to the combined influence of mass splitting, oscillation baseline, and neutrino energy on the oscillation probability, it is often the case that only one term contributes to the sums in equations~\ref{eq:nuOsc} and \ref{eq:nuSurv}. The two neutrino approximation can be instructive in this instance. For this model, the mixing matrix simplifies to the two dimensional rotation matrix:
 \beq
 U = \begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix}.
 \label{eq:2NuU}
 \eeq
 
-\n As this matrix is entirely real, the imaginary piece of eq.~\ref{eq:nuOsc} drops out. Plugging the matrix elements into the remaining term directly and simplifying slightly, we find the following forms for the survival and appearance probabilities.
+\n As this matrix is entirely real, the imaginary piece of equation \ref{eq:nuOsc} drops out. Plugging the matrix elements into the remaining term directly and simplifying slightly, we find the following forms for the survival and appearance probabilities.
 \beqa
 P(\nu_\alpha \rightarrow \nu_\alpha) & = & 1 - \sin^2 2\theta \sin^2 \left( \frac{\Delta m^2 L}{4E} \right) \label{eq:2NuSurv} \\
 P(\nu_\alpha \nrightarrow \nu_\alpha) & = & \sin^2 2\theta \sin^2 \left( \frac{\Delta m^2 L}{4E} \right) \label{eq:2NuApp}
@@ -157,7 +157,7 @@ P(\nu_\alpha \nrightarrow \nu_\alpha) & = & \sin^2 2\theta \sin^2 \left( \frac{\
 \section{Standard 3-Flavor Oscillations}
 \label{sec:Theory3}
 
-The Standard Model includes three neutrinos, so the PMNS matrix is $3 \times 3$ in this picture. Explicitly expanding eq.~\ref{eq:massflav}, $U$ takes the following form:
+The Standard Model includes three neutrinos, so the PMNS matrix is $3 \times 3$ in this picture. Explicitly expanding equation \ref{eq:massflav}, $U$ takes the following form:
 \beq
 \begin{pmatrix} \nue \\ \numu \\ \nutau \end{pmatrix} = \begin{pmatrix} \Uxy{e}{1} & \Uxy{e}{2} & \Uxy{e}{3} \\ \Uxy{\mu}{1} & \Uxy{\mu}{2} & \Uxy{\mu}{3} \\ \Uxy{\tau}{1} & \Uxy{\tau}{2} & \Uxy{\tau}{3} \end{pmatrix} \begin{pmatrix} \nu_1 \\ \nu_2 \\ \nu_3 \end{pmatrix}.
 \label{eq:FlavUMass}
@@ -172,7 +172,7 @@ U & = & \begin{bmatrix} c_{12} c_{13} & s_{12} c_{13} & s_{13} e^{-i\delta} \\ -
 
 \n where $c_{ij} \equiv \cos\theta_{ij}$ and $s_{ij} \equiv \sin\theta_{ij}$.
 
-With three neutrinos, the expanded forms of eq.s \ref{eq:nuOsc} and \ref{eq:nuSurv} can still balloon into unwieldy messes. Fortunately, based on current knowledge of the mass splittings, it is usually the case that only one mass splitting scale matters and other terms can be dropped. Fig.~\ref{fig:MassSplit} shows a schematic of the mass splittings. For historic reasons, $\dmxy{1}{2}$ is known as the solar mass splitting and the larger mass splitting is called the atmospheric mass splitting. The atmospheric mass splitting is about 30 times the solar mass splitting. The sign of the solar mass splitting is known, while that of the atmospheric mass splitting is not. A positive value of $\dmxy{2}{3}$ is called the normal hierarchy; a negative value is called the inverted hierarchy.
+With three neutrinos, the expanded forms of equations \ref{eq:nuOsc} and \ref{eq:nuSurv} can still balloon into unwieldy messes. Fortunately, based on current knowledge of the mass splittings, it is usually the case that only one mass splitting scale matters and other terms can be dropped. Figure \ref{fig:MassSplit} shows a schematic of the mass splittings. For historic reasons, $\dmxy{1}{2}$ is known as the solar mass splitting and the larger mass splitting is called the atmospheric mass splitting. The atmospheric mass splitting is about 30 times the solar mass splitting. The sign of the solar mass splitting is known, while that of the atmospheric mass splitting is not. A positive value of $\dmxy{2}{3}$ is called the normal hierarchy; a negative value is called the inverted hierarchy.
 
 \begin{figure}[!htb]
   \includegraphics[width=\textwidth]{figures/MassSplitting.png}
@@ -189,7 +189,7 @@ P(\numu \rightarrow \numu) & \approx & 1 - 4\Usqxy{\mu}{3} (\Usqxy{\mu}{1} + \Us
 \label{eq:3MuToMu}
 \eeqa
 
-\n Between eq.s \ref{eq:3MuToMu2} and \ref{eq:3MuToMu3}, the term proportional to $s^4_{13}$ was dropped using the current knowledge that $s^2_{13}$ is small \cite{ref:PDG}. Note that if $\theta_{13}$ were 0, then eq.~\ref{eq:3MuToMu} would reduce to eq.~\ref{eq:2NuSurv}, the two neutrino survival probability.
+\n Between equations \ref{eq:3MuToMu2} and \ref{eq:3MuToMu3}, the term proportional to $s^4_{13}$ was dropped using the current knowledge that $s^2_{13}$ is small \cite{ref:PDG}. Note that if $\theta_{13}$ were 0, then equation \ref{eq:3MuToMu} would reduce to equation \ref{eq:2NuSurv}, the two neutrino survival probability.
 
 The full 3 flavor electron neutrino appearance from muon neutrino oscillation probability is often written in the form \cite{ref:Evan}:
 \beq
@@ -251,7 +251,7 @@ So far, the oscillation formalism has been developed only considering neutrinos 
   \end{center}
 \end{figure}
 
-The MSW effect is the coherent forward scattering of neutrinos off of the electrons in ordinary matter, a channel only available to electron flavor neutrinos and anti-neutrinos. Fig.~\ref{fig:MSW} illustrates the interactions. The electrons contribute an additional potential term, $V_e = \pm \sqrt{2}G_F N_e$, where $G_F$ is Fermi's constant, $N_e$ is the electron number density, the positive sign is for neutrinos, and the negative for anti-neutrinos. Neutrinos also forward scatter off the neutrons and protons in matter via neutral current interactions, but this only provides an overall phase as all neutrino flavors participate in these interactions equally. The matter induced potential adds an additional term to the Schr\"{o}dinger equation, affecting the time evolution of the flavor states and thus changing the oscillation probabilities.
+The MSW effect is the coherent forward scattering of neutrinos off of the electrons in ordinary matter, a channel only available to electron flavor neutrinos and anti-neutrinos. Figure \ref{fig:MSW} illustrates the interactions. The electrons contribute an additional potential term, $V_e = \pm \sqrt{2}G_F N_e$, where $G_F$ is Fermi's constant, $N_e$ is the electron number density, the positive sign is for neutrinos, and the negative for anti-neutrinos. Neutrinos also forward scatter off the neutrons and protons in matter via neutral current interactions, but this only provides an overall phase as all neutrino flavors participate in these interactions equally. The matter induced potential adds an additional term to the Schr\"{o}dinger equation, affecting the time evolution of the flavor states and thus changing the oscillation probabilities.
 
 The following derivation will consider the MSW effect in the case of two neutrino flavors. The time evolution of the flavor states is written as follows:
 \beq
@@ -259,7 +259,7 @@ i \begin{pmatrix} \nue \\ \numu \end{pmatrix} = \left[ U \begin{pmatrix} \frac{m
 \label{eq:2NuSchro}
 \eeq
 
-\n Inserting the 2 flavor PMNS matrix from eq.~\ref{eq:2NuU}, applying some trigonometric identites, and dropping common diagonal terms, eq.~\ref{eq:2NuSchro} simplifies to
+\n Inserting the 2 flavor PMNS matrix from equation \ref{eq:2NuU}, applying some trigonometric identites, and dropping common diagonal terms, equation \ref{eq:2NuSchro} simplifies to
 \beq
 i \begin{pmatrix} \nue \\ \numu \end{pmatrix} = \frac{1}{4E} \begin{pmatrix} -\dmxy{1}{2} \cos 2\theta \pm 4E V_e & \dmxy{1}{2} \sin 2\theta \\ \dmxy{1}{2} \sin 2\theta & \dmxy{1}{2} \cos 2\theta \end{pmatrix} \begin{pmatrix} \nue \\ \numu \end{pmatrix}.
 \label{eq:2NuSchroNoDiag}
@@ -280,19 +280,19 @@ A_{M} & \equiv & \sqrt{ \left( \cos 2\theta \mp \frac{2EV_e}{\dmxy{1}{2}} \right
 
 \n and now the negative sign in $A_M$ is for neutrinos and the positive sign for anti-neutrinos. As the electron number density goes to 0, so too does $V_e$ and the vacuum solution is recovered.
 
-From the form of this solution, it can be seen that the Hamiltonian takes the same form as that in vacuum oscillations, but with modified effective masses. Likewise, $U_M$ has the same form as the 2 neutrino PMNS matrix, so $\theta_M$ can be considered the effective mixing angle. In the absence of neutrino oscillations (when $\theta = 0$), matter effects cannot ``create'' them. However, even for small angles $\theta$, the matter effect can create a resonant effect pushing the effective mixing angle, $\theta_M$, maximally to $45^\circ$. This occurs when the term in parenthesis in the definition of $A_M$ is $0$ (eq.~\ref{eq:AMSW}).
+From the form of this solution, it can be seen that the Hamiltonian takes the same form as that in vacuum oscillations, but with modified effective masses. Likewise, $U_M$ has the same form as the 2 neutrino PMNS matrix, so $\theta_M$ can be considered the effective mixing angle. In the absence of neutrino oscillations (when $\theta = 0$), matter effects cannot ``create'' them. However, even for small angles $\theta$, the matter effect can create a resonant effect pushing the effective mixing angle, $\theta_M$, maximally to $45^\circ$. This occurs when the term in parenthesis in the definition of $A_M$ is $0$ (equation \ref{eq:AMSW}).
 \beq
 N_e^{res} = \frac{\dmxy{1}{2} \cos 2\theta}{2\sqrt{2} G_F E}
 \label{eq:MSWres}
 \eeq
 
-In the case of 3 neutrinos, the same procedure is followed to diagonalize the Hamilton and obtain effective values for the various oscillation parameters. The effects are considerably more complicated, but the general effect is the same--matter changes the effective neutrino mass and alters the oscillation probability curves differently for neutrinos and anti-neutrinos. Under the same conditions that were used to calculate $P(\nuanu_\mu \rightarrow \nuanu_e)$ in sec.~\ref{sec:Theory3}, the results can be simplified to a few basic replacements \cite{ref:3NuMatter}.
+In the case of 3 neutrinos, the same procedure is followed to diagonalize the Hamilton and obtain effective values for the various oscillation parameters. The effects are considerably more complicated, but the general effect is the same--matter changes the effective neutrino mass and alters the oscillation probability curves differently for neutrinos and anti-neutrinos. Under the same conditions that were used to calculate $P(\nuanu_\mu \rightarrow \nuanu_e)$ in section \ref{sec:Theory3}, the results can be simplified to a few basic replacements \cite{ref:3NuMatter}.
 \beq
 P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P^M_{atm} + 2\sqrt{P^M_{atm}}\sqrt{P^M_{sol}} \left(\cos\delta \cos\Delta_{32}\, \varmp\, \sin\delta \sin\Delta_{32} \right) + P^M_{sol}
 \label{eq:3MuToEMSW}
 \eeq
 
-\n This is exactly the same form as eq.~\ref{eq:3MuToE}. The interesting effects are seen with how $P^M_{atm}$ and $P^M_{sol}$ differ from their respective vacuum counterparts.
+\n This is exactly the same form as equation \ref{eq:3MuToE}. The interesting effects are seen with how $P^M_{atm}$ and $P^M_{sol}$ differ from their respective vacuum counterparts.
 \beqa
 \sqrt{P^M_{atm}} & \equiv & \sin \thxy{2}{3} \sin 2\thxy{1}{3} \frac{\sin (\Delta_{31} - aL)}{\Delta_{31} - aL} \Delta_{31} \label{eq:PatmMSW} \\
 \sqrt{P_{sol}} & \equiv & \cos \thxy{2}{3} \sin 2\thxy{1}{2} \frac{\sin(aL)}{aL} \Delta_{21} \label{eq:PsolMSW}
@@ -300,7 +300,7 @@ P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P^M_{atm} + 2\sqrt{P^M_{atm}}\sqrt{P^M
 
 \n Here, $a \equiv \pm G_F N_e / \sqrt{2}$ where the positive sign is for neutrinos and the negative sign for anti-neutrinos. For the Earth, $\vert a \vert \approx 1/3500\, km$.
 
-The combined effect that appears in eq.s \ref{eq:3MuToEMSW}, \ref{eq:PatmMSW}, and \ref{eq:PsolMSW} due to the presence of matter plays an interesting role in the search for CP violation. The MSW effect by itself mimics CP violation as it alters oscillation probabilities for neutrinos and anti-neutrinos differently. Depending on the value of $\delta$ that nature has chosen, the differences in oscillation probabilities due to the CP violation angle and the MSW effect can either compound or cancel out.
+The combined effect that appears in equations \ref{eq:3MuToEMSW}, \ref{eq:PatmMSW}, and \ref{eq:PsolMSW} due to the presence of matter plays an interesting role in the search for CP violation. The MSW effect by itself mimics CP violation as it alters oscillation probabilities for neutrinos and anti-neutrinos differently. Depending on the value of $\delta$ that nature has chosen, the differences in oscillation probabilities due to the CP violation angle and the MSW effect can either compound or cancel out.
 
 \section{Current Measurements}
 \label{sec:BestMeasures}
@@ -313,7 +313,7 @@ P(\anue \rightarrow \anue) \approx 1 - \sin^2 2\theta_{13} \sin^2 \Delta_{31}.
 \label{eq:2NuReactor}
 \eeq
 
-\n Daya Bay made the first nonzero measurement of $\theta_{13}$ in 2012, reporting a value of $\sin^2 2\theta_{13} = 0.092 \pm 0.016\mbox{ (stat)} \pm 0.005\mbox{ (syst)}$ after taking just 55 days of data \cite{ref:DayaBay2012}. This result excluded a zero value for $\theta_{13}$ at $5.2\sigma$ and is shown in Fig.~\ref{fig:DayaBay2012}. Since that result, the limits have only continued to improve, and the leading measurement still comes from Daya Bay.
+\n Daya Bay made the first nonzero measurement of $\theta_{13}$ in 2012, reporting a value of $\sin^2 2\theta_{13} = 0.092 \pm 0.016\mbox{ (stat)} \pm 0.005\mbox{ (syst)}$ after taking just 55 days of data \cite{ref:DayaBay2012}. This result excluded a zero value for $\theta_{13}$ at $5.2\sigma$ and is shown in figure\ref{fig:DayaBay2012}. Since that result, the limits have only continued to improve, and the leading measurement still comes from Daya Bay.
 
 \begin{figure}[!htb]
   \centering
@@ -324,7 +324,7 @@ P(\anue \rightarrow \anue) \approx 1 - \sin^2 2\theta_{13} \sin^2 \Delta_{31}.
 
 Accelerator neutrino experiments, such as MINOS, T2K, and \nova, begin with a beam of nearly pure $\nuanu_\mu$ and search for both a disappearance of $\nuanu_\mu$ and appearance of other neutrino flavors. These experiments are sensitive to $\theta_{13}$, $\theta_{23}$, $\dmxy{2}{3}$, and $\delta$. The experiments that have the largest matter effect are the most sensitive to $\delta$ and the mass hierarchy.
 
-Global fits to the combined data of these (and other) neutrino experiments have been performed and summarized in \cite{ref:PDG, ref:BestFits3}; the best fit values are shown in Table \ref{tab:BestFits3}. While most of the parameters have been measured with good precision, there are still a few lingering questions. From the table it is clear that a much better measurement on the CP violation angle is needed. The mass hierarchy still needs to be definitively measured as well. The other main question is whether $\theta_{23}$ is maximal, and if not, whether it is in the lower or upper octant.
+Global fits to the combined data of these (and other) neutrino experiments have been performed and summarized in \cite{ref:PDG, ref:BestFits3}; the best fit values are shown in table \ref{tab:BestFits3}. While most of the parameters have been measured with good precision, there are still a few lingering questions. From the table it is clear that a much better measurement on the CP violation angle is needed. The mass hierarchy still needs to be definitively measured as well. The other main question is whether $\theta_{23}$ is maximal, and if not, whether it is in the lower or upper octant.
 \begin{table}[!htb]
   \begin{center}
     \caption[Best Fit Parameters for Three Neutrino Oscillation Model]{Current status of best fit oscillation parameters, from \cite{ref:PDG, ref:BestFits3}. The last column shows the allowed values within a $3\sigma$ range, with the exception of $\delta$, which is shown at a $2\sigma$ range. This is because the current global best fit for $\delta$ still allows the full range from $0$ to $2\pi$ at $3\sigma$. \nova~should vastly improve the limits on $\delta$.}
@@ -348,7 +348,7 @@ Global fits to the combined data of these (and other) neutrino experiments have 
   \end{center}
 \end{table}
 
-Current and next generation reactor experiments have a great outlook to answer these outstanding questions. Making use of the MSW effect, the $\nue$ and $\anue$ appearance results from experiments like T2K and \nova~could simultaneously measure $\delta$, the mass hierarchy, and $\theta_{23}$ octant. The prospects for \nova to make these measurements are shown in Fig.~\ref{fig:BiProb}. The first analysis results from \nova~\cite{ref:NOvAFANuE, ref:NOvAFANuMu} were published after taking about 10\% of the experiments design statistics and already show promise. The \nova~measurement for $\delta$, shown in Fig.~\ref{fig:NOvAFADelta}, provide a hint toward the normal hierarchy and eliminate portions of $\delta$ space at 90\% confidence.
+Current and next generation reactor experiments have a great outlook to answer these outstanding questions. Making use of the MSW effect, the $\nue$ and $\anue$ appearance results from experiments like T2K and \nova~could simultaneously measure $\delta$, the mass hierarchy, and $\theta_{23}$ octant. The prospects for \nova to make these measurements are shown in figure \ref{fig:BiProb}. The first analysis results from \nova~\cite{ref:NOvAFANuE, ref:NOvAFANuMu} were published after taking about 10\% of the experiments design statistics and already show promise. The \nova~measurement for $\delta$, shown in figure \ref{fig:NOvAFADelta}, provide a hint toward the normal hierarchy and eliminate portions of $\delta$ space at 90\% confidence.
 
 \begin{figure}[!htb]
   \centering
@@ -505,9 +505,9 @@ The effect of each of the oscillation parameters can be seen in the figures belo
 \begin{figure}[p]
   \centering
   \begin{tabular}{c}
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSDm41.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuSDm41.png} \\
     \\ \\
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuDm41.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuMuDm41.png} \\
   \end{tabular}
   \caption[Oscillation Probabilities for Values of $\dmxy{1}{4}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\dmxy{1}{4}$. Above $\dmxy{1}{4} = 0.5\unit{eV}^2$, oscillations start to affect the ND. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
   \label{fig:LOverEDm41}
@@ -516,9 +516,9 @@ The effect of each of the oscillation parameters can be seen in the figures belo
 \begin{figure}[p]
   \centering
   \begin{tabular}{c}
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh34.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuSTh34.png} \\
     \\ \\
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh34.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuMuTh34.png} \\
   \end{tabular}
   \caption[Oscillation Probabilities for Values of $\theta_{34}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{34}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
   \label{fig:LOverETh34}
@@ -527,9 +527,9 @@ The effect of each of the oscillation parameters can be seen in the figures belo
 \begin{figure}[p]
   \centering
   \begin{tabular}{c}
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh24.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuSTh24.png} \\
     \\ \\
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh24.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuMuTh24.png} \\
   \end{tabular}
   \caption[Oscillation Probabilities for Values of $\theta_{24}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{24}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
   \label{fig:LOverETh24}
@@ -538,9 +538,9 @@ The effect of each of the oscillation parameters can be seen in the figures belo
 \begin{figure}[p]
   \centering
   \begin{tabular}{c}
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh23.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuSTh23.png} \\
     \\ \\
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh23.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuMuTh23.png} \\
   \end{tabular}
   \caption[Oscillation Probabilities for Values of $\theta_{23}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{23}$. Shifts in $\theta_{23}$ have a modest effect at the \nova~peak energy. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
   \label{fig:LOverETh23}
@@ -549,9 +549,9 @@ The effect of each of the oscillation parameters can be seen in the figures belo
 \begin{figure}[p]
   \centering
   \begin{tabular}{c}
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSCP24.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuSCP24.png} \\
     \\ \\
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuCP24.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuMuCP24.png} \\
   \end{tabular}
   \caption[Oscillation Probabilities for Values of $\delta_{24}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\delta_{24}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
   \label{fig:LOverECP24}
@@ -560,9 +560,9 @@ The effect of each of the oscillation parameters can be seen in the figures belo
 \begin{figure}[p]
   \centering
   \begin{tabular}{c}
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh14.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuSTh14.png} \\
     \\ \\
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh14.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuMuTh14.png} \\
   \end{tabular}
   \caption[Oscillation Probabilities for Values of $\theta_{14}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{14}$. The values shown are well outside of experimental bounds, but even these large shifts have only a small effect on the oscillation probabilities that is largely degenerate with $\theta_{23}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
   \label{fig:LOverETh14}
@@ -571,9 +571,9 @@ The effect of each of the oscillation parameters can be seen in the figures belo
 \begin{figure}[p]
   \centering
   \begin{tabular}{c}
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSTh13.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuSTh13.png} \\
     \\ \\
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuTh13.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuMuTh13.png} \\
   \end{tabular}
   \caption[Oscillation Probabilities for Values of $\theta_{13}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\theta_{13}$. The values shown are well outside of experimental bounds, but even these large shifts have only a small effect on the oscillation probabilities that is largely degenerate with $\theta_{23}$. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
   \label{fig:LOverETh13}
@@ -582,9 +582,9 @@ The effect of each of the oscillation parameters can be seen in the figures belo
 \begin{figure}[p]
   \centering
   \begin{tabular}{c}
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuSCP13.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuSCP13.png} \\
     \\ \\
-    \includegraphics[width=1\textwidth]{figures/LOverE/LOverEMuMuCP13.png} \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEMuMuCP13.png} \\
   \end{tabular}
   \caption[Oscillation Probabilities for Values of $\delta_{13}$]{Total active neutrino survival probability (top) and $\numu$ survival probability (bottom) for different values of $\delta_{13}$. The effects of $\delta_{13}$ are negligible on the oscillation probabilities. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Parameters not varied in the figures are held fixed to values shown in table \ref{tab:LOverEValues}.}
   \label{fig:LOverECP13}
