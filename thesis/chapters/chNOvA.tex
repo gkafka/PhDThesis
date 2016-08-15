@@ -1,4 +1,4 @@
-\chapter{The \nova~Experiment}
+\chapter{\texorpdfstring{The \nova~Experiment}{The NOvA Experiment}}
 \label{ch:nova}
 
 The \nova~experiment, or the NuMI Off-Axis $\nue$ Appearance experiment, is a long baseline, two detector, neutrino oscillation experiment designed to measure $\numu$ to $\nue$ appearance from the Fermilab NuMI beam. The two functionally identical \nova~detectors are situated $14.6\unit{mrad}$ off-axis of the beam center, with its Near Detector (ND) located approximately $1\unit{km}$ downstream of the beam target source and its Far Detector (FD) located $810\unit{km}$ from the source in Ash River, MN. The main purpose of the ND is to constrain the neutrino beam energy and composition by measuring the beam very close to its source, i.e., before the neutrinos have had a chance to oscillate. The FD then measures the oscillated neutrinos. This chapter describes the NuMI beam and \nova~detectors in more detail.
@@ -76,4 +76,51 @@ The narrow energy band result is shown in figure \ref{fig:BeamEComp}, which comp
 
 As with the main \nova~analyses, the off-axis nature of the experiment has both pros and cons when searching for sterile oscillations via NC disappearance. Obviously a reduced neutrino flux is not great when searching for neutrino interactions. However, the CC backgrounds are highly suppressed due to oscillations, even with the $\nue$ appearance. This makes the selection of a relatively pure sample of NC events at the FD a much easier task.
 
-\section{The \nova~Detectors}
+\section{\texorpdfstring{The \nova~Detectors}{The NOvA Detectors}}
+
+The \nova~Detectors are highly segmented, liquid scintillating calorimeters. They consist of PVC plastic cells filled with a liquid scintillating solution, and the active scintillating material makes about $65\%$ of the detectors by weight. The two detectors are functionally identical in order to reduce the effect of systematic errors, with the ND used to constrain the neutrino beam flux and energy and the FD used to measure the oscillated neutrino spectrum. This section first describes the general detector design, and later focuses on the specific details of the individual detectors. The information contained here is largely a summary of the \nova~TDR \cite{ref:TDRNOvA}, which contains a much more detailed account of the detectors. 
+
+The basic structure of the \nova~detectors is a set of PVC plastic cells arranged together as planes and alternating in orientation. The cross section of the cells is approximately rectangular with dimensions of $4\unit{cm} \times 6\unit{cm}$. The cell length spans the entire height or width of the particular detector, depending on the orientation of the given plane. The PVC is extruded in groups of $16$ cells, as shown in figure \ref{fig:DetExtrusion}. Two extrusions are glued together to create a `module,' shown in figure \ref{fig:DetModule}. Many modules are glued together side by side to form a single plane. The planes are oriented such that the NuMI beam direction is approximately parallel to the plane normal vector.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/DetExtrusion.png}
+  \caption[A PVC Extrusion]{A schematic of a PVC cell extrusion. The PVC is extruded along the axis into the page with a length equal to the detector height or width. Figure from \cite{ref:TDRNOvA}.}
+  \label{fig:DetExtrusion}
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/DetModule.png}
+  \caption[A Detector Module]{A schematic of a module. A full plane is made up of modules connected side by side. Figure from \cite{ref:TDRNOvA}.}
+  \label{fig:DetModule}
+\end{figure}
+
+The local detector coordinate systems consider the NuMI beam direction as the Z axis, height (or altitude) as the Y axis, and the X axis is the other remaining. As the NuMI beam points approximately to the north, the direction of positive X happens to point west. (The beam travels in the positive Z direction, and the positive Y direction points to higher elevation.) In this frame, a given plane can either locate activity in an XZ plane if the cells are in the vertical orientation, or a YZ plane if the cells are in the horizontal orientation. For this reason, the planes alternate between horizontal and vertical orientations to give a full three dimensional view of detector activity.
+
+Each cell is filled with a liquid scintillator solution that consists of several different compounds, each with a specific function. Pseudocumene ({1,2,4-Trimethylbenzene}) is the scintillant used in the solution. The solution contains two wave shifters, PPO (2,5-Diphenyloxazole) and bis-MIS (1,4-bis(2-methylstyryl)benzene). A small amount of Stadis-425 is used in the solution as an antistatic agent, and a small amount of tocopherol (Vitamin E) is added as an antioxidant. Mineral oil provides the solvent for each of the above compounds and makes up the majority of the solution. Table \ref{tab:scintillator} summarizes the solution contents and lists their mass fractions. The resultant mixture produces scintillation light in the low wavelength UV region, and shifts this to the violet-blue region.
+\begin{table}[h]
+  \begin{center}
+    \caption[Scintillator Solution Summary]{A summary of each component in the scintillation solution. Adapted from \cite{ref:TDRNOvA}.}
+    \label{tab:scintillator}
+    \begin{tabular}{c c c}
+      \hline\hline
+      Compound & Purpose & Mass Fraction \\
+      \hline
+      Mineral Oil & Solvent & $95.8\%$ \\
+      Pseudocumene & Scintillant & $4.1\%$ \\
+      PPO & Waveshifter & $0.091\%$ \\
+      bis-MSB & Waveshifter & $0.0013\%$ \\
+      Stadis-425 & Anti-static & $0.0003\%$ \\
+      Vitamin E & Antioxidant & $0.0010\%$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+To collect the scintillation light, the inside of each cell is coated with titanium dioxide and a loop of a plastic wavelength shifting (WLS) fiber rests inside each cell. The TiO\textsubscript{2} is used as a reflective agent to maximize the scintillation light collection. A fluorescent dye in the WLS fiber absorbs this scintillation light and shifts it to the blue-green region. This light is then transmitted through the fiber to electronics for readout. A complete schematic of a cell is shown in figure \ref{fig:DetCell}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.2\textwidth]{figures/DetCell.png}
+  \caption[A Detector Cell]{A schematic of the inside of a cell. The width and depth are approximately $W \approx 4\unit{cm}$ and $D \approx 6\unit{cm}$, respectively. The green curve is the WLS fiber, and the zigzagging blue line is a path light might take from emission by the scintillator through absorption by the WLS fiber. Figure from \cite{ref:TDRNOvA}.}
+  \label{fig:DetCell}
+\end{figure}
