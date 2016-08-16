@@ -17,7 +17,7 @@ Illegal, another \bibstyle command---line 113 of file dissertation.aux
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 451 of file references.bib
+I was expecting a `,' or a `}'---line 443 of file references.bib
  : 
  : %
 (Error may have been on previous line)
@@ -25,7 +25,7 @@ I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
 You've used 75 entries,
             1791 wiz_defined-function locations,
-            904 strings with 14728 characters,
+            904 strings with 14740 characters,
 and the built_in function-call counts, 12326 in all, are:
 = -- 1142
 > -- 383
