@@ -146,3 +146,26 @@ The first component in data readout is collection and amplification by a Hamamat
 Each APD is connected directly to a thermoelectric cooler and housed in an electronics box as shown in figure \ref{fig:DetModule}. The cooler keeps the operating temperature for the APD at $-15^\circ$ to reduce noise. Furthermore, the APDs are held at a voltage of about $425\unit{V}$ to run at a gain of $100$, though exact voltages are set individually. The thermoelectric cooler is part of a larger front-end board (FEB) that is also housed inside the same electronics box as the APD. The FEB thus provides the cooling and voltage for the APD, but it also digitizes the signals from the APD.
 
 The electronics for the \nova~detectors were installed in 64 plane sections called diblocks. The signals from (up to) 64 FEBs are read out by a single data concentrator module (DCM). Due to the alternating orientations of the planes, and thus the modules, electronics boxes are found on either the top or one side of the detector. Consequently, a given DCM does not read out one FEB per plane, but rather (up to) two FEBs per plane. The two FEBs are always from adjacent modules, and the modules always share the same X or Y coordinate range based on the module orientation. This diblock structure is important because it allowed for data collection at the FD before the detector was fully commissioned.
+
+Data stored by the DCMs are stored in $50\microsec$ blocks called microslices, which are transferred to a data buffer farm in larger $5\unit{ms}$ blocks called millislices. Data is stored in the farm for up to $20$ minutes before being erased. During this time, different trigger decisions can be applied to keep the data for different purposes such as recording beam activity, searching for good calibration candidates, or searching for exotic physics like monopoles. Data that pass a trigger decision are written to disk and permanently stored, and this mechanism allows the FEBs to collect data continuously.
+
+Detector activity that could be due to a beam event is captured within a $500\microsec$ window. These events are specifically triggered by a signal from Fermilab, corrected for time of flight at the FD. The event window is centered around the ${\sim}10\microsec$ beam spill, which allows for considerable drift in the timing systems without loss of data \cite{ref:ThesisEvan}. Other $500\microsec$ event windows without beam candidates are stored as cosmic trigger data that are useful for predicting the cosmic background event rate.
+
+\subsection{Far Detector}
+
+The \nova~FD is situated $810\unit{km}$ from the beam target in Ash River, MN. Both the horizontal and vertical planes consist of $12$ modules, or $384$ cells, for a total cross sectional area of about $15.2\unit{m} \times 15.2\unit{m}$. The fully commissioned detector has $14$ diblocks (data taking began with as few as $4$), or $896$ planes, with a total length of about $59.6\unit{m}$. This means that the detector reads out $344,064$ individual cells, or channels. The FD weighs $14\unit{kT}$, which is about $65\%$ scintillator and $35\%$ PVC plastic.
+
+The detector itself is inside a building that is at the surface, mostly dug underground and partially above ground. The site is at an elevation of about $1220\unit{ft}$ and thus subject to a large background of cosmic rays. A large amount of overburden is used to mitigate this effect. $2.5\unit{ft}$ of precast concrete covers the entire detector and is capped with $1.5\unit{ft}$ of concrete cast in place. Finally, $6$" of barite, or barium sulfate, is placed above the concrete and composed of loosely packed rocks. Barite was chosen because it is a high Z material with a high stopping power for cosmic ray photons. Together, the concrete and barite provide around $14$ radiation lengths for the cosmic rays. Figure \ref{fig:FD} shows the FD and the building inside which it is located.
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.29\textwidth]{figures/NOvAFD.jpg} &
+    \includegraphics[width=.65\textwidth]{figures/NOvAFDSite.jpg} \\
+  \end{tabular}
+  \caption[The \nova~Far Detector]{Left: The \nova~FD. The beam comes from the back of the photograph and out of the page. The red and yellow structure is a piovter that was used to rotate and put the detector blocks into position and is not part of the detector. A person can be seen halfway up on the right of the detector for scale. Right: The FD building. The detector is beneath the rocky section on the right of the photograph, which only partially shows the barite overburden.}
+  \label{fig:FD}
+\end{figure}
+
+Even with the overburden, it is still expected to see cosmic rays in the FD with a rate over $200\unit{kHz}$. This is the main reason why \nova~must use a trigger from the Fermilab accelerator to signal a beam event, but also why taking cosmic trigger data is so important. These data are used to develop and train cuts designed to remove cosmic background. Later, a predicted background is made from an independent sample, namely the data regions in the NuMI trigger events that fall safely outside the smaller beam window.
+
+\subsection{Near Detector}
