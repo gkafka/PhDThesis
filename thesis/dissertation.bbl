@@ -289,6 +289,35 @@ J.~Cooper.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11906}{\nova~Internal
   Document 11906}.
 
+\bibitem{ref:Fluka1}
+T.~T.~B\"{o}hlen et~al.
+\newblock The {FLUKA} code: Developments and challenges for high energy and
+  medical applications.
+\newblock {\em Nuclear Data Sheets}, 120:211--214, 2014.
+
+\bibitem{ref:Fluka2}
+A.~Ferrari et~al.
+\newblock {FLUKA}: A multi-particle transport code.
+\newblock {\em {CERN-2005-10, INFN/TC$\_$05/11, SLAC-R-773}}, 2005.
+
+\bibitem{ref:Geant41}
+S.~Agostinelli et~al.
+\newblock {Geant4}--a simulation toolkit.
+\newblock {\em Nuclear Instruments and Methods in Physics A}, 506:250--303,
+  2003.
+
+\bibitem{ref:Geant42}
+J.~Allison et~al.
+\newblock {Geant4} developments and applications.
+\newblock {\em IEEE Transactions on Nuclear Science}, 53:270--278, 2006.
+
+\bibitem{ref:GeomNuMI}
+G.~Kafka.
+\newblock Spider support fix/update.
+\newblock
+  \href{http://numix-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=39}{NuMI-X
+  Internal Document 39}.
+
 \bibitem{ref:TNBeamQual}
 L.~Goodenough and S.~R. Phan-Budd.
 \newblock Technical note on the {NOvA} beam monitoring for 2015 summer
