@@ -303,8 +303,8 @@ A.~Ferrari et~al.
 \bibitem{ref:Geant41}
 S.~Agostinelli et~al.
 \newblock {Geant4}--a simulation toolkit.
-\newblock {\em Nuclear Instruments and Methods in Physics A}, 506:250--303,
-  2003.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A},
+  506:250--303, 2003.
 
 \bibitem{ref:Geant42}
 J.~Allison et~al.
@@ -317,6 +317,58 @@ G.~Kafka.
 \newblock
   \href{http://numix-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=39}{NuMI-X
   Internal Document 39}.
+
+\bibitem{ref:Dk2Nu}
+R.~Hatcher.
+\newblock Proposal for a unified ``flux'' {N-tuple} format.
+\newblock
+  \href{http://minos-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=9070}{MINOS
+  Internal Document 9070}.
+
+\bibitem{ref:gsimple}
+R.~Hatcher.
+\newblock The {\nova}~simulation chain.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=6941}{\nova~Internal
+  Document 6941}.
+
+\bibitem{ref:GENIEGen}
+C.~Andreopoulos et~al.
+\newblock The {GENIE} neutrino {Monte} {Carlo} generator.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A},
+  614:87--104, 2010.
+
+\bibitem{ref:GENIE}
+C.~Andreopoulos et~al.
+\newblock The {GENIE} neutrino {Monte} {Carlo} generator: Physics and user
+  manual.
+\newblock \url{http://arxiv.org/abs/1510.05494}.
+
+\bibitem{ref:TNDetSim}
+A.~Aurisano.
+\newblock The {\nova} detector simulation.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13577}{\nova~Internal
+  Document 13577}.
+
+\bibitem{ref:SimRock}
+G.~Davies and R.~Murphy.
+\newblock Updated {ND} rock rate.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13247}{\nova~Internal
+  Document 13247}.
+
+\bibitem{ref:BirksChou}
+C.~N. Chou.
+\newblock The nature of the saturation effect of fluorescent scintillators.
+\newblock {\em Physical Review}, 87:904--905, 1952.
+
+\bibitem{ref:DanBirks}
+D.~Pershey.
+\newblock Birks-chou parameter selection.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13158}{\nova~Internal
+  Document 13158}.
 
 \bibitem{ref:TNBeamQual}
 L.~Goodenough and S.~R. Phan-Budd.
@@ -404,18 +456,6 @@ H.~Duyang et~al.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15296}{\nova~Internal
   Document 15296}.
 
-\bibitem{ref:BirksChou}
-C.~N. Chou.
-\newblock The nature of the saturation effect of fluorescent scintillators.
-\newblock {\em Physical Review}, 87:904--905, 1952.
-
-\bibitem{ref:DanBirks}
-D.~Pershey.
-\newblock Birks-chou parameter selection.
-\newblock
-  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13158}{\nova~Internal
-  Document 13158}.
-
 \bibitem{ref:TNCalib}
 L.~Vinton.
 \newblock First analysis calibration technotes.
@@ -443,11 +483,6 @@ K.~Matera et~al.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15127}{\nova~Internal
   Document 15127}.
-
-\bibitem{ref:GENIE}
-C.~Andreopoulos et~al.
-\newblock The {GENIE} neutrino monte carlo generator: Physics and user manual.
-\newblock \url{http://arxiv.org/abs/1510.05494}.
 
 \bibitem{ref:TNGENIE}
 H.~Gallagher et~al.
