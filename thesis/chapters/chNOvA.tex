@@ -152,6 +152,8 @@ Data stored by the DCMs are stored in $50\microsec$ blocks called microslices, w
 
 Detector activity that could be due to a beam event is captured within a $500\microsec$ window. These events are specifically triggered by a signal from Fermilab, corrected for time of flight at the FD. The event window is centered around the ${\sim}10\microsec$ beam spill, which allows for considerable drift in the timing systems without loss of data \cite{ref:ThesisEvan}. Other $500\microsec$ event windows without beam candidates are stored as cosmic trigger data that are useful for predicting the cosmic background event rate.
 
+Data are collected by organizing these events into larger run and subrun file structures. Subruns are populated with events until either a maximum file size is reached, or after an hour of data taking has elapsed, whichever comes first. Runs are comprised of $64$ subruns for the FD, and $24$ subruns for the ND, and are numbered in succession such that larger numbered runs correspond to later times.
+
 \subsection{Far Detector}
 
 The \nova~FD is situated $810\unit{km}$ from the beam target in Ash River, MN. Both the horizontal and vertical planes consist of $12$ modules, or $384$ cells, for a total cross sectional area of about $15.2\unit{m} \times 15.2\unit{m}$. The fully commissioned detector has $14$ diblocks (data taking began with as few as $4$), or $896$ planes, with a total length of about $59.6\unit{m}$. This means that the detector reads out $344$,$064$ individual cells, or channels. The FD weighs $14\unit{kT}$, which is about $65\%$ scintillator and $35\%$ PVC plastic.
