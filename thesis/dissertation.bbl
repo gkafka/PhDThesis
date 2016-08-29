@@ -332,6 +332,13 @@ R.~Hatcher.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=6941}{\nova~Internal
   Document 6941}.
 
+\bibitem{ref:TNDetSim}
+A.~Aurisano.
+\newblock The {\nova} detector simulation.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13577}{\nova~Internal
+  Document 13577}.
+
 \bibitem{ref:GENIEGen}
 C.~Andreopoulos et~al.
 \newblock The {GENIE} neutrino {Monte} {Carlo} generator.
@@ -343,13 +350,6 @@ C.~Andreopoulos et~al.
 \newblock The {GENIE} neutrino {Monte} {Carlo} generator: Physics and user
   manual.
 \newblock \url{http://arxiv.org/abs/1510.05494}.
-
-\bibitem{ref:TNDetSim}
-A.~Aurisano.
-\newblock The {\nova} detector simulation.
-\newblock
-  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13577}{\nova~Internal
-  Document 13577}.
 
 \bibitem{ref:SimRock}
 G.~Davies and R.~Murphy.

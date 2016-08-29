@@ -8,33 +8,33 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Assumed Oscillation Parameters}}{59}{table.caption.39}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Beam Quality Cuts}}{59}{table.caption.40}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Data Quality Cuts}}{60}{table.caption.41}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Event Table: Data Quality Cuts}}{60}{table.caption.42}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Event Quality Cuts}}{61}{table.caption.44}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Event Table: Event Quality Cuts}}{62}{table.caption.45}
-\contentsline {table}{\numberline {6.7}{\ignorespaces FD Fiducial and Containment Cuts}}{63}{table.caption.48}
-\contentsline {table}{\numberline {6.8}{\ignorespaces Event Table: Fiducial and Containment Cuts, FD}}{64}{table.caption.49}
-\contentsline {table}{\numberline {6.9}{\ignorespaces ND Fiducial and Containment Cuts}}{65}{table.caption.51}
-\contentsline {table}{\numberline {6.10}{\ignorespaces Event Table: Fiducial and Containment Cuts, ND}}{65}{table.caption.52}
-\contentsline {table}{\numberline {6.11}{\ignorespaces NC Selection Cuts}}{68}{table.caption.56}
-\contentsline {table}{\numberline {6.12}{\ignorespaces Event Table: NC Selection Cuts}}{68}{table.caption.57}
-\contentsline {table}{\numberline {6.13}{\ignorespaces Cosmic Rejection Cuts}}{70}{table.caption.60}
-\contentsline {table}{\numberline {6.14}{\ignorespaces Event Table: FD Cosmic Rejection Cuts}}{70}{table.caption.61}
-\contentsline {table}{\numberline {6.15}{\ignorespaces Event Table: FD Selection Cuts}}{70}{table.caption.63}
-\contentsline {table}{\numberline {6.16}{\ignorespaces Event Table: ND Selection Cuts}}{71}{table.caption.64}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Assumed Oscillation Parameters}}{61}{table.caption.39}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Beam Quality Cuts}}{61}{table.caption.40}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Data Quality Cuts}}{62}{table.caption.41}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Event Table: Data Quality Cuts}}{62}{table.caption.42}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Event Quality Cuts}}{63}{table.caption.44}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Event Table: Event Quality Cuts}}{64}{table.caption.45}
+\contentsline {table}{\numberline {6.7}{\ignorespaces FD Fiducial and Containment Cuts}}{65}{table.caption.48}
+\contentsline {table}{\numberline {6.8}{\ignorespaces Event Table: Fiducial and Containment Cuts, FD}}{66}{table.caption.49}
+\contentsline {table}{\numberline {6.9}{\ignorespaces ND Fiducial and Containment Cuts}}{67}{table.caption.51}
+\contentsline {table}{\numberline {6.10}{\ignorespaces Event Table: Fiducial and Containment Cuts, ND}}{67}{table.caption.52}
+\contentsline {table}{\numberline {6.11}{\ignorespaces NC Selection Cuts}}{70}{table.caption.56}
+\contentsline {table}{\numberline {6.12}{\ignorespaces Event Table: NC Selection Cuts}}{70}{table.caption.57}
+\contentsline {table}{\numberline {6.13}{\ignorespaces Cosmic Rejection Cuts}}{72}{table.caption.60}
+\contentsline {table}{\numberline {6.14}{\ignorespaces Event Table: FD Cosmic Rejection Cuts}}{72}{table.caption.61}
+\contentsline {table}{\numberline {6.15}{\ignorespaces Event Table: FD Selection Cuts}}{72}{table.caption.63}
+\contentsline {table}{\numberline {6.16}{\ignorespaces Event Table: ND Selection Cuts}}{73}{table.caption.64}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Beam Systematic Errors}}{77}{table.caption.65}
-\contentsline {table}{\numberline {8.2}{\ignorespaces Birks-Chou Systematic Errors}}{79}{table.caption.67}
-\contentsline {table}{\numberline {8.3}{\ignorespaces Calibration Systematic Errors}}{80}{table.caption.69}
-\contentsline {table}{\numberline {8.4}{\ignorespaces GENIE Systematic Errors}}{82}{table.8.4}
-\contentsline {table}{\numberline {8.5}{\ignorespaces ND Containment Systematic Errors}}{84}{table.caption.73}
-\contentsline {table}{\numberline {8.6}{\ignorespaces ND Data/MC and CC Background Errors}}{87}{table.caption.77}
-\contentsline {table}{\numberline {8.7}{\ignorespaces Systematic Error Summary}}{89}{table.caption.79}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Beam Systematic Errors}}{79}{table.caption.65}
+\contentsline {table}{\numberline {8.2}{\ignorespaces Birks-Chou Systematic Errors}}{81}{table.caption.67}
+\contentsline {table}{\numberline {8.3}{\ignorespaces Calibration Systematic Errors}}{82}{table.caption.69}
+\contentsline {table}{\numberline {8.4}{\ignorespaces GENIE Systematic Errors}}{84}{table.8.4}
+\contentsline {table}{\numberline {8.5}{\ignorespaces ND Containment Systematic Errors}}{86}{table.caption.73}
+\contentsline {table}{\numberline {8.6}{\ignorespaces ND Data/MC and CC Background Errors}}{89}{table.caption.77}
+\contentsline {table}{\numberline {8.7}{\ignorespaces Systematic Error Summary}}{91}{table.caption.79}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {9.1}{\ignorespaces Fixed Parameters and Values for Fitting}}{92}{table.caption.81}
-\contentsline {table}{\numberline {9.2}{\ignorespaces FD Event Rates for Shifted Energy Spectra}}{97}{table.caption.86}
-\contentsline {table}{\numberline {9.3}{\ignorespaces Sideband Event Rates}}{98}{table.caption.88}
+\contentsline {table}{\numberline {9.1}{\ignorespaces Fixed Parameters and Values for Fitting}}{94}{table.caption.81}
+\contentsline {table}{\numberline {9.2}{\ignorespaces FD Event Rates for Shifted Energy Spectra}}{99}{table.caption.86}
+\contentsline {table}{\numberline {9.3}{\ignorespaces Sideband Event Rates}}{100}{table.caption.88}
 \addvspace {10\p@ }
