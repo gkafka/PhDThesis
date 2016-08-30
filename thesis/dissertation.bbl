@@ -351,6 +351,26 @@ C.~Andreopoulos et~al.
   manual.
 \newblock \url{http://arxiv.org/abs/1510.05494}.
 
+\bibitem{ref:MinervaMEC}
+P.~A.~Rodriques et~al.
+\newblock Identification of nuclear effects in neutrino-carbon interactions at
+  low three-momentum transfer.
+\newblock {\em Physical Review Letters}, 116:071802, 2016.
+
+\bibitem{ref:TNGENIE}
+H.~Gallagher et~al.
+\newblock {GENIE} tune and uncertainty band for second analysis.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15214}{\nova~Internal
+  Document 15214}.
+
+\bibitem{ref:MECPlots}
+J.~Wolcott.
+\newblock Blessed plots for {SA} {GENIE} tune.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15481}{\nova~Internal
+  Document 15481}.
+
 \bibitem{ref:SimRock}
 G.~Davies and R.~Murphy.
 \newblock Updated {ND} rock rate.
@@ -369,6 +389,48 @@ D.~Pershey.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13158}{\nova~Internal
   Document 13158}.
+
+\bibitem{ref:TNFR}
+G.~Kafka.
+\newblock The {FluxReader} framework.
+\newblock
+  \url{https://cdcvs.fnal.gov/redmine/attachments/download/19714/FluxReader_TN.pdf}.
+
+\bibitem{ref:TNBeam}
+H.~Duyang et~al.
+\newblock A technote describing the derivation and size of {NuMI} flux
+  uncertainties used in the second {NOvA} analyses.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15296}{\nova~Internal
+  Document 15296}.
+
+\bibitem{ref:FRFluka}
+M.~{Del Tutto}.
+\newblock Fluka {11.2c.0} validation.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13164}{\nova~Internal
+  Document 13164}.
+
+\bibitem{ref:FRHornProposal}
+J.~Cooper et~al.
+\newblock Special run proposal.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13451}{\nova~Internal
+  Document 13451}.
+
+\bibitem{ref:FRHornResult}
+M.~{Del Tutto}.
+\newblock Special runs - horn current study.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13523}{\nova~Internal
+  Document 13523}.
+
+\bibitem{ref:FRTarget}
+G.~Brunetti.
+\newblock Target studies with {FLUGG}.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=12556}{\nova~Internal
+  Document 12556}.
 
 \bibitem{ref:TNBeamQual}
 L.~Goodenough and S.~R. Phan-Budd.
@@ -436,7 +498,7 @@ N.~J. Raddatz.
 
 \bibitem{ref:TNLID}
 K.~Sachdev, J.~Bian, and E.~Niner.
-\newblock Likelihood based nue identifier (lid).
+\newblock Likelihood based nue identifier ({LID}).
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13590}{\nova~Internal
   Document 13590}.
@@ -447,14 +509,6 @@ K.~Bays.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11205}{\nova~Internal
   Document 11205}.
-
-\bibitem{ref:TNBeam}
-H.~Duyang et~al.
-\newblock A technote describing the derivation and size of {NuMI} flux
-  uncertainties used in the second {NOvA} analyses.
-\newblock
-  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15296}{\nova~Internal
-  Document 15296}.
 
 \bibitem{ref:TNCalib}
 L.~Vinton.
@@ -483,13 +537,6 @@ K.~Matera et~al.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15127}{\nova~Internal
   Document 15127}.
-
-\bibitem{ref:TNGENIE}
-H.~Gallagher et~al.
-\newblock {GENIE} tune and uncertainty band for second analysis.
-\newblock
-  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15214}{\nova~Internal
-  Document 15214}.
 
 \bibitem{ref:NDDataMC}
 A.~Markowitz.
