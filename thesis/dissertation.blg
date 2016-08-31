@@ -6,53 +6,58 @@ A level-1 auxiliary file: chapters/chHistory.aux
 A level-1 auxiliary file: chapters/chTheory.aux
 A level-1 auxiliary file: chapters/chNOvA.aux
 A level-1 auxiliary file: chapters/chSimulation.aux
+White space in argument---line 16 of file chapters/chSimulation.aux
+ : \citation{ref:TNDetSimFA
+ :                          ref:TNDetSimSA}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: chapters/chReconstruction.aux
 A level-1 auxiliary file: chapters/chSelection.aux
 A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 133 of file dissertation.aux
+Illegal, another \bibstyle command---line 132 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 579 of file references.bib
+I was expecting a `,' or a `}'---line 587 of file references.bib
  : 
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "ref:TNDetSim"
 Warning--empty author in ref:TDRNuMI
-You've used 95 entries,
+You've used 94 entries,
             1791 wiz_defined-function locations,
-            1008 strings with 17792 characters,
-and the built_in function-call counts, 14848 in all, are:
-= -- 1378
-> -- 474
+            1005 strings with 17648 characters,
+and the built_in function-call counts, 14753 in all, are:
+= -- 1369
+> -- 470
 < -- 0
-+ -- 216
-- -- 121
++ -- 214
+- -- 120
 * -- 697
-:= -- 2657
-add.period$ -- 283
-call.type$ -- 95
-change.case$ -- 96
+:= -- 2636
+add.period$ -- 280
+call.type$ -- 94
+change.case$ -- 95
 chr.to.int$ -- 0
-cite$ -- 96
-duplicate$ -- 641
-empty$ -- 1505
-format.name$ -- 121
-if$ -- 3222
+cite$ -- 95
+duplicate$ -- 637
+empty$ -- 1497
+format.name$ -- 120
+if$ -- 3203
 int.to.chr$ -- 0
-int.to.str$ -- 95
+int.to.str$ -- 94
 missing$ -- 51
-newline$ -- 476
-num.names$ -- 94
-pop$ -- 107
+newline$ -- 471
+num.names$ -- 93
+pop$ -- 106
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 209
+skip$ -- 208
 stack$ -- 0
 substring$ -- 957
 swap$ -- 53
@@ -61,7 +66,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 143
-width$ -- 97
-write$ -- 962
-(There were 2 error messages)
+while$ -- 142
+width$ -- 96
+write$ -- 953
+(There were 3 error messages)

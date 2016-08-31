@@ -27,7 +27,7 @@ Dk2Nu format flux files (or simply dk2nu files) are one of the main outputs from
 \section{Detector Simulation}
 \label{sec:SimDet}
 
-The second main section in the simulation chain is the detector simulation. This section begins with neutrino interactions, models many different detector response effects, and finishes with files of simulated raw hits, or the signals read out by the detector electronics. The latter portion of this section closely follows the \nova~Simulation Technical Note \cite{ref:TNDetSim}, which provides more detail and further references.
+The second main section in the simulation chain is the detector simulation. This section begins with neutrino interactions, models many different detector response effects, and finishes with files of simulated raw hits, or the signals read out by the detector electronics. The latter portion of this section closely follows the \nova~Simulation Technical Notes \cite{ref:TNDetSimFA ref:TNDetSimSA}, which provide more detail and further references.
 
 %\subsection{Neutrino Interactions}
 %\label{sec:SimGENIE}
@@ -71,7 +71,16 @@ Geant4 also handles the next piece of the simulation, the conversion between ene
 
 The next part of the simulation simulates the capture of the scintillation photons, their transport through the WLS fiber to the electronics, and their conversion into photoelectrons after collection by the APD. The detector is treated as uniform for this section, with the assumption that any individual differences between cells would be removed by the downstream calibration. Individual photons are not traced from emission to the electronics due to its expensive computation time, despite the ability of Geant4 to perform this simulation. Rather, a template that parametrizes the photon transport are created and individual results are drawn from this.
 
-The first template is a collection rate of photons by the WLS fibers as a function of time from scintillator emission and distance along the cell length from scintillator emission. The template is constructed using a ray tracing algorithm that considers a photon to be captured when it intersects with a fiber.  The mean number of photons per energy deposited is a tunable parameter that is constrained using cosmic ray data. The scintillator emission spectrum and cell wall reflectivity are modeled as a function of wavelength based on data from \nova's quality control database.
+The first template is a collection rate of photons by the WLS fibers as a function of time from scintillator emission and distance along the cell length from scintillator emission. The template is constructed using a ray tracing algorithm that considers a photon to be captured when it intersects with a fiber, and is shown in figure \ref{fig:SimPhoton}. The mean number of photons per energy deposited is a tunable parameter that is constrained using cosmic ray data. The scintillator emission spectrum and cell wall reflectivity are modeled as a function of wavelength based on data from \nova's quality control database. The reflectivity is also shown in figure \ref{fig:SimPhoton}.
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/SimPhotonCaputre.png} &
+    \includegraphics[width=.47\textwidth]{figures/SimWallReflectivity.png} \\
+  \end{tabular}
+  \caption[Simulation of Photon Transport]{Distributions used during the simulation of photon transport. Left: collection rate as a function of time and distance travelled from scintillator emission. Right: cell wall reflectivity as a function of wavelength.}
+  \label{fig:SimPhoton}
+\end{figure}
 
 Next, the photons are transported through the fiber to the electronics. Since the fiber is looped and both ends are read out, half of the photons are transported to each end. The number of photons that reach the fiber ends is attenuated by applying an attenuation curve derived from quality control tests as a function of distance from the fiber end. Another template is constructed using a ray tracer that models transport time as a function of distance. The actual transport times are drawn from this template instead of handling the photon capture angles individually.
 
@@ -80,7 +89,13 @@ At this point in the simulation, there is a number of photons that reach the APD
 %\subsection{Electronic Readout}
 %\label{sec:Electronics}
 
-The last piece of the detector simulation models the electronics readout. This section starts with the number of PEs collected by the APDs and simulates the effects of the electronics to generate the raw signals equivalent to data. There are three main chips on the FEBs simulated here, an application-specific integrated circuit (ASIC) that performs the initial pulse shaping, an analog to digital converter (ADC) that samples each channel periodically, and a field-programmable gate array (FPGA) that searches for peaks above noise threshold using a dual correlated sampling trace. Before digitizing the signal by the ADC, two additional data driven effects are simulated. First, noise hits are added before the sample is digitized by drawing from a histogram of noise from cosmic data. The second effect is APD sag, or the tendency when one APD channel observes a large hit for other channel baselines to slightly drop. After these effects are applied and the signal is digitized, the ADC values of the hits above threshold are the final output of the detector simulation and are recorded as a vector of objects called RawDigits. This is the lowest level object that has the same format for both data and MC; however, the additional truth information is always stored for the MC for validation and further studies.
+The last piece of the detector simulation models the electronics readout. This section starts with the number of PEs collected by the APDs and simulates the effects of the electronics to generate the raw signals equivalent to data. Before the PE signal from the APD is input to the circuitry simulation, an excess noise factor is applied. The excess noise PE signal is drawn from a log-normal distribution, the limit of the product of many random variables, motivated by the fact that the actual PE signal comes from many random charge multiplications. Next, three chips on the FEBs are simulated, an application-specific integrated circuit (ASIC), an analong to digital converter (ADC), and a field-programmable gate array (FPGA).
+
+The ASIC pre-amplifies and shapes the PE signal. A data driven effect is included at this point called APD sag, or the tendency when one APD channel observes a large hit for other channel baselines to slightly drop. The recovery from the drop can appear like real activity causing all APD pixels to register hits. Another form of noise is modeled at this point as the sum of two Gaussian Markov chains. This is done to simulate the high correlation of noise traces between adjacent samples, and is tuned to best match pedestal detector scans.
+
+The shaped pulse is next input to the ADC, which performs two functions. The signal is first converted into an integer value, up to a maximum threshold that would saturate the ADC. These values are then sampled on a periodic basis to create a simulated time series of channel outputs. The FPGA then searches for peaks above threshold using a dual correlated sampling trace, defined from $ADC_i - ADC_{i - 3}$, where $ADC_j$ is the $j$th output from the ADC. A final type of noise is considered for otherwise empty cells, drawn probabilistically from templates made from histograms of ADC differences from data noise hits.
+
+The hits above threshold are the final output of the detector simulation and are recorded as a vector of objects called RawDigits. This is the lowest level object that has the same format for both data and MC; however, the additional truth information is always stored for the MC for validation and further studies.
 
 %\subsection{Detector Conditions}
 %\label{sec:Masking}
