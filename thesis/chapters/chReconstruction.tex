@@ -1,6 +1,10 @@
 \chapter{Event Reconstruction}
 \label{ch:RecoCal}
 
-\section{Reconstruction Chain}
+The most basic form of raw data collected is a vector of hits above threshold. The MC simulation described in chapter \ref{ch:Simulation} also outputs events in this format. However, these objects by themselves are not very useful; instead, a certain level of reconstruction is required before real physics can be studied. The first major step in this process is to apply calibration so that the hits can be translated into a set of energy depositions, consistent throughout and across both detectors. Any number of algorithms can then be applied to create new objects or search for features, including tracks, the event vertex, or particle identifiers (PIDs). This chapter describes the calibration and elements of the reconstruction chain relevant to the NC disappearance analysis.
 
 \section{Calibration}
+
+The purpose of calibration is to ensure a uniform detector response throughout each and across both detectors. This is done in two major steps, a relative and absolute calibration. The relative calibration accounts for threshold effects and attenuation across a single cell.
+
+\section{Reconstruction Chain}

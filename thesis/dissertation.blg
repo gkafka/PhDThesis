@@ -6,17 +6,13 @@ A level-1 auxiliary file: chapters/chHistory.aux
 A level-1 auxiliary file: chapters/chTheory.aux
 A level-1 auxiliary file: chapters/chNOvA.aux
 A level-1 auxiliary file: chapters/chSimulation.aux
-White space in argument---line 16 of file chapters/chSimulation.aux
- : \citation{ref:TNDetSimFA
- :                          ref:TNDetSimSA}
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: chapters/chReconstruction.aux
 A level-1 auxiliary file: chapters/chSelection.aux
 A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 132 of file dissertation.aux
+Illegal, another \bibstyle command---line 134 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
@@ -26,38 +22,37 @@ I was expecting a `,' or a `}'---line 587 of file references.bib
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "ref:TNDetSim"
 Warning--empty author in ref:TDRNuMI
-You've used 94 entries,
+You've used 96 entries,
             1791 wiz_defined-function locations,
-            1005 strings with 17648 characters,
-and the built_in function-call counts, 14753 in all, are:
-= -- 1369
-> -- 470
+            1012 strings with 17957 characters,
+and the built_in function-call counts, 14961 in all, are:
+= -- 1388
+> -- 482
 < -- 0
-+ -- 214
-- -- 120
-* -- 697
-:= -- 2636
-add.period$ -- 280
-call.type$ -- 94
-change.case$ -- 95
++ -- 219
+- -- 123
+* -- 699
+:= -- 2681
+add.period$ -- 286
+call.type$ -- 96
+change.case$ -- 97
 chr.to.int$ -- 0
-cite$ -- 95
-duplicate$ -- 637
-empty$ -- 1497
-format.name$ -- 120
-if$ -- 3203
+cite$ -- 97
+duplicate$ -- 645
+empty$ -- 1513
+format.name$ -- 123
+if$ -- 3245
 int.to.chr$ -- 0
-int.to.str$ -- 94
+int.to.str$ -- 96
 missing$ -- 51
-newline$ -- 471
-num.names$ -- 93
-pop$ -- 106
+newline$ -- 481
+num.names$ -- 95
+pop$ -- 108
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 208
+skip$ -- 211
 stack$ -- 0
 substring$ -- 957
 swap$ -- 53
@@ -66,7 +61,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 142
-width$ -- 96
-write$ -- 953
-(There were 3 error messages)
+while$ -- 144
+width$ -- 98
+write$ -- 971
+(There were 2 error messages)

@@ -332,6 +332,20 @@ R.~Hatcher.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=6941}{\nova~Internal
   Document 6941}.
 
+\bibitem{ref:TNDetSimFA}
+A.~Aurisano.
+\newblock The {\nova} detector simulation.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13577}{\nova~Internal
+  Document 13577}.
+
+\bibitem{ref:TNDetSimSA}
+A.~Aurisano and J.~Musser.
+\newblock Detector simulation technote.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15338}{\nova~Internal
+  Document 15338}.
+
 \bibitem{ref:GENIEGen}
 C.~Andreopoulos et~al.
 \newblock The {GENIE} neutrino {Monte} {Carlo} generator.
@@ -456,7 +470,7 @@ X.~Bu and K.~Sachdev.
 
 \bibitem{ref:DQFDDCMLiveGeo}
 K.~Bays.
-\newblock Livegeometry tech note.
+\newblock {LiveGeometry} tech note.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11470}{\nova~Internal
   Document 11470}.
@@ -518,8 +532,8 @@ K.~Bays.
   Document 11205}.
 
 \bibitem{ref:TNCalib}
-L.~Vinton.
-\newblock First analysis calibration technotes.
+C.~Backhouse et~al.
+\newblock Calibration technotes.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13579}{\nova~Internal
   Document 13579}.

@@ -26,40 +26,40 @@
 \contentsline {section}{\numberline {4.2}Detector Simulation}{54}{section.4.2}
 \contentsline {section}{\numberline {4.3}Studying Simulation Files}{61}{section.4.3}
 \contentsline {chapter}{\numberline {5}Event Reconstruction}{64}{chapter.5}
-\contentsline {section}{\numberline {5.1}Reconstruction Chain}{64}{section.5.1}
-\contentsline {section}{\numberline {5.2}Calibration}{64}{section.5.2}
-\contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{65}{chapter.6}
-\contentsline {section}{\numberline {6.1}Data Quality}{66}{section.6.1}
-\contentsline {section}{\numberline {6.2}Event Quality}{67}{section.6.2}
-\contentsline {section}{\numberline {6.3}Fiducial Volume and Containment}{69}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Far Detector}{69}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Near Detector}{71}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}NC Selection}{72}{section.6.4}
-\contentsline {section}{\numberline {6.5}Cosmic Rejection}{74}{section.6.5}
-\contentsline {section}{\numberline {6.6}Summary}{76}{section.6.6}
-\contentsline {chapter}{\numberline {7}Neutral Current Spectrum Prediction}{79}{chapter.7}
-\contentsline {section}{\numberline {7.1}The CAFAna Analysis Chain}{79}{section.7.1}
-\contentsline {section}{\numberline {7.2}Near Detector Decomposition}{80}{section.7.2}
-\contentsline {section}{\numberline {7.3}Extrapolation}{81}{section.7.3}
-\contentsline {section}{\numberline {7.4}Far Detector Prediction}{81}{section.7.4}
-\contentsline {chapter}{\numberline {8}Systematic Error Analysis}{82}{chapter.8}
-\contentsline {section}{\numberline {8.1}Beam}{83}{section.8.1}
-\contentsline {section}{\numberline {8.2}Birks-Chou Light Yield Simulation}{84}{section.8.2}
-\contentsline {section}{\numberline {8.3}Calibration}{86}{section.8.3}
-\contentsline {section}{\numberline {8.4}GENIE Simulation}{87}{section.8.4}
-\contentsline {section}{\numberline {8.5}ND Containment}{90}{section.8.5}
-\contentsline {section}{\numberline {8.6}ND Rock Event Contamination}{92}{section.8.6}
-\contentsline {section}{\numberline {8.7}ND Data/MC Difference and CC Background}{92}{section.8.7}
-\contentsline {section}{\numberline {8.8}MC Statistics}{95}{section.8.8}
-\contentsline {section}{\numberline {8.9}Noise Model}{95}{section.8.9}
-\contentsline {section}{\numberline {8.10}Overall Normalization}{96}{section.8.10}
-\contentsline {section}{\numberline {8.11}Systematic Error Summary}{96}{section.8.11}
-\contentsline {chapter}{\numberline {9}Analysis Results}{98}{chapter.9}
-\contentsline {section}{\numberline {9.1}Fitting Method}{99}{section.9.1}
-\contentsline {section}{\numberline {9.2}ND Data/MC Comparisons}{100}{section.9.2}
-\contentsline {section}{\numberline {9.3}Sideband Studies}{105}{section.9.3}
-\contentsline {section}{\numberline {9.4}Results}{107}{section.9.4}
-\contentsline {chapter}{\numberline {10}Conclusions and Future Improvements}{110}{chapter.10}
-\contentsline {section}{\numberline {10.1}Conclusions}{110}{section.10.1}
-\contentsline {section}{\numberline {10.2}Future Improvements}{110}{section.10.2}
-\contentsline {chapter}{References}{116}{chapter*.101}
+\contentsline {section}{\numberline {5.1}Calibration}{64}{section.5.1}
+\contentsline {section}{\numberline {5.2}Reconstruction Chain}{65}{section.5.2}
+\contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{66}{chapter.6}
+\contentsline {section}{\numberline {6.1}Data Quality}{67}{section.6.1}
+\contentsline {section}{\numberline {6.2}Event Quality}{68}{section.6.2}
+\contentsline {section}{\numberline {6.3}Fiducial Volume and Containment}{70}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Far Detector}{70}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Near Detector}{72}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}NC Selection}{73}{section.6.4}
+\contentsline {section}{\numberline {6.5}Cosmic Rejection}{75}{section.6.5}
+\contentsline {section}{\numberline {6.6}Summary}{77}{section.6.6}
+\contentsline {chapter}{\numberline {7}Neutral Current Spectrum Prediction}{80}{chapter.7}
+\contentsline {section}{\numberline {7.1}The CAFAna Analysis Chain}{80}{section.7.1}
+\contentsline {section}{\numberline {7.2}Near Detector Decomposition}{81}{section.7.2}
+\contentsline {section}{\numberline {7.3}Extrapolation}{82}{section.7.3}
+\contentsline {section}{\numberline {7.4}Far Detector Prediction}{82}{section.7.4}
+\contentsline {chapter}{\numberline {8}Systematic Error Analysis}{83}{chapter.8}
+\contentsline {section}{\numberline {8.1}Beam}{84}{section.8.1}
+\contentsline {section}{\numberline {8.2}Birks-Chou Light Yield Simulation}{85}{section.8.2}
+\contentsline {section}{\numberline {8.3}Calibration}{87}{section.8.3}
+\contentsline {section}{\numberline {8.4}GENIE Simulation}{88}{section.8.4}
+\contentsline {section}{\numberline {8.5}ND Containment}{91}{section.8.5}
+\contentsline {section}{\numberline {8.6}ND Rock Event Contamination}{93}{section.8.6}
+\contentsline {section}{\numberline {8.7}ND Data/MC Difference and CC Background}{93}{section.8.7}
+\contentsline {section}{\numberline {8.8}MC Statistics}{96}{section.8.8}
+\contentsline {section}{\numberline {8.9}Noise Model}{96}{section.8.9}
+\contentsline {section}{\numberline {8.10}Overall Normalization}{97}{section.8.10}
+\contentsline {section}{\numberline {8.11}Systematic Error Summary}{97}{section.8.11}
+\contentsline {chapter}{\numberline {9}Analysis Results}{99}{chapter.9}
+\contentsline {section}{\numberline {9.1}Fitting Method}{100}{section.9.1}
+\contentsline {section}{\numberline {9.2}ND Data/MC Comparisons}{101}{section.9.2}
+\contentsline {section}{\numberline {9.3}Sideband Studies}{106}{section.9.3}
+\contentsline {section}{\numberline {9.4}Results}{108}{section.9.4}
+\contentsline {chapter}{\numberline {10}Conclusions and Future Improvements}{111}{chapter.10}
+\contentsline {section}{\numberline {10.1}Conclusions}{111}{section.10.1}
+\contentsline {section}{\numberline {10.2}Future Improvements}{111}{section.10.2}
+\contentsline {chapter}{References}{117}{chapter*.101}
