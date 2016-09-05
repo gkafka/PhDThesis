@@ -453,6 +453,20 @@ J.~Musser.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=14740}{\nova~Internal
   Document 14740}.
 
+\bibitem{ref:TNCalib}
+C.~Backhouse et~al.
+\newblock Calibration technotes.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13579}{\nova~Internal
+  Document 13579}.
+
+\bibitem{ref:RecoWinTrack}
+B.~Rebel.
+\newblock Window tracking update.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11806}{\nova~Internal
+  Document 11806}.
+
 \bibitem{ref:TNBeamQual}
 L.~Goodenough and S.~R. Phan-Budd.
 \newblock Technical note on the {NOvA} beam monitoring for 2015 summer
@@ -530,13 +544,6 @@ K.~Bays.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11205}{\nova~Internal
   Document 11205}.
-
-\bibitem{ref:TNCalib}
-C.~Backhouse et~al.
-\newblock Calibration technotes.
-\newblock
-  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13579}{\nova~Internal
-  Document 13579}.
 
 \bibitem{ref:CalibMESA}
 D.~Pershey.
