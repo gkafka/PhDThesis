@@ -17,7 +17,7 @@ T = \frac{PE}{\lambda} \cdot \frac{E_{True}}{E_{MIP}}
 \label{eq:CalibThreshold}
 \eeq
 
-\n where $T$ is correction factor, $PE$ is the number of simulated photons that the electronics register, $\lambda$ is the number of photons that would be seen without fluctuations, $E_{True}$ is the true energy deposited in the scintillator, and $E_{MIP}$ is the energy that would be deposited based only on the particle path length through the cell. The ratio on the left accounts for the threshold correction since $\lambda$ is only dependent on the simulated threshold level, and the ratio on the right accounts for the shielding correction since $E_{MIP}$ is only depenedent on the path length. Two dimensional histograms of the correction factor as a function of the cell number and distance from the readout are made for each detector and view, then fit with a polynomial to remove noise. These histograms are then used to correct the corresponding data and MC. Figure \ref{fig:CalibThreshold} shows examples used for the FD.
+\n where $T$ is correction factor, $PE$ is the number of simulated photons that the electronics register, $\lambda$ is the number of photons that would be seen without fluctuations, $E_{True}$ is the true energy deposited in the scintillator, and $E_{MIP}$ is the energy that would be deposited based only on the particle path length through the cell. The ratio on the left accounts for the threshold correction since $\lambda$ is only dependent on the simulated threshold level, and the ratio on the right accounts for the shielding correction since $E_{MIP}$ is only depenedent on the path length. Two dimensional histograms of the correction factor as a function of the cell number and distance from the readout are made for each detector and view, then fit with a polynomial to remove noise. These histograms are then used to correct the corresponding data and MC. Figure \ref{fig:CalibThreshold} shows examples of this correction factor used for the FD.
 \begin{figure}[htb]
   \centering
   \begin{tabular}{c c}
@@ -36,7 +36,7 @@ y = C + A\left(\exp\left(\frac{W}{X}\right) + \exp\left(-\frac{L+W}{X}\right)\ri
 
 \n where $C$, $A$, and $X$ are the free parameters, and $L$ is the full length of the cell. $X$ is the cell attenuation length. The fit excludes hits in the regions closest and furthest to the readout. It includes the range $[-750, 750]$ at the FD, $[-150, 150]$ for the fully active region of the ND and for Y view muon catcher cells, and $[-150, 50]$ for X view muon catcher cells, with all numbers in cm. These central regions are chosen to exclude the significant rolloff regions at the end of the cells, which are handled differently.
 
-The final step in the relative calibration handles the attenuation correction at the ends of the cells and the residuals from the fit above in the central part of the cells. Both of these regions are fit with a single LOWESS curve using a tricube weight,
+The final step in the relative calibration handles the attenuation correction at the ends of the cells and the residuals from the fit above in the central part of the cells. First, both of these regions are fit with a single LOWESS curve using a tricube weight,
 \beq
 w_i = \begin{cases}
 \left(1 - \left| \frac{W - W_i}{\sigma} \right|^3 \right)^3 & \mbox{for } \vert W - W_i \vert < \sigma \\
@@ -44,6 +44,28 @@ w_i = \begin{cases}
 \label{eq:CalibRolloff}
 \eeq
 
-\n where $W$ is a local point on the curve, $W_i$ is the $i$th neighbor of the local point, $w_i$ is the weight on $W_i$, and $\sigma = 30\unit{cm}$ is the range of neighbors that affect the value of $W$.
+\n where $W$ is a local point on the curve, $W_i$ is the $i$th neighbor of the local point, $w_i$ is the weight on $W_i$, and $\sigma = 30\unit{cm}$ is the range of neighbors that affect the value of $W$. $W$ is then the weighted mean of $W_i$. Next, a simple line of the form $y = mW + c$ is fit to a collection of the neighbor points around a point, $W$, to give the corrected response, $y$. The full LOWESS curve is approximated by linear interpolation between $20$ points calculated using this procedure. The full attenuation calibration combines the results of the linear interpolation with the result of the double exponential above. Figure \ref{fig:CalibAttenuation} shows examples of the fully fit attenuation curves used in FD data calibration.
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/Calib/AttenuationFDH.png} &
+    \includegraphics[width=.47\textwidth]{figures/Calib/AttenuationFDV.png} \\
+  \end{tabular}
+  \caption[Attenuation Fits]{Fits to the average detector response for a cell in the FD. The red curves show just the result from the double exponential fit, and the blue curves show the full fit that also includes the LOWESS correction. The left plot is an example of a horizontal view cell, the right plot is an example of a vertical view cell.}
+  \label{fig:CalibAttenuation}
+\end{figure}
+
+The relative calibration combines the results of all three steps to create a uniform detector response as a function of distance to readout. Figure \ref{fig:CalibRelative} shows the MC before and after calibration is applied to assess the performance of the full procedure.
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/Calib/RelativeNDX.png} &
+    \includegraphics[width=.47\textwidth]{figures/Calib/RelativeNDY.png} \\
+    \includegraphics[width=.47\textwidth]{figures/Calib/RelativeFDX.png} &
+    \includegraphics[width=.47\textwidth]{figures/Calib/RelativeFDY.png} \\
+  \end{tabular}
+  \caption[Relative Calibration Results]{Ratios of mean reconstructed to true energy as a function of distance to readout to assess the performance of the relative calibration. The red points show the ratios before calibration; the blue points after. The left column shows calibration of the X view cells, the right column shows the Y view cells, the top row shows the ND relative calibration results, and the bottom shows the FD results.}
+  \label{fig:CalibRelative}
+\end{figure}
 
 \section{Reconstruction Chain}
