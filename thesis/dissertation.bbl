@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{ref:Pauli}
 W.~Pauli.
@@ -466,6 +466,30 @@ B.~Rebel.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11806}{\nova~Internal
   Document 11806}.
+
+\bibitem{ref:MuonTables}
+D.~E. Groom, N.~V. Mokhov, and S.~I. Striganov.
+\newblock Muon stopping power and range tables $10\unit{MeV}$--$100\unit{TeV}$.
+\newblock {\em Atomic Data and Nuclear Data Tables}, 78:183--356, 2001.
+
+\bibitem{ref:DensityScint}
+S.~Mufson.
+\newblock Density of {\nova} liquid scintillator at $69^\circ$ {F}.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=11886}{\nova~Internal
+  Document 11886}.
+
+\bibitem{ref:RecoDBSCAN}
+M.~Ester et~al.
+\newblock A {Density-Based} algorithm for discovering clusters in large spatial
+  databases with noise.
+\newblock pages 226--231. AAAI Press, 1996.
+
+\bibitem{ref:ThesisMichael}
+M.~Baird.
+\newblock {\em An Analysis of Muon Neutrino Disappearance from the {NuMI} Beam
+  Using an Optimal Track Fitter}.
+\newblock PhD thesis, Indiana University, 2015.
 
 \bibitem{ref:TNBeamQual}
 L.~Goodenough and S.~R. Phan-Budd.

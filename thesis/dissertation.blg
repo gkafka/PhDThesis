@@ -12,56 +12,57 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 135 of file dissertation.aux
+Illegal, another \bibstyle command---line 139 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 587 of file references.bib
+I was expecting a `,' or a `}'---line 605 of file references.bib
  : 
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
-You've used 97 entries,
+Warning--empty booktitle in ref:RecoDBSCAN
+You've used 101 entries,
             1791 wiz_defined-function locations,
-            1017 strings with 18121 characters,
-and the built_in function-call counts, 15056 in all, are:
-= -- 1397
-> -- 486
-< -- 0
-+ -- 221
-- -- 124
-* -- 699
-:= -- 2702
-add.period$ -- 289
-call.type$ -- 97
-change.case$ -- 98
+            1040 strings with 18796 characters,
+and the built_in function-call counts, 15849 in all, are:
+= -- 1475
+> -- 509
+< -- 1
++ -- 231
+- -- 130
+* -- 735
+:= -- 2830
+add.period$ -- 302
+call.type$ -- 101
+change.case$ -- 101
 chr.to.int$ -- 0
-cite$ -- 98
-duplicate$ -- 649
-empty$ -- 1521
-format.name$ -- 124
-if$ -- 3264
+cite$ -- 103
+duplicate$ -- 689
+empty$ -- 1599
+format.name$ -- 130
+if$ -- 3449
 int.to.chr$ -- 0
-int.to.str$ -- 97
-missing$ -- 51
-newline$ -- 486
-num.names$ -- 96
-pop$ -- 109
+int.to.str$ -- 101
+missing$ -- 53
+newline$ -- 506
+num.names$ -- 100
+pop$ -- 119
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 212
+skip$ -- 232
 stack$ -- 0
-substring$ -- 957
-swap$ -- 53
-text.length$ -- 0
+substring$ -- 1006
+swap$ -- 65
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 145
-width$ -- 99
-write$ -- 980
+warning$ -- 2
+while$ -- 152
+width$ -- 104
+write$ -- 1022
 (There were 2 error messages)
