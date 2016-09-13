@@ -12,7 +12,7 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 150 of file dissertation.aux
+Illegal, another \bibstyle command---line 152 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
@@ -24,36 +24,36 @@ I was expecting a `,' or a `}'---line 616 of file references.bib
 I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
-You've used 113 entries,
+You've used 114 entries,
             1791 wiz_defined-function locations,
-            1111 strings with 20656 characters,
-and the built_in function-call counts, 17944 in all, are:
-= -- 1669
-> -- 580
+            1115 strings with 20810 characters,
+and the built_in function-call counts, 18039 in all, are:
+= -- 1678
+> -- 584
 < -- 1
-+ -- 261
-- -- 148
++ -- 263
+- -- 149
 * -- 845
-:= -- 3188
-add.period$ -- 338
-call.type$ -- 113
-change.case$ -- 112
+:= -- 3209
+add.period$ -- 341
+call.type$ -- 114
+change.case$ -- 113
 chr.to.int$ -- 0
-cite$ -- 115
-duplicate$ -- 783
-empty$ -- 1815
-format.name$ -- 148
-if$ -- 3918
+cite$ -- 116
+duplicate$ -- 787
+empty$ -- 1823
+format.name$ -- 149
+if$ -- 3937
 int.to.chr$ -- 0
-int.to.str$ -- 113
+int.to.str$ -- 114
 missing$ -- 63
-newline$ -- 566
-num.names$ -- 112
-pop$ -- 136
+newline$ -- 571
+num.names$ -- 113
+pop$ -- 137
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 265
+skip$ -- 266
 stack$ -- 0
 substring$ -- 1141
 swap$ -- 74
@@ -62,7 +62,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 172
-width$ -- 116
-write$ -- 1148
+while$ -- 173
+width$ -- 117
+write$ -- 1157
 (There were 2 error messages)

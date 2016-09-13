@@ -7,6 +7,8 @@ The most basic form of raw data collected is a vector of hits above threshold. T
 
 The purpose of calibration is to ensure a uniform detector response throughout each and across both detectors. This is done in two major steps, a relative and absolute calibration. The relative calibration accounts for threshold effects and attenuation across a single cell. It is designed to create a uniform response throughout a cell and across a single detector. The absolute calibration creates a scale factor for each detector to convert the calibrated PE scale from the relative calibration into an energy unit. This section follows the SA notes in reference \cite{ref:TNCalib}.
 
+\subsection{Relative Calibration}
+
 The relative calibration is designed to convert the PE signal output from the electronics into a calibrated unit, such that two equal signals from any two detector locations mean equal true energy deposited. This part of the calibration accounts for threshold effects and attenuation in the WLS fibers, outputting a corrected PE value, the PECorr.
 
 Hits from through-going cosmic ray muons, or muons that enter and exit the detector without stopping, are used for the relative calibration. The WindowTrack algorithm, a fast algorithm that fits straight lines through hits \cite{ref:RecoWinTrack}, is used to produce 3D tracks from the cosmic ray events, and only those with a successful reconstruction are used. Within these events, only tricell hits are used for the calibration procedure. A tricell hit is defined as a hit in cell $i$ within a given plane that also has hits in cells $i+1$ and $i-1$. Under special circumstances (low statistics, too many dead neighboring cells) different hits are used for a particular cell. The path length of the cosmic traveling through the cell and the distance from readout are calculated for all of the selected hits in a cell. The distance from readout is labeled $W$, an alias for either X or Y, such that $W = 0$ is the center of a cell and positive values of $W$ are closer to the readout. From this information, individual histograms of the average PE/cm vs $W$ are constructed for each cell. The relative calibration procedures apply corrections to these histograms.
@@ -68,6 +70,8 @@ The relative calibration combines the results of all three steps to create a uni
   \label{fig:CalibRelative}
 \end{figure}
 
+\subsection{Absolute Calibration}
+
 The absolute calibration is performed after the relative calibration to convert the corrected PE signal into an energy value. Much like the relative calibration, the absolute calibration uses a sample of tricell hits from cosmic ray muons. However, in this case the energy deposited in the cell must be known in order to convert the PE signal into an energy. The energy is known either from external sources \cite{ref:MuonTables} or the Bethe-Block equation \cite{ref:PDG},
 \beq
 \left\langle-\frac{dE}{dx} \right\rangle = Kz^2 \frac{Z}{A} \frac{1}{\beta^2} \left[ \frac{1}{2} \ln \frac{2 m_e c^2 \beta^2 \gamma^2 W_{max}}{I^2} - \beta^2 - \frac{\delta(\beta\gamma)}{2} \right],
@@ -105,7 +109,9 @@ At this point the calibration procedure is complete. The calibration constants o
 
 \section{Reconstruction Chain}
 
-The first step in the NC disappearance analysis is the selection of a relatively pure sample of NC events. However, the relatively raw calibrated hits are a far cry from the complete events necessary for the analysis. A set of reconstruction algorithms are thus applied to take individual hits and group them into more complete objects, often providing extra information along the way. The reconstruction procedures begin with the basic grouping of hits in spacetime, and become as complex as applying machine learning algorithms to separate events into different components. The NC disappearance analysis did not have an independent reconstruction chain from the two main \nova~analyses. Rather, the information used for the NC selection discussed in the next chapter was a mixture from the $\nue$ appearance and $\numu$ disappearance analyses. The remainder of this section discusses the reconstruction components relevant to the analysis described in this dissertation.
+The first step in the NC disappearance analysis is the selection of a relatively pure sample of NC events. However, the relatively raw calibrated hits are a far cry from the complete events necessary for the analysis. A set of reconstruction algorithms are thus applied to take individual hits and group them into more complete objects, often providing extra information along the way. The reconstruction procedures begin with the basic grouping of hits in spacetime, and become as complex as applying machine learning algorithms to separate events into different components. The NC disappearance analysis did not have an independent reconstruction chain from the two main \nova~analyses. Rather, the information used for the NC selection discussed in the next chapter was a mixture from the $\nue$ appearance and $\numu$ disappearance analyses. The reconstruction chains for these analyses were developed with different philosophies; the $\nue$ reconstruction chain was designed to identify shower like objects and is focused on clustering particles, white the $\numu$ reconstruction chain was designed to identify long tracks. The remainder of this section discusses the reconstruction components from these reconstruction chains that are relevant to the analysis described in this dissertation.
+
+\subsection{Event Slicing}
 
 The first part step in reconstruction is the clustering of hits into separate events, or slices. This is done based on the Density-Based Spatial Clustering of Application with Noise (DBSCAN) algorithm \cite{ref:RecoDBSCAN}. The algorithm as applied to \nova~is described in detail in reference \cite{ref:ThesisMichael}; the main points are summarized here.
 
@@ -138,7 +144,7 @@ The free parameters and their values are summarized in Table \ref{tab:SlicerPara
   \end{center}
 \end{table}
 
-There are several reconstruction chains that begin with slices, each developed with a different philosophy. The $\nue$ reconstruction chain was designed to identify shower like objects and is focused on clustering particles. The $\numu$ reconstruction chain was designed to identify long tracks. Finally, a global machine learning algorithm was developed to identify and separate all types of events. The $\nue$ and $\numu$ reconstruction chains both terminate with machine learning algorithms as well, but they were not used for this analysis and so not discussed in detail here. The algorithms used in each of the three chains are discussed insofar that they are relevant to the analysis presented in this dissertation.
+\subsection{Hough Transform Line Finding}
 
 The $\nue$ reconstruction chain begins by searching for line like features in the slice, using a modified Hough Transform \cite{ref:RecoHough}. The algorithm as applied to \nova~is described in references \cite{ref:ThesisMichael, ref:TNHough}; it is summarized here.
 
@@ -152,6 +158,8 @@ w &=& \exp \left( -\frac{(\rho - \rho_0)^2}{2\sigma^2_\rho} \right) \exp \left( 
 \n where $d$ is the distance between the two points in cm. There are two restrictions on the pairs of points that are evaluated. Any pairs of points that are farther than $\sqrt{15000}\unit{cm}$ apart are not evaluated together to limit the total number of contributions and limit contributions with very low uncertainties in $\theta$. Pairs of points that have the same X or Y coordinate are not evaluated together unless they are farther than $\sqrt{15000}/4\unit{cm}$ apart to avoid the creation of spurious horizontal or vertical lines. Finally, the Hough map is smoothed using a Gaussian smoothing weight over non-zero bins.
 
 The algorithm then iterates over peaks in the Hough map to find and label valid lines. The highest peak is considered first. A $7\times7$ square of bins centered on the peak is used to find an average $(\rho, \theta)$, with the bin values weighted by the inverse distance from the central bin. The resultant parameters are recorded along with the size of the peak. The Hough map is then regenerated without hits within $6\unit{cm}$ of the line, with the exception of the most upstream and downstream hits. This process is then repeated to find the next line. For all iterations after the first, the current line is tested against previous lines. If the new line is within $15\unit{cm}$ in $\rho$ and $0.02\unit{rad}$ in $\theta$, the line is not added to the list of valid Hough lines, but the hits associated with the line are still removed. The algorithm terminates when there are no remaining peaks, or when there are $10$ Hough lines, whichever comes soonest.
+
+\subsection{Elastic Arms Vertex Reconstruction}
 
 The output of Hough Transform is the input to the Elastic Arms algorithm that is used to reconstruct the original neutrino interaction vertex. Elastic arms, also called deformable templates, is described in references \cite{ref:RecoElastic1, ref:RecoElastic2, ref:RecoElastic3, ref:RecoElastic4} and is designed to find outgoing tracks with a known vertex. The algorithm as applied to \nova~was modified to account for the unknown vertex, is fully described in reference \cite{ref:TNElastic}, and summarized here.
 
@@ -214,6 +222,8 @@ The results of the fit for the vertex position are summarized in table \ref{tab:
   \end{center}
 \end{table}
 
+\subsection{Fuzzy K-Means Clustering}
+
 The reconstructed vertex output by Elastic Arms is used as the input to a clustering algorithm that determines the number of prongs are in the event, or tracks with an angular spread that originate at a single point, and the hits that belong to each prong. This algorithm is a possibilistic Fuzzy-K means clustering algorithm, described in detail in references \cite{ref:TNFuzzyK, ref:ThesisEvan} and summarized here.
 
 The clustering algorithm is a Fuzzy-K Means algorithm extended to deal with an unknown number of clusters and noise. The classic Fuzzy-K Means \cite{ref:RecoFuzzy1, ref:RecoFuzzy2} takes an event origin, or vertex, and assumes that all activity radiating outward with tracks appearing as peaks in angular space. It searches for the optimal placement of $k$ clusters, or prongs, and associates activity, or hits, to them. Each hit is allowed to be associated to multiple prongs leading to the fuzzy nature of the prongs. However, they are subject to the constraint that all association strengths add to 1, meaning that every hit, including noise, will be associated to at least one prong. An extension of this algorithm \cite{ref:RecoFuzzyExt} removes the association normalization constraint and allows for a changing number of clusters. This allows noise hits to remain unassociated with any cluster, changing the probabilistic nature of the prong association to a possibilistic association.
@@ -267,4 +277,29 @@ K = \mbox{max}(D^+(s)) + \mbox{max}(D^-(s))
 
 \n The prongs with the lowest score are matched, all other pairs that include either of the 2D prongs are removed, and the process continues until there are no remaining possible matches.
 
-The $\nue$ reconstruction chain finishes by creating shower objects and by training two particle identification algorithms (PIDs), but these are not used for the NC disappearance analysis.
+\subsection{Kalman Tracking}
+
+The $\numu$ reconstruction chain begins by using a Kalman filter to identify track like features and from hits in the slice. The algorithm outputs reconstructed objects called Kalman tracks. Reference \cite{ref:TNKalman} describes the algorithm in full detail; it is summarized here.
+
+The KalmanTrack algorithm uses a Kalman filter to build up tracks from hits in a slice. The Kalman filter is used to estimate the state of a measurable system, $x$, given a set of $k$ measurements, $z$ of the system. It is assumed that the system is affected by a set of inputs, $u$, and system noise, $w$, while the measurements have an independent, inherent noise, $v$. Note the difference and independence between $w$, the error in the system process, and $v$, the error in the measurement process.
+
+In the \nova~detectors, the Kalman filter prediction, $x$, is the position of a charged particle. The path of the particle is expected to be mostly straight since the algorithm was designed for tracking muons. The system noise, $w$, is taken as the result of small angle multiple scattering drawn from a normal distribution with width
+\beq
+\theta_0 = \frac{13.6\unit{MeV}}{\beta p} z \sqrt{x/X_0} \left( 1 + 0.038 \ln (x/X_0) \right),
+\label{eq:KalmanNoiseWidth}
+\eeq
+
+\n which is about $5.4\unit{mrad}$ for $2\unit{GeV}$ muons passing through one plane. Large angle scattering is handled separately at a later stage. The measurements of the particle position, $z$, come from the cell locations within the detector, and the measurement noise, $v$, is represented using the finite dimensions of the \nova~detector cell. Initially, the algorithm only reconstructs tracks in a single view; it merges tracks from both views in a later step.
+
+The algorithm begins each iteration by constructing track seeds from pairs of hits separated by fewer than $4$ cells. To ensure that these track seeds are not created from hits belonging to multiple particles, the seeds are created and the tracking begins at the downstream end of the detector. For each seed, a line that connects the hits is calculated, and the track is then extrapolated to the next upstream plane based on the line output. Any hits that are within a given tolerance are added to the track, and the line parameters are updated with the new information. The algorithm repeats this process until no new hits are found within $4$ planes of the previous hit. At this point, the track propagation reverses and proceeds downstream to find any hits that may have been missed from the original upstream propagation. Once the filter finishes tracking all of the track seeds, the track with the largest number of hits is saved, and the algorithm starts a new iteration on all of the remaining, unassociated hits. The algorithm terminates when no it can no longer reconstruct a track.
+
+The final step of the tracking algorithm merges tracks from the XZ and YZ views. This process assumes that the start and stop endpoints for the opposing views are at roughly the same plane. For planes that have at least one plane of overlap, a metric for matching is calculated according to
+\beq
+S = \frac{\Delta \mbox{Start Plane} + \Delta \mbox{Stop Plane}}{\mbox{N Overlap Planes}}.
+\label{eq:KalmanMerge}
+\eeq
+
+\n Aside from checking single pairs of tracks, the merging step also checks if two tracks in a single view can be joined together to improve the score for the three dimensional matching. This step is where large scattering can be handled. The set of tracks that produce the lowest score are matched as a 3D Kalman track, and the merging process is repeated on the remaining tracks. The algorithm terminates when it is unable to match any other 2D tracks.
+
+\section{Particle Identification Algorithms}
+
