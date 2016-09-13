@@ -12,57 +12,57 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 139 of file dissertation.aux
+Illegal, another \bibstyle command---line 150 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 605 of file references.bib
+I was expecting a `,' or a `}'---line 616 of file references.bib
  : 
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
-You've used 101 entries,
+You've used 113 entries,
             1791 wiz_defined-function locations,
-            1040 strings with 18796 characters,
-and the built_in function-call counts, 15849 in all, are:
-= -- 1475
-> -- 509
+            1111 strings with 20656 characters,
+and the built_in function-call counts, 17944 in all, are:
+= -- 1669
+> -- 580
 < -- 1
-+ -- 231
-- -- 130
-* -- 735
-:= -- 2830
-add.period$ -- 302
-call.type$ -- 101
-change.case$ -- 101
++ -- 261
+- -- 148
+* -- 845
+:= -- 3188
+add.period$ -- 338
+call.type$ -- 113
+change.case$ -- 112
 chr.to.int$ -- 0
-cite$ -- 103
-duplicate$ -- 689
-empty$ -- 1599
-format.name$ -- 130
-if$ -- 3449
+cite$ -- 115
+duplicate$ -- 783
+empty$ -- 1815
+format.name$ -- 148
+if$ -- 3918
 int.to.chr$ -- 0
-int.to.str$ -- 101
-missing$ -- 53
-newline$ -- 506
-num.names$ -- 100
-pop$ -- 119
+int.to.str$ -- 113
+missing$ -- 63
+newline$ -- 566
+num.names$ -- 112
+pop$ -- 136
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 232
+skip$ -- 265
 stack$ -- 0
-substring$ -- 1006
-swap$ -- 65
+substring$ -- 1141
+swap$ -- 74
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 152
-width$ -- 104
-write$ -- 1022
+while$ -- 172
+width$ -- 116
+write$ -- 1148
 (There were 2 error messages)

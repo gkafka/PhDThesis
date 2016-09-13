@@ -107,7 +107,9 @@ At this point the calibration procedure is complete. The calibration constants o
 
 The first step in the NC disappearance analysis is the selection of a relatively pure sample of NC events. However, the relatively raw calibrated hits are a far cry from the complete events necessary for the analysis. A set of reconstruction algorithms are thus applied to take individual hits and group them into more complete objects, often providing extra information along the way. The reconstruction procedures begin with the basic grouping of hits in spacetime, and become as complex as applying machine learning algorithms to separate events into different components. The NC disappearance analysis did not have an independent reconstruction chain from the two main \nova~analyses. Rather, the information used for the NC selection discussed in the next chapter was a mixture from the $\nue$ appearance and $\numu$ disappearance analyses. The remainder of this section discusses the reconstruction components relevant to the analysis described in this dissertation.
 
-The first part step in reconstruction is the clustering of hits into separate events, or slices. This is done based on the Density-Based Spatial Clustering of Application with Noise (DBSCAN) algorithm \cite{ref:RecoDBSCAN}. The algorithm as applied to \nova~is described in detail in reference \cite{ref:ThesisMichael}; the main points are summarized here. The DBSCAN algorithm uses a score function to compute a distance between neighboring points. A threshold is set to determine whether two neighbors are close. Points that have more than a set number of neighbors within a that distance are labeled {\em core points}, and the close neighbors of the core points that are not themselves considered core points are labeled {border points}. Clusters are formed by iterating over the hits in an event window, computing whether a point is a core point, then expanding to the neighbors of the core point, and moving to the next cluster when the current one is entirely bounded by border points. At the end of this procedure, slices with more than $3$ hits in each view are made into a `physics' slice, and any hits not assigned to a cluster are placed into a `noise' slice.
+The first part step in reconstruction is the clustering of hits into separate events, or slices. This is done based on the Density-Based Spatial Clustering of Application with Noise (DBSCAN) algorithm \cite{ref:RecoDBSCAN}. The algorithm as applied to \nova~is described in detail in reference \cite{ref:ThesisMichael}; the main points are summarized here.
+
+The DBSCAN algorithm uses a score function to compute a distance between neighboring points. A threshold is set to determine whether two neighbors are close. Points that have more than a set number of neighbors within a that distance are labeled {\em core points}, and the close neighbors of the core points that are not themselves considered core points are labeled {border points}. Clusters are formed by iterating over the hits in an event window, computing whether a point is a core point, then expanding to the neighbors of the core point, and moving to the next cluster when the current one is entirely bounded by border points. At the end of this procedure, slices with more than $3$ hits in each view are made into a `physics' slice, and any hits not assigned to a cluster are placed into a `noise' slice.
 
 The score function used between two hits in the slicing algorithm is
 \beq
@@ -120,7 +122,7 @@ The score function used between two hits in the slicing algorithm is
 The free parameters and their values are summarized in Table \ref{tab:SlicerParams}. The parameters were tuned and the performance of the algorithm was measured based on two metrics, completeness, the percentage of energy deposited in the scintillator from a physics interaction included in a slice, and purity, the percentage of energy in a slice that came from a single physics interaction. Values were tuned separately for the ND and FD. Notably, $PE_{pen}$ was set to 0 for both detectors, effectively removing this term from the distance calculation.
 \begin{table}[htb]
   \begin{center}
-    \caption[Slicing Algorithm Free Parameters]{A summary of the free parameters used in the slicing algorithm, and the tuned values used for each detector.}
+    \caption[Slicing Algorithm Free Parameters]{A summary of the free parameters used in the slicing algorithm, and the tuned values used for each detector. Table adapted from \cite{ref:ThesisMichael}.}
     \label{tab:SlicerParams}
     \begin{tabular}{c c c}
       \hline\hline
@@ -135,3 +137,134 @@ The free parameters and their values are summarized in Table \ref{tab:SlicerPara
     \end{tabular}
   \end{center}
 \end{table}
+
+There are several reconstruction chains that begin with slices, each developed with a different philosophy. The $\nue$ reconstruction chain was designed to identify shower like objects and is focused on clustering particles. The $\numu$ reconstruction chain was designed to identify long tracks. Finally, a global machine learning algorithm was developed to identify and separate all types of events. The $\nue$ and $\numu$ reconstruction chains both terminate with machine learning algorithms as well, but they were not used for this analysis and so not discussed in detail here. The algorithms used in each of the three chains are discussed insofar that they are relevant to the analysis presented in this dissertation.
+
+The $\nue$ reconstruction chain begins by searching for line like features in the slice, using a modified Hough Transform \cite{ref:RecoHough}. The algorithm as applied to \nova~is described in references \cite{ref:ThesisMichael, ref:TNHough}; it is summarized here.
+
+The algorithm begins by constructing a Hough map with the parameters of lines between pairs of points. A separate map is constructed for the XZ and YZ views. The lines are parametrized in polar coordinates, $(\rho, \theta)$, with $\rho$ the perpendicular distance from the origin and $\theta$ the angle away from the X axis. For each line calculated, the Hough map is filled with a Gaussian smeared weight based on the line parameters,
+\beqa
+w &=& \exp \left( -\frac{(\rho - \rho_0)^2}{2\sigma^2_\rho} \right) \exp \left( -\frac{(\theta - \theta_0)^2}{2\sigma^2_\theta} \right) \label{eq:HoughWeight} \\
+\sigma_\rho &=& \frac{3}{\sqrt{12}} \mbox{[cm]} \\
+\sigma_\rho &=& \frac{3\unit{cm}}{d\sqrt{6}}
+\eeqa
+
+\n where $d$ is the distance between the two points in cm. There are two restrictions on the pairs of points that are evaluated. Any pairs of points that are farther than $\sqrt{15000}\unit{cm}$ apart are not evaluated together to limit the total number of contributions and limit contributions with very low uncertainties in $\theta$. Pairs of points that have the same X or Y coordinate are not evaluated together unless they are farther than $\sqrt{15000}/4\unit{cm}$ apart to avoid the creation of spurious horizontal or vertical lines. Finally, the Hough map is smoothed using a Gaussian smoothing weight over non-zero bins.
+
+The algorithm then iterates over peaks in the Hough map to find and label valid lines. The highest peak is considered first. A $7\times7$ square of bins centered on the peak is used to find an average $(\rho, \theta)$, with the bin values weighted by the inverse distance from the central bin. The resultant parameters are recorded along with the size of the peak. The Hough map is then regenerated without hits within $6\unit{cm}$ of the line, with the exception of the most upstream and downstream hits. This process is then repeated to find the next line. For all iterations after the first, the current line is tested against previous lines. If the new line is within $15\unit{cm}$ in $\rho$ and $0.02\unit{rad}$ in $\theta$, the line is not added to the list of valid Hough lines, but the hits associated with the line are still removed. The algorithm terminates when there are no remaining peaks, or when there are $10$ Hough lines, whichever comes soonest.
+
+The output of Hough Transform is the input to the Elastic Arms algorithm that is used to reconstruct the original neutrino interaction vertex. Elastic arms, also called deformable templates, is described in references \cite{ref:RecoElastic1, ref:RecoElastic2, ref:RecoElastic3, ref:RecoElastic4} and is designed to find outgoing tracks with a known vertex. The algorithm as applied to \nova~was modified to account for the unknown vertex, is fully described in reference \cite{ref:TNElastic}, and summarized here.
+
+The Elastic Arms algorithm attempts to fit a set of arms, or tracks that originate at a single point, to the hits in the slice. Each arm, $a$, is parametrically described in spherical coordinates according to
+\beqa
+x(s) &=& x_0 + s \sin\theta_a \cos\phi_a \nonumber \\
+y(s) &=& y_0 + s \sin\theta_a \sin\phi_a \nonumber \\
+z(s) &=& z_0 + s \cos\theta_a
+\label{eq:ElasticArms}
+\eeqa
+
+\n where $(x_0, y_0, z_0)$ is the neutrino event vertex, $s$ is the distance from the vertex, and $(\theta_a, \phi_a)$ are the standard spherical angles. The algorithm fits for values of $(x_0, y_0, z_0, \vec{\theta}, \vec{\phi})$ by minimizing an energy cost function,
+\beq
+E = \sum_{i=1}^N \sum_{a=1}^M V_{ia} M_{ia} + \lambda \sum_{i=1}^N \left( \sum_{a=1}^M V_{ia} - 1 \right)^2 + \frac{2}{\lambda_v} \sum_{a=1}^M D_a,
+\label{eq:ElasticE}
+\eeq
+for an event with $N$ hits and $M$ arms, where $M_{ia}$ is the distance of hit $i$ to arm $a$, $V_{ia}$ is the strength of association of hit $i$ to arm $a$, $D_a$ is a penalty on the distance between the vertex and the first hit on arm $a$, and $\lambda$ and $\lambda_v$ control the penalty of the second and third terms, respectively. $M_{ia}$ is specifically computed as the perpendicular distance to the arm, unless the hit is in a backward direction with respect to the arm.
+\beq
+M_{ia} = \begin{cases}
+\left( \frac{d_{ia}^{perp}}{\sigma_i} \right)^2 & \mbox{Standard} \\
+\left( \frac{d_{i}^{vtx}}{\sigma_i} \right)^2 & \mbox{Hit in backward direction, } \frac{d_i^{vtx}}{\sigma_i} \leq 1 \\
+\left( \frac{d_{i}^{vtx}}{\sigma_i} \right)^4 & \mbox{Hit in backward direction, } \frac{d_i^{vtx}}{\sigma_i} > 1
+\end{cases}
+\label{eq:ElasticM}
+\eeq
+
+\n Above, $\sigma_i$ is a measure of the spatial resolution of the cell, and set to $\sigma_i = 3/\sqrt{12}\unit{cm}$. $V_{ia}$ is calculated from
+\beq
+V_{ia} = \frac{e^{-\beta M_{ia}}}{e^{-\beta\lambda} + \sum_{b=1}^M e^{-\beta M_{ib}}},
+\label{eq:ElasticV}
+\eeq
+
+\n where $\beta$ can be interpreted as a temperature via $\beta = 1/T$. For any hit, the sum of the association to all arms is bounded between $0$ and $1$, $0 < \sum_{a = 1}^M V_{ia} \leq 1$, with the difference from $1$ representing the probability that a hit is considered noise by this algorithm. This gives $\lambda$ the interpretation as the distance compared to $M_{ia}$ that a hit has a $50\%$ chance as being considered noise.
+
+The penalty on the distance between the vertex and the first hit on the arm is not part of the general algorithm and is specific to \nova. Since there are two views, $D_a$ combines the distance to the first hit in both views, $D_a = d_a^{xz} + d_a^{yz}$. To calculate these distances, only hits with an above average association to an arm are used, as technically each hit has an association to every arm. This term in equation \ref{eq:ElasticE} was partially motivated by photons. The likelihood that a photon will travel a distance $d$ before converting into an $e^+e^-$ pair is proportional to $\exp(-d/\lambda_v)$, where $\lambda_v \approx (7/9) X_0$ and $X_0$ is the radiation length of the material the through which the photon is traveling. For the \nova~detectors, $X_0 \approx 39\unit{cm}$, or $6$ planes. This photon conversion length leads to an energy function error of
+\beq
+\chi^2 = -2\ln \mathcal{L} = 2\frac{d}{\lambda_v},
+\label{eq:Elasticlv}
+\eeq
+
+\n hence the form of the penalty on this term in equation \ref{eq:ElasticE}.
+
+Before searching for the best fit vertex and arm directions, the algorithm first considers the best seed from a set of vertex positions and directions. The number of arms is set as the larger of the number of quality Hough lines from the two views and generates a list of possible vertex seeds and arm direction seeds based on a sorted list of the hits in $z$ and from the Hough lines themselves. The algorithm then searches for the seed that minimizes the energy cost function. Once this is chosen, the best fit vertex and directions are found by minimizing equation equation \ref{eq:ElasticE}. Since this function is dependent on many parameters and can have many local minima, the algorithm starts with low $\beta$ or high $T$, allowing hits to have moderate association with many arms. The temperature is gradually lowered while searching for the best fit parameters, pushing hits to their correct arms in the process.
+
+The results of the fit for the vertex position are summarized in table \ref{tab:Elastic}. It was found that the final arm directions were not very reliable, even while the vertex position was. Therefore, the vertex is the only output used from the Elastic Arms algorithm.
+\begin{table}[htb]
+  \begin{center}
+    \caption[Results from Elastic Arms Vertex Fits]{Difference between the true and reconstructed vertex for Elastic Arms vertex fits to FD MC events. All numbers shown are in cm. Table adapted from \cite{ref:ThesisEvan}.}
+    \label{tab:Elastic}
+    \begin{tabular}{c c c c c c c c c}
+      \hline\hline
+      \multirow{2}{*}{Interaction} & \multicolumn{2}{c}{$\Delta x$} & \multicolumn{2}{c}{$\Delta y$} & \multicolumn{2}{c}{$\Delta z$} & \multicolumn{2}{c}{3D Resolution} \\
+      & Mean & FWHM & Mean & FWHM & Mean & FWHM & Mean & FWHM \\
+      \hline
+      $\nue$ CC & $0.04$ & $4.11$ & $-0.02$ & $4.44$ & $0.73$ & $7.38$ & $10.65$ & $17.20$ \\
+      $\numu$ CC & $0.11$ & $4.43$ & $-0.24$ & $4.61$ & $-0.61$ & $8.16$ & $11.56$ & $17.08$ \\
+      NC & $0.35$ & $8.22$ & $-0.77$ & $7.84$ & $0.47$ & $9.50$ & $28.72$ & $30.80$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+The reconstructed vertex output by Elastic Arms is used as the input to a clustering algorithm that determines the number of prongs are in the event, or tracks with an angular spread that originate at a single point, and the hits that belong to each prong. This algorithm is a possibilistic Fuzzy-K means clustering algorithm, described in detail in references \cite{ref:TNFuzzyK, ref:ThesisEvan} and summarized here.
+
+The clustering algorithm is a Fuzzy-K Means algorithm extended to deal with an unknown number of clusters and noise. The classic Fuzzy-K Means \cite{ref:RecoFuzzy1, ref:RecoFuzzy2} takes an event origin, or vertex, and assumes that all activity radiating outward with tracks appearing as peaks in angular space. It searches for the optimal placement of $k$ clusters, or prongs, and associates activity, or hits, to them. Each hit is allowed to be associated to multiple prongs leading to the fuzzy nature of the prongs. However, they are subject to the constraint that all association strengths add to 1, meaning that every hit, including noise, will be associated to at least one prong. An extension of this algorithm \cite{ref:RecoFuzzyExt} removes the association normalization constraint and allows for a changing number of clusters. This allows noise hits to remain unassociated with any cluster, changing the probabilistic nature of the prong association to a possibilistic association.
+
+The algorithm first proceeds by seeding the prongs, calculating the association of the hits to the prongs, then updating the prong centers. The prongs are seeded in angular space based on an activity density matrix,
+\beq
+w_k = \sum_{i=1}^n e^{- \left( \frac{\theta_k - \theta_i}{\sigma_i} \right)^2}
+\label{eq:FuzzyDensity}
+\eeq
+
+\n with $360$ equally spaced bins from $-\pi$ to $\pi$. The hit uncertainty, $\sigma_i$, is given by
+\beq
+\sigma_i = \frac{1.745}{d} + 0.0204 + 0.000173d, \quad d < 5\unit{m},
+\label{eq:FuzzySigma}
+\eeq
+
+\n where $d$ is the distance from the vertex to the hit. Equation \ref{eq:FuzzySigma} was modeled after the behavior of multiple scattering for muons but found to work well for all event types. This equation is used until $d = 5\unit{m}$, at which point the uncertainty is held constant. Once the density matrix is populated, the prongs are seeded by the densest bins. With the prongs seeded, the algorithm proceeds with calculating the membership of each hit. First, the angular distance between the hit and a cluster center is calculated,
+\beq
+d_{ij} = \left( \frac{ \theta_j - \theta_i }{\sigma_j} \right)^2,
+\label{eq:Fuzzyd}
+\eeq
+
+\n where $j$ refers to the $j$\textsuperscript{th} hit and $i$ refers to the $i$\textsuperscript{th} cluster center. Next, the algorithm assigns membership to the cluster,
+\beq
+\mu_{ij} = e^{ - \frac{m d_{ij} \sqrt{c}}{\beta} },
+\label{eq:Fuzzymu}
+\eeq
+
+\n where $m$ is the degree of fuzziness for the clusters, $c$ is the current number of clusters, and $\beta$ is a measure of the expected spread in the clusters. Both $m$ and $\beta$ are tunable parameters. When $m = 0$, the algorithm reduces to a hard clustering model where each hit belongs to a separate cluster. In \nova, $m$ is set to $2$ and $\beta$ to $4$. Finally, the cluster centers are updated.
+\beq
+\theta'_i = \theta_i + \frac{ \sum_{j = 1}^n \frac{\mu_{ij}^m}{\sigma_j^2} (\theta_j - \theta_i) }{ \sum_{j = 1}^n \frac{\mu_{ij}^m}{\sigma_j^2} }
+\label{eq:FuzzyUpdate}
+\eeq
+
+\n This loop continues until none of the cluster centers update by more than a specified tolerance.
+
+The next major component of the algorithm performs checks on the prongs and may modify the total number. If any cluster centers are found to have converged to the same value, the cluster centers are reseeded. The lower peak in the density matrix that led to a duplicate prong center is replaced with the next lowest peak, and the above procedure is repeated. If there are no valid peaks to replace the original seed, the total number of prongs is reduced by one but the algorithm does not repeat the above procedure. Once the cluster centers are stable and there are no duplicates, all the hits are tested for cluster membership. All hits that have $< 1\%$ membership to all clusters are used to populate a new density matrix and an extra cluster is added, seeded with the highest density bin from the new density matrix. All of the cluster centers are then updated through the above procedure, and this full process is repeated until all hits have at least $1\%$ membership to a cluster or when there are $7$ total prongs.
+
+Lastly, the 2D prongs are matched across views to form 3D prongs. To do this, prongs from the XZ and YZ views that overlap for at least one plane are paired and their energy distributions are compared using a Kuiper test \cite{ref:Kuiper}. Specifically, the test considers the difference in the cumulative fractions of deposited energy between the two views as a function of distance through the prong, $s$.
+\beqa
+D^+(s) = E^{XZ}(s) - E^{YZ}(s) \nonumber\\
+D^-(s) = E^{YZ}(s) - E^{XZ}(s)
+\label{eq:FuzzyDs}
+\eeqa
+
+\n The final score of the Kuiper test maximizes each difference, and sums the result.
+\beq
+K = \mbox{max}(D^+(s)) + \mbox{max}(D^-(s))
+\label{eq:Kuiper}
+\eeq
+
+\n The prongs with the lowest score are matched, all other pairs that include either of the 2D prongs are removed, and the process continues until there are no remaining possible matches.
+
+The $\nue$ reconstruction chain finishes by creating shower objects and by training two particle identification algorithms (PIDs), but these are not used for the NC disappearance analysis.

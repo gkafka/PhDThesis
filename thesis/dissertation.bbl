@@ -491,6 +491,77 @@ M.~Baird.
   Using an Optimal Track Fitter}.
 \newblock PhD thesis, Indiana University, 2015.
 
+\bibitem{ref:RecoHough}
+L.~Fernandes and M.~Oliveira.
+\newblock Real-time line detection through an improved {Hough} transform voting
+  scheme.
+\newblock {\em Pattern Recognition}, 41:299--314, 2008.
+
+\bibitem{ref:TNHough}
+M.~Baird.
+\newblock Tech note for the {Multi-Hough} transform.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=8241}{\nova~Internal
+  Document 8241}.
+
+\bibitem{ref:RecoElastic1}
+M.~Gyulassy and M.~Harlander.
+\newblock Elastic tracking and neural network algorithms for complex pattern
+  recognition.
+\newblock {\em Computer Physics Communications}, 66:31--46, 1991.
+
+\bibitem{ref:RecoElastic2}
+M.~Ohlsson, C.~Peterson, and A.~L. Yuille.
+\newblock Track finding with deformable templates - the elastic arms approach.
+\newblock {\em Computer Physics Communications}, 71:77--98, 1992.
+
+\bibitem{ref:RecoElastic3}
+M.~Ohlsson.
+\newblock Extensions and explorations of the elastic arms algorithm.
+\newblock {\em Computer Physics Communications}, 77:19--32, 1993.
+
+\bibitem{ref:RecoElastic4}
+R.~Fr\"{u}hwirth and A.~Strandlie.
+\newblock Track fitting with ambiguities and noise: A study of elastic tracking
+  and nonlinear filters.
+\newblock {\em Computer Physics Communications}, 120:197--214, 1999.
+
+\bibitem{ref:TNElastic}
+M.~Messier.
+\newblock Vertex reconstruction based on elastic arms.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=7530}{\nova~Internal
+  Document 7530}.
+
+\bibitem{ref:TNFuzzyK}
+E.~Niner.
+\newblock Technical note of {FuzzyKVertex} reconstruction.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=7648}{\nova~Internal
+  Document 7648}.
+
+\bibitem{ref:RecoFuzzy1}
+J.~C. Dunn.
+\newblock A fuzzy relative of the {ISODATA} process and its use in detecting
+  compact well-separated clusters.
+\newblock {\em Journal of Cybernetics}, 3:32--57, 1973.
+
+\bibitem{ref:RecoFuzzy2}
+J.~C. Bezdek.
+\newblock {\em Pattern Recognition with Fuzzy Objective Function Algorithms}.
+\newblock Plenum Press, New York, 1981.
+
+\bibitem{ref:RecoFuzzyExt}
+R.~Krishnapuram and J.~M. Keller.
+\newblock A possibilistic approach to clustering.
+\newblock {\em IEEE Transactions on Fuzzy Systems}, 1:98--110, 1993.
+
+\bibitem{ref:Kuiper}
+N.~H. Kuiper.
+\newblock Tests concerning random points on a circle.
+\newblock {\em Proceedings of the Koninklijke Nederlandse Akademie van
+  Wetenschappen, Series A}, 63:38--47, 1960.
+
 \bibitem{ref:TNBeamQual}
 L.~Goodenough and S.~R. Phan-Budd.
 \newblock Technical note on the {NOvA} beam monitoring for 2015 summer
