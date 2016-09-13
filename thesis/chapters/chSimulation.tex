@@ -29,8 +29,8 @@ Dk2Nu format flux files (or simply dk2nu files) are one of the main outputs from
 
 The second main section in the simulation chain is the detector simulation. This section begins with neutrino interactions, models many different detector response effects, and finishes with files of simulated raw hits, or the signals read out by the detector electronics. The latter portion of this section closely follows the \nova~Simulation Technical Notes \cite{ref:TNDetSimFA, ref:TNDetSimSA}, which provide more detail and further references.
 
-%\subsection{Neutrino Interactions}
-%\label{sec:SimGENIE}
+\subsection{Neutrino Interactions}
+\label{sec:SimGENIE}
 
 Neutrino interactions are modeled using the GENIE event generator product \cite{ref:GENIEGen, ref:GENIE}. For the analysis in this dissertation, version v2.10.4 was used. GENIE requires as input flux files, a model of the detector geometry, and cross section information, and from this determines if and where a neutrino interaction occurs, the type of interaction, and the kinematics of the interaction products. The generator uses a sophisticated model of the nucleus that allows for quasi-elastic, resonant, or deep inelastic scattering, taking into account any intranuclear scattering that may occur after the initial interaction takes place. The output of a GENIE interaction is a list of primary particles that escape the target nucleus and the relevant kinematic variables that describe each entry.
 
@@ -66,8 +66,8 @@ Geant4 also handles the next piece of the simulation, the conversion between ene
 
 \n Above, the constants $L_0$, $k_B$, and $k_C$ are dependent on the scintillator material and had to be estimated for \nova~as no measurement existed for the particular materials used in the experiment. A study was performed comparing the energy deposition at the end of proton tracks in the ND for both data and MC to find parameters that would generate agreement between the two \cite{ref:DanBirks}. The results of the study were $k_B = 0.04\unit{cm/MeV}$ and $k_C = -0.0005\unit{(cm/MeV)}^2$. The output from this simulation step is a set of energy depositions now encoded as light yield called FLSHits, or fiber in liquid scintillator hits.
 
-%\subsection{Photon Propagation}
-%\label{sec:Photon}
+\subsection{Photon Propagation}
+\label{sec:Photon}
 
 The next part of the simulation simulates the capture of the scintillation photons, their transport through the WLS fiber to the electronics, and their conversion into photoelectrons after collection by the APD. The detector is treated as uniform for this section, with the assumption that any individual differences between cells would be removed by the downstream calibration. Individual photons are not traced from emission to the electronics due to its expensive computation time, despite the ability of Geant4 to perform this simulation. Rather, a template that parametrizes the photon transport are created and individual results are drawn from this.
 
@@ -86,8 +86,8 @@ Next, the photons are transported through the fiber to the electronics. Since th
 
 At this point in the simulation, there is a number of photons that reach the APD as a function of time. This is converted to photoelectrons (PEs) assuming a flat quantum efficiency of $0.85$ for every APD. The exact number of PEs collected is drawn from a log-normal distribution with a mean of the expected number of PEs to account for the repeated random charge avalanche process within the APD. The final output of the photon transport simulation is a set of objects that encodes the number of PEs as a function of time, called PhotonSignals.
 
-%\subsection{Electronic Readout}
-%\label{sec:Electronics}
+\subsection{Electronic Readout}
+\label{sec:Electronics}
 
 The last piece of the detector simulation models the electronics readout. This section starts with the number of PEs collected by the APDs and simulates the effects of the electronics to generate the raw signals equivalent to data. Before the PE signal from the APD is input to the circuitry simulation, an excess noise factor is applied. The excess noise PE signal is drawn from a log-normal distribution, the limit of the product of many random variables, motivated by the fact that the actual PE signal comes from many random charge multiplications. Next, three chips on the FEBs are simulated, an application-specific integrated circuit (ASIC), an analong to digital converter (ADC), and a field-programmable gate array (FPGA).
 
@@ -97,8 +97,8 @@ The shaped pulse is next input to the ADC, which performs two functions. The sig
 
 The hits above threshold are the final output of the detector simulation and are recorded as a vector of objects called RawDigits. This is the lowest level object that has the same format for both data and MC; however, the additional truth information is always stored for the MC for validation and further studies.
 
-%\subsection{Detector Conditions}
-%\label{sec:Masking}
+\subsection{Simulation Miscellany}
+\label{sec:SimMisc}
 
 In real data, readout did not always occur from every cell in the full detector. Full diblocks sometimes were missing due to original commissioning or repair work. Within individual diblocks, single channels can be masked off for too high noise levels or too low data rates. The diblock configuration for data was stored by run, and the channel masks were stored by subrun. To most accurately reflect the detector running conditions, the MC was generated matching the configurations in data, or weighting the MC configurations simulated by POT.
 

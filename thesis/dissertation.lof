@@ -33,50 +33,50 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Model of the Second Focusing Horn}}{53}{figure.caption.38}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Data/MC Comparison With and Without MEC Events}}{56}{figure.caption.39}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces ND Neutrino Interaction Vertex Distribution}}{57}{figure.caption.40}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces ND Neutrino Interaction Vertex Distribution}}{58}{figure.caption.40}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Simulation of Photon Transport}}{59}{figure.caption.41}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Identifying Missing Simulated Events in the FD}}{63}{figure.caption.42}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Identifying Missing Simulated Events in the ND}}{63}{figure.caption.43}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Identifying Missing Simulated Events in the ND}}{64}{figure.caption.43}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Threshold and Shielding Correction Factors}}{66}{figure.caption.44}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Attenuation Fits}}{68}{figure.caption.45}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Relative Calibration Results}}{68}{figure.caption.46}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Detector Response to Stopping Cosmic Muons vs Distance to Track End}}{70}{figure.caption.47}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Absolute Calibration Results}}{71}{figure.caption.48}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Threshold and Shielding Correction Factors}}{67}{figure.caption.44}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Attenuation Fits}}{69}{figure.caption.45}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Relative Calibration Results}}{69}{figure.caption.46}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Detector Response to Stopping Cosmic Muons vs Distance to Track End}}{71}{figure.caption.47}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Absolute Calibration Results}}{72}{figure.caption.48}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Energy Spectra After Data Quality Cuts}}{84}{figure.caption.55}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Energy Spectra After Event Quality Cuts}}{85}{figure.caption.58}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Fiducial and Containment Variable Distributions}}{86}{figure.caption.59}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Energy Spectra After Fiducial and Containment Cuts, FD}}{87}{figure.caption.62}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Energy Spectra After Fiducial and Containment Cuts, ND}}{88}{figure.caption.65}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces RemID and LID Distributions}}{90}{figure.caption.66}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces NC Selection Variable Distributions}}{90}{figure.caption.67}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Energy Spectra After NC Selection Cuts}}{91}{figure.caption.70}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Cosmic Rejection Variable Distributions}}{92}{figure.caption.71}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Energy Spectra After All Cuts}}{93}{figure.caption.74}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Energy Spectra After Data Quality Cuts}}{85}{figure.caption.55}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Energy Spectra After Event Quality Cuts}}{86}{figure.caption.58}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Fiducial and Containment Variable Distributions}}{87}{figure.caption.59}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Energy Spectra After Fiducial and Containment Cuts, FD}}{88}{figure.caption.62}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Energy Spectra After Fiducial and Containment Cuts, ND}}{89}{figure.caption.65}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces RemID and LID Distributions}}{91}{figure.caption.66}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces NC Selection Variable Distributions}}{91}{figure.caption.67}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Energy Spectra After NC Selection Cuts}}{92}{figure.caption.70}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Cosmic Rejection Variable Distributions}}{93}{figure.caption.71}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Energy Spectra After All Cuts}}{94}{figure.caption.74}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Beam Systematic Error Envelopes}}{101}{figure.caption.78}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Birks-Chou Shifted FD Predictions}}{102}{figure.caption.80}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Shifted FD Predictions Due to Miscalibration at Both Detectors}}{104}{figure.caption.82}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Shifted FD Predictions Due to Miscalibration at One Detector}}{104}{figure.caption.83}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces GENIE Systematic Error Envelopes}}{107}{figure.caption.84}
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Shifted FD Predictions from Extrapolation of Halves of the ND}}{108}{figure.caption.86}
-\contentsline {figure}{\numberline {8.7}{\ignorespaces ND Rock Contamination Shifted Spectra}}{109}{figure.caption.87}
-\contentsline {figure}{\numberline {8.8}{\ignorespaces ND Data/MC Energy Spectrum Comparison}}{110}{figure.caption.88}
-\contentsline {figure}{\numberline {8.9}{\ignorespaces Systematic Error Due to ND Data/MC Discrepancy and CC Background Uncertainty}}{111}{figure.caption.90}
-\contentsline {figure}{\numberline {8.10}{\ignorespaces ND Data/MC Spectra with Systematics}}{113}{figure.caption.92}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Beam Systematic Error Envelopes}}{102}{figure.caption.78}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Birks-Chou Shifted FD Predictions}}{103}{figure.caption.80}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Shifted FD Predictions Due to Miscalibration at Both Detectors}}{105}{figure.caption.82}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Shifted FD Predictions Due to Miscalibration at One Detector}}{105}{figure.caption.83}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces GENIE Systematic Error Envelopes}}{108}{figure.caption.84}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Shifted FD Predictions from Extrapolation of Halves of the ND}}{109}{figure.caption.86}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces ND Rock Contamination Shifted Spectra}}{110}{figure.caption.87}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces ND Data/MC Energy Spectrum Comparison}}{111}{figure.caption.88}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Systematic Error Due to ND Data/MC Discrepancy and CC Background Uncertainty}}{112}{figure.caption.90}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces ND Data/MC Spectra with Systematics}}{114}{figure.caption.92}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces ND Data/MC Comparison: Energy Distribution}}{117}{figure.caption.94}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces ND Data/MC Comparison: Fiducial and Containment Variable Distributions}}{118}{figure.caption.95}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces ND Data/MC Comparison: NC Selection Variable Distributions}}{119}{figure.caption.96}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces ND Data/MC Comparison: Cosmic Rejection Variable Distribution}}{119}{figure.caption.97}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Angle Sensitivities for Shifted Energy Spectra}}{120}{figure.caption.99}
-\contentsline {figure}{\numberline {9.6}{\ignorespaces High Energy Sideband}}{122}{figure.caption.101}
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Low CVN Sideband}}{122}{figure.caption.102}
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Mid Cosmic BDT Sideband}}{123}{figure.caption.103}
-\contentsline {figure}{\numberline {9.9}{\ignorespaces FD Data and MC Energy Distribution}}{124}{figure.caption.104}
-\contentsline {figure}{\numberline {9.10}{\ignorespaces FD Data/MC Comparison: Fiducial Variable Distributions}}{124}{figure.caption.105}
-\contentsline {figure}{\numberline {9.11}{\ignorespaces FD Data/MC Comparison: CVN Distribution}}{125}{figure.caption.106}
-\contentsline {figure}{\numberline {9.12}{\ignorespaces FD Data/MC Comparison: Cosmic Rejection Variable Distributions}}{125}{figure.caption.107}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces ND Data/MC Comparison: Energy Distribution}}{118}{figure.caption.94}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces ND Data/MC Comparison: Fiducial and Containment Variable Distributions}}{119}{figure.caption.95}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces ND Data/MC Comparison: NC Selection Variable Distributions}}{120}{figure.caption.96}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces ND Data/MC Comparison: Cosmic Rejection Variable Distribution}}{120}{figure.caption.97}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Angle Sensitivities for Shifted Energy Spectra}}{121}{figure.caption.99}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces High Energy Sideband}}{123}{figure.caption.101}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Low CVN Sideband}}{123}{figure.caption.102}
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Mid Cosmic BDT Sideband}}{124}{figure.caption.103}
+\contentsline {figure}{\numberline {9.9}{\ignorespaces FD Data and MC Energy Distribution}}{125}{figure.caption.104}
+\contentsline {figure}{\numberline {9.10}{\ignorespaces FD Data/MC Comparison: Fiducial Variable Distributions}}{125}{figure.caption.105}
+\contentsline {figure}{\numberline {9.11}{\ignorespaces FD Data/MC Comparison: CVN Distribution}}{126}{figure.caption.106}
+\contentsline {figure}{\numberline {9.12}{\ignorespaces FD Data/MC Comparison: Cosmic Rejection Variable Distributions}}{126}{figure.caption.107}
 \addvspace {10\p@ }
