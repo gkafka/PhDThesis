@@ -24,36 +24,36 @@ I was expecting a `,' or a `}'---line 616 of file references.bib
 I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
-You've used 114 entries,
+You've used 115 entries,
             1791 wiz_defined-function locations,
-            1115 strings with 20810 characters,
-and the built_in function-call counts, 18039 in all, are:
-= -- 1678
-> -- 584
+            1120 strings with 20990 characters,
+and the built_in function-call counts, 18134 in all, are:
+= -- 1687
+> -- 588
 < -- 1
-+ -- 263
-- -- 149
++ -- 265
+- -- 150
 * -- 845
-:= -- 3209
-add.period$ -- 341
-call.type$ -- 114
-change.case$ -- 113
+:= -- 3230
+add.period$ -- 344
+call.type$ -- 115
+change.case$ -- 114
 chr.to.int$ -- 0
-cite$ -- 116
-duplicate$ -- 787
-empty$ -- 1823
-format.name$ -- 149
-if$ -- 3937
+cite$ -- 117
+duplicate$ -- 791
+empty$ -- 1831
+format.name$ -- 150
+if$ -- 3956
 int.to.chr$ -- 0
-int.to.str$ -- 114
+int.to.str$ -- 115
 missing$ -- 63
-newline$ -- 571
-num.names$ -- 113
-pop$ -- 137
+newline$ -- 576
+num.names$ -- 114
+pop$ -- 138
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 266
+skip$ -- 267
 stack$ -- 0
 substring$ -- 1141
 swap$ -- 74
@@ -62,7 +62,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 173
-width$ -- 117
-write$ -- 1157
+while$ -- 174
+width$ -- 118
+write$ -- 1166
 (There were 2 error messages)

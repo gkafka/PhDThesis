@@ -4,10 +4,12 @@
 The most basic form of raw data collected is a vector of hits above threshold. The MC simulation described in chapter \ref{ch:Simulation} also outputs events in this format. However, these objects by themselves are not very useful; instead, a certain level of reconstruction is required before real physics can be studied. The first major step in this process is to apply calibration so that the hits can be translated into a set of energy depositions, consistent throughout and across both detectors. Any number of algorithms can then be applied to create new objects or search for features, including tracks, the event vertex, or particle identifiers (PIDs). This chapter describes the calibration and elements of the reconstruction chain relevant to the NC disappearance analysis.
 
 \section{Calibration}
+\label{sec:Calib}
 
 The purpose of calibration is to ensure a uniform detector response throughout each and across both detectors. This is done in two major steps, a relative and absolute calibration. The relative calibration accounts for threshold effects and attenuation across a single cell. It is designed to create a uniform response throughout a cell and across a single detector. The absolute calibration creates a scale factor for each detector to convert the calibrated PE scale from the relative calibration into an energy unit. This section follows the SA notes in reference \cite{ref:TNCalib}.
 
 \subsection{Relative Calibration}
+\label{sec:CalibRel}
 
 The relative calibration is designed to convert the PE signal output from the electronics into a calibrated unit, such that two equal signals from any two detector locations mean equal true energy deposited. This part of the calibration accounts for threshold effects and attenuation in the WLS fibers, outputting a corrected PE value, the PECorr.
 
@@ -71,6 +73,7 @@ The relative calibration combines the results of all three steps to create a uni
 \end{figure}
 
 \subsection{Absolute Calibration}
+\label{sec:CalibAbs}
 
 The absolute calibration is performed after the relative calibration to convert the corrected PE signal into an energy value. Much like the relative calibration, the absolute calibration uses a sample of tricell hits from cosmic ray muons. However, in this case the energy deposited in the cell must be known in order to convert the PE signal into an energy. The energy is known either from external sources \cite{ref:MuonTables} or the Bethe-Block equation \cite{ref:PDG},
 \beq
@@ -108,10 +111,12 @@ The absolute calibration energy scale is determined from distributions of tricel
 At this point the calibration procedure is complete. The calibration constants output by the relative and absolute calibrations are stored in a database so that the raw PE signal in any RawDigit object can be converted into an energy value.
 
 \section{Reconstruction Chain}
+\label{sec:Reco}
 
-The first step in the NC disappearance analysis is the selection of a relatively pure sample of NC events. However, the relatively raw calibrated hits are a far cry from the complete events necessary for the analysis. A set of reconstruction algorithms are thus applied to take individual hits and group them into more complete objects, often providing extra information along the way. The reconstruction procedures begin with the basic grouping of hits in spacetime, and become as complex as applying machine learning algorithms to separate events into different components. The NC disappearance analysis did not have an independent reconstruction chain from the two main \nova~analyses. Rather, the information used for the NC selection discussed in the next chapter was a mixture from the $\nue$ appearance and $\numu$ disappearance analyses. The reconstruction chains for these analyses were developed with different philosophies; the $\nue$ reconstruction chain was designed to identify shower like objects and is focused on clustering particles, white the $\numu$ reconstruction chain was designed to identify long tracks. The remainder of this section discusses the reconstruction components from these reconstruction chains that are relevant to the analysis described in this dissertation.
+The first step in the NC disappearance analysis is the selection of a relatively pure sample of NC events. However, the relatively raw calibrated hits are a far cry from the complete events necessary for the analysis. A set of reconstruction algorithms are thus applied to take individual hits and group them into more complete objects, often providing extra information along the way. The reconstruction procedures begin with the basic grouping of hits in spacetime, and become as complex as applying machine learning algorithms to separate events into different components. The NC disappearance analysis did not have an independent reconstruction chain from the two main \nova~analyses. Rather, the information used for the NC selection discussed later in chapter \ref{ch:Selection} was a mixture from the $\nue$ appearance and $\numu$ disappearance analyses. The reconstruction chains for these analyses were developed with different philosophies; the $\nue$ reconstruction chain was designed to identify shower like objects and is focused on clustering particles, white the $\numu$ reconstruction chain was designed to identify long tracks. The remainder of this section discusses the reconstruction components from these reconstruction chains that are relevant to the analysis described in this dissertation.
 
 \subsection{Event Slicing}
+\label{sec:RecoSlicer}
 
 The first part step in reconstruction is the clustering of hits into separate events, or slices. This is done based on the Density-Based Spatial Clustering of Application with Noise (DBSCAN) algorithm \cite{ref:RecoDBSCAN}. The algorithm as applied to \nova~is described in detail in reference \cite{ref:ThesisMichael}; the main points are summarized here.
 
@@ -145,8 +150,9 @@ The free parameters and their values are summarized in Table \ref{tab:SlicerPara
 \end{table}
 
 \subsection{Hough Transform Line Finding}
+\label{sec:RecoHough}
 
-The $\nue$ reconstruction chain begins by searching for line like features in the slice, using a modified Hough Transform \cite{ref:RecoHough}. The algorithm as applied to \nova~is described in references \cite{ref:ThesisMichael, ref:TNHough}; it is summarized here.
+The $\nue$ reconstruction chain begins by searching for line like features in the slice using a modified Hough Transform \cite{ref:RecoHough}. The algorithm as applied to \nova~is described in references \cite{ref:ThesisMichael, ref:TNHough}; it is summarized here.
 
 The algorithm begins by constructing a Hough map with the parameters of lines between pairs of points. A separate map is constructed for the XZ and YZ views. The lines are parametrized in polar coordinates, $(\rho, \theta)$, with $\rho$ the perpendicular distance from the origin and $\theta$ the angle away from the X axis. For each line calculated, the Hough map is filled with a Gaussian smeared weight based on the line parameters,
 \beqa
@@ -160,6 +166,7 @@ w &=& \exp \left( -\frac{(\rho - \rho_0)^2}{2\sigma^2_\rho} \right) \exp \left( 
 The algorithm then iterates over peaks in the Hough map to find and label valid lines. The highest peak is considered first. A $7\times7$ square of bins centered on the peak is used to find an average $(\rho, \theta)$, with the bin values weighted by the inverse distance from the central bin. The resultant parameters are recorded along with the size of the peak. The Hough map is then regenerated without hits within $6\unit{cm}$ of the line, with the exception of the most upstream and downstream hits. This process is then repeated to find the next line. For all iterations after the first, the current line is tested against previous lines. If the new line is within $15\unit{cm}$ in $\rho$ and $0.02\unit{rad}$ in $\theta$, the line is not added to the list of valid Hough lines, but the hits associated with the line are still removed. The algorithm terminates when there are no remaining peaks, or when there are $10$ Hough lines, whichever comes soonest.
 
 \subsection{Elastic Arms Vertex Reconstruction}
+\label{sec:RecoElastic}
 
 The output of Hough Transform is the input to the Elastic Arms algorithm that is used to reconstruct the original neutrino interaction vertex. Elastic arms, also called deformable templates, is described in references \cite{ref:RecoElastic1, ref:RecoElastic2, ref:RecoElastic3, ref:RecoElastic4} and is designed to find outgoing tracks with a known vertex. The algorithm as applied to \nova~was modified to account for the unknown vertex, is fully described in reference \cite{ref:TNElastic}, and summarized here.
 
@@ -223,6 +230,7 @@ The results of the fit for the vertex position are summarized in table \ref{tab:
 \end{table}
 
 \subsection{Fuzzy K-Means Clustering}
+\label{sec:RecoFuzzyK}
 
 The reconstructed vertex output by Elastic Arms is used as the input to a clustering algorithm that determines the number of prongs are in the event, or tracks with an angular spread that originate at a single point, and the hits that belong to each prong. This algorithm is a possibilistic Fuzzy-K means clustering algorithm, described in detail in references \cite{ref:TNFuzzyK, ref:ThesisEvan} and summarized here.
 
@@ -278,6 +286,7 @@ K = \mbox{max}(D^+(s)) + \mbox{max}(D^-(s))
 \n The prongs with the lowest score are matched, all other pairs that include either of the 2D prongs are removed, and the process continues until there are no remaining possible matches.
 
 \subsection{Kalman Tracking}
+\label{sec:RecoKalman}
 
 The $\numu$ reconstruction chain begins by using a Kalman filter to identify track like features and from hits in the slice. The algorithm outputs reconstructed objects called Kalman tracks. Reference \cite{ref:TNKalman} describes the algorithm in full detail; it is summarized here.
 
@@ -302,4 +311,42 @@ S = \frac{\Delta \mbox{Start Plane} + \Delta \mbox{Stop Plane}}{\mbox{N Overlap 
 \n Aside from checking single pairs of tracks, the merging step also checks if two tracks in a single view can be joined together to improve the score for the three dimensional matching. This step is where large scattering can be handled. The set of tracks that produce the lowest score are matched as a 3D Kalman track, and the merging process is repeated on the remaining tracks. The algorithm terminates when it is unable to match any other 2D tracks.
 
 \section{Particle Identification Algorithms}
+\label{sec:PIDs}
 
+Unlike the other reconstruction algorithms, Particle Identification (PID) algorithms attempt to directly the particle interaction type. PIDs generally take some amount of both raw and reconstructed information and output one or more probability distributions for event classification. The algorithms developed for the main \nova~analyses are discussed here, with most emphasis placed on those used for the NC disappearance analysis.
+
+\subsection{\texorpdfstring{$\nue$ and $\numu$ CC Specific PIDs}{ve and vu CC PIDs}}
+\label{sec:PIDnue}
+
+The $\nue$ appearance and $\numu$ disappearance analyses developed independent PIDs specifically trained to identify $\nue$ CC and $\numu$ CC events, respectively. The $\nue$ analysis developed two PIDs that had equal performance, the Likelihood Identifier (LID) and Library Event Matching (LEM) algorithms, and the $\numu$ analysis developed the Reconstructed Muon Identifier (RemID). These were only used briefly as a selection cross check in chapter \ref{ch:Selection}, so they are only briefly described. Technical notes with more detail are provided for each.
+
+LEM, described in reference \cite{ref:TNLEM}, compares an event to a library of known simulated events to find the best matches. The charge distribution of the trial event and a library event are aligned by the vertex and compared using a metric inspired by electrostatics. The algorithm compares the trial event to $77$ million library events, and the $1000$ best candidate matches are used to construct five physically based variables, a weighted fraction of signal matches, mean hadronic $y$, mean matched charge fraction, match energy difference, and enriched match fraction. Lastly, these variables and the calorimetric energy of the trial event are input into a decision tree.
+
+LID, described in reference \cite{ref:TNLID}, uses an artificial neural network to test the most energetic shower against electron, muon, proton, neutron, pion (charged and neutral), and photon hypotheses. The main inputs to this PID are the longitudinal and transverse energy deposition, but it also considers the fraction of event energy contained in the primary shower, the invariant mass of all event showers, the energy contained within eight planes of the vertex, the distance between the event vertex and shower start point, and the angle of the shower away from the beam direction. Note that the shower object mentioned above is a reconstructed object downstream of the Fuzzy K-Means Clustering algorithm, but these were not used for the NC disappearance analysis.
+
+ReMID, discussed in detail in reference \cite{ref:TNRemID}, is specifically designed to identify muons from charged pions. The PID is trained using a $k-$Nearest Neighboor classification on four input variables for a reconstructed track, the track energy deposition log likelihood, a scattering log likelihood, the track length, and the fraction of planes passed by the track that are uncontaminated by vertex or hadronic activity.
+
+\subsection{Cosmic Rejection PID}
+\label{sec:PIDcos}
+
+Aside from ReMID, the $\numu$ disappearance analysis also developed a cosmic rejection PID \cite{ref:TNNumuContPID}. This algorithm was originally tuned to distinguish cosmic events from $\numu$ CC events, but was found to have similar separation power for the NC disappearance analysis as well. A boosted decision tree is trained using a considerable number of inputs, largely quantities derived from the Kalman tracks best identified as a muon track by ReMID (referred to as `the track' below). These inputs were:
+\begin{itemize}
+  \item The angle of the track away from the neutrino beam.
+  \item Y direction of the track.
+  \item Maximum Y position of any hit activity.
+  \item Number of hits in the track.
+  \item Length of the track.
+  \item Projected forward distance of the track to the detector edge.
+  \item Projected backward distance of the track to the detector edge.
+  \item Total scattering angle of the track over the total length of the track.
+  \item Number of hits in the slice.
+  \item Calorimetric energy in the slice.
+  \item Minimum Y position of any hit activity.
+  \item Total number of 3D Kalman tracks.
+\end{itemize}
+\n The PID was trained separately for different data taking periods, and the final two items listed were only used for training in later data periods. The separate tunings were done to accommodate the changing detector conditions.
+
+\subsection{CVN, the All Purpose PID}
+\label{sec:PIDCVN}
+
+CVN, discussed in detail in reference \cite{ref:CVN}, does not attempt to identify a single event type; rather, it gives the most likely event type among all possibilities. CVN is a convolutional neural network that only takes the raw event topology as input. The algorithm applies a series of convolutional filters to search for key event features as opposed to taking these features as input, then trains against these features. Since this PID attempts to classify all event types, cutting events that have a low NC score removes a significant majority of all background types.
