@@ -12,57 +12,62 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 152 of file dissertation.aux
+Illegal, another \bibstyle command---line 156 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 616 of file references.bib
+I was expecting a `,' or a `}'---line 633 of file references.bib
+ : 
+ : %
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1009 of file references.bib
  : 
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
-You've used 115 entries,
+You've used 118 entries,
             1791 wiz_defined-function locations,
-            1120 strings with 20990 characters,
-and the built_in function-call counts, 18134 in all, are:
-= -- 1687
-> -- 588
+            1136 strings with 21300 characters,
+and the built_in function-call counts, 18519 in all, are:
+= -- 1723
+> -- 600
 < -- 1
-+ -- 265
-- -- 150
-* -- 845
-:= -- 3230
-add.period$ -- 344
-call.type$ -- 115
-change.case$ -- 114
++ -- 271
+- -- 153
+* -- 857
+:= -- 3304
+add.period$ -- 353
+call.type$ -- 118
+change.case$ -- 117
 chr.to.int$ -- 0
-cite$ -- 117
-duplicate$ -- 791
-empty$ -- 1831
-format.name$ -- 150
-if$ -- 3956
+cite$ -- 120
+duplicate$ -- 808
+empty$ -- 1869
+format.name$ -- 153
+if$ -- 4037
 int.to.chr$ -- 0
-int.to.str$ -- 115
-missing$ -- 63
-newline$ -- 576
-num.names$ -- 114
-pop$ -- 138
+int.to.str$ -- 118
+missing$ -- 64
+newline$ -- 591
+num.names$ -- 117
+pop$ -- 141
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 267
+skip$ -- 272
 stack$ -- 0
-substring$ -- 1141
-swap$ -- 74
+substring$ -- 1159
+swap$ -- 75
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 174
-width$ -- 118
-write$ -- 1166
-(There were 2 error messages)
+while$ -- 178
+width$ -- 121
+write$ -- 1195
+(There were 3 error messages)

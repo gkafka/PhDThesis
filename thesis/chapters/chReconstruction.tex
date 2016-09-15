@@ -149,6 +149,28 @@ The free parameters and their values are summarized in Table \ref{tab:SlicerPara
   \end{center}
 \end{table}
 
+An example event is shown in figure \ref{fig:evdfull}. Figure \ref{fig:evdfullslice} shows the same event after slicer was applied, and figure \ref{fig:evdzoomslice} zooms in on the neutrino candidate event.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/evd/FullNone.png}
+  \caption[An Example \nova~Event]{An example \nova~event in the FD. The upper panel shows the XZ view and the bottom panel shows the YZ view. The color of the hits relates to the charge deposited.}
+  \label{fig:evdfull}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/evd/FullSlicer.png}
+  \caption[An Example \nova~Event with Slicer Applied]{The same \nova~event as in figure \ref{fig:evdfull} after slicer was applied. Colors only denote different slices. $65$ different slices were made for this event, with $1$ candidate neutrino interaction located at approximately $(500, -300, 1500)\unit{cm}$.}
+  \label{fig:evdfullslice}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/evd/ZoomNone.png}
+  \caption[An Example Neutrino Candidate Slice]{Zoomed view of the neutrino candidate slice from figures \ref{fig:evdfull} and \ref{fig:evdfullslice}. Activity in other slices was grayed out.}
+  \label{fig:evdzoomslice}
+\end{figure}
+
 \subsection{Hough Transform Line Finding}
 \label{sec:RecoHough}
 
@@ -163,7 +185,26 @@ w &=& \exp \left( -\frac{(\rho - \rho_0)^2}{2\sigma^2_\rho} \right) \exp \left( 
 
 \n where $d$ is the distance between the two points in cm. There are two restrictions on the pairs of points that are evaluated. Any pairs of points that are farther than $\sqrt{15000}\unit{cm}$ apart are not evaluated together to limit the total number of contributions and limit contributions with very low uncertainties in $\theta$. Pairs of points that have the same X or Y coordinate are not evaluated together unless they are farther than $\sqrt{15000}/4\unit{cm}$ apart to avoid the creation of spurious horizontal or vertical lines. Finally, the Hough map is smoothed using a Gaussian smoothing weight over non-zero bins.
 
-The algorithm then iterates over peaks in the Hough map to find and label valid lines. The highest peak is considered first. A $7\times7$ square of bins centered on the peak is used to find an average $(\rho, \theta)$, with the bin values weighted by the inverse distance from the central bin. The resultant parameters are recorded along with the size of the peak. The Hough map is then regenerated without hits within $6\unit{cm}$ of the line, with the exception of the most upstream and downstream hits. This process is then repeated to find the next line. For all iterations after the first, the current line is tested against previous lines. If the new line is within $15\unit{cm}$ in $\rho$ and $0.02\unit{rad}$ in $\theta$, the line is not added to the list of valid Hough lines, but the hits associated with the line are still removed. The algorithm terminates when there are no remaining peaks, or when there are $10$ Hough lines, whichever comes soonest.
+The algorithm then iterates over peaks in the Hough map to find and label valid lines. The highest peak is considered first. A $7\times7$ square of bins centered on the peak is used to find an average $(\rho, \theta)$, with the bin values weighted by the inverse distance from the central bin. The resultant parameters are recorded along with the size of the peak. The Hough map is then regenerated without hits within $6\unit{cm}$ of the line, with the exception of the most upstream and downstream hits. This process is then repeated to find the next line. For all iterations after the first, the current line is tested against previous lines. If the new line is within $15\unit{cm}$ in $\rho$ and $0.02\unit{rad}$ in $\theta$, the line is not added to the list of valid Hough lines, but the hits associated with the line are still removed. The algorithm terminates when there are no remaining peaks, or when there are $10$ Hough lines, whichever comes soonest. An example of the algorithm generating Hough lines on a MC event is shown in figure \ref{fig:Hough}.
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/Hough/HoughEvent1.png} &
+    \includegraphics[width=.47\textwidth]{figures/Hough/HMapSurf1.png} \\
+    \includegraphics[width=.47\textwidth]{figures/Hough/HoughEvent2.png} &
+    \includegraphics[width=.47\textwidth]{figures/Hough/HMapSurf2.png} \\
+  \end{tabular}
+  \caption[Hough Line Generation from a Hough Map]{An example of the Hough transform algorithm generating lines from an event. The top row, left panel shows an example MC event from which a Hough map is generated and shown on the right. The strongest peak is used to generate the Hough line shown on the event in the top left panel. The Hough map is then regenerated without hits associated with the first line as shown in the bottom right panel. From this map, the strongest peak is used to generate the second Hough line, shown on the bottom left panel.}
+  \label{fig:Hough}
+\end{figure}
+
+Figure \ref{fig:evdHough} shows the Hough lines that were created for the neutrino candidate slice shown from figure \ref{fig:evdzoomslice}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/evd/ZoomHough.png}
+  \caption[An Example Neutrino Candidate Slice with Hough Lines]{The neutrino candidate slice from figure \ref{fig:evdzoomslice} with Hough lines drawn.}
+  \label{fig:evdHough}
+\end{figure}
 
 \subsection{Elastic Arms Vertex Reconstruction}
 \label{sec:RecoElastic}
@@ -211,7 +252,7 @@ The penalty on the distance between the vertex and the first hit on the arm is n
 
 Before searching for the best fit vertex and arm directions, the algorithm first considers the best seed from a set of vertex positions and directions. The number of arms is set as the larger of the number of quality Hough lines from the two views and generates a list of possible vertex seeds and arm direction seeds based on a sorted list of the hits in $z$ and from the Hough lines themselves. The algorithm then searches for the seed that minimizes the energy cost function. Once this is chosen, the best fit vertex and directions are found by minimizing equation equation \ref{eq:ElasticE}. Since this function is dependent on many parameters and can have many local minima, the algorithm starts with low $\beta$ or high $T$, allowing hits to have moderate association with many arms. The temperature is gradually lowered while searching for the best fit parameters, pushing hits to their correct arms in the process.
 
-The results of the fit for the vertex position are summarized in table \ref{tab:Elastic}. It was found that the final arm directions were not very reliable, even while the vertex position was. Therefore, the vertex is the only output used from the Elastic Arms algorithm.
+The results of the fit for the vertex position are summarized in table \ref{tab:Elastic}. It was found that the final arm directions were not very reliable, even while the vertex position was. Therefore, the vertex is the only output used from the Elastic Arms algorithm. Figure \ref{fig:evdVtx} shows the vertex reconstructed for the neutrino candidate slice shown from figures \ref{fig:evdzoomslice} and \ref{fig:evdHough}.
 \begin{table}[htb]
   \begin{center}
     \caption[Results from Elastic Arms Vertex Fits]{Difference between the true and reconstructed vertex for Elastic Arms vertex fits to FD MC events. All numbers shown are in cm. Table adapted from \cite{ref:ThesisEvan}.}
@@ -228,6 +269,13 @@ The results of the fit for the vertex position are summarized in table \ref{tab:
     \end{tabular}
   \end{center}
 \end{table}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/evd/ZoomVtx.png}
+  \caption[An Example Neutrino Candidate Slice with a Reconstructed Vertex]{The neutrino candidate slice from figure \ref{fig:evdzoomslice} with a reconstructed vertex drawn as a red cross. The vertex was found to be slightly downstream of all activity at the intersection point of $3$ Hough lines. In reality, the vertex was most likely at the most upstream hit and a $\pi^0$ traveled downstream briefly before decaying to two photons that both quickly converted. However, the vertex was still quite close to the most upstream hit and this was considered a good reconstruction.}
+  \label{fig:evdVtx}
+\end{figure}
 
 \subsection{Fuzzy K-Means Clustering}
 \label{sec:RecoFuzzyK}
@@ -285,6 +333,14 @@ K = \mbox{max}(D^+(s)) + \mbox{max}(D^-(s))
 
 \n The prongs with the lowest score are matched, all other pairs that include either of the 2D prongs are removed, and the process continues until there are no remaining possible matches.
 
+Figure \ref{fig:evdProng} shows the prongs created for the neutrino slice from figure \ref{fig:evdzoomslice}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/evd/ZoomVtxProng.png}
+  \caption[An Example Neutrino Candidate Slice with Prongs]{The neutrino candidate slice from figure \ref{fig:evdVtx} with prongs drawn.}
+  \label{fig:evdProng}
+\end{figure}
+
 \subsection{Kalman Tracking}
 \label{sec:RecoKalman}
 
@@ -310,6 +366,14 @@ S = \frac{\Delta \mbox{Start Plane} + \Delta \mbox{Stop Plane}}{\mbox{N Overlap 
 
 \n Aside from checking single pairs of tracks, the merging step also checks if two tracks in a single view can be joined together to improve the score for the three dimensional matching. This step is where large scattering can be handled. The set of tracks that produce the lowest score are matched as a 3D Kalman track, and the merging process is repeated on the remaining tracks. The algorithm terminates when it is unable to match any other 2D tracks.
 
+Figure \ref{fig:evdTrack} shows the prongs created for the neutrino slice from figure \ref{fig:evdzoomslice}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/evd/ZoomTrack.png}
+  \caption[An Example Neutrino Candidate Slice with Tracks]{The neutrino candidate slice from figure \ref{fig:evdVtx} with tracks drawn. Tracks are not as accurate for NC events and are better suited for eliminating cosmics and $\numu$ CCs.}
+  \label{fig:evdTrack}
+\end{figure}
+
 \section{Particle Identification Algorithms}
 \label{sec:PIDs}
 
@@ -324,7 +388,7 @@ LEM, described in reference \cite{ref:TNLEM}, compares an event to a library of 
 
 LID, described in reference \cite{ref:TNLID}, uses an artificial neural network to test the most energetic shower against electron, muon, proton, neutron, pion (charged and neutral), and photon hypotheses. The main inputs to this PID are the longitudinal and transverse energy deposition, but it also considers the fraction of event energy contained in the primary shower, the invariant mass of all event showers, the energy contained within eight planes of the vertex, the distance between the event vertex and shower start point, and the angle of the shower away from the beam direction. Note that the shower object mentioned above is a reconstructed object downstream of the Fuzzy K-Means Clustering algorithm, but these were not used for the NC disappearance analysis.
 
-ReMID, discussed in detail in reference \cite{ref:TNRemID}, is specifically designed to identify muons from charged pions. The PID is trained using a $k-$Nearest Neighboor classification on four input variables for a reconstructed track, the track energy deposition log likelihood, a scattering log likelihood, the track length, and the fraction of planes passed by the track that are uncontaminated by vertex or hadronic activity.
+ReMID, discussed in detail in reference \cite{ref:TNRemID}, is specifically designed to identify muons from charged pions. The PID is trained using a $k-$Nearest Neighbor classification on four input variables for a reconstructed track, the track energy deposition log likelihood, a scattering log likelihood, the track length, and the fraction of planes passed by the track that are uncontaminated by vertex or hadronic activity.
 
 \subsection{Cosmic Rejection PID}
 \label{sec:PIDcos}
@@ -344,9 +408,54 @@ Aside from ReMID, the $\numu$ disappearance analysis also developed a cosmic rej
   \item Minimum Y position of any hit activity.
   \item Total number of 3D Kalman tracks.
 \end{itemize}
-\n The PID was trained separately for different data taking periods, and the final two items listed were only used for training in later data periods. The separate tunings were done to accommodate the changing detector conditions.
+\n The PID was trained separately for different data taking periods, and the final two items listed were only used for training in later data periods. The separate tunings were done to accommodate the changing detector conditions. This PID was only trained and filled for FD events. The output score distribution from the later periods is shown in figure \ref{fig:PIDCosBDT}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/CosBDT/BDTPost.png}
+  \caption[Cosmic Rejection BDT Output Distributions]{The cosmic rejection BDT output distributions for later data taking periods that encompass the majority of the data. The training sample is only $\numu$ CCs and the background sample is only cosmic trigger data events. Other beam events tend to have a similar distribution to the signal.}
+  \label{fig:PIDCosBDT}
+\end{figure}
 
 \subsection{CVN, the All Purpose PID}
 \label{sec:PIDCVN}
 
-CVN, discussed in detail in reference \cite{ref:CVN}, does not attempt to identify a single event type; rather, it gives the most likely event type among all possibilities. CVN is a convolutional neural network that only takes the raw event topology as input. The algorithm applies a series of convolutional filters to search for key event features as opposed to taking these features as input, then trains against these features. Since this PID attempts to classify all event types, cutting events that have a low NC score removes a significant majority of all background types.
+CVN, discussed in detail in reference \cite{ref:CVN}, does not attempt to identify a single event type; rather, it gives the most likely event type among all possibilities. CVN, or convolutional visual network, is the specific application of a convolutional neural network, a deep learning technique that has had success in the field of computer vision and specifically in image processing and classification. CVN was developed as a classifier for \nova~as the events in each view are essentially images of physics processes.
+
+One of the advantages of CNNs is that they do not require a known set of features as inputs; instead, the CNN itself finds and trains on the image features. CNNs use a stack of kernels within a convolutional layer to transform an image in a variety of ways, where each kernel can be thought of as finding a particular feature. For a layer $f$ that acts on an $n\times m$ set of pixels from an image $g$, the image is transformed via
+\beq
+(f \ast g)_{p,q,r} = \sum_{i=1}^n \sum_{j=1}^m \sum_{k=1}^c f_{i,j,k,r} g_{p+i,q+j,k},
+\label{eq:CVNKernel}
+\eeq
+
+\n where $p$ and $q$ are the output pixel indices, $r$ is the output channel, $k$ is the input channel, and $c$ is the total number of channels. For a traditional image, channels refer to the RGB values of the pixel. In \nova, the pixels are the individual cells and the channels are the two views of the event The energy deposited in a cell is encoded into an $8$-bit integer with $256$ possible values much like the intensities of a standard color are encoded. After the kernel is applied to the full image, the output is called a feature map, and a separate map is created and stored from each of the $r$ kernels in the convolutional layer. 
+
+CNNs contain many layers that perform different functions. Convolutional layers nearest to the input image tend to output feature maps that exaggerate specific features while later layers become more holistic and topological. Other layers down-sample the image using a pooling technique that replaces an $n\times m$ subset of pixels with either the maximum pixel value (max pooling) or the average pixel value (average pooling). Finally, a process called local response normalization (LRN) is used that normalizes the result of a given pixel in a feature map relative that pixel in adjacent maps to avoid local minima.
+
+The different layers are chained together into a particular architecture. CVN was built as a modified version of the GoogLeNet \cite{ref:GoogLeNet} architecture using the Caffe \cite{ref:Caffe} framework. One of the features of the GoogLeNet architecture used in several layers for CVN is the inception module, shown in figure \ref{fig:CVNInception}. This module performs several parallel feature extractions at different scales before concatenating the results into a single output layer. The full architecture of CVN is shown in figure \ref{fig:CVNArchitecture}. The XZ and YZ views are split and passed through two independent, equivalent branches. The output from these branches are only joined toward the end of the chain. The output of the final CVN inception module layer is passed into a traditional network for classification, where the event type outputs are normalized to $1$ to be interpreted as probabilities.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/CVN/Inception.png}
+  \caption[Inception Module Schematic]{Schematic of the Inception module.}
+  \label{fig:CVNInception}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.55\textwidth]{figures/CVN/Architecture.png}
+  \caption[CVN Architecture Schematic]{Schematic of the CVN architecture. The algorithm starts at the bottom and moves upward.}
+  \label{fig:CVNArchitecture}
+\end{figure}
+
+CNNs are trained by using a set of images with known classifications and by optimizing a set of weights for each feature to minimize a loss function. This was done for CVN in two steps \cite{ref:TNCVN}, first training over a set of MC events, and second adding in cosmic data. The MC events were split into $13$ types, \{$\numu$ CC, $\nue$ CC, $\nutau$ CC\} $\times$ \{QE, RES, DIS, Other\} and NC. After the training weights for these event types stabilized, a sample of cosmic trigger data was added to train the PID with the full suite of event types. The cosmics were added in a separate step to prevent the PID from simply learning to reject data. Instead of using the entire detector view as the initial input, a smaller $100$ plane $\times$ $80$ cell view is constructed with the most upstream plane lining up with the first hit and the cells centered on the median hit for training, testing, and evaluation.
+
+A true NC, $\nue$ CC, and $\numu$ CC event are each shown with a corresponding feature map collection in figure \ref{fig:CVNEvents}. The maps shown are from the output of the first inception module for the YZ view. Three particular features are highlighted for each of these events that appear to correspond to traditional features. The green feature map shows activity for the $\numu$ CC event as a long, track like feature. Unsurprisingly, this feature map shows little activity for the other two events. The blue map shows a more diffuse pattern for the $\nue$ CC event, but is almost entirely absent for the $\numu$ CC and NC events. This feature map thus appears to be picking out the characteristic shower development of electrons. Finally, the pink map shows moderate activity for all events, with a small peak of activity in the center of the left edge. This feature map seems to be sensitive to the hadronic activity near the event vertex. To reiterate, these feature maps are not the inputs into the final classification layer, but to another inception module layer. As the layers become deeper, the extracted features become more abstract. Distributions of the NC classifier are shown in section \ref{sec:SelNCSel} on NC event selection, section \ref{sec:ResultsND} on ND data/MC comparisons, and section \ref{sec:ResultsFD} on the final results.
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=.95\textwidth]{figures/CVN/MapNumu.png} \\
+    \includegraphics[width=.95\textwidth]{figures/CVN/MapNue.png} \\
+    \includegraphics[width=.95\textwidth]{figures/CVN/MapNC.png} \\
+  \end{tabular}
+  \caption[Feature Maps from Representative Events]{Feature maps from representative events. Top: True $\numu$ CC. Middle: True $\nue$ CC. Bottom: True NC.}
+  \label{fig:CVNEvents}
+\end{figure}
