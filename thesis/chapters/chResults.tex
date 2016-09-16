@@ -14,6 +14,7 @@ Results in this chapter were collected between February 2014 and May 2016. For t
 The first section in this chapter describes the fitting methods used to make the mixing angle and matrix element measurements. Before presenting the results, the next two sections discuss preliminary tests to demonstrate satisfactory performance of the analysis. The final section in this chapter presents the ultimate results.
 
 \section{Fitting Method}
+\label{sec:FitMethod}
 
 It was decided to make rate only measurements for the first \nova~NC disappearance analysis. Thus, even though the extrapolation and prediction were performed in $250\unit{MeV}$ bins of calorimetric energy, only the integrated event totals were input to the fitting framework.
 
@@ -26,8 +27,8 @@ Fitting was performed allowing some parameters to float, some held to best fit v
       \hline\hline
       Parameter & Value \\
       \hline
-      $\dmxy{1}{2}$ & $7.53 \times \left[10^{-5}\evsq\right]$ \\
-      $\dmxy{2}{3}$ & $2.37 \times \left[10^{-3}\evsq\right]$ \\
+      $\dmxy{1}{2}$ & $7.53 \times 10^{-5}\evsq$ \\
+      $\dmxy{2}{3}$ & $2.37 \times 10^{-3}\evsq$ \\
       $\sin^2 2\theta_{12}$ & $0.846$ \\
       $\sin^2 2\theta_{13}$ & $0.085$ \\
       $\theta_{14}$ & $0$ \\
@@ -47,6 +48,7 @@ The best fit values were found by calculating the minimum $\chi^2$ value and all
 \n where $\mu_{23}$ and $\sigma_{23}$ are the mean and standard deviation used in the Gaussian constraint on the value of $\theta_{23}$, $\sigma_i^{BF}$ is the number of standard deviations the $i$th systematic error is shifted in the best fit, and $\sigma_i$ is one standard deviation for the $i$th systematic error. Equation \ref{eq:Chisq} is the standard formula for calculating $\chi^2$ with penalty terms, where the first term is the basic value for $\chi^2$, and the second and third terms add a unit for each shift of $\theta_{23}$ and the systematic errors by their respective variances. For one and two dimensional $\chi^2$ surfaces, the remaining angles not shown were profiled.
 
 \section{ND Data/MC Comparisons}
+\label{sec:ResultsND}
 
 Before diving head first into the FD data, the first necessary analysis benchmark was ND data/MC comparisons. Fig~\ref{fig:NDDataMCECal} shows the event energy distributions and fig.s \ref{fig:NDDataMCFidCont}, \ref{fig:NDDataMCNCSel}, and \ref{fig:NDDataMCCosRej} show the distributions for all of the variables used for selection discussed in chapter \ref{ch:Selection}.
 \begin{figure}[htbp]
@@ -122,6 +124,7 @@ Two sanity checks were performed to ensure that the data/MC difference would not
 \end{figure}
 
 \section{Sideband Studies}
+\label{sec:Sideband}
 
 Three different sidebands were studied to test the performance of the analysis, a high energy sideband, a low CVN sideband, and mid cosmic BDT sideband. The predicted and observed event rates for each sideband are shown in table \ref{tab:Sideband}.
 \begin{table}[htbp]
@@ -165,6 +168,7 @@ The mid cosmic BDT sideband considers events with a BDT score between $0.42$ and
 \end{figure}
 
 \section{Results}
+\label{sec:ResultsFD}
 
 This analysis predicted that there would be $83.8 \pm a.b \mbox{(stat.)} ^{+c.d}_{-e.f} \mbox{(syst.)}$ NC-like events selected in the FD data. $95 \pm 9.7$ were observed, corresponding to a measurement of $R_{NC} = 1.186 \pm 0.161 \mbox{(stat.)} ^{+0.081}_{-0.129} \mbox{(syst.)}$ If active neutrinos mixed with sterile neutrinos, the number of observed events would be depleted, causing $R_{NC}$ to be less than one. Thus, the measurement of $R_{NC}$ is consistent with the no sterile mixing hypothesis.
 
