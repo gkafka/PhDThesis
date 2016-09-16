@@ -44,14 +44,15 @@
 \contentsline {subsection}{\numberline {5.3.2}Cosmic Rejection PID}{87}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}CVN, the All Purpose PID}{88}{subsection.5.3.3}
 \contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{94}{chapter.6}
-\contentsline {section}{\numberline {6.1}Data Quality}{95}{section.6.1}
-\contentsline {section}{\numberline {6.2}Event Quality}{96}{section.6.2}
-\contentsline {section}{\numberline {6.3}Fiducial Volume and Containment}{98}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Far Detector}{98}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Near Detector}{100}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}NC Selection}{101}{section.6.4}
-\contentsline {section}{\numberline {6.5}Cosmic Rejection}{102}{section.6.5}
-\contentsline {section}{\numberline {6.6}Summary}{104}{section.6.6}
+\contentsline {section}{\numberline {6.1}A Note on Preselection}{95}{section.6.1}
+\contentsline {section}{\numberline {6.2}Data Quality}{95}{section.6.2}
+\contentsline {section}{\numberline {6.3}Event Quality}{97}{section.6.3}
+\contentsline {section}{\numberline {6.4}Fiducial Volume and Containment}{97}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Far Detector}{99}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Near Detector}{100}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}NC Selection}{102}{section.6.5}
+\contentsline {section}{\numberline {6.6}Cosmic Rejection}{104}{section.6.6}
+\contentsline {section}{\numberline {6.7}Summary}{105}{section.6.7}
 \contentsline {chapter}{\numberline {7}Neutral Current Spectrum Prediction}{107}{chapter.7}
 \contentsline {section}{\numberline {7.1}The CAFAna Analysis Chain}{107}{section.7.1}
 \contentsline {section}{\numberline {7.2}Near Detector Decomposition}{108}{section.7.2}
@@ -77,4 +78,4 @@
 \contentsline {chapter}{\numberline {10}Conclusions and Future Improvements}{138}{chapter.10}
 \contentsline {section}{\numberline {10.1}Conclusions}{138}{section.10.1}
 \contentsline {section}{\numberline {10.2}Future Improvements}{138}{section.10.2}
-\contentsline {chapter}{References}{145}{chapter*.120}
+\contentsline {chapter}{References}{145}{chapter*.121}

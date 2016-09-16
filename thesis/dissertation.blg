@@ -12,12 +12,12 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 156 of file dissertation.aux
+Illegal, another \bibstyle command---line 157 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 633 of file references.bib
+I was expecting a `,' or a `}'---line 640 of file references.bib
  : 
  : %
 (Error may have been on previous line)
@@ -29,36 +29,36 @@ I was expecting a `,' or a `}'---line 1009 of file references.bib
 I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
-You've used 118 entries,
+You've used 119 entries,
             1791 wiz_defined-function locations,
-            1136 strings with 21300 characters,
-and the built_in function-call counts, 18519 in all, are:
-= -- 1723
-> -- 600
+            1141 strings with 21494 characters,
+and the built_in function-call counts, 18614 in all, are:
+= -- 1732
+> -- 604
 < -- 1
-+ -- 271
-- -- 153
++ -- 273
+- -- 154
 * -- 857
-:= -- 3304
-add.period$ -- 353
-call.type$ -- 118
-change.case$ -- 117
+:= -- 3325
+add.period$ -- 356
+call.type$ -- 119
+change.case$ -- 118
 chr.to.int$ -- 0
-cite$ -- 120
-duplicate$ -- 808
-empty$ -- 1869
-format.name$ -- 153
-if$ -- 4037
+cite$ -- 121
+duplicate$ -- 812
+empty$ -- 1877
+format.name$ -- 154
+if$ -- 4056
 int.to.chr$ -- 0
-int.to.str$ -- 118
+int.to.str$ -- 119
 missing$ -- 64
-newline$ -- 591
-num.names$ -- 117
-pop$ -- 141
+newline$ -- 596
+num.names$ -- 118
+pop$ -- 142
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 272
+skip$ -- 273
 stack$ -- 0
 substring$ -- 1159
 swap$ -- 75
@@ -67,7 +67,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 178
-width$ -- 121
-write$ -- 1195
+while$ -- 179
+width$ -- 122
+write$ -- 1204
 (There were 3 error messages)
