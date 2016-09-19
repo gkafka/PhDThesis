@@ -676,6 +676,41 @@ K.~Bays et~al.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13641}{\nova~Internal
   Document 13641}.
 
+\bibitem{ref:TNCAFAna}
+C.~Backhouse et~al.
+\newblock The {CAFAna} framework.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=9222}{\nova~Internal
+  Document 9222}.
+
+\bibitem{ref:TNDecompBEN}
+E.~Catano-Mur.
+\newblock {BEN} decomposition technote.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15392}{\nova~Internal
+  Document 15392}.
+
+\bibitem{ref:TNDecompMichel}
+D.~Pershey.
+\newblock {MichelDecomp} for the {SA}.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15395}{\nova~Internal
+  Document 15395}.
+
+\bibitem{ref:VHC}
+G.~Kafka.
+\newblock Decomposition by varied horn current.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=13424}{\nova~Internal
+  Document 13424}.
+
+\bibitem{ref:TNModular}
+J.~Lozier.
+\newblock {ModularExtrap} technical note.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=12563}{\nova~Internal
+  Document 12563}.
+
 \bibitem{ref:CalibMESA}
 D.~Pershey.
 \newblock {ME} check with {SA} rock muons in {ND}.
