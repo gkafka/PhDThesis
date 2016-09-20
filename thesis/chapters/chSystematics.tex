@@ -1,13 +1,14 @@
 \chapter{Systematic Error Analysis}
 \label{ch:Systs}
 
-As with any analysis, the NC disappearance analysis is sensitive to a number of systematic effects. \nova~was designed with two functionally identical detectors, so that Near Detector data can be used to constrain or correct the Far Detector prediction. Since many effects such as beam and cross section uncertainties affect the spectra at both detectors in a similar or the same way, this two detector technique leads to the reduction of these systematic errors. Other effects, such as Near Detector rock event contamination, require a data driven technique to quantify.
+As with any analysis, the NC disappearance analysis is sensitive to a number of systematic effects. \nova\newline\n was designed with two functionally identical detectors, so that Near Detector data can be used to constrain or correct the Far Detector prediction. Since many effects such as beam and cross section uncertainties affect the spectra at both detectors in a similar or the same way, this two detector technique leads to the reduction of these systematic errors. Other effects, such as Near Detector rock event contamination, require a data driven technique to quantify.
 
 The general technique for analyzing systematic errors was to run the full extrapolation chain and generate a predicted spectrum with and without a systematic effect applied. As in chapter \ref{ch:Selection}, the prediction assumed the same three flavor oscillation parameters listed in table \ref{tab:3FlavParams}, and for normalization simplicity, only 14 diblock MC and data were studied. All spectra were then scaled to \pot{6}. Each given systematic effect was used to shift the MC simulation at one or both detectors as appropriate. The resulting difference between the shifted and nominal spectra was quantified as a systematic error.
 
 The systematic effects analyzed included uncertainties arising from the beam, GENIE simulation, Birks-Chou light yield simulation, calibration, bias from the ND containment, ND rock event contamination, ND data/MC spectrum and hadronic energy differences, noise model, MC statistics, and overall normalization. The rest of this chapter discusses each of these effects in greater detail.
 
 \section{Beam}
+\label{sec:SystBeam}
 
 The \nova~MC simulation involves a fully detailed model of the NuMI beam process in an attempt to create the most realistic MC possible, but systematic errors can result from any mismatch between simulation and reality. The \nova~Beam Working Group performed studies to assess the effect that uncertainties in the simulation can have on the neutrino flux \cite{ref:TNBeam}. These studies included the effects of incorrectly modeling various parts of the beam transport and the effects of uncertainties in hadron production arising from fixed target experiments.
 
@@ -37,20 +38,20 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
       \hline\hline
       Systematic & NC Difference (\%) & Background Difference (\%) \\
       \hline
-      Beam Position, X & 0.5 & 0.4 \\
-      Beam Position, Y & 0.2 & 0.2 \\
-      Beam Spot Size & 0.2 & 0.3 \\
-      Target Position & 0.04 & 0.1 \\
-      Horn Current & 0.1 & 0.1 \\
-      Horn 1 Position & 0.6 & 0.8 \\
-      Horn 2 Position & 0.2 & 0.2 \\
-      Horn B Field & 0.05 & 0.05 \\
-      Geometry Simulation Change & 0.4 & 1.2 \\
-      FLUKA Versions & 0.04 & 0.4 \\
-      FLUKA v G4NuMI & 0.4 & 1.2 \\
-      FLUKA v NA49 & 3.0 & 2.6 \\
+      Beam Position, X & $0.5$ & $0.4$ \\
+      Beam Position, Y & $0.2$ & $0.2$ \\
+      Beam Spot Size & $0.2$ & $0.3$ \\
+      Target Position & $0.04$ & $0.1$ \\
+      Horn Current & $0.1$ & $0.1$ \\
+      Horn 1 Position & $0.6$ & $0.8$ \\
+      Horn 2 Position & $0.2$ & $0.2$ \\
+      Horn B Field & $0.05$ & $0.05$ \\
+      Geometry Simulation Change & $0.4$ & $1.2$ \\
+      FLUKA Versions & $0.04$ & $0.4$ \\
+      FLUKA v G4NuMI & $0.4$ & $1.2$ \\
+      FLUKA v NA49 & $3.0$ & $2.6$ \\
       \hline
-      Combined & 3.4 & 3.6 \\
+      Combined & $3.4$ & $3.6$ \\
       \hline
     \end{tabular}
   \end{center}
@@ -60,17 +61,18 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
   \centering
   \begin{tabular}{c c}
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXBeamSysts.png} &
-    \includegraphics[width=.47\textwidth]{figures/Systs/cBGEXBeamSysts.png} \\
+    \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXBeamSysts.png} \\
   \end{tabular}
   \caption[Beam Systematic Error Envelopes]{Beam systematics error envelope on the NC signal (left) and background (right) event spectra, after extrapolation. The envelope was calculated by adding in quadrature the larger of $\vert +1\sigma \vert$ and $\vert -1\sigma \vert$ for each individual systematic.}
   \label{fig:SystBeam}
 \end{figure}
 
 \section{Birks-Chou Light Yield Simulation}
+\label{sec:SystBirks}
 
-As discussed in section \ref{sec:SimDet}, the MC simulation employs the Birks-Chou Law (\ref{eq:BirksChou}) to model the relationship between scintillator light yield and energy deposition. This empirical law depends on several constants dependent on the particular scintillator material. These constants were estimated via a data driven study for \nova~\cite{ref:DanBirks}. The results of the study were $k_B = 0.04\unit{cm/MeV}$ and $k_C = -0.0005\unit{(cm/MeV)}^2$.
+As discussed in section \ref{sec:SimGENIE} the MC simulation employs the Birks-Chou Law (equation \ref{eq:BirksChou}) to model the relationship between scintillator light yield and energy deposition. This empirical law depends on several constants dependent on the particular scintillator material. These constants were estimated for the \nova~scintillator via a data driven study \cite{ref:DanBirks}. The results of the study were $k_B = 0.04\unit{cm/MeV}$ and $k_C = -0.0005\unit{(cm/MeV)}^2$.
 
-The systematic error based on the Birks-Chou light yield simulation was quantified by comparing the nominal FD prediction to predicted spectra using alternative Birks-Chou parameter constants. The values reported in the study from \cite{ref:DanBirks} were much larger than other typical measurements, so two MC samples were generated with more traditional values, one with $k_B = 0.01\unit{cm/MeV}$ called BirksB, the other with $k_B = 0.02\unit{cm/MeV}$ called BirksC, both with $k_C = 0$. Shifted FD event spectra were predicted by extrapolating the same set of ND data as the nominal prediction, but using the MC with alternative Birks-Chou model parameters. The error was taken as the percentage difference between the nominal and shifted predictions. Table \ref{tab:SystBirks} shows the percentage differences from both MC samples; figure \ref{fig:SystBirks} shows the shifted event spectra compared to nominal. Instead of combining the individual errors in quadrature, the shifted sample with the larger overall difference from the BirksC model taken as the systematic error, which had a $2.4\%$ effect on the NC signal, and a $1.8\%$ effect on the background.
+The systematic error based on the Birks-Chou light yield simulation was quantified by comparing the nominal FD prediction to predicted spectra using alternative Birks-Chou parameter constants. The values reported in the study from reference \cite{ref:DanBirks} were much larger than other typical measurements, so two MC samples were generated with more traditional values, one with $k_B = 0.01\unit{cm/MeV}$ called BirksB, the other with $k_B = 0.02\unit{cm/MeV}$ called BirksC, both with $k_C = 0$. Shifted FD event spectra were predicted by extrapolating the same set of ND data as the nominal prediction, but using the MC with alternative Birks-Chou model parameters. The error was taken as the percentage difference between the nominal and shifted predictions. Table \ref{tab:SystBirks} shows the percentage differences from both MC samples; figure \ref{fig:SystBirks} shows the shifted event spectra compared to nominal. Instead of combining the individual errors in quadrature, the shifted sample with the larger overall difference from the BirksC model taken as the systematic error, which had a $2.4\%$ effect on the NC signal, and a $1.8\%$ effect on the background.
 \begin{table}[htb]
   \begin{center}
     \caption[Birks-Chou Systematic Errors]{The percentage difference between the shifted and nominal predictions for the number of FD events due to extrapolation using MC with alternative Birks-Chou model parameters.}
@@ -79,8 +81,8 @@ The systematic error based on the Birks-Chou light yield simulation was quantifi
       \hline\hline
       Model & NC Difference (\%) & Background Difference (\%) \\
       \hline
-      BirksB & 0.5 & 1.2 \\
-      BirksC & 2.4 & 1.8 \\
+      BirksB & $0.5$ & $1.2$ \\
+      BirksC & $2.4$ & $1.8$ \\
       \hline
     \end{tabular}
   \end{center}
@@ -90,13 +92,14 @@ The systematic error based on the Birks-Chou light yield simulation was quantifi
   \centering
   \begin{tabular}{c c}
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXBirksSysts.png} &
-    \includegraphics[width=.47\textwidth]{figures/Systs/cBGEXBirksSysts.png} \\
+    \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXBirksSysts.png} \\
   \end{tabular}
   \caption[Birks-Chou Shifted FD Predictions]{Shifted FD predictions due to extrapolation of ND data with MC using different Birks-Chou parameter values. The NC signal spectrum is on the left; the background spectrum is on the right.}
   \label{fig:SystBirks}
 \end{figure}
 
 \section{Calibration}
+\label{sec:SystCalib}
 
 The calibration procedure is designed to make a constant energy response both across each detector and between the two, but any problem can introduce a systematic error. This error was evaluated by studying various MC samples with an engineered miscalibration. The effects studied included a miscalibration that varied as a function of the cell length and an overall scale miscalibration. The functional miscalibration was studied separately between the X and Y views of the detector. The scale miscalibration was applied as a 5\% effect both up and down at each detector. These effects are motivated by studying data/MC comparisons for various samples \cite{ref:TNCalib, ref:CalibMESA, ref:CalibPi0SA} and were updated based on the most recent round of data \cite{ref:CalibSA}.
 
@@ -110,15 +113,15 @@ The systematic error was evaluated in two regimes. The first applied the same mi
       Miscalibration & NC Difference (\%) & Background Difference (\%) \\
       \hline
       \multicolumn{3}{l}{Miscalibration applied to both detectors:} \\
-      Sloped X & 0.5 & 0.5 \\
-      Sloped Y & 1.6 & 1.1 \\
-      Flat Scale Up & 1.6 & 1.2 \\
-      Flat Scale Down & 3.5 & 2.3 \\
+      Sloped X & $0.5$ & $0.5$ \\
+      Sloped Y & $1.6$ & $1.1$ \\
+      Flat Scale Up & $1.6$ & $1.2$ \\
+      Flat Scale Down & $3.5$ & $2.3$ \\
       \multicolumn{3}{l}{Miscalibration applied to one detector:} \\
-      Flat Scale Up, ND & 2.2 & 3.8 \\
-      Flat Scale Down, ND & 4.3 & 5.5 \\
-      Flat Scale Up, FD & 0.6 & 5.6 \\
-      Flat Scale Down, FD & 0.6 & 2.4 \\
+      Flat Scale Up, ND & $2.2$ & $3.8$ \\
+      Flat Scale Down, ND & $4.3$ & $5.5$ \\
+      Flat Scale Up, FD & $0.6$ & $5.6$ \\
+      Flat Scale Down, FD & $0.6$ & $2.4$ \\
       \hline
     \end{tabular}
   \end{center}
@@ -128,7 +131,7 @@ The systematic error was evaluated in two regimes. The first applied the same mi
   \centering
   \begin{tabular}{c c}
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXCalibAbsSysts.png} &
-    \includegraphics[width=.47\textwidth]{figures/Systs/cBGEXCalibAbsSysts.png} \\
+    \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXCalibAbsSysts.png} \\
   \end{tabular}
   \caption[Shifted FD Predictions Due to Miscalibration at Both Detectors]{Shifted FD predictions due to miscalibration applied to both detector MC samples. The NC signal spectrum is on the left; the background spectrum is on the right.}
   \label{fig:SystCalibAbs}
@@ -138,7 +141,7 @@ The systematic error was evaluated in two regimes. The first applied the same mi
   \centering
   \begin{tabular}{c c}
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXCalibRelSysts.png} &
-    \includegraphics[width=.47\textwidth]{figures/Systs/cBGEXCalibRelSysts.png} \\
+    \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXCalibRelSysts.png} \\
   \end{tabular}
   \caption[Shifted FD Predictions Due to Miscalibration at One Detector]{Shifted FD predictions due to miscalibration applied to one detector MC sample. The NC signal spectrum is on the left; the background spectrum is on the right.}
   \label{fig:SystCalibRel}
@@ -152,7 +155,7 @@ Neutrino interactions in the \nova~simulation are generated using GENIE \cite{re
 The systematic uncertainties from physics modeling were evaluated by using the GENIE parameters as event reweights. Nominal MC was produced using the parameters and weights as provided by the GENIE authors, but also included a table of weights to modify an events `worth' based on how much the different GENIE parameters shifted. Using the reweight table, a nominal FD prediction was produced from the default MC, and a shifted prediction was produced for each of the parameters provided by GENIE. The percentage difference was taken as the systematic error for the particular parameter. Table \ref{tab:SystGENIE} lists all of the parameters considered for the systematic study, and the associated error. Figure \ref{fig:SystGENIE} shows the final systematic error envelope. The combined systematic error, adding the individual contributions in quadrature, was $1.6\%$ for the NC signal and $4.8\%$ for the background.
 
 \singlespacing
-\begin{longtable}{p{3.5in} c c c}
+\begin{longtable}{p{3.25in} c c c}
   \caption[GENIE Systematic Errors]{The systematic error, in percentage difference, for each GENIE systematic parameter. The description and standard deviations come from reference \cite{ref:GENIE, ref:TNGENIE}. Parameters with a standard deviation marked as `D' are discrete and thus do not have a standard deviation estimate.} \tabularnewline
   \hline\hline
   \multicolumn{2}{c}{Parameter Description and Standard Deviation} & NC Diff. (\%) & Bkg.~Diff. (\%) \\
@@ -160,64 +163,64 @@ The systematic uncertainties from physics modeling were evaluated by using the G
   \hline\hline
   \multicolumn{2}{c}{Parameter Description and Standard Deviation} & NC Diff. (\%) & Bkg.~Diff. (\%) \\
   \hline \endhead
-  Axial mass for NC elastic & $\pm25\%$ & 0.4 & 0.00 \\
-  Strange axial form factor $\eta$ for NC elastic & $\pm30\%$ & 0.02 & 0.00 \\
-  Normalization Factor for CCQE & $^{+25\%}_{-15\%}$ & 0.00 & 1.3 \\
-  Axial mass CCQE distribution shape & $^{+25\%}_{-15\%}$ & 0.0 & 0.4 \\
-  CCQE Pauli suppression (via changes in Fermi level $k_F$) & $\pm35\%$ & 0.00 & 0.6 \\
-  Choice of CCQE vector form factors \newline (BBA05 $\leftrightarrow$ Dipole) & D & 0.00 & 0.3 \\
-%  Parametrization of nucleon momentum distributions & D & 0.00 & 0.00 \\ %CCQEMomDistroFGtoSF
-  Axial mass for CC resonance neutrino production & $\pm20\%$ & 0.00 & 2.2 \\
-  Vector mass for CC resonance neutrino \newline production & $\pm10\%$ & 0.00 & 1.1 \\
-  Axial mass for NC resonance neutrino production & $\pm20\%$ & 0.7 & 0.00 \\
-  Vector mass for NC resonance neutrino production & $\pm10\%$ & 0.2 & 0.00 \\
-  Axial mass for CC and NC coherent pion \newline production & $\pm50\%$ & 0.4 & 0.3 \\
-  Nuclear size param controlling $\pi$ absorption in RS model & $\pm10\%$ & 0.4 & 0.3 \\
-  Non-resonance bkg in $\nu p$ CC$1\pi$ reactions & $\pm50\%$ & 0.00 & 0.4 \\
-  Non-resonance bkg in $\nu p$ CC$2\pi$ reactions & $\pm50\%$ & 0.00 & 0.9 \\
-  Non-resonance bkg in $\nu n$ CC$1\pi$ reactions & $\pm50\%$ & 0.00 & 1.9 \\
-  Non-resonance bkg in $\nu n$ CC$2\pi$ reactions & $\pm50\%$ & 0.00 & 0.9 \\
-  Non-resonance bkg in $\nu p$ NC$1\pi$ reactions & $\pm50\%$ & 0.2 & 0.00 \\
-  Non-resonance bkg in $\nu p$ NC$2\pi$ reactions & $\pm50\%$ & 0.2 & 0.00 \\
-  Non-resonance bkg in $\nu n$ NC$1\pi$ reactions & $\pm50\%$ & 0.2 & 0.00 \\
-  Non-resonance bkg in $\nu n$ NC$2\pi$ reactions & $\pm50\%$ & 0.1 & 0.00 \\
-  Non-resonance bkg in $\bar{\nu} p$ CC$1\pi$ reactions & $\pm50\%$ & 0.00 & 0.1 \\
-  Non-resonance bkg in $\bar{\nu} p$ CC$2\pi$ reactions & $\pm50\%$ & 0.00 & 0.02 \\
-  Non-resonance bkg in $\bar{\nu} n$ CC$1\pi$ reactions & $\pm50\%$ & 0.00 & 0.01 \\
-  Non-resonance bkg in $\bar{\nu} n$ CC$2\pi$ reactions & $\pm50\%$ & 0.00 & 0.02 \\
-  Non-resonance bkg in $\bar{\nu} p$ NC$1\pi$ reactions & $\pm50\%$ & 0.02 & 0.00 \\
-  Non-resonance bkg in $\bar{\nu} p$ NC$2\pi$ reactions & $\pm50\%$ & 0.02 & 0.00 \\
-  Non-resonance bkg in $\bar{\nu} n$ NC$1\pi$ reactions & $\pm50\%$ & 0.02 & 0.00 \\
-  Non-resonance bkg in $\bar{\nu} n$ NC$2\pi$ reactions & $\pm50\%$ & 0.02 & 0.00 \\
-  $A_{HT}$ higher-twist param in BY model scaling \newline variable $\xi_w$ & $\pm25\%$ & 0.01 & 0.2 \\
-  $B_{HT}$ higher-twist param in BY model scaling \newline variable $\xi_w$ & $\pm25\%$ & 0.02 & 0.3 \\
-  $C_{V1u}$ u valence GRV98 PDF correction param in BY model & $\pm30\%$ & 0.02 & 0.1 \\
-  $C_{V2u}$ u valence GRV98 PDF correction param in BY model & $\pm40\%$ & 0.01 & 0.1 \\
-%  Inclusive CC cross-section normalization factor & 0.00 & 0.00 & \\
-%  $\bar{\nu}/\nu$ CC ratio & 0.00 & 0.00 & \\
-%  DIS nuclear & 0.00 & 0.00 & \\
-  Pion transverse momentum ($p_T$) for $N\pi$ states in AGKY & D & 0.01 & 0.02 \\
-  Pion Feynman x ($x_F$) for $N\pi$ states in AGKY & D & 0.01 & 0.02 \\
-%  Hadron formation zone & $\pm50\%$ & 0.00 & 0.00 \\
-  Pion angular distribution in $\Delta \rightarrow \pi N$ \newline (isotropic $\leftrightarrow$ RS) & D & 0.1 & 0.3 \\
-  Branching ratio for radiative resonance decays & $\pm50\%$ & 0.02 & 0.01 \\
-  Branching ratio for single-$\eta$ resonance decays & $\pm50\%$ & 0.1 & 0.2 \\
-  Nucelon mean free path (total rescattering \newline probability) & $\pm20\%$ & 0.2 & 0.4 \\
-  Nucleon charge exchange probability & $\pm50\%$ & 0.1 & 0.2 \\
-  Nucleon elastic reaction probability & $\pm30\%$ & 0.1 & 0.4 \\
-  Nucleon inelastic reaction probability & $\pm40\%$ & 0.1 & 0.2 \\
-  Nucleon absorption probability & $\pm20\%$ & 0.05 & 0.2 \\
-  Nucleon $\pi$-production probability & $\pm20\%$ & 0.04 & 0.1 \\
-  $\pi$ mean free path (total rescattering probability) & $\pm20\%$ & 0.4 & 0.7 \\
-  $\pi$ charge exchange probability & $\pm50\%$ & 0.1 & 0.2 \\
-  $\pi$ elastic reaction probability & $\pm10\%$ & 0.1 & 0.1 \\
-  $\pi$ inelastic reaction probability & $\pm40\%$ & 0.6 & 0.3 \\
-  $\pi$ absorption probability & $\pm20\%$ & 0.6 & 0.4 \\
-  $\pi$ $\pi$-production probability & $\pm20\%$ & 0.03 & 0.1 \\
-  MEC event scale & $+50\%$ & 0.00 & 1.6 \\
-  RPA event weight & Varied & 0.00 & 1.1 \\
+  Axial mass for NC elastic & $\pm25\%$ & $0.4$ & $0.00$ \\
+  Strange axial form factor $\eta$ for NC elastic & $\pm30\%$ & $0.02$ & $0.00$ \\
+  Normalization factor for CCQE & $^{+25\%}_{-15\%}$ & $0.00$ & $1.3$ \\
+  Axial mass CCQE distribution shape & $^{+25\%}_{-15\%}$ & $0.0$ & $0.4$ \\
+  CCQE Pauli suppression (via changes in Fermi level $k_F$) & $\pm35\%$ & $0.00$ & $0.6$ \\
+  Choice of CCQE vector form factors \newline (BBA05 $\leftrightarrow$ Dipole) & D & $0.00$ & $0.3$ \\
+%  Parametrization of nucleon momentum distributions & D & $0.00$ & $0.00$ \\ %CCQEMomDistroFGtoSF
+  Axial mass for CC resonance neutrino production & $\pm20\%$ & $0.00$ & $2.2$ \\
+  Vector mass for CC resonance neutrino \newline production & $\pm10\%$ & $0.00$ & $1.1$ \\
+  Axial mass for NC resonance neutrino production & $\pm20\%$ & $0.7$ & $0.00$ \\
+  Vector mass for NC resonance neutrino production & $\pm10\%$ & $0.2$ & $0.00$ \\
+  Axial mass for CC and NC coherent pion \newline production & $\pm50\%$ & $0.4$ & $0.3$ \\
+  Nuclear size parameter controlling $\pi$ absorption \newline in RS model & $\pm10\%$ & $0.4$ & $0.3$ \\
+  Non-resonance background in $\nu p$ CC$1\pi$ reactions & $\pm50\%$ & $0.00$ & $0.4$ \\
+  Non-resonance background in $\nu p$ CC$2\pi$ reactions & $\pm50\%$ & $0.00$ & $0.9$ \\
+  Non-resonance background in $\nu n$ CC$1\pi$ reactions & $\pm50\%$ & $0.00$ & $1.9$ \\
+  Non-resonance background in $\nu n$ CC$2\pi$ reactions & $\pm50\%$ & $0.00$ & $0.9$ \\
+  Non-resonance background in $\nu p$ NC$1\pi$ reactions & $\pm50\%$ & $0.2$ & $0.00$ \\
+  Non-resonance background in $\nu p$ NC$2\pi$ reactions & $\pm50\%$ & $0.2$ & $0.00$ \\
+  Non-resonance background in $\nu n$ NC$1\pi$ reactions & $\pm50\%$ & $0.2$ & $0.00$ \\
+  Non-resonance background in $\nu n$ NC$2\pi$ reactions & $\pm50\%$ & $0.1$ & $0.00$ \\
+  Non-resonance background in $\bar{\nu} p$ CC$1\pi$ reactions & $\pm50\%$ & $0.00$ & $0.1$ \\
+  Non-resonance background in $\bar{\nu} p$ CC$2\pi$ reactions & $\pm50\%$ & $0.00$ & $0.02$ \\
+  Non-resonance background in $\bar{\nu} n$ CC$1\pi$ reactions & $\pm50\%$ & $0.00$ & $0.01$ \\
+  Non-resonance background in $\bar{\nu} n$ CC$2\pi$ reactions & $\pm50\%$ & $0.00$ & $0.02$ \\
+  Non-resonance background in $\bar{\nu} p$ NC$1\pi$ reactions & $\pm50\%$ & $0.02$ & $0.00$ \\
+  Non-resonance background in $\bar{\nu} p$ NC$2\pi$ reactions & $\pm50\%$ & $0.02$ & $0.00$ \\
+  Non-resonance background in $\bar{\nu} n$ NC$1\pi$ reactions & $\pm50\%$ & $0.02$ & $0.00$ \\
+  Non-resonance background in $\bar{\nu} n$ NC$2\pi$ reactions & $\pm50\%$ & $0.02$ & $0.00$ \\
+  $A_{HT}$ higher-twist parameter in BY model scaling \newline variable $\xi_w$ & $\pm25\%$ & $0.01$ & $0.2$ \\
+  $B_{HT}$ higher-twist parameter in BY model scaling \newline variable $\xi_w$ & $\pm25\%$ & $0.02$ & $0.3$ \\
+  $C_{V1u}$ u valence GRV98 PDF correction parameter \newline in BY model & $\pm30\%$ & $0.02$ & $0.1$ \\
+  $C_{V2u}$ u valence GRV98 PDF correction parameter \newline in BY model & $\pm40\%$ & $0.01$ & $0.1$ \\
+%  Inclusive CC cross-section normalization factor & & $0.00$ & $0.00$ \\
+%  $\bar{\nu}/\nu$ CC ratio & & $0.00$ & $0.00$ \\
+%  DIS nuclear & & $0.00$ & $0.00$ \\
+  Pion transverse momentum ($p_T$) for $N\pi$ states \newline in AGKY & D & $0.01$ & $0.02$ \\
+  Pion Feynman x ($x_F$) for $N\pi$ states in AGKY & D & $0.01$ & $0.02$ \\
+%  Hadron formation zone & $\pm50\%$ & $0.00$ & $0.00$ \\
+  Pion angular distribution in $\Delta \rightarrow \pi N$ \newline (isotropic $\leftrightarrow$ RS) & D & $0.1$ & $0.3$ \\
+  Branching ratio for radiative resonance decays & $\pm50\%$ & $0.02$ & $0.01$ \\
+  Branching ratio for single-$\eta$ resonance decays & $\pm50\%$ & $0.1$ & $0.2$ \\
+  Nucelon mean free path (total rescattering \newline probability) & $\pm20\%$ & $0.2$ & $0.4$ \\
+  Nucleon charge exchange probability & $\pm50\%$ & $0.1$ & $0.2$ \\
+  Nucleon elastic reaction probability & $\pm30\%$ & $0.1$ & $0.4$ \\
+  Nucleon inelastic reaction probability & $\pm40\%$ & $0.1$ & $0.2$ \\
+  Nucleon absorption probability & $\pm20\%$ & $0.05$ & $0.2$ \\
+  Nucleon $\pi$-production probability & $\pm20\%$ & $0.04$ & $0.1$ \\
+  $\pi$ mean free path (total rescattering probability) & $\pm20\%$ & $0.4$ & $0.7$ \\
+  $\pi$ charge exchange probability & $\pm50\%$ & $0.1$ & $0.2$ \\
+  $\pi$ elastic reaction probability & $\pm10\%$ & $0.1$ & $0.1$ \\
+  $\pi$ inelastic reaction probability & $\pm40\%$ & $0.6$ & $0.3$ \\
+  $\pi$ absorption probability & $\pm20\%$ & $0.6$ & $0.4$ \\
+  $\pi$ $\pi$-production probability & $\pm20\%$ & $0.03$ & $0.1$ \\
+  MEC event scale & $+50\%$ & $0.00$ & $1.6$ \\
+  RPA event weight & Varied & $0.00$ & $1.1$ \\
   \hline
-  Combined & & 1.6 & 4.8 \\
+  Combined & & $1.6$ & $4.8$ \\
   \hline
   \label{tab:SystGENIE}
 \end{longtable}
@@ -227,13 +230,14 @@ The systematic uncertainties from physics modeling were evaluated by using the G
   \centering
   \begin{tabular}{c c}
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXGENIESysts.png} &
-    \includegraphics[width=.47\textwidth]{figures/Systs/cBGEXGENIESysts.png} \\
+    \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXGENIESysts.png} \\
   \end{tabular}
   \caption[GENIE Systematic Error Envelopes]{GENIE systematics error envelope on the NC signal (left) and background (right) event spectra, after extrapolation. The envelope was calculated by adding in quadrature the larger of $\vert +1\sigma \vert$ and $\vert -1\sigma \vert$ for each individual systematic.}
   \label{fig:SystGENIE}
 \end{figure}
 
 \section{ND Containment}
+\label{sec:SystNDCont}
 
 The ND does not see an effective point source of neutrinos like the FD due to its proximity to the beam source. As a result, the neutrino flux is not uniform across the detector, and so the energy spectrum of neutrinos seen by the two \nova~detectors is slightly different. To study the effect this has on the extrapolated prediction, multiple predicted FD spectra were generated using subsamples of the ND. The fiducial volume of the ND was split in half along each axis, and split into an inner and outer half (the overall containment criteria was left in tact). The extrapolation was performed using each of these `half detectors.' The error was taken as the percentage difference from the shifted prediction to the nominal. Table \ref{tab:SystFidCont} shows the results from each of these extrapolations and figure \ref{fig:SystFidCont} show the shifted spectra. Like the Birks-Chou systematic, the largest overall difference was taken as the systematic error for a $1.0\%$ effect on the NC signal and a $0.6\%$ effect on the background.
 \begin{table}[htb]
@@ -244,14 +248,14 @@ The ND does not see an effective point source of neutrinos like the FD due to it
       \hline\hline
       ND Half & NC Difference (\%) & Background Difference (\%) \\
       \hline
-      West (+X) & 0.3 & 0.01 \\
-      East (-X) & 0.2 & 0.1 \\
-      Top (+Y) & 0.3 & 0.01 \\
-      Bottom (-Y) & 0.3 & 0.01 \\
-      Front (Low Z) & 0.1 & 0.3 \\
-      Back (High Z) & 0.1 & 0.4 \\
-      Inner (Low $\vert$X$\vert$, $\vert$Y$\vert$) & 0.8 & 0.02 \\
-      Outer (High $\vert$X$\vert$, $\vert$Y$\vert$) & 1.0 & 0.6 \\
+      West (+X) & $0.3$ & $0.01$ \\
+      East (-X) & $0.2$ & $0.1$ \\
+      Top (+Y) & $0.3$ & $0.01$ \\
+      Bottom (-Y) & $0.3$ & $0.01$ \\
+      Front (Low Z) & $0.1$ & $0.3$ \\
+      Back (High Z) & $0.1$ & $0.4$ \\
+      Inner (Low $\vert$X$\vert$, $\vert$Y$\vert$) & $0.8$ & $0.02$ \\
+      Outer (High $\vert$X$\vert$, $\vert$Y$\vert$) & $1.0$ & $0.6$ \\
       \hline
     \end{tabular}
   \end{center}
@@ -261,36 +265,36 @@ The ND does not see an effective point source of neutrinos like the FD due to it
   \centering
   \begin{tabular}{c c}
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXFidContSysts.png} &
-    \includegraphics[width=.47\textwidth]{figures/Systs/cBGEXFidContSysts.png} \\
+    \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXFidContSysts.png} \\
   \end{tabular}
   \caption[Shifted FD Predictions from Extrapolation of Halves of the ND]{Shifted FD predictions after extrapolation using only half of the ND fiducial volume. The NC signal spectrum is on the left; the background spectrum is on the right.}
   \label{fig:SystFidCont}
 \end{figure}
 
 \section{ND Rock Event Contamination}
+\label{sec:SystNDRock}
 
 The MC simulation does include neutrino interactions that occur in the rock that surrounds the ND. These events often leak into the detector volume, and while most of them are cut away by fiducial and containment cuts, there are some that remain. Those events that do remain cannot be reconstructed properly as their origins are outside of the detector. 
 
 The systematic error that is incurred due to the rock event contamination was estimated by predicting the FD event spectrum from an extrapolation with rock events removed by MC truth and comparing to the nominal predicted spectrum. The events were only removed from the ND MC sample, requiring that the true neutrino vertex was inside the detector to remain. The shifted spectra are shown in figure \ref{fig:SystNDRock}. This systematic amounted to an overall $4.1\%$ shift on the NC signal spectrum and a $1.7\%$ shift on the background spectrum.
-
 \begin{figure}[htb]
   \centering
   \begin{tabular}{c c}
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXNDRockSysts.png} &
-    \includegraphics[width=.47\textwidth]{figures/Systs/cBGEXNDRockSysts.png} \\
+    \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXNDRockSysts.png} \\
   \end{tabular}
   \caption[ND Rock Contamination Shifted Spectra]{Shifted vs nominal spectra for the NC signal (left) and background (right). The shifted spectra are extrapolated after removal of rock events in the ND MC by truth.}
   \label{fig:SystNDRock}
 \end{figure}
 
 \section{ND Data/MC Difference and CC Background}
-\label{sec:DataMC}
+\label{sec:SystDataMC}
 
 To assess the results over the MC simulation, data was compared to MC at the ND, and the event spectra were found to be an imperfect match; see figure \ref{fig:NDDataMC}. The FD prediction is made by decomposing ND data into NC, $\numu$ CC and $\nue$ CC components proportional to the amounts in the MC, so a data/MC difference can cause a systematic effect. This error was treated as a hybrid decomposition and CC background error, and as such, was quantified using a hybrid method.
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/NDDataMC.png}
-  \caption[ND Data/MC Energy Spectrum Comparison]{Energy spectra for data and MC at the ND, from reference \cite{ref:NDDataMC}}
+  \caption[ND Data/MC Energy Spectrum Comparison]{Energy spectra for data and MC at the ND, from reference \cite{ref:NDDataMC}.}
   \label{fig:NDDataMC}
 \end{figure}
 
@@ -305,13 +309,13 @@ The NC disappearance analysis used a combination of the above techniques to eval
       \hline\hline
       Error Method & NC Difference (\%) & Background Difference (\%) \\
       \hline
-      Beam $\nue$ $+100\%$ & 0.00 & 8.2 \\
-      Beam $\nue$ $-100\%$ & 0.00 & 8.2 \\
-      ND Data/MC difference & \multirow{2}{*}{5.2} & \multirow{2}{*}{7.7} \\
+      Beam $\nue$ $+100\%$ & $0.00$ & $8.2$ \\
+      Beam $\nue$ $-100\%$ & $0.00$ & $8.2$ \\
+      ND Data/MC difference & \multirow{2}{*}{$5.2$} & \multirow{2}{*}{$7.7$} \\
       assigned to NC component \\
-      ND Data/MC difference & \multirow{2}{*}{7.0} & \multirow{2}{*}{6.4} \\
+      ND Data/MC difference & \multirow{2}{*}{$7.0$} & \multirow{2}{*}{$6.4$} \\
       assigned to $\numu$ CC component \\
-      Overall & 7.0 & 10.4 \\
+      Overall & $7.0$ & $10.4$ \\
       \hline
     \end{tabular}
   \end{center}
@@ -321,27 +325,31 @@ The NC disappearance analysis used a combination of the above techniques to eval
   \centering
   \begin{tabular}{c c}
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXDecompSysts.png} &
-    \includegraphics[width=.47\textwidth]{figures/Systs/cBGEXDecompSysts.png} \\
+    \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXDecompSysts.png} \\
   \end{tabular}
   \caption[Systematic Error Due to ND Data/MC Discrepancy and CC Background Uncertainty]{Shifted FD predictions from studies to quantify ND data/MC difference and CC background uncertainties.}
   \label{fig:SystNDDataMC}
 \end{figure}
 
 \section{MC Statistics}
+\label{sec:SystMCStats}
 
 In a perfect world, there would be enough MC statistics that this section would be unnecessary, but alas, a perfect world this is not. To estimate the systematic error due to MC statistics, the MC was split into five uniformly sized samples, and each was used to extrapolate the same set of ND data. One of the resultant predicted FD spectra was labeled as nominal, and the other four were compared to this. The bin by bin differences were taken as the error between the nominal spectrum and the `shifted' spectrum. To come up with an overall uncertainty, all of the errors were added in quadrature and the result was divided by the square root of the number of samples, or $\sqrt{4} = 2$. The result was a $2.0\%$ error on the NC signal spectrum and a $4.8\%$ error on the background spectrum.
 
 \section{Noise Model}
+\label{sec:SystNoise}
 
 A sample of MC was generated for the FD using a different model of noise to study the systematic error caused by the noise model. To quantify the error, the predicted FD event spectra from the nominal and alternative MC samples were compared against each other after applying normal three flavor oscillation weights. The difference seen was $0.9\%$ for the NC signal, and $0.7\%$ for the background. As the shifted sample was only generated for the FD MC and the error was comparatively small, this systematic was added into the overall normalization.
 
 \section{Overall Normalization}
+\label{sec:SystNorm}
 
-Several independent effects contributed to an overall normalization systematic error. A $0.5\%$ error on the POT counting came from a small difference in the two toroids that determine the POT in a spill \cite{ref:TNBeam}. Uncertainties in the masses of the various parts of the \nova~detectors contributed another error of $0.7\%$ \cite{ref:MassError}. Finally, a study of the reconstruction efficiency between ND data and MC showed a $2.9\%$ difference between the number of events that get fully reconstructed \cite{ref:NDDataMCRecoEff}, which was taken directly as a contribution to the normalization error. These three effects and the noise systematic were combined in quadrature and constituted a systematic error of $3.2\%$ on the NC signal and $3.1\%$ on the background.
+Several independent effects contributed to an overall normalization systematic error. A $0.5\%$ error on the POT counting came from a small difference in the two toroids that determine the POT in a spill \cite{ref:TNBeam}. Uncertainties in the masses of the various parts of the \nova~detectors contributed another error of $0.7\%$ \cite{ref:MassError}. A study of the reconstruction efficiency between ND data and MC showed a $2.9\%$ difference between the number of events that get fully reconstructed \cite{ref:NDDataMCRecoEff}, which was taken directly as a contribution to the normalization error. Finally, studies of the interaction rate after overlaying cosmic trigger data over MC beam interactions suggested a rate difference of $3.7\%$. These four effects and the noise systematic were combined in quadrature and constituted a systematic error of $4.9\%$ on the NC signal and $4.9\%$ on the background.
 
 \section{Systematic Error Summary}
+\label{sec:SystSummary}
 
-Table \ref{tab:SystSummary} shows a summary of all of the systematics, as well as an overall error. The overall error was calculated by summing the error from each row in quadrature. The final systematic error on the NC signal is $11.6\%$ and the error on the background is $14.8\%$.
+Table \ref{tab:SystSummary} shows a summary of all of the systematics, as well as an overall error. The overall error was calculated by summing the error from each row in quadrature. The final systematic error on the NC signal is $12.2\%$ and the error on the background is $15.2\%$.
 \begin{table}[htb]
   \begin{center}
     \caption[Systematic Error Summary]{A summary of the individual systematic errors for the NC disappearance analysis. The errors are percentage differences between the nominal and shifted predicted spectra.}
@@ -350,17 +358,17 @@ Table \ref{tab:SystSummary} shows a summary of all of the systematics, as well a
       \hline\hline
       Systematic & NC Difference (\%) & Background Difference (\%) \\
       \hline
-      Beam & 3.4 & 3.6 \\
-      Birks-Chou & 2.4 & 1.8 \\
-      Calibration & 5.8 & 6.0 \\
-      GENIE & 1.6 & 4.8 \\
-      ND Containment & 1.0 & 0.6 \\
-      ND Rock Contamination & 4.1 & 1.7 \\
-      ND Data/MC & 7.0 & 10.4 \\
-      MC Statistics & 2.0 & 4.8 \\
-      Overall Normalization & 3.2 & 3.1 \\
+      Beam & $3.4$ & $3.6$ \\
+      Birks-Chou & $2.4$ & $1.8$ \\
+      Calibration & $5.8$ & $6.0$ \\
+      GENIE & $1.6$ & $4.8$ \\
+      ND Containment & $1.0$ & $0.6$ \\
+      ND Rock Contamination & $4.1$ & $1.7$ \\
+      ND Data/MC & $7.0$ & $10.4$ \\
+      MC Statistics & $2.0$ & $4.8$ \\
+      Overall Normalization & $4.9$ & $4.9$ \\
       \hline
-      Combined & 11.6 & 14.8 \\
+      Combined & $12.2$ & $15.2$ \\
       \hline
     \end{tabular}
   \end{center}
@@ -376,6 +384,25 @@ All of the systematics discussed to this point were also calculated at the ND. M
   \caption[ND Data/MC Spectra with Systematics]{ND Data/MC spectra with full systematic error band. The calorimetric energy spectrum is shown on the left, the number of hits spectrum is shown on the right.}
   \label{fig:NDSystBand}
 \end{figure}
+
+%3.3568, 3.5575
+%2.4436, 1.7554
+%3.5338, 2.3200
+%0.5350, 0.4734
+%1.6067, 1.0886
+%4.3086, 5.4516
+%1.6259, 4.8421
+%0.9553, 0.5984
+%4.0920, 1.6963
+%7.0269, 6.3453
+%0.0000, 8.2210
+%1.9691, 4.7888
+%0.5000, 0.5000
+%0.7000, 0.7000
+%0.7000, 0.7000
+%0.8787, 0.7284
+%2.9306, 2.9306
+%3.7000, 3.7000
 
 %%\begin{table}[htb]
 %%  \begin{center}
@@ -397,22 +424,22 @@ All of the systematics discussed to this point were also calculated at the ND. M
 %      MvNCRES & Vector mass for NC resonance neutrino production & $\pm10\%$ & & \\
 %      MaCOHpi & Axial mass for CC and NC coherent pion production & $\pm50\%$ & & \\
 %      R0COHpi & Nuclear size param controlling $pi$ absorption in RS model & $\pm10\%$ & & \\
-%      RvpCC1pi & Non-resonance bkg in $\nu p$ CC$1\pi$ reactions & $\pm50\%$ & & \\
-%      RvpCC2pi & Non-resonance bkg in $\nu p$ CC$2\pi$ reactions & $\pm50\%$ & & \\
-%      RvnCC1pi & Non-resonance bkg in $\nu n$ CC$1\pi$ reactions & $\pm50\%$ & & \\
-%      RvnCC2pi & Non-resonance bkg in $\nu n$ CC$2\pi$ reactions & $\pm50\%$ & & \\
-%      RvpNC1pi & Non-resonance bkg in $\nu p$ NC$1\pi$ reactions & $\pm50\%$ & & \\
-%      RvpNC2pi & Non-resonance bkg in $\nu p$ NC$2\pi$ reactions & $\pm50\%$ & & \\
-%      RvnNC1pi & Non-resonance bkg in $\nu n$ NC$1\pi$ reactions & $\pm50\%$ & & \\
-%      RvnNC2pi & Non-resonance bkg in $\nu n$ NC$2\pi$ reactions & $\pm50\%$ & & \\
-%      RvbarpCC1pi & Non-resonance bkg in $\bar{\nu} p$ CC$1\pi$ reactions & $\pm50\%$ & & \\
-%      RvbarpCC2pi & Non-resonance bkg in $\bar{\nu} p$ CC$2\pi$ reactions & $\pm50\%$ & & \\
-%      RvbarnCC1pi & Non-resonance bkg in $\bar{\nu} n$ CC$1\pi$ reactions & $\pm50\%$ & & \\
-%      RvbarnCC2pi & Non-resonance bkg in $\bar{\nu} n$ CC$2\pi$ reactions & $\pm50\%$ & & \\
-%      RvbarpNC1pi & Non-resonance bkg in $\bar{\nu} p$ NC$1\pi$ reactions & $\pm50\%$ & & \\
-%      RvbarpNC2pi & Non-resonance bkg in $\bar{\nu} p$ NC$2\pi$ reactions & $\pm50\%$ & & \\
-%      RvbarnNC1pi & Non-resonance bkg in $\bar{\nu} n$ NC$1\pi$ reactions & $\pm50\%$ & & \\
-%      RvbarnNC2pi & Non-resonance bkg in $\bar{\nu} n$ NC$2\pi$ reactions & $\pm50\%$ & & \\
+%      RvpCC1pi & Non-resonance background in $\nu p$ CC$1\pi$ reactions & $\pm50\%$ & & \\
+%      RvpCC2pi & Non-resonance background in $\nu p$ CC$2\pi$ reactions & $\pm50\%$ & & \\
+%      RvnCC1pi & Non-resonance background in $\nu n$ CC$1\pi$ reactions & $\pm50\%$ & & \\
+%      RvnCC2pi & Non-resonance background in $\nu n$ CC$2\pi$ reactions & $\pm50\%$ & & \\
+%      RvpNC1pi & Non-resonance background in $\nu p$ NC$1\pi$ reactions & $\pm50\%$ & & \\
+%      RvpNC2pi & Non-resonance background in $\nu p$ NC$2\pi$ reactions & $\pm50\%$ & & \\
+%      RvnNC1pi & Non-resonance background in $\nu n$ NC$1\pi$ reactions & $\pm50\%$ & & \\
+%      RvnNC2pi & Non-resonance background in $\nu n$ NC$2\pi$ reactions & $\pm50\%$ & & \\
+%      RvbarpCC1pi & Non-resonance background in $\bar{\nu} p$ CC$1\pi$ reactions & $\pm50\%$ & & \\
+%      RvbarpCC2pi & Non-resonance background in $\bar{\nu} p$ CC$2\pi$ reactions & $\pm50\%$ & & \\
+%      RvbarnCC1pi & Non-resonance background in $\bar{\nu} n$ CC$1\pi$ reactions & $\pm50\%$ & & \\
+%      RvbarnCC2pi & Non-resonance background in $\bar{\nu} n$ CC$2\pi$ reactions & $\pm50\%$ & & \\
+%      RvbarpNC1pi & Non-resonance background in $\bar{\nu} p$ NC$1\pi$ reactions & $\pm50\%$ & & \\
+%      RvbarpNC2pi & Non-resonance background in $\bar{\nu} p$ NC$2\pi$ reactions & $\pm50\%$ & & \\
+%      RvbarnNC1pi & Non-resonance background in $\bar{\nu} n$ NC$1\pi$ reactions & $\pm50\%$ & & \\
+%      RvbarnNC2pi & Non-resonance background in $\bar{\nu} n$ NC$2\pi$ reactions & $\pm50\%$ & & \\
 %      AhtBY & $A_{HT}$ higher-twist param in BY model scaling variable $\xi_w$ & $\pm25\%$ & & \\
 %      BhtBY & $B_{HT}$ higher-twist param in BY model scaling variable $\xi_w$ & $\pm25\%$ & & \\
 %      CV1uBY & $C_{V1u}$ u valence GRV98 PDF correction param in BY model & $\pm30\%$ & & \\
