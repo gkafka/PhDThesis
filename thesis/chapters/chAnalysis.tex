@@ -55,7 +55,7 @@ The goal of the extrapolation is to predict the number of events from each compo
 \label{eq:ExtrapRecoRW}
 \eeq
 
-\n This method is used for the NC signal, $\numu$ and $\nue$ CC survival background components. All three of these are survival components $(\beta = \alpha)$ that have a directly comparable spectrum at the ND and FD, unlike with the appearance components, and this is why the NC event selection is applied to the ND spectra as well in equation \ref{eq:ExtrapRecoRW}. The remaining two components, $\nuanu_\mu \rightarrow\,\nuanu_e$, have enough ND statistics to apply the F/N ratio in bins of true energy. Since these are both appearance components from muon flavor neutrinos, a $\numu$-like event selection is applied at the ND.
+\n This method is used for the NC signal, $\numu$ and $\nue$ CC survival background components. All three of these are survival components $(\beta = \alpha)$ that have a directly comparable spectrum at the ND and FD, unlike with the appearance components, and this is why the NC event selection is applied to the ND spectra as well in equation \ref{eq:ExtrapRecoRW}. The remaining two components, $\nuanu_\mu \rightarrow\,\nuanu_e$, have enough ND statistics to apply the F/N ratio in bins of true energy. Since these are both appearance components from muon flavor neutrinos, a $\numu$-like event selection is applied at the ND, specifically the cut \verb|kNumuND| described in reference \cite{ref:TNNumuND}.
 \beq
 \mbox{FD}^{Pred}_{\alpha\rightarrow\beta}(S_{NC}; E^R_i, E^T_j) = \frac{ \mbox{FD}^{MC}_{\alpha\rightarrow\beta}(S_{NC}; E^R_i, E^T_j) \cdot \mbox{ND}^{Pred}_\alpha (S_{\numu}; E^T_j)}{\mbox{ND}^{MC}_\alpha (S_{\numu}; E^T_j)}
 \label{eq:ExtrapTrueRW}
@@ -66,7 +66,26 @@ The goal of the extrapolation is to predict the number of events from each compo
 \label{eq:ExtrapTrueND}
 \eeq
 
-\n Equation \ref{eq:ExtrapTrueND} can be interpreted as a two step process, where the combination of terms inside the sum normalizes the calorimetric energy columns to the data values, then sums across the true energy row to find the ND true energy predicted value. Equations \ref{eq:ExtrapRecoRW} and \ref{eq:ExtrapTrueRW} then have the same structure, where $\mbox{ND}^{Pred}$ is used as the data input. Note that for equations \ref{eq:ExtrapRecoRW}, \ref{eq:ExtrapTrueRW}, and \ref{eq:ExtrapTrueND}, if the $\mbox{ND}^{MC}$ value is $0$ the extrapolation falls back to using the base FD MC for the prediction, but only for the particular bin that would otherwise require division by $0$.
+\n Equation \ref{eq:ExtrapTrueND} can be interpreted as a two step process, where the combination of terms inside the sum normalizes the calorimetric energy columns to the data values, then sums across the true energy row to find the ND true energy predicted value. Equations \ref{eq:ExtrapRecoRW} and \ref{eq:ExtrapTrueRW} then have the same structure, where $\mbox{ND}^{Pred}$ is used as the data input. Note that for equations \ref{eq:ExtrapRecoRW}, \ref{eq:ExtrapTrueRW}, and \ref{eq:ExtrapTrueND}, if the $\mbox{ND}^{MC}$ value is $0$ the extrapolation falls back to using the base FD MC for the prediction, but only for the particular bin that would otherwise require division by $0$. Figure \ref{fig:FNRatio} shows the F/N ratio for the NC component, as well as the ND data/MC for the alternative interpretation of equation \ref{eq:ExtrapFN}. Figure \ref{fig:MCvsEX} shows how the extrapolation changes the predicted distribution of the NC component.
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/Extrap/FNRatio.png} &
+    \includegraphics[width=.47\textwidth]{figures/Extrap/NDDatMC.png} \\
+  \end{tabular}
+  \caption[F/N Ratio and ND Data/MC Ratio for NC Component Extrapolation]{The left figure shows the F/N ratio for the NC component extrapolation. Equation \ref{eq:ExtrapFN} can also be interpreted as applying a ND data/MC ratio to the FD MC; this ratio is shown in the right figure.}
+  \label{fig:FNRatio}
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/Extrap/FDMC.png} &
+    \includegraphics[width=.47\textwidth]{figures/Extrap/FDEX.png} \\
+  \end{tabular}
+  \caption[Effect of the Extrapolation on the NC Component Distribution]{These plots show how the extrapolation affects the predicted NC component distribution. Left: FD base MC. Right: Extrapolated spectrum. Both plots are scaled to \pot{6} and have the same $z$ axis range.}
+  \label{fig:MCvsEX}
+\end{figure}
 
 In reality, only the neutrino flavor affects the oscillations, and not the interaction current. For the standard three flavor model, the number of NC interactions is not affected by oscillations, so it is okay to treat the NCs as any other component within the extrapolation. The NC disappearance analysis built its extrapolation upon the existing ModularExtrap class \cite{ref:TNModular} that handles the NC component in this fashion. However, when sterile neutrinos are added to the model, oscillations do affect the NC rate and thus the neutrino flavor breakdown of the NC interactions does matter. So long as the final neutrino flavor is an active one, the exact flavor does not matter. Therefore, it suffices to split the NCs based on their four initial flavors, $\nuanu_\mu$ and $\nuanu_e$. This was done by extrapolating the NCs as described above and splitting the FD result with flavor proportions constructed from the FD MC.
 \beq
@@ -74,30 +93,36 @@ In reality, only the neutrino flavor affects the oscillations, and not the inter
 \label{eq:ExtrapNCSplit}
 \eeq
 
-\n It was convenient to use this method based on what already existed within ModularExtrap, but it also avoided the need to construct raw spectra of the number of neutrinos per flavor using cross section information with large uncertainties.
+\n Figure \ref{fig:NCProportions} shows the flavor breakdown of the NC component. It was convenient to use this method based on what already existed within ModularExtrap, but it also avoided the need to construct raw spectra of the number of neutrinos per flavor using cross section information with large uncertainties.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=.47\textwidth]{figures/Extrap/NCProportions.png}
+  \caption[NC Component Flavor Proportions]{Proportions of the NC component from each neutrino flavor. The proportions are calculated based on the initial neutrino flavor, i.e., before oscillations are considered.}
+  \label{fig:NCProportions}
+\end{figure}
 
 Table \ref{tab:ExtrapPred} summarizes the method used to extrapolate each component of the FD prediction.
 \begin{table}[htb]
   \begin{center}
-    \caption[Extrapolation Method and Rate Summary]{Extrapolation method used for each component. The final two columns show the total number of predicted event rates after oscillations are applied as described in section \ref{sec:AnaPred}. All components other than NC are CC backgrounds.}
+    \caption[Extrapolation Method and Rate Summary]{Extrapolation method used for each component. The final two columns show the total number of predicted event rates after oscillations are applied as described in section \ref{sec:AnaPred}. These numbers used all diblock configurations and scaled to \pot{6.69} as described at the beginning of chapter \ref{ch:Results}. All components other than NC are CC backgrounds.}
     \label{tab:ExtrapPred}
     \begin{tabular}{c c c c}
       \hline\hline
       Component & F/N Method & FD MC Prediction & Extrapolated Prediction \\
       \hline
-      NC & Calorimetric Energy Bins & & \\
-      $\numu \rightarrow\,\numu$ & Calorimetric Energy Bins & & \\
-      $\numu \rightarrow\,\nue$ & True Energy Bins & & \\
-      $\numu \rightarrow\,\nutau$ & Base FD MC & & \\
-      $\anumu \rightarrow\,\anumu$ & Base FD MC & & \\
-      $\anumu \rightarrow\,\anue$ & True Energy Bins & & \\
-      $\anumu \rightarrow\,\anutau$ & Base FD MC & & \\
-      $\nue \rightarrow\,\numu$ & Base FD MC & & \\
-      $\nue \rightarrow\,\nue$ & Calorimetric Energy Bins & & \\
-      $\nue \rightarrow\,\nutau$ & Base FD MC & & \\
-      $\anue \rightarrow\,\anumu$ & Base FD MC & & \\
-      $\anue \rightarrow\,\anue$ & Base FD MC & & \\
-      $\anue \rightarrow\,\anutau$ & Base FD MC & & \\
+      NC & Calorimetric Energy Bins & 65.19 & 60.61 \\
+      $\numu \rightarrow\,\numu$ & Calorimetric Energy Bins & 4.98 & 4.47 \\
+      $\numu \rightarrow\,\nue$ & True Energy Bins & 2.88 & 2.83 \\
+      $\numu \rightarrow\,\nutau$ & Base FD MC & 0.32 & 0.32 \\
+      $\anumu \rightarrow\,\anumu$ & Base FD MC & 0.10 & 0.10 \\
+      $\anumu \rightarrow\,\anue$ & True Energy Bins & 0.043 & 0.044 \\
+      $\anumu \rightarrow\,\anutau$ & Base FD MC & 0.046 & 0.046 \\
+      $\nue \rightarrow\,\numu$ & Base FD MC & 0.010 & 0.010 \\
+      $\nue \rightarrow\,\nue$ & Calorimetric Energy Bins & 0.77 & 0.72 \\
+      $\nue \rightarrow\,\nutau$ & Base FD MC & 0.0010 & 0.0010 \\
+      $\anue \rightarrow\,\anumu$ & Base FD MC & 0.0002 & 0.0002 \\
+      $\anue \rightarrow\,\anue$ & Base FD MC & 0.036 & 0.036 \\
+      $\anue \rightarrow\,\anutau$ & Base FD MC & 0.0001 & 0.0001 \\
       \hline
     \end{tabular}
   \end{center}
@@ -115,7 +140,7 @@ Oscillations weights are applied in the final step of the analysis chain in the 
 \n The NC component was handled as four separate components based on the initial neutrino flavor. For each of these, the probability of oscillating into any active neutrino flavor was applied.
 \beq
 \mbox{FD}^{Pred}_{NC, \alpha}(S_{NC}; E^R_i) = \sum_j \mbox{FD}^{Pred}_{NC, \alpha}(S_{NC}; E^R_i, E^T_j) \cdot P(\nu_\alpha \rightarrow \nu_{Active}, E^T_j)
-\label{eq:PredComp}
+\label{eq:PredNCComp}
 \eeq
 \beq
 P(\nu_\alpha \rightarrow \nu_{Active}) \equiv \sum_{\ell \in \{e, \mu, \tau\}} P(\nu_\alpha \rightarrow \nu_\ell) = 1 - P(\nu_\alpha \rightarrow \nu_s)
@@ -128,4 +153,10 @@ P(\nu_\alpha \rightarrow \nu_{Active}) \equiv \sum_{\ell \in \{e, \mu, \tau\}} P
 \label{eq:Pred}
 \eeq
 
-The total event rates for each component are summarized in table \ref{tab:ExtrapPred}, which shows a comparison between the rates predicted by the base MC and the extrapolation.
+The total event rates for each component, based on the oscillation parameters in table \ref{tab:3FlavParams}, are summarized in table \ref{tab:ExtrapPred}. This table also shows a comparison between the rates predicted by the base MC and the extrapolation. Figure \ref{fig:PredAllComp} shows all of the predicted component distributions based on the extrapolation, with the exception of cosmics.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=.8\textwidth]{figures/FDPredAllComp.png}
+  \caption[Predicted Component Distributions]{FD predicted distributions of all $13$ beam components, assuming oscillation parameters listed in table \ref{tab:3FlavParams}.}
+  \label{fig:PredAllComp}
+\end{figure}
