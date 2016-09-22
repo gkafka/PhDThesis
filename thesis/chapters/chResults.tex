@@ -18,7 +18,7 @@ The first section in this chapter describes the fitting methods used to make the
 
 It was decided to make rate only measurements for the first \nova~NC disappearance analysis. Thus, even though the extrapolation and prediction were performed in $250\unit{MeV}$ bins of calorimetric energy, only the integrated event totals were input to the fitting framework.
 
-Fitting was performed allowing some parameters to float, some held to best fit values, and others set to $0$ due to insensitivity. As mentioned above, a major analysis goal was to measure $\theta_{24}$ and $\theta_{34}$, so these angles were allowed to float between $0^\circ$ and $45^\circ$. Values outside of this range are either equivalent to this range through redefinition of the angles, or already highly disfavored through previous experiments and in a region difficult for fitting due to many local minima. $\theta_{23}$ was allowed to float with a Gaussian constraint with mean $45.8^\circ$ and standard deviation $3.2^\circ$, the best fit measurement by T2K \cite{ref:T2K2015}. All of the remaining parameters were held fixed to the values listed in table \ref{tab:FitFix}.
+Fitting was performed allowing some parameters to float, some held to current best fit values, and others set to $0$ due to insensitivity. As mentioned above, a major analysis goal was to measure $\theta_{24}$ and $\theta_{34}$, so these angles were allowed to float between $0^\circ$ and $45^\circ$. Values outside of this range are either equivalent to this range through redefinition of the angles, or already highly disfavored through previous experiments and in a region difficult for fitting due to many local minima. $\theta_{23}$ was allowed to float with a Gaussian constraint with mean $45.8^\circ$ and standard deviation $3.2^\circ$, the best fit measurement by T2K \cite{ref:T2K2015}. All of the remaining parameters were held fixed to the values listed in table \ref{tab:FitFix}.
 \begin{table}[htb]
   \begin{center}
     \caption[Fixed Parameters and Values for Fitting]{The parameters held fixed and the values they were set at for fitting.}
@@ -219,4 +219,25 @@ The energy distribution of the predicted and observed events is shown in figure 
   \end{tabular}
   \caption[FD Data Vertex Distributions]{Distributions of the selected data event vertices in the detector. The solid black outline shows the full detector volume; the dashed blue line shows the fiducial and contained region. Top: XZ view. Middle: YZ view. Bottom: XY view.}
   \label{fig:FDDataVtx}
+\end{figure}
+
+Oscillation parameter measurements were extracted from a fit to the data, using the methods described in section \ref{sec:FitMethod}. The two dimensional $68\%$ and $90\%$ confidence levels are shown in figure \ref{fig:Fit2D}. One dimensional slices of $\theta_{24}$ and $\theta_{34}$ were constructed from the full fit by profiling over the remaining angles and can be seen in figure \ref{fig:Fit1D}. The best fit values were within an arc second of $0^\circ$, and from the one dimensional slices the mixing angles were limited to $\theta_{34} < 35^\circ$ and $\theta_{24} < 21^\circ$ at $90\%$ confidence. The $\theta_{34}$ limit is already competitive with the MINOS 2011 result of $\theta_{34} < ef^\circ (90\% \mbox{ C.L.})$ \cite{ref:MINOSSterile}, also shown in figure \ref{fig:Fit2D}.
+\begin{figure}[htbp]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/Fits/2D3424.png} &
+    \includegraphics[width=.47\textwidth]{figures/Fits/2D3424_MINOS.png} \\
+  \end{tabular}
+  \caption[Two Dimensional $\theta_{34}$ vs $\theta_{24}$ Contours]{Two dimensional contours of $\theta_{34}$ vs $\theta_{24}$. The left figure shows the $68\%$ and $90\%$ confidence limits. The right figure shows the $90\%$ confidence limit with a comparison to the MINOS 2011 results \cite{ref:MINOSSterile}.}
+  \label{fig:Fit2D}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh34.png} &
+    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh24.png} \\
+  \end{tabular}
+  \caption[One Dimensional $\theta_{34}$ and $\theta_{24}$ Slices]{One dimensional slices of $\theta_{34}$ and $\theta_{24}$. These distributions were constructed by profiling over the remaining angles from the fit. Left: $\theta_{34}$. Right: $\theta_{24}$.}
+  \label{fig:Fit1D}
 \end{figure}
