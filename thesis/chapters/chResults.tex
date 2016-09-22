@@ -50,7 +50,7 @@ The best fit values were found by calculating the minimum $\chi^2$ value and all
 \section{ND Data/MC Comparisons}
 \label{sec:ResultsND}
 
-Before diving head first into the FD data, the first necessary analysis benchmark was ND data/MC comparisons. Fig~\ref{fig:NDDataMCECal} shows the event energy distributions and fig.s \ref{fig:NDDataMCFidCont}, \ref{fig:NDDataMCNCSel}, and \ref{fig:NDDataMCCosRej} show the distributions for all of the variables used for selection discussed in chapter \ref{ch:Selection}.
+Before diving head first into the FD data, the first necessary analysis benchmark was ND data/MC comparisons. Figure \ref{fig:NDDataMCECal} shows the event energy distributions and figures \ref{fig:NDDataMCFidCont}, \ref{fig:NDDataMCNCSel}, and \ref{fig:NDDataMCCosRej} show the distributions for all of the variables used for selection discussed in chapter \ref{ch:Selection}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{figures/NDDataMC/ECalNusNDRat.png}
@@ -170,7 +170,7 @@ The mid cosmic BDT sideband considers events with a BDT score between $0.42$ and
 
 This analysis predicted that there would be $83.8 \pm a.b \mbox{(stat.)} ^{+c.d}_{-e.f} \mbox{(syst.)}$ NC-like events selected in the FD data. $95 \pm 9.7$ were observed, corresponding to a measurement of $R_{NC} = 1.186 \pm 0.161 \mbox{(stat.)} ^{+0.081}_{-0.129} \mbox{(syst.)}$ If active neutrinos mixed with sterile neutrinos, the number of observed events would be depleted, causing $R_{NC}$ to be less than one. Thus, the measurement of $R_{NC}$ is consistent with the no sterile mixing hypothesis.
 
-The energy distribution of the predicted and observed events is shown in figure \ref{fig:FDDataMCECal}. The $\chi^2$ of this distribution is $23.31$ for $14$ bins, or $1.665$/bin. To better assess the understanding of the observed data, data/MC comparisons distributions were studied for many of the variables used for selection, including regions cut for the analysis. These can be seen in fig.s \ref{fig:FDDataMCFidCont}, \ref{fig:FDDataMCNCSel}, and \ref{fig:FDDataMCCosRej}.
+The energy distribution of the predicted and observed events is shown in figure \ref{fig:FDDataMCECal}. The $\chi^2$ of this distribution is $23.31$ for $14$ bins, or $1.665$/bin. To better assess the understanding of the observed data, data/MC comparisons distributions were studied for many of the variables used for selection, including regions cut from the analysis. These can be seen in figures \ref{fig:FDDataMCFidCont}, \ref{fig:FDDataMCNCSel}, and \ref{fig:FDDataMCCosRej}. All of the distributions showed excellent agreement, especially within the CVN classifier. Lastly, the event vertices were well dispersed throughout the entire FD volume, as shown in figure \ref{fig:FDDataVtx}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{figures/FDDataMC/cCalEFDAllStSy.png}
@@ -208,4 +208,15 @@ The energy distribution of the predicted and observed events is shown in figure 
   \end{tabular}
   \caption[FD Data/MC Comparison: Cosmic Rejection Variable Distributions]{FD data/MC comparisons of the variables used for cosmic rejection. The dashed lines and arrows indicate the regions kept for the analysis.}
   \label{fig:FDDataMCCosRej}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=.8\textwidth]{figures/VtxDistFDXZ.png} \\
+    \includegraphics[width=.8\textwidth]{figures/VtxDistFDYZ.png} \\
+    \includegraphics[width=.4\textwidth]{figures/VtxDistFDXY.png} \\
+  \end{tabular}
+  \caption[FD Data Vertex Distributions]{Distributions of the selected data event vertices in the detector. The solid black outline shows the full detector volume; the dashed blue line shows the fiducial and contained region. Top: XZ view. Middle: YZ view. Bottom: XY view.}
+  \label{fig:FDDataVtx}
 \end{figure}

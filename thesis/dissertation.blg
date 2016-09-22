@@ -41,43 +41,43 @@ Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
 You've used 125 entries,
             1791 wiz_defined-function locations,
-            1168 strings with 22462 characters,
-and the built_in function-call counts, 19184 in all, are:
-= -- 1786
+            1169 strings with 22468 characters,
+and the built_in function-call counts, 19250 in all, are:
+= -- 1793
 > -- 628
 < -- 1
 + -- 285
 - -- 160
-* -- 857
-:= -- 3451
+* -- 866
+:= -- 3459
 add.period$ -- 374
 call.type$ -- 125
 change.case$ -- 124
 chr.to.int$ -- 0
 cite$ -- 127
-duplicate$ -- 836
-empty$ -- 1925
+duplicate$ -- 837
+empty$ -- 1933
 format.name$ -- 160
-if$ -- 4170
+if$ -- 4185
 int.to.chr$ -- 0
 int.to.str$ -- 125
 missing$ -- 64
 newline$ -- 626
 num.names$ -- 124
-pop$ -- 148
+pop$ -- 146
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 279
 stack$ -- 0
-substring$ -- 1159
+substring$ -- 1177
 swap$ -- 75
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 185
+while$ -- 186
 width$ -- 128
-write$ -- 1258
+write$ -- 1259
 (There were 5 error messages)
