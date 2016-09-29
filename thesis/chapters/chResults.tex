@@ -242,8 +242,94 @@ Oscillation parameter measurements were extracted from a fit to the data, using 
   \label{fig:Fit1D}
 \end{figure}
 
-The data were also analyzed using a Feldman-Cousins (FC) statistical correction. The basic premise of this technique is to extract confidence intervals from an ordered likelihood ratio, instead of directly from $\Delta\chi^2$ values. The FC method performs particularly well near physical boundaries, such as angles close to maximum or minimum. The actual FC procedure was to run many pseudo-experiments in each bin of $\vec{\theta} \equiv (\theta_{34}, \theta_{24})$, construct a `critical value surface' from the results, and compare the $\chi^2$ of the actual data to the critical surface.
+The data were also analyzed using a Feldman-Cousins (FC) statistical correction \cite{ref:FC}. The basic premise of this technique is to extract confidence intervals from an ordered likelihood ratio, instead of directly from $\Delta\chi^2$ values. The FC method performs particularly well near physical boundaries, such as angles close to maximum or minimum. The likelihood ratio, $R$, is calculated from
+\beq
+R_{i} = P\left( x_i | x_e\left(\vec{\theta}\right) \right) / P\left( x_i | x_e\left(\vec{\theta}_{BF}\right) \right),
+\label{eq:FCRank}
+\eeq
 
-For a given bin in $\vec{\theta}$ space, many pseudo-experiments were run by randomly picking a `true' $\vec{\theta}$ from within the bin with uniform probability. A mock data spectrum was created by calculating a MC spectrum from the chosen $\vec{\theta}$ and Poisson varying each bin. Two fits were then performed to the mock data using equation \ref{eq:Chisq} with the systematic errors seeded randomly from a Gaussian with mean $0$ and standard deviation $1$. One fit allowed $\vec{\theta}$ to float as normal to calculate $\chi^2_{Best}$, and the other fit used the fixed, true $\vec{\theta}$ to calculate $\chi^2_{True}$. All of the pseudo-experiment results were then ordered by $\Delta\chi^2_{FC} = \chi^2_{True} - \chi^2_{Best}$, and this process was repeated for each bin in $\vec{\theta}$ space.
+\n where $P$ is the Poisson probability of observing $x_i$ events based on an expectation of $x_e$, and $x_e$ is a function of the parameters $\vec{\theta}$. Holding to a fixed $\vec{\theta}$, all $R_i$ are calculated and ordered from highest to lowest. The exclusion significance, $c$, of $\vec{\theta}$ is then calculated from
+\beq
+c = \sum_{i | R_i = R_{Max}}^{i | R_i = R_{Data}} P\left(x_i | x_e\left(\vec{\theta}\right)\right).
+\label{eq:FCConf}
+\eeq
 
-Critical value surfaces corresponding to particular confidence levels, $c$, where $0 < c < 1$, were next constructed from the results of the pseudo-experiments. For each bin in $\vec{\theta}$ space, a $\Delta\chi^2_c$ was calculated such that $c\%$ of the pseudo-experiments satisfied $\Delta\chi^2_{FC} < \Delta\chi^2_c$. This set of $\{\Delta\chi^2_c\}$ represents the $\chi^2$ values that correspond to the confidence level $c$, much like $\chi^2 = 2.71$ represents a $90\%$ confidence level for a Gaussian distributed random variable. The $\chi^2$ surface from the data was then compared to the critical value surface. In the Gaussian analogy, the $90\%$ confidence interval is constructed by including the set of parameters with $\chi^2_{Data} < 2.71$. Similarly, the FC corrected $c$ confidence level was constructed from the set of parameters, $\vec{\theta}$, such that $\chi^2_{Data} < \chi^2_c$.
+\n In practice, all $R_i$ are not necessary, which is important as $x_i$ goes from $0$ to infinity. Instead, two facts are used to limit the number of calculations. First, the max rank is found using the fact that the Poisson probability peaks when the observed rate matches the mean. Second, since the probability summation stops when $R_i < R_{Data}$, the $R_i$ are calculated moving outward from $x_{Max}$ until this condition is met.
+
+Nuisance parameters, including $\theta_{23}$ and the systematics, are handled by including and profiling them in equations \ref{eq:FCRank} and \ref{eq:FCConf} \cite{ref:FCNotes}. Specifically,
+\beq
+R_{i} = P\left( x_i | x_e\left(\vec{\theta}, \vec{\lambda}_{BF(Data)}\right) \right) / P\left( x_i | x_e\left(\vec{\theta}_{BF}, \vec{\lambda}_{BF}\right) \right),
+\label{eq:FCRankLambda}
+\eeq
+
+\n where in the numerator, $\vec{\lambda}_{BF(Data)}$ is found by fitting to the actual data, and $\vec{\lambda}_{BF}$ in the denominator is calculated by fitting to the possible observation $x_i$. In other words,
+\beq
+\vec{\lambda}_{BF(Data)} = \vec{\lambda} | \chi^2\left(x_{Data}, \vec{\theta}, \vec{\lambda}\right) = \chi^2_{Min}\left(x_{Data}, \vec{\theta}\right),
+\label{eq:FCLambdaNum}
+\eeq
+\beq
+\left(\vec{\theta}_{BF}, \vec{\lambda}_{BF}\right) = \left(\vec{\theta}, \vec{\lambda}\right) | \chi^2\left(x_i, \vec{\theta}, \vec{\lambda}\right) = \chi^2_{Min}(x_i).
+\label{eq:FCLambdaDen}
+\eeq
+
+\n The confidence interval is calculated using the best fit of the nuisance parameters to the data,
+\beq
+c = \sum_{i | R_i = R_{Max}}^{i | R_i = R_{Data}} P\left(x_i | x_e\left(\vec{\theta}, \vec{\lambda}_{BF(Data)}\right)\right),
+\label{eq:FCConfLambda}
+\eeq
+
+\n where $R_i$ is that which includes the nuisance parameters calculated from equation \ref{eq:FCRankLambda}.
+
+The results of the FC corrections are shown in figure \ref{fig:Fit2DFC}, which shows the significance surface and compares the FC corrected $68\%$ and $90\%$ contours to their uncorrected counterparts. The massive improvement is largely an artifact of the assumed numbers of degrees of freedom (DOF). The uncorrected curves were constructed varying $\theta_{34}$ and $\theta_{24}$ in equation \ref{eq:Chisq}, generating a $\Delta\chi^2$, and interpreting the result assuming a separate DOF for each angle. For $2$ DOF, the $68\%$ contour was thus calculated where $\Delta\chi^2 = 2.30$, and the $90\%$ contour at $\Delta\chi^2 = 4.61$. Given that the fits had a single measured number as input, using $2$ DOFs was dubious, though it only resulted in an overly conservative limit. On the other hand, the FC corrected contour only considered a single DOF by construction.
+\begin{figure}[htbp]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/Fits/cFCSig.png} &
+    \includegraphics[width=.47\textwidth]{figures/Fits/2D3424FC.png} \\
+  \end{tabular}
+  \caption[FC Corrected Significance Surface and $68\%$ and $90\%$ Contours]{Left: the FC corrected significance surface. The $(\theta_{34}, \theta_{24})$ values are included in a $c\%$ confidence interval if the significance value is $\leq c$. Right: the $68\%$ and $90\%$ FC contours as compared to the uncorrected contours.}
+  \label{fig:Fit2DFC}
+\end{figure}
+
+The two dimensional surface was profiled to create one dimensional slices of the two angles. These are shown in figure \ref{fig:Fit1DFC} with a comparison to the uncorrected versions. Here, the results are much more consistent, as the uncorrected one dimensional slices only show a single DOF.
+\begin{figure}[htbp]
+  \centering
+  \begin{tabular}{c c}
+    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh34FC.png} &
+    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh24FC.png} \\
+  \end{tabular}
+  \caption[FC Corrected One Dimensional $\theta_{34}$ and $\theta_{24}$ Slices]{One dimensional slices of $\theta_{34}$ and $\theta_{24}$, with the uncorrected slice in black and the FC corrected slice in blue. Left: $\theta_{34}$. Right: $\theta_{24}$.}
+  \label{fig:Fit1DFC}
+\end{figure}
+
+The final results of the analysis, based on the FC corrected surface, placed upper limits on the mixing angles and matrix elements. The sterile mixing angle limits were measured at $\theta_{34} < 22^\circ$ and $\theta_{24} < 14^\circ$ at the $90\%$ confidence level. These values were converted into measurements of the matrix elements via
+\beqa
+\Usqxy{\mu}{4} &=& \sin^2\theta_{24} \nonumber\\
+\Usqxy{\tau}{4} &=& \cos^2\theta_{24} \sin^2\theta_{34} \label{eq:MatrixResults}
+\eeqa
+
+\n where $\theta_{14} = 0$ is assumed. The limits on the matrix elements were measured to be $\Usqxy{\mu}{4} < 0.059$ and $\Usqxy{\tau}{4} < 0.13$ at the $90\%$ confidence level.
+
+%The actual FC procedure was to run many pseudo-experiments in each bin of $\vec{\theta} \equiv (\theta_{34}, \theta_{24})$, construct a `critical value surface' from the results, and compare the $\chi^2$ of the actual data to the critical surface.
+%
+%For a given bin in $\vec{\theta}$ space, $2500$ pseudo-experiments were run by randomly picking a `true' $\vec{\theta}$ from within the bin with uniform probability. A mock data spectrum was created by calculating a MC spectrum from the chosen $\vec{\theta}$ and Poisson varying each bin. Two fits were then performed to the mock data using equation \ref{eq:Chisq} with the systematic errors seeded randomly from a Gaussian with mean $0$ and standard deviation $1$. One fit allowed $\vec{\theta}$ to float as normal to calculate $\chi^2_{Best}$, and the other fit used the fixed, true $\vec{\theta}$ to calculate $\chi^2_{True}$. All of the pseudo-experiment results were then ordered by $\Delta\chi^2_{FC} = \chi^2_{True} - \chi^2_{Best}$, and this process was repeated for each bin in $\vec{\theta}$ space.
+%
+%Critical value surfaces were next constructed from the results of the pseudo-experiments with each surface corresponding to a particular confidence level, $c$, where $0 < c < 1$. For each bin in $\vec{\theta}$ space, a $\Delta\chi^2_c$ was calculated such that $c\%$ of the pseudo-experiments satisfied $\Delta\chi^2_{FC} < \Delta\chi^2_c$ and the remaining $(1-c)\%$ satisfied $\Delta\chi^2_{FC} > \Delta\chi^2_{c}$. This set of $\{\Delta\chi^2_c\}$ represents the $\chi^2$ values that correspond to the confidence level $c$, much like $\chi^2 = 2.71$ represents a $90\%$ confidence level for a Gaussian distributed random variable. The $\chi^2$ surface from the data was then compared to the critical value surface. In the Gaussian analogy, the $90\%$ confidence interval is constructed by including the set of parameters with $\chi^2_{Data} < 2.71$. Similarly, the FC corrected $c$ confidence level was constructed from the set of parameters, $\vec{\theta}$, such that $\chi^2_{Data} < \chi^2_c$.
+%
+%The critical value surfaces for the $68\%$ and $90\%$ confidence levels are shown in figure \ref{fig:FCCritical}. Figure \ref{fig:Fit2DFC} shows the two dimensional FC corrected contour with a comparison to the conventional contour.
+%\begin{figure}[htbp]
+%  \centering
+%  \begin{tabular}{c c}
+%    \includegraphics[width=.47\textwidth]{figures/Fits/FC68Smooth.png} &
+%    \includegraphics[width=.47\textwidth]{figures/Fits/FC90Smooth.png} \\
+%  \end{tabular}
+%  \caption[FC $68\%$ and $90\%$ Critical Surfaces for $\theta_{34}$ vs $\theta_{24}$]{FC $68\%$ (left) and $90\%$ (right) critical value surfaces for $\theta_{34}$ vs $\theta_{24}$. These surfaces had a standard smoothing algorithm applied to them.}
+%  \label{fig:FCCritical}
+%\end{figure}
+%
+%\begin{figure}[htbp]
+%  \centering
+%  \includegraphics[width=.47\textwidth]{figures/Fits/2D3424FC.png} \\
+%  \caption[FC Corrected Two Dimensional $\theta_{34}$ vs $\theta_{24}$ Contours]{Two dimensional contours of $\theta_{34}$ vs $\theta_{24}$. The blue curves show the FC corrected contours, and the black curves are the standard calculated curves from figure \ref{fig:Fit2D} shown for comparison.}
+%  \label{fig:Fit2DFC}
+%\end{figure}

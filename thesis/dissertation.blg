@@ -12,72 +12,72 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 163 of file dissertation.aux
+Illegal, another \bibstyle command---line 165 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 640 of file references.bib
+I was expecting a `,' or a `}'---line 658 of file references.bib
  : 
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1017 of file references.bib
+I was expecting a `,' or a `}'---line 1035 of file references.bib
  : 
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1024 of file references.bib
+I was expecting a `,' or a `}'---line 1042 of file references.bib
  : 
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1031 of file references.bib
+I was expecting a `,' or a `}'---line 1049 of file references.bib
  : 
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
-You've used 125 entries,
+You've used 127 entries,
             1791 wiz_defined-function locations,
-            1169 strings with 22468 characters,
-and the built_in function-call counts, 19250 in all, are:
-= -- 1793
-> -- 628
+            1180 strings with 22796 characters,
+and the built_in function-call counts, 19588 in all, are:
+= -- 1825
+> -- 640
 < -- 1
-+ -- 285
-- -- 160
-* -- 866
-:= -- 3459
-add.period$ -- 374
-call.type$ -- 125
-change.case$ -- 124
++ -- 290
+- -- 163
+* -- 883
+:= -- 3518
+add.period$ -- 380
+call.type$ -- 127
+change.case$ -- 126
 chr.to.int$ -- 0
-cite$ -- 127
-duplicate$ -- 837
-empty$ -- 1933
-format.name$ -- 160
-if$ -- 4185
+cite$ -- 129
+duplicate$ -- 850
+empty$ -- 1966
+format.name$ -- 163
+if$ -- 4259
 int.to.chr$ -- 0
-int.to.str$ -- 125
-missing$ -- 64
-newline$ -- 626
-num.names$ -- 124
-pop$ -- 146
+int.to.str$ -- 127
+missing$ -- 65
+newline$ -- 636
+num.names$ -- 126
+pop$ -- 148
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 279
+skip$ -- 284
 stack$ -- 0
-substring$ -- 1177
-swap$ -- 75
+substring$ -- 1204
+swap$ -- 76
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 186
-width$ -- 128
-write$ -- 1259
+while$ -- 189
+width$ -- 130
+write$ -- 1279
 (There were 5 error messages)

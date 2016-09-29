@@ -766,4 +766,18 @@ K.~Abe et~al.
   channels by the {T2K} experiment with $6.6 \times 10^{20}$ protons on target.
 \newblock {\em Physical Review D}, 91:072010, 2015.
 
+\bibitem{ref:FC}
+G.~J. Feldman and R.~D. Cousins.
+\newblock Unified approach to the classical statistical analysis of small
+  signals.
+\newblock {\em Physical Review D}, 57:3873--3889, 1998.
+
+\bibitem{ref:FCNotes}
+G.~Feldman.
+\newblock Notes on the inclusion of nuisance parameters in the unified
+  approach.
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15884}{\nova~Internal
+  Document 15884}.
+
 \end{thebibliography}
