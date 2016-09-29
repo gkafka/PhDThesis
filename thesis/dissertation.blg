@@ -12,17 +12,12 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 165 of file dissertation.aux
+Illegal, another \bibstyle command---line 166 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 658 of file references.bib
- : 
- : %
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1035 of file references.bib
+I was expecting a `,' or a `}'---line 665 of file references.bib
  : 
  : %
 (Error may have been on previous line)
@@ -37,38 +32,43 @@ I was expecting a `,' or a `}'---line 1049 of file references.bib
  : %
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1056 of file references.bib
+ : 
+ : %
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
-You've used 127 entries,
+You've used 128 entries,
             1791 wiz_defined-function locations,
-            1180 strings with 22796 characters,
-and the built_in function-call counts, 19588 in all, are:
-= -- 1825
-> -- 640
+            1184 strings with 22952 characters,
+and the built_in function-call counts, 19683 in all, are:
+= -- 1834
+> -- 644
 < -- 1
-+ -- 290
-- -- 163
++ -- 292
+- -- 164
 * -- 883
-:= -- 3518
-add.period$ -- 380
-call.type$ -- 127
-change.case$ -- 126
+:= -- 3539
+add.period$ -- 383
+call.type$ -- 128
+change.case$ -- 127
 chr.to.int$ -- 0
-cite$ -- 129
-duplicate$ -- 850
-empty$ -- 1966
-format.name$ -- 163
-if$ -- 4259
+cite$ -- 130
+duplicate$ -- 854
+empty$ -- 1974
+format.name$ -- 164
+if$ -- 4278
 int.to.chr$ -- 0
-int.to.str$ -- 127
+int.to.str$ -- 128
 missing$ -- 65
-newline$ -- 636
-num.names$ -- 126
-pop$ -- 148
+newline$ -- 641
+num.names$ -- 127
+pop$ -- 149
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 284
+skip$ -- 285
 stack$ -- 0
 substring$ -- 1204
 swap$ -- 76
@@ -77,7 +77,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 189
-width$ -- 130
-write$ -- 1279
+while$ -- 190
+width$ -- 131
+write$ -- 1288
 (There were 5 error messages)
