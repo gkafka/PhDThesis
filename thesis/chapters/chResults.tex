@@ -256,13 +256,13 @@ c = \sum_{i | R_i = R_{Max}}^{i | R_i = R_{Data}} P\left(x_i | x_e\left(\vec{\th
 
 \n In practice, all $R_i$ are not necessary, which is important as $x_i$ goes from $0$ to infinity. Instead, two facts are used to limit the number of calculations. First, the max rank is found using the fact that the Poisson probability peaks when the observed rate matches the mean. Second, since the probability summation stops when $R_i < R_{Data}$, the $R_i$ are calculated moving outward from $x_{Max}$ until this condition is met.
 
-Nuisance parameters, including $\theta_{23}$ and the systematics, are handled by including and profiling them in equations \ref{eq:FCRank} and \ref{eq:FCConf} \cite{ref:FCNotes}. Specifically,
+Nuisance parameters, including $\theta_{23}$ and the systematics, are handled by including and profiling them in equations \ref{eq:FCRank} and \ref{eq:FCConf} \cite{ref:FCNotes}.
 \beq
-R_{i} = P\left( x_i | x_e\left(\vec{\theta}, \vec{\lambda}_{BF(Data)}\right) \right) / P\left( x_i | x_e\left(\vec{\theta}_{BF}, \vec{\lambda}_{BF}\right) \right),
+R_{i} = P\left( x_i | x_e\left(\vec{\theta}, \vec{\lambda}'_{BF}\right) \right) / P\left( x_i | x_e\left(\vec{\theta}_{BF}, \vec{\lambda}_{BF}\right) \right)
 \label{eq:FCRankLambda}
 \eeq
 
-\n where in the numerator, $\vec{\lambda}_{BF(Data)}$ is found by fitting to the actual data, and $\vec{\lambda}_{BF}$ in the denominator is calculated by fitting to the possible observation $x_i$. In other words,
+\n In the numerator, $\vec{\lambda}'_{BF}$ is found by holding $\vec{\theta}$ constant and fitting the nuisance parameters to the possible observation, $x_i$. On the other hand, in the denominator both $\vec{\theta}$ and $\vec{\lambda}$ are fit to the possible observation, $x_i$, to find $\vec{\theta}$ and $\vec{\lambda}_{BF}$. In other words,
 \beq
 \vec{\lambda}_{BF(Data)} = \vec{\lambda} | \chi^2\left(x_{Data}, \vec{\theta}, \vec{\lambda}\right) = \chi^2_{Min}\left(x_{Data}, \vec{\theta}\right),
 \label{eq:FCLambdaNum}
@@ -272,13 +272,17 @@ R_{i} = P\left( x_i | x_e\left(\vec{\theta}, \vec{\lambda}_{BF(Data)}\right) \ri
 \label{eq:FCLambdaDen}
 \eeq
 
-\n The confidence interval is calculated using the best fit of the nuisance parameters to the data,
+\n The significance, $c$, of a particular point $\vec{\theta}$ is calculated by summing the Poisson probabilities of observing $x_i$ events given the fixed $\vec{\theta}$ and nuisance parameters best fit to the data.
 \beq
 c = \sum_{i | R_i = R_{Max}}^{i | R_i = R_{Data}} P\left(x_i | x_e\left(\vec{\theta}, \vec{\lambda}_{BF(Data)}\right)\right),
 \label{eq:FCConfLambda}
 \eeq
+\beq
+\vec{\lambda}_{BF(Data)} = \vec{\lambda} | \chi^2\left(x_{Data}, \vec{\theta}, \vec{\lambda}\right) = \chi^2_{Min}\left(x_{Data}, \vec{\theta}\right),
+\label{eq:FCLambdaData}
+\eeq
 
-\n where $R_i$ is that which includes the nuisance parameters calculated from equation \ref{eq:FCRankLambda}.
+\n Note than in equation \ref{eq:FCConfLambda}, both $\vec{\theta}$ and $\vec{\lambda}_{BF(Data)}$ are held constant. This must be the case so that summing over all $i$ would result in $c = 1$. Conversely, the nuisance parameters are fit to the possible observation, $x_i$, when calculating the ranks, $R_i$, as shown in equation \ref{eq:FCLambdaNum}.
 
 The results of the FC corrections are shown in figure \ref{fig:Fit2DFC}, which shows the significance surface and compares the FC corrected $68\%$ and $90\%$ contours to their uncorrected counterparts. The massive improvement is largely an artifact of the assumed numbers of degrees of freedom (DOF). The uncorrected curves were constructed varying $\theta_{34}$ and $\theta_{24}$ in equation \ref{eq:Chisq}, generating a $\Delta\chi^2$, and interpreting the result assuming a separate DOF for each angle. For $2$ DOF, the $68\%$ contour was thus calculated where $\Delta\chi^2 = 2.30$, and the $90\%$ contour at $\Delta\chi^2 = 4.61$. Given that the fits had a single measured number as input, using $2$ DOFs was dubious, though it only resulted in an overly conservative limit. On the other hand, the FC corrected contour only considered a single DOF by construction.
 \begin{figure}[htbp]
@@ -291,24 +295,24 @@ The results of the FC corrections are shown in figure \ref{fig:Fit2DFC}, which s
   \label{fig:Fit2DFC}
 \end{figure}
 
-The two dimensional surface was profiled to create one dimensional slices of the two angles. These are shown in figure \ref{fig:Fit1DFC} with a comparison to the uncorrected versions. Here, the results are much more consistent, as the uncorrected one dimensional slices only show a single DOF.
-\begin{figure}[htbp]
-  \centering
-  \begin{tabular}{c c}
-    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh34FC.png} &
-    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh24FC.png} \\
-  \end{tabular}
-  \caption[FC Corrected One Dimensional $\theta_{34}$ and $\theta_{24}$ Slices]{One dimensional slices of $\theta_{34}$ and $\theta_{24}$, with the uncorrected slice in black and the FC corrected slice in blue. Left: $\theta_{34}$. Right: $\theta_{24}$.}
-  \label{fig:Fit1DFC}
-\end{figure}
+%The two dimensional surface was profiled to create one dimensional slices of the two angles. These are shown in figure \ref{fig:Fit1DFC} with a comparison to the uncorrected versions. Here, the results are much more consistent, as the uncorrected one dimensional slices only show a single DOF.
+%\begin{figure}[htbp]
+%  \centering
+%  \begin{tabular}{c c}
+%    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh34FC.png} &
+%    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh24FC.png} \\
+%  \end{tabular}
+%  \caption[FC Corrected One Dimensional $\theta_{34}$ and $\theta_{24}$ Slices]{One dimensional slices of $\theta_{34}$ and $\theta_{24}$, with the uncorrected slice in black and the FC corrected slice in blue. Left: $\theta_{34}$. Right: $\theta_{24}$.}
+%  \label{fig:Fit1DFC}
+%\end{figure}
 
-The final results of the analysis, based on the FC corrected surface, placed upper limits on the mixing angles and matrix elements. The sterile mixing angle limits were measured at $\theta_{34} < 30^\circ$ and $\theta_{24} < 19^\circ$ at the $90\%$ confidence level. These values were converted into measurements of the matrix elements via
+The final results of the analysis, based on the FC corrected surface, placed upper limits on the mixing angles and matrix elements. The sterile mixing angle limits were measured at $\theta_{34} < 29^\circ$ and $\theta_{24} < 18^\circ$ at the $90\%$ confidence level. These values were converted into measurements of the matrix elements via
 \beqa
 \Usqxy{\mu}{4} &=& \sin^2\theta_{24} \nonumber\\
 \Usqxy{\tau}{4} &=& \cos^2\theta_{24} \sin^2\theta_{34} \label{eq:MatrixResults}
 \eeqa
 
-\n where $\theta_{14} = 0$ is assumed. The limits on the matrix elements were measured to be $\Usqxy{\mu}{4} < 0.10$ and $\Usqxy{\tau}{4} < 0.25$ at the $90\%$ confidence level.
+\n where $\theta_{14} = 0$ is assumed. The limits on the matrix elements were measured to be $\Usqxy{\mu}{4} < 0.10$ and $\Usqxy{\tau}{4} < 0.24$ at the $90\%$ confidence level.
 
 %The actual FC procedure was to run many pseudo-experiments in each bin of $\vec{\theta} \equiv (\theta_{34}, \theta_{24})$, construct a `critical value surface' from the results, and compare the $\chi^2$ of the actual data to the critical surface.
 %
