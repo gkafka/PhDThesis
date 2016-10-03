@@ -133,8 +133,6 @@ The score function used between two hits in the slicing algorithm is
 The free parameters and their values are summarized in Table \ref{tab:SlicerParams}. The parameters were tuned and the performance of the algorithm was measured based on two metrics, completeness, the percentage of energy deposited in the scintillator from a physics interaction included in a slice, and purity, the percentage of energy in a slice that came from a single physics interaction. Values were tuned separately for the ND and FD. Notably, $PE_{pen}$ was set to 0 for both detectors, effectively removing this term from the distance calculation.
 \begin{table}[htb]
   \begin{center}
-    \caption[Slicing Algorithm Free Parameters]{A summary of the free parameters used in the slicing algorithm, and the tuned values used for each detector. Table adapted from \cite{ref:ThesisMichael}.}
-    \label{tab:SlicerParams}
     \begin{tabular}{c c c}
       \hline\hline
       Parameter & ND & FD \\
@@ -146,6 +144,8 @@ The free parameters and their values are summarized in Table \ref{tab:SlicerPara
       $PE_{pen}$, penalty on the PE total & $0$ & $0$ \\
       \hline
     \end{tabular}
+    \caption[Slicing Algorithm Free Parameters]{A summary of the free parameters used in the slicing algorithm, and the tuned values used for each detector. Table adapted from \cite{ref:ThesisMichael}.}
+    \label{tab:SlicerParams}
   \end{center}
 \end{table}
 
@@ -255,8 +255,6 @@ Before searching for the best fit vertex and arm directions, the algorithm first
 The results of the fit for the vertex position are summarized in table \ref{tab:Elastic}. It was found that the final arm directions were not very reliable, even while the vertex position was. Therefore, the vertex is the only output used from the Elastic Arms algorithm. Figure \ref{fig:evdVtx} shows the vertex reconstructed for the neutrino candidate slice shown from figures \ref{fig:evdzoomslice} and \ref{fig:evdHough}.
 \begin{table}[htb]
   \begin{center}
-    \caption[Results from Elastic Arms Vertex Fits]{Difference between the true and reconstructed vertex for Elastic Arms vertex fits to FD MC events. All numbers shown are in cm. Table adapted from \cite{ref:ThesisEvan}.}
-    \label{tab:Elastic}
     \begin{tabular}{c c c c c c c c c}
       \hline\hline
       \multirow{2}{*}{Interaction} & \multicolumn{2}{c}{$\Delta x$} & \multicolumn{2}{c}{$\Delta y$} & \multicolumn{2}{c}{$\Delta z$} & \multicolumn{2}{c}{3D Resolution} \\
@@ -267,6 +265,8 @@ The results of the fit for the vertex position are summarized in table \ref{tab:
       NC & $0.35$ & $8.22$ & $-0.77$ & $7.84$ & $0.47$ & $9.50$ & $28.72$ & $30.80$ \\
       \hline
     \end{tabular}
+    \caption[Results from Elastic Arms Vertex Fits]{Difference between the true and reconstructed vertex for Elastic Arms vertex fits to FD MC events. All numbers shown are in cm. Table adapted from \cite{ref:ThesisEvan}.}
+    \label{tab:Elastic}
   \end{center}
 \end{table}
 

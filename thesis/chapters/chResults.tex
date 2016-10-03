@@ -21,8 +21,6 @@ It was decided to make rate only measurements for the first \nova~NC disappearan
 Fitting was performed allowing some parameters to float, some held to current best fit values, and others set to $0$ due to insensitivity. As mentioned above, a major analysis goal was to measure $\theta_{24}$ and $\theta_{34}$, so these angles were allowed to float between $0^\circ$ and $45^\circ$. Values outside of this range are either equivalent to this range through redefinition of the angles, or already highly disfavored through previous experiments and in a region difficult for fitting due to many local minima. $\theta_{23}$ was allowed to float with a Gaussian constraint with mean $45.8^\circ$ and standard deviation $3.2^\circ$, the best fit measurement by T2K \cite{ref:T2K2015}. All of the remaining parameters were held fixed to the values listed in table \ref{tab:FitFix}.
 \begin{table}[htb]
   \begin{center}
-    \caption[Fixed Parameters and Values for Fitting]{The parameters held fixed and the values they were set at for fitting.}
-    \label{tab:FitFix}
     \begin{tabular}{c c}
       \hline\hline
       Parameter & Value \\
@@ -37,6 +35,8 @@ Fitting was performed allowing some parameters to float, some held to current be
       $\delta_{14}$ & $0$ \\
       \hline
     \end{tabular}
+    \caption[Fixed Parameters and Values for Fitting]{The parameters held fixed and the values they were set at for fitting.}
+    \label{tab:FitFix}
   \end{center}
 \end{table}
 
@@ -95,8 +95,6 @@ Before diving head first into the FD data, the first necessary analysis benchmar
 Two sanity checks were performed to ensure that the data/MC difference would not negatively impact the analysis. First, the ND data/MC energy distribution was shown with a full systematic error band to show the difference is covered by systematics. This was shown in figure \ref{fig:NDSystBand}. Secondly, the effect of shifting either the data or MC in relation to the other on the predicted event rate and 1D angle sensitivities was studied. This was done by shifting the data up or the MC down by the ratio of the means of the energy distributions for MC and data, $1.39\unit{GeV} / 1.33\unit{GeV} \approx 4.5\%$ and also for a much larger shift of $10\%$. The event counts are shown in table \ref{tab:FDShift} and the angle sensitivities are shown in figure \ref{fig:1D2434Shift}. Due to the nature of a counting experiment, since the overall event rates are essentially unchanged, the effect of these rather large shifts is negligible. As a result, it was decided to take the data and MC as is and push for model improvements for future analyses.
 \begin{table}[htb]
   \begin{center}
-    \caption[FD Event Rates for Shifted Energy Spectra]{The number of predicted events at the FD after applying an energy shift to data or MC.}
-    \label{tab:FDShift}
     \begin{tabular}{c c c c c c c}
       \hline\hline
       Shift & All & NC & $\numu$ CC & $\nue$ CC & Cosmic & FOM \\
@@ -108,6 +106,8 @@ Two sanity checks were performed to ensure that the data/MC difference would not
       MC $10 \%$ Down & $87.2$ & $63.4$ & $5.2$ & $3.8$ & $14.3$ & $6.792$ \\
       \hline
     \end{tabular}
+    \caption[FD Event Rates for Shifted Energy Spectra]{The number of predicted events at the FD after applying an energy shift to data or MC.}
+    \label{tab:FDShift}
   \end{center}
 \end{table}
 
@@ -127,8 +127,6 @@ Two sanity checks were performed to ensure that the data/MC difference would not
 Three different sidebands were studied to test the performance of the analysis, a high energy sideband, a low CVN sideband, and mid cosmic BDT sideband. The predicted and observed event rates for each sideband are shown in table \ref{tab:Sideband}.
 \begin{table}[htbp]
   \begin{center}
-    \caption[Sideband Event Rates]{The observed and predicted events at the FD for each sideband.}
-    \label{tab:Sideband}
     \begin{tabular}{c c c c c c c}
       \hline\hline
       Sideband & Data & Total MC & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
@@ -138,6 +136,8 @@ Three different sidebands were studied to test the performance of the analysis, 
       Mid BDT & 17 & 14.5 & 6.0 & 0.5 & 0.4 & 7.5 \\
       \hline
     \end{tabular}
+    \caption[Sideband Event Rates]{The observed and predicted events at the FD for each sideband.}
+    \label{tab:Sideband}
   \end{center}
 \end{table}
 
@@ -242,7 +242,7 @@ Oscillation parameter measurements were extracted from a fit to the data, using 
   \label{fig:Fit1D}
 \end{figure}
 
-The data were also analyzed using a Feldman-Cousins (FC) statistical correction \cite{ref:FC}. The basic premise of this technique is to extract confidence intervals from an ordered likelihood ratio, instead of directly from $\Delta\chi^2$ values. The FC method performs particularly well near physical boundaries, such as angles close to maximum or minimum. The likelihood ratio, $R$, is calculated from
+The data were also analyzed using a Feldman-Cousins (FC) statistical correction \cite{ref:FC}. The basic pre\-mise of this technique is to extract confidence intervals from an ordered likelihood ratio, instead of directly from $\Delta\chi^2$ values. The FC method performs particularly well near physical boundaries, such as angles close to maximum or minimum. The likelihood ratio, $R$, is calculated from
 \beq
 R_{i} = P\left( x_i | x_e\left(\vec{\theta}\right) \right) / P\left( x_i | x_e\left(\vec{\theta}_{BF}\right) \right),
 \label{eq:FCRank}

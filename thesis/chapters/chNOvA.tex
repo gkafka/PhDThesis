@@ -98,11 +98,9 @@ The basic structure of the \nova~detectors is a set of PVC plastic cells arrange
 
 The local detector coordinate systems consider the NuMI beam direction as the Z axis, height (or altitude) as the Y axis, and the X axis is the other remaining. As the NuMI beam points approximately to the north, the direction of positive X happens to point west. (The beam travels in the positive Z direction, and the positive Y direction points to higher elevation.) In this frame, a given plane can either locate activity in an XZ plane if the cells are in the vertical orientation, or a YZ plane if the cells are in the horizontal orientation. For this reason, the planes alternate between horizontal and vertical orientations to give a full three dimensional view of detector activity.
 
-Each cell is filled with a liquid scintillator solution that consists of several different compounds, each with a specific function. Pseudocumene ({1,2,4-Trimethylbenzene}) is the scintillant used in the solution. The solution contains two wave shifters, PPO (2,5-Diphenyloxazole) and bis-MIS (1,4-bis(2-methylstyryl)benzene). A small amount of Stadis-425 is used in the solution as an antistatic agent, and a small amount of tocopherol (Vitamin E) is added as an antioxidant. Mineral oil provides the solvent for each of the above compounds and makes up the majority of the solution. Table \ref{tab:scintillator} summarizes the solution contents and lists their mass fractions. The resultant mixture produces scintillation light in the low wavelength UV region, and shifts this to the violet-blue region.
+Each cell is filled with a liquid scintillator solution that consists of several different compounds, each with a specific function. Pseudocumene ({1,2,4-Trimethylbenzene}) is the scintillant used in the solution. The solution contains two wave shifters, PPO (2,5-Diphenyloxazole) and bis-MIS (1,4-bis(2-methylstyryl)\linebreak benzene). A small amount of Stadis-425 is used in the solution as an antistatic agent, and a small amount of tocopherol (Vitamin E) is added as an antioxidant. Mineral oil provides the solvent for each of the above compounds and makes up the majority of the solution. Table \ref{tab:scintillator} summarizes the solution contents and lists their mass fractions. The resultant mixture produces scintillation light in the low wavelength UV region, and shifts this to the violet-blue region.
 \begin{table}[h]
   \begin{center}
-    \caption[Scintillator Solution Summary]{A summary of each component in the scintillation solution. Adapted from \cite{ref:TDRNOvA}.}
-    \label{tab:scintillator}
     \begin{tabular}{c c c}
       \hline\hline
       Compound & Purpose & Mass Fraction \\
@@ -115,6 +113,8 @@ Each cell is filled with a liquid scintillator solution that consists of several
       Vitamin E & Antioxidant & $0.0010\%$ \\
       \hline
     \end{tabular}
+    \caption[Scintillator Solution Summary]{A summary of each component in the scintillation solution. Adapted from \cite{ref:TDRNOvA}.}
+    \label{tab:scintillator}
   \end{center}
 \end{table}
 
@@ -194,8 +194,6 @@ Unlike the FD, the ND is not a surface detector. It is located $105\unit{m}$ bel
 
 \begin{table}[htb]
   \begin{center}
-    \caption[Detector Properties]{A summary of the physical properties of both detectors. For the ND, a single value means the property is consistent across the entire detector. Otherwise, values in parenthesis are for the muon catcher only. Note that the detector width and height exceed the cell lengths due to inclusion of the end caps on either side of the planes.}
-    \label{tab:Dets}
     \begin{tabular}{c c c}
       \hline\hline
       Detector Property & FD & ND \\
@@ -212,5 +210,7 @@ Unlike the FD, the ND is not a surface detector. It is located $105\unit{m}$ bel
       Cell Length (m) & $15.2$ & $3.8$~($3.8$H,~$2.6$V$)$ \\
       \hline
     \end{tabular}
+    \caption[Detector Properties]{A summary of the physical properties of both detectors. For the ND, a single value means the property is consistent across the entire detector. Otherwise, values in parenthesis are for the muon catcher only. Note that the detector width and height exceed the cell lengths due to inclusion of the end caps on either side of the planes.}
+    \label{tab:Dets}
   \end{center}
 \end{table}

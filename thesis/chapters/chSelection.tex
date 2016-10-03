@@ -6,8 +6,6 @@ The NC disappearance analysis is performed by comparing the observed FD spectrum
 The analysis specific cuts were chosen based on the official SA files. These files were produced in tag R16-03-03, and NuS group specific DeCAF files were produced in tag S16-04-08. These files included MEC events, and the corresponding Tufts CC weight was applied to all (applicable) events \cite{ref:TNGENIE}. For normalization simplicity, only 14 diblock MC and data were studied. After applying this criterion, all beam spectra were scaled to \pot{6}, and the cosmic spectra were scaled to $120\unit{s}$. The cuts were set assuming the three flavor oscillation parameters listed in table \ref{tab:3FlavParams}. The remainder of this chapter describes each level of event cut and their affect on the ND and FD spectra.
 \begin{table}[htb]
   \begin{center}
-    \caption[Assumed Oscillation Parameters]{The three flavor oscillation parameters assumed for studying the NC selection cuts}
-    \label{tab:3FlavParams}
     \begin{tabular}{c c}
       \hline\hline
       Oscillation Parameter & Value \\
@@ -21,6 +19,8 @@ The analysis specific cuts were chosen based on the official SA files. These fil
       $\delta$ & $0$ \\
       \hline
     \end{tabular}
+    \caption[Assumed Oscillation Parameters]{The three flavor oscillation parameters assumed for studying the NC selection cuts}
+    \label{tab:3FlavParams}
   \end{center}
 \end{table}
 
@@ -35,8 +35,6 @@ The cuts discussed in this chapter were trained on cosmic trigger data files. Th
 Data quality cuts were developed well before the first \nova~results to ensure proper data taking conditions, and all analysis groups apply them as standard. These cuts are applied per spill, and spills that fail these cuts are not included in POT accounting. The cuts can be categorized into three main groups, beam quality, data quality, and timing. The beam quality cuts were studied and set as described in reference \cite{ref:TNBeamQual}. To be included, spills must meet all of the criteria listed in table \ref{tab:BeamQual}. Two event quality cuts were applied to data from each detector. These cuts were motivated and set as described in references \cite{ref:DQND, ref:DQFDDCMLiveGeo, ref:DQFDDCMEdgeFrac}, and are summarized in table \ref{tab:DataQual}. Finally, a timing cut is applied to cosmic data to ensure that the data is not too close to the edge of the data taking window. For cosmic events within a given $500\,\mu s$ trigger window, only events between $25\,\mu{\mbox{s}} < t < 475\,\mu{\mbox{s}}$ are kept. Table \ref{tab:NP1DataQual} shows the number of events that pass these data quality cuts, and figure \ref{fig:NP1DataQual} shows the energy spectra at the ND and FD.
 \begin{table}[htb]
   \begin{center}
-    \caption[Beam Quality Cuts]{Beam quality cuts applied to each spill to ensure proper data taking conditions. Taken from reference \cite{ref:TNBeamQual}.}
-    \label{tab:BeamQual}
     \begin{tabular}{c c c}
       \hline\hline
       Beam Quality Parameter & Minimum & Maximum \\
@@ -48,13 +46,13 @@ Data quality cuts were developed well before the first \nova~results to ensure p
       Time to nearest beam spill & & $0.5\unit{s}$ \\
       \hline
     \end{tabular}
+    \caption[Beam Quality Cuts]{Beam quality cuts applied to each spill to ensure proper data taking conditions. Taken from reference \cite{ref:TNBeamQual}.}
+    \label{tab:BeamQual}
   \end{center}
 \end{table}
 
 \begin{table}[htb]
   \begin{center}
-    \caption[Data Quality Cuts]{Data quality cuts applied to each spill to ensure proper data taking conditions.}
-    \label{tab:DataQual}
     \begin{tabular}{c c c}
       \hline\hline
       Data Quality Parameter & Detector & Metric for Spill to Pass \\
@@ -65,13 +63,13 @@ Data quality cuts were developed well before the first \nova~results to ensure p
       DCM Edge Match Fraction & FD & $> 0.2$ \\
       \hline
     \end{tabular}
+    \caption[Data Quality Cuts]{Data quality cuts applied to each spill to ensure proper data taking conditions.}
+    \label{tab:DataQual}
   \end{center}
 \end{table}
 
 \begin{table}[htb]
   \begin{center}
-    \caption[Event Table: Data Quality Cuts]{The number of events that pass the data quality cuts, at both detectors.}
-    \label{tab:NP1DataQual}
     \begin{tabular}{c c c c c}
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
@@ -82,6 +80,8 @@ Data quality cuts were developed well before the first \nova~results to ensure p
       Data Quality & $11930$ & $82594$ & $1011$ & \\
       \hline
     \end{tabular}
+    \caption[Event Table: Data Quality Cuts]{The number of events that pass the data quality cuts, at both detectors.}
+    \label{tab:NP1DataQual}
   \end{center}
 \end{table}
 
@@ -102,8 +102,6 @@ Data quality cuts were developed well before the first \nova~results to ensure p
 Event quality cuts are the first applied to individual events and ensure that there is enough reconstructed information to be properly analyzed and that there were no obvious reconstruction failures. As with the data quality cuts above, these cuts were taken directly from the $\nue$ \cite{ref:EQNuEND, ref:EQNuEFD} and $\numu$ \cite{ref:EQNuMu} analyses. Two of the cuts within this suite simply require the presence of a reconstructed vertex and a shower object. These reconstructed objects are used more extensively in later stages, so the event quality cuts make sure they are available. Other quantities considered are the number of hits per plane, distance between the reconstructed vertex and leading shower, and number of contiguous planes. Events with a high number of hits per plane are cut to remove so called `FEB Flashers,' an event most often triggered by high energy cosmic rays. Likewise, events with a low number of contiguous planes are most often associated with very vertical cosmic rays. Finally, the a large distance between a vertex and leading shower is considered a reconstruction failure. These cuts are summarized with the exact parameters used for the cuts in table \ref{tab:EventQual}. The number of events before and after the event quality cuts are listed in table \ref{tab:NP1EventQual}, and figure \ref{fig:NP1EventQual} shows the energy spectra of the events that pass these cuts.
 \begin{table}[p]
   \begin{center}
-    \caption[Event Quality Cuts]{Quality cuts applied to individual events to ensure properly reconstructed quantities.}
-    \label{tab:EventQual}
     \begin{tabular}{c c c}
       \hline\hline
       Event Quality Metric & Metric for Event to Pass \\
@@ -115,13 +113,13 @@ Event quality cuts are the first applied to individual events and ensure that th
       Distance between vertex and leading shower & $< 100\unit{cm}$ \\
       \hline
     \end{tabular}
+    \caption[Event Quality Cuts]{Quality cuts applied to individual events to ensure properly reconstructed quantities.}
+    \label{tab:EventQual}
   \end{center}
 \end{table}
 
 \begin{table}[p]
   \begin{center}
-    \caption[Event Table: Event Quality Cuts]{The number of events before and after application of event quality cuts, at both detectors.}
-    \label{tab:NP1EventQual}
     \begin{tabular}{c c c c c}
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
@@ -134,6 +132,8 @@ Event quality cuts are the first applied to individual events and ensure that th
       $+$Event Quality & $7233$ & $45251$ & $592$ & \\
       \hline
     \end{tabular}
+    \caption[Event Table: Event Quality Cuts]{The number of events before and after application of event quality cuts, at both detectors.}
+    \label{tab:NP1EventQual}
   \end{center}
 \end{table}
 
@@ -150,8 +150,6 @@ Event quality cuts are the first applied to individual events and ensure that th
 It was discovered after these cuts were frozen that the requirement for the presence of at least one shower object implicitly imposed several other cuts. These cuts are thus already applied in the spectra shown in figure \ref{fig:NP1EventQual}, but they are listed separately in table \ref{tab:NuePresel}. Since the number of hits cut was not the same at both detectors, an explicit cut is made later in the cut flow as discussed in section \ref{sec:SelNCSel}.
 \begin{table}[p]
   \begin{center}
-    \caption[Implicit Event Quality Cuts]{Event quality cuts applied implicitly due to the requirement of at least one shower object.}
-    \label{tab:NuePresel}
     \begin{tabular}{c c c}
       \hline\hline
       Event Quality Metric & Metric for Event to Pass & Detector \\
@@ -162,6 +160,8 @@ It was discovered after these cuts were frozen that the requirement for the pres
       Length of Longest Prong & $< 500\unit{cm}$ & ND, FD \\
       \hline
     \end{tabular}
+    \caption[Implicit Event Quality Cuts]{Event quality cuts applied implicitly due to the requirement of at least one shower object.}
+    \label{tab:NuePresel}
   \end{center}
 \end{table}
 
@@ -188,8 +188,6 @@ For the FD, the fiducial and containment cuts have the largest effect on the cos
 
 \begin{table}[htb]
   \begin{center}
-    \caption[FD Fiducial and Containment Cuts]{Fiducial and containment cuts applied to events in the FD.}
-    \label{tab:FidContFD}
     \begin{tabular}{c c c}
       \hline\hline
       Reconstructed Quantity & Metric for Event to Pass \\
@@ -200,13 +198,13 @@ For the FD, the fiducial and containment cuts have the largest effect on the cos
       Leading prong start/stop distance to detector face & $> 10\unit{cm}$ \\
       \hline
     \end{tabular}
+    \caption[FD Fiducial and Containment Cuts]{Fiducial and containment cuts applied to events in the FD.}
+    \label{tab:FidContFD}
   \end{center}
 \end{table}
 
 \begin{table}[htb]
   \begin{center}
-    \caption[Event Table: Fiducial and Containment Cuts, FD]{The number of events before and after application of fiducial and containment cuts at the FD.}
-    \label{tab:NP1FidContFD}
     \begin{tabular}{c c c c c}
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
@@ -216,6 +214,8 @@ For the FD, the fiducial and containment cuts have the largest effect on the cos
       $+$ Containment & $129.6$ & $42.7$ & $33.3$ & $4324$ \\
       \hline
     \end{tabular}
+    \caption[Event Table: Fiducial and Containment Cuts, FD]{The number of events before and after application of fiducial and containment cuts at the FD.}
+    \label{tab:NP1FidContFD}
   \end{center}
 \end{table}
 
@@ -235,8 +235,6 @@ For the FD, the fiducial and containment cuts have the largest effect on the cos
 While the ND does not have a large cosmic background to eliminate, there are many events that originate in the rock outside of the detector that can leak into the detector. Furthermore, the small size of the ND means that many events have activity that escapes outside of the detector. The fiducial and containment cuts at the ND are designed to combat both of these effects. The fiducial cuts on the $x$ and $y$ coordinates of the reconstructed vertex were applied symmetrically, with a modestly large cut to remove events that originate in the rock outside the detector. The vertex cut on $z$ also cuts a large portion of the detector to cut rock events that leak into the front of the detector. The containment cuts at the ND are more strict than the FD. The leading prong is required to be greater than $25\unit{cm}$ from each detector face, and every track in the event is also subject to this cut. For the cut on each track, the back `face' of the detector is considered to be the last plane of the fully active portion of the detector, effectively cutting events with activity in the muon catcher. All of these cuts are summarized in table \ref{tab:FidContND}, table \ref{tab:NP1FidContND} lists the event rates before and after the cuts are applied, and figure \ref{fig:NP1FidContND} shows the energy spectra of events that pass these cuts.
 \begin{table}[htb]
   \begin{center}
-    \caption[ND Fiducial and Containment Cuts]{Fiducial and containment cuts applied to events in the ND.}
-    \label{tab:FidContND}
     \begin{tabular}{c c c}
       \hline\hline
       Reconstructed Quantity & Metric for Event to Pass \\
@@ -248,13 +246,13 @@ While the ND does not have a large cosmic background to eliminate, there are man
       Each track start/stop point, distance to detector face & $> 25\unit{cm}$ \\
       \hline
     \end{tabular}
+    \caption[ND Fiducial and Containment Cuts]{Fiducial and containment cuts applied to events in the ND.}
+    \label{tab:FidContND}
   \end{center}
 \end{table}
 
 \begin{table}[htb]
   \begin{center}
-    \caption[Event Table: Fiducial and Containment Cuts, ND]{The number of events before and after application of fiducial and containment cuts at the ND. Here, containment refers to cuts on the distance of the leading prong and each track to the closest detector face. All numbers in this table are $\times 10^{3}$.}
-    \label{tab:NP1FidContND}
     \begin{tabular}{c c c c}
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC \\
@@ -264,6 +262,8 @@ While the ND does not have a large cosmic background to eliminate, there are man
       $+$ Containment & $328.0$ & $379.4$ & $11.0$ \\
       \hline
     \end{tabular}
+    \caption[Event Table: Fiducial and Containment Cuts, ND]{The number of events before and after application of fiducial and containment cuts at the ND. Here, containment refers to cuts on the distance of the leading prong and each track to the closest detector face. All numbers in this table are $\times 10^{3}$.}
+    \label{tab:NP1FidContND}
   \end{center}
 \end{table}
 
@@ -295,8 +295,6 @@ A cut on the optimized NC classifier score is the main piece of the NC selection
 
 \begin{table}[htb]
   \begin{center}
-    \caption[NC Selection Cuts]{NC selection cuts to reject CC events, leaving a relatively pure sample of NC events.}
-    \label{tab:NCSel}
     \begin{tabular}{c c c}
       \hline\hline
       Selection Parameter & Metric for Event to Pass \\
@@ -305,13 +303,13 @@ A cut on the optimized NC classifier score is the main piece of the NC selection
       Number of Hits & $\geq 20$, $< 200$ \\
       \hline
     \end{tabular}
+    \caption[NC Selection Cuts]{NC selection cuts to reject CC events, leaving a relatively pure sample of NC events.}
+    \label{tab:NCSel}
   \end{center}
 \end{table}
 
 \begin{table}[htb]
   \begin{center}
-    \caption[Event Table: NC Selection Cuts]{The number of events before and after application of NC selection cuts, at both detectors.}
-    \label{tab:NP1NCSel}
     \begin{tabular}{c c c c c}
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
@@ -324,6 +322,8 @@ A cut on the optimized NC classifier score is the main piece of the NC selection
       $+$NC Selection & $263.9$ & $124.4$ & $3.5$ & \\
       \hline
     \end{tabular}
+    \caption[Event Table: NC Selection Cuts]{The number of events before and after application of NC selection cuts, at both detectors.}
+    \label{tab:NP1NCSel}
   \end{center}
 \end{table}
 
@@ -366,8 +366,6 @@ The final set of cuts applied to the events is cosmic rejection. While there are
 
 \begin{table}[htb]
   \begin{center}
-    \caption[Final Selection Cuts]{Final selection cuts applied to all events.}
-    \label{tab:CosRej}
     \begin{tabular}{c c}
       \hline\hline
       Selection Parameter & Metric for Event to Pass \\
@@ -380,13 +378,13 @@ The final set of cuts applied to the events is cosmic rejection. While there are
       Calorimetric Energy & $> 0.5\unit{GeV}$, $< 4.0\unit{GeV}$ \\
       \hline
     \end{tabular}
+    \caption[Final Selection Cuts]{Final selection cuts applied to all events.}
+    \label{tab:CosRej}
   \end{center}
 \end{table}
 
 \begin{table}[htb]
   \begin{center}
-    \caption[Event Table: FD Cosmic Rejection Cuts]{The number of events after each cut level at the FD.}
-    \label{tab:NP1CosRej}
     \begin{tabular}{c c c c c}
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
@@ -400,6 +398,8 @@ The final set of cuts applied to the events is cosmic rejection. While there are
       \hline
       \hline
     \end{tabular}
+    \caption[Event Table: FD Cosmic Rejection Cuts]{The number of events after each cut level at the FD.}
+    \label{tab:NP1CosRej}
   \end{center}
 \end{table}
 
@@ -418,8 +418,6 @@ The final set of cuts applied to the events is cosmic rejection. While there are
 The final selection combines all of the previous sections with explicit energy cuts applied at both low and high energy. A low energy cut rejecting events below 0.5 GeV was used to reject very low energy events that could be subject to threshold events, and a high energy cut rejecting events above 4 GeV was placed due to diverging ND and FD selection efficiencies above that point. These energy cuts are listed in table \ref{tab:NP1CosRej}. The event rates at each level of cut are summarized for the FD in table \ref{tab:FDSel}, and in table \ref{tab:NDSel} for the ND. The final energy spectra are shown in figure \ref{fig:Sel}.
 \begin{table}[htb]
   \begin{center}
-    \caption[Event Table: FD Selection Cuts]{The number of events after each cut level at the FD.}
-    \label{tab:FDSel}
     \begin{tabular}{c c c c c}
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
@@ -432,13 +430,13 @@ The final selection combines all of the previous sections with explicit energy c
       $+$ Cosmic Rejection & $65.0$ & $5.0$ & $3.7$ & $11.0$ \\
       \hline
     \end{tabular}
+    \caption[Event Table: FD Selection Cuts]{The number of events after each cut level at the FD.}
+    \label{tab:FDSel}
   \end{center}
 \end{table}
 
 \begin{table}[htb]
   \begin{center}
-    \caption[Event Table: ND Selection Cuts]{The number of events after each cut level at the ND. All numbers in this table are $\times 10^{3}$.}
-    \label{tab:NDSel}
     \begin{tabular}{c c c c}
       \hline\hline
       Cut Level & NC & $\numu$ CC & $\nue$ CC \\
@@ -451,5 +449,7 @@ The final selection combines all of the previous sections with explicit energy c
       $+$ Cosmic Rejection & $198.3$ & $77.5$ & $2.6$ \\
       \hline
     \end{tabular}
+    \caption[Event Table: ND Selection Cuts]{The number of events after each cut level at the ND. All numbers in this table are $\times 10^{3}$.}
+    \label{tab:NDSel}
   \end{center}
 \end{table}
