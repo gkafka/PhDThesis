@@ -17,7 +17,7 @@
 %\RequirePackage[width=5.75in, letterpaper]{geometry}
 \RequirePackage[margin=1.25in, letterpaper]{geometry}
 \usepackage{ragged2e}
-\RaggedRight
+%\RaggedRight
 \RequirePackage{graphicx}
 \usepackage{fixltx2e}
 \parindent 12pt
@@ -40,8 +40,8 @@
 \newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{EB Garamond}
 \setsansfont[Scale=MatchLowercase, BoldFont={Lato Bold}]{Lato Regular}
 \setmonofont[Scale=MatchLowercase]{Source Code Pro}
-\RequirePackage[labelfont={bf,sf,footnotesize,singlespacing},
-                textfont={sf,footnotesize,singlespacing},
+\RequirePackage[labelfont={bf,footnotesize,singlespacing},
+                textfont={footnotesize,singlespacing},
                 justification={justified,RaggedRight},
                 singlelinecheck=false,
                 margin=0pt,
@@ -78,6 +78,7 @@
 \renewcommand\bibname{References}
 \RequirePackage[square,comma,numbers]{natbib}
 \bibliographystyle{unsrt}
+%\RequirePackage[numbers,sort&compress]{natbib}
 \renewcommand{\bibnumfmt}[1]{[#1]}
 \RequirePackage[palatino]{quotchap}
 \renewcommand*{\chapterheadstartvskip}{\vspace*{-0.5\baselineskip}}

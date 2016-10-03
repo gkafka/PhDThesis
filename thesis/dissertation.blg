@@ -17,26 +17,6 @@ Illegal, another \bibstyle command---line 166 of file dissertation.aux
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 665 of file references.bib
- : 
- : %
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1042 of file references.bib
- : 
- : %
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1049 of file references.bib
- : 
- : %
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1056 of file references.bib
- : 
- : %
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
 You've used 128 entries,
@@ -80,4 +60,4 @@ warning$ -- 2
 while$ -- 190
 width$ -- 131
 write$ -- 1288
-(There were 5 error messages)
+(There was 1 error message)
