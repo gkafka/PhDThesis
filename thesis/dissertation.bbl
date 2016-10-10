@@ -12,12 +12,12 @@ J.~Chadwick.
 \bibitem{ref:Fermi}
 E.~Fermi.
 \newblock Versuch einer theorie der $\beta$-strahlen.
-\newblock {\em Zeitschrift f\"{u}r Physik}, 88:161--177, 1934.
+\newblock {\em Z.~Phys.}, 88:161--177, 1934.
 
 \bibitem{ref:1953}
 F.~Reines and C.~L. Cowan.
 \newblock Detection of the free neutrino.
-\newblock {\em Physical Review}, 92:830--831, 1953.
+\newblock {\em \PRev}, 92:830--831, 1953.
 
 \bibitem{ref:1956}
 C.~L. Cowan, F.~Reines, F.~B. Harrison, H.~W. Kruse, and A.~D. McGuire.
@@ -28,170 +28,169 @@ C.~L. Cowan, F.~Reines, F.~B. Harrison, H.~W. Kruse, and A.~D. McGuire.
 G.~Danby et~al.
 \newblock Observation of high-energy neutrino reactions and the existence of
   two kinds of neutrinos.
-\newblock {\em Physical Review Letters}, 9:36--44, 1962.
+\newblock {\em \PRL}, 9:36--44, 1962.
 
 \bibitem{ref:DONUT}
 {DONUT Collaboration, K. Kodama et al}.
 \newblock Observation of tau neutrino interactions.
-\newblock {\em Physics Letters B}, 504:218--224, 2001.
+\newblock {\em \PLB}, 504:218--224, 2001.
 
 \bibitem{ref:Pontecorvo1}
 B.~Pontecorvo.
 \newblock Mesonium and anti-mesonium.
-\newblock {\em Soviet Journal of Experimental and Theoretical Physics}, 6:429,
-  1957.
+\newblock {\em Sov.~Phys.~JETP}, 6:429, 1957.
 
 \bibitem{ref:Davis}
 {R. Davis, Jr.}, D.~S. Harmer, and K.~C. Hoffman.
 \newblock Search for neutrinos from the sun.
-\newblock {\em Physical Review Letters}, 20:1205--1209, 1968.
+\newblock {\em \PRL}, 20:1205--1209, 1968.
 
 \bibitem{ref:Bahcall}
 J.~N. Bahcall, N.~A. Bahcall, and G.~Shaviv.
 \newblock Present status of the theoretical predictions for the
   \textsuperscript{37}{Cl} solar-neutrino experiment.
-\newblock {\em Physical Review Letters}, 20:1209--1212, 1968.
+\newblock {\em \PRL}, 20:1209--1212, 1968.
 
 \bibitem{ref:Pontecorvo2}
 V.~Gribov and B.~Pontecorvo.
 \newblock Neutrino astronomy and lepton charge.
-\newblock {\em Physics Letters B}, 28:493--496, 1969.
+\newblock {\em \PLB}, 28:493--496, 1969.
 
 \bibitem{ref:Kamiokande}
 K.S.~Hirata et~al.
 \newblock Observation of {B-8} solar neutrinos in the {Kamiokande-II} detector.
-\newblock {\em Physical Review Letters}, 63:16--19, 1989.
+\newblock {\em \PRL}, 63:16--19, 1989.
 
 \bibitem{ref:SAGE}
 A.~I.~Abazov et~al.
 \newblock Search for neutrinos from the sun using the reaction
   \textsuperscript{71}{Ga} ($\nue$, $e^{-}$) \textsuperscript{71}{Ge}.
-\newblock {\em Physical Review Letters}, 67:3332--3335, 1991.
+\newblock {\em \PRL}, 67:3332--3335, 1991.
 
 \bibitem{ref:GALLEX}
 P.~Anselmann et~al.
 \newblock Solar neutrinos observed by {GALLEX} at {Gran} {Sasso}.
-\newblock {\em Physics Letters B}, 285:376--389, 1992.
+\newblock {\em \PLB}, 285:376--389, 1992.
 
 \bibitem{ref:KamioAtm}
 K.S.~Hirata et~al.
 \newblock Observation of a small atmospheric $\numu$/$\nue$ ratio in
   {Kamiokande}.
-\newblock {\em Physical Letters B}, 280:146--152, 1992.
+\newblock {\em \PLB}, 280:146--152, 1992.
 
 \bibitem{ref:SuperKAtm}
 Y.~Fukuda et~al.
 \newblock Evidence for oscillation of atmospheric neutrinos.
-\newblock {\em Physical Review Letters}, 81:1562--1567, 1998.
+\newblock {\em \PRL}, 81:1562--1567, 1998.
 
 \bibitem{ref:SNO02}
 Q.~R.~Ahmad et~al.
 \newblock Direct evidence for neutrino flavor transformation from
   neutral-current interactions in the sudbury neutrino observatory.
-\newblock {\em Physical Review Letters}, 89:011301, 2002.
+\newblock {\em \PRL}, 89:011301, 2002.
 
 \bibitem{ref:LEP}
 {ALEPH Collaboration, DELPHI Collaboration, L3 Collaboration, OPAL
   Collaboration, SID Collaboration, LEP Electroweak Working Group, SID
   Electroweak Group, Heavy Flavour Group}.
 \newblock Precision electroweak measurements on the {Z} resonance.
-\newblock {\em Physics Reports}, 427:218--224, 2006.
+\newblock {\em \PRep}, 427:218--224, 2006.
 
 \bibitem{ref:LSND}
 C.~Athanassopoulos et~al.
 \newblock Candidate events in a search for anti-muon-neutrino -->
   anti-electron-neutrino oscillations.
-\newblock {\em Physical Review Letters}, 75:2650--2653, 1995.
+\newblock {\em \PRL}, 75:2650--2653, 1995.
 
 \bibitem{ref:Mini2007}
 A.~A. Aguilar-Arevalo et~al.
 \newblock A search for electron neutrino appearance at the {$\Delta m^{2} \sim
   1\evsq$} scale.
-\newblock {\em Physical Review Letters}, 98:231801, 2007.
+\newblock {\em \PRL}, 98:231801, 2007.
 
 \bibitem{ref:Mini2013}
 A.~A. Aguilar-Arevalo et~al.
 \newblock Improved search for $\anumu \rightarrow \anue$ oscillations in the
   {MiniBooNE} experiment.
-\newblock {\em Physical Review Letters}, 110:161801, 2013.
+\newblock {\em \PRL}, 110:161801, 2013.
 
 \bibitem{ref:KARMEN}
 B.~Armbruster et~al.
 \newblock Upper limits for neutrino oscillations $\anumu \rightarrow \anue$
   from muon decay at rest.
-\newblock {\em Physical Review D}, 65:112001, 2002.
+\newblock {\em \PRD}, 65:112001, 2002.
 
 \bibitem{ref:NOMAD}
 P.~Astier et~al.
 \newblock Search for $\numu \rightarrow \nue$ oscillations in the {NOMAD}
   experiment.
-\newblock {\em Physics Letters B}, 570:19--31, 2003.
+\newblock {\em \PLB}, 570:19--31, 2003.
 
 \bibitem{ref:GALLEXSterile}
 F.~Kaether et~al.
 \newblock Reanalysis of the {GALLEX} solar neutrino flux and source
   experiments.
-\newblock {\em Physics Letters B}, 685:47--54, 2010.
+\newblock {\em \PLB}, 685:47--54, 2010.
 
 \bibitem{ref:SageSterile}
 J.~Abdurashitov et~al.
 \newblock Measurement of the response of a {Ga} solar neutrino experiment to
   neutrinos from an \textsuperscript{37}{Ar} source.
-\newblock {\em Physical Review C}, 73:045805, 2006.
+\newblock {\em Phys.~Rev.~C}, 73:045805, 2006.
 
 \bibitem{ref:Bugey}
 B.~Achkar et~al.
 \newblock Search for neutrino oscillations at 15, 40 and 95 meters from a
   nuclear power reactor at bugey.
-\newblock {\em Nuclear Physics B}, 434:503--532, 1995.
+\newblock {\em \NPhysB}, 434:503--532, 1995.
 
 \bibitem{ref:RENO}
 J.~Ahn et~al.
 \newblock Observation of reactor electron antineutrino disappearance in the
   reno experiment.
-\newblock {\em Physical Review Letters}, 108:191802, 2012.
+\newblock {\em \PRL}, 108:191802, 2012.
 
 \bibitem{ref:DayaSterile}
 F.~P.~An et~al.
 \newblock Search for a light sterile neutrino at {Daya Bay}.
-\newblock {\em Physical Review Letters}, 113:141802, 2014.
+\newblock {\em \PRL}, 113:141802, 2014.
 
 \bibitem{ref:SuperKSterile}
 K.~Abe et~al.
 \newblock Limits on sterile neutrino mixing using atmospheric neutrinos in
   {Super-Kamiokande}.
-\newblock {\em Physical Review D}, 91:052019, 2015.
+\newblock {\em \PRD}, 91:052019, 2015.
 
 \bibitem{ref:MINOSSterile}
 P.~Adamson et~al.
 \newblock Active to sterile neutrino mixing limits from neutral-current
   interactions in minos.
-\newblock {\em Physical Review Letters}, 107:011802, 2011.
+\newblock {\em \PRL}, 107:011802, 2011.
 
 \bibitem{ref:MNS}
 Z.~Maki, M.~Nakagawa, and S.~Sakata.
 \newblock Remarks on the unified model of elementary particles.
-\newblock {\em Progress of Theoretical Physics}, 28:870--880, 1962.
+\newblock {\em Prog.~Theor.~Phys.}, 28:870--880, 1962.
 
 \bibitem{ref:PlaneWaves}
 J.~Rich.
 \newblock Quantum mechanics of neutrino oscillations.
-\newblock {\em Physical Review D}, 48:4318--4325, 1993.
+\newblock {\em \PRD}, 48:4318--4325, 1993.
 
 \bibitem{ref:WavePackets}
 B.~Kayser.
 \newblock On the quantum mechanics of neutrino oscillation.
-\newblock {\em Physical Review D}, 24:110--116, 1981.
+\newblock {\em \PRD}, 24:110--116, 1981.
 
 \bibitem{ref:PDG}
 K.~A.~Olive et~al.
 \newblock Review of particle physics.
-\newblock {\em Chinese Physics C}, 38:090001, 2014.
+\newblock {\em Chin.~Phys.~C}, 38:090001, 2014.
 
 \bibitem{ref:MassSplitRef}
 O.~Mena and S.~Parke.
 \newblock Unified graphical summary of neutrino mixing parameters.
-\newblock {\em Physical Review D}, 69:117301, 2004.
+\newblock {\em \PRD}, 69:117301, 2004.
 
 \bibitem{ref:ThesisEvan}
 E.~Niner.
@@ -202,38 +201,38 @@ E.~Niner.
 \bibitem{ref:Wolfenstein}
 L.~Wolfenstein.
 \newblock Neutrino oscillations in matter.
-\newblock {\em Physical Review D}, 17:2369--2374, 1978.
+\newblock {\em \PRD}, 17:2369--2374, 1978.
 
 \bibitem{ref:MSW}
 S.~P. Mikheev and A.~Y. Smirnov.
 \newblock Resonance enhancement of oscillations in matter and solar neutrino
   spectroscopy.
-\newblock {\em Soviet Journal of Nuclear Physics}, 42:913--917, 1985.
+\newblock {\em Sov.~J.~Nucl.~Phys.}, 42:913--917, 1985.
 
 \bibitem{ref:3NuMatter}
 H.~Nunokawa, S.~Parke, and J.~W.~F. Valle.
 \newblock {CP} violation and neutrino oscillations.
-\newblock {\em Progress in Particle and Nuclear Physics}, 60:338--402, 2008.
+\newblock {\em Prog.~Part.~Nucl.~Phys.}, 60:338--402, 2008.
 
 \bibitem{ref:DayaBay2012}
 F.~P.~An et~al.
 \newblock Observation of electron-antineutrino disappearance at {Daya Bay}.
-\newblock {\em Physical Review Letters}, 108:171803, 2012.
+\newblock {\em \PRL}, 108:171803, 2012.
 
 \bibitem{ref:BestFits3}
 F.~Capozzi et~al.
 \newblock Status of three-neutrino oscillation parameters, circa 2013.
-\newblock {\em Physical Review D}, 89:093018, 2014.
+\newblock {\em \PRD}, 89:093018, 2014.
 
 \bibitem{ref:NOvAFANuE}
 P.~Adamson et~al.
 \newblock First measurement of electron-neutrino appearance in {NOvA}.
-\newblock {\em Physical Review Letters}, 116:151806, 2016.
+\newblock {\em \PRL}, 116:151806, 2016.
 
 \bibitem{ref:NOvAFANuMu}
 P.~Adamson et~al.
 \newblock First measurement of muon-neutrino disappearance in {NOvA}.
-\newblock {\em Physical Review D Rapid Communications}, 93:051104, 2016.
+\newblock {\em \PRD}, 93:051104, 2016.
 
 \bibitem{ref:Planck}
 P.~A. R.~Ade et~al.
@@ -244,13 +243,13 @@ P.~A. R.~Ade et~al.
 \bibitem{ref:GlobalFit}
 J.~Kopp, P.~A.~N. Machado, M.~Maltoni, and T.~Schwetz.
 \newblock Sterile neutrino oscillations: The global picture.
-\newblock {\em Journal of High Energy Physics}, 2013:050, 2013.
+\newblock {\em \JHEP}, 2013:050, 2013.
 
 \bibitem{ref:Th14Con}
 A.~Palazzo.
 \newblock Estimate of $\theta_{14}$ independent of the reactor antineutrino
   flux determinations.
-\newblock {\em Physical Review D}, 85:077301, 2012.
+\newblock {\em \PRD}, 85:077301, 2012.
 
 \bibitem{ref:TDRNOvA}
 D.~S.~Ayers et~al.
@@ -293,7 +292,7 @@ J.~Cooper.
 T.~T.~B\"{o}hlen et~al.
 \newblock The {FLUKA} code: Developments and challenges for high energy and
   medical applications.
-\newblock {\em Nuclear Data Sheets}, 120:211--214, 2014.
+\newblock {\em Nucl.~Data Sheets}, 120:211--214, 2014.
 
 \bibitem{ref:Fluka2}
 A.~Ferrari et~al.
@@ -303,13 +302,12 @@ A.~Ferrari et~al.
 \bibitem{ref:Geant41}
 S.~Agostinelli et~al.
 \newblock {Geant4}--a simulation toolkit.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  506:250--303, 2003.
+\newblock {\em \NIMA}, 506:250--303, 2003.
 
 \bibitem{ref:Geant42}
 J.~Allison et~al.
 \newblock {Geant4} developments and applications.
-\newblock {\em IEEE Transactions on Nuclear Science}, 53:270--278, 2006.
+\newblock {\em IEEE Trans.~Nucl.~Sci.}, 53:270--278, 2006.
 
 \bibitem{ref:GeomNuMI}
 G.~Kafka.
@@ -349,8 +347,7 @@ A.~Aurisano and J.~Musser.
 \bibitem{ref:GENIEGen}
 C.~Andreopoulos et~al.
 \newblock The {GENIE} neutrino {Monte} {Carlo} generator.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  614:87--104, 2010.
+\newblock {\em \NIMA}, 614:87--104, 2010.
 
 \bibitem{ref:GENIE}
 C.~Andreopoulos et~al.
@@ -362,7 +359,7 @@ C.~Andreopoulos et~al.
 P.~A.~Rodriques et~al.
 \newblock Identification of nuclear effects in neutrino-carbon interactions at
   low three-momentum transfer.
-\newblock {\em Physical Review Letters}, 116:071802, 2016.
+\newblock {\em \PRL}, 116:071802, 2016.
 
 \bibitem{ref:TNGENIE}
 H.~Gallagher et~al.
@@ -388,7 +385,7 @@ G.~Davies and R.~Murphy.
 \bibitem{ref:BirksChou}
 C.~N. Chou.
 \newblock The nature of the saturation effect of fluorescent scintillators.
-\newblock {\em Physical Review}, 87:904--905, 1952.
+\newblock {\em \PRev}, 87:904--905, 1952.
 
 \bibitem{ref:DanBirks}
 D.~Pershey.
@@ -470,7 +467,7 @@ B.~Rebel.
 \bibitem{ref:MuonTables}
 D.~E. Groom, N.~V. Mokhov, and S.~I. Striganov.
 \newblock Muon stopping power and range tables $10\unit{MeV}$--$100\unit{TeV}$.
-\newblock {\em Atomic Data and Nuclear Data Tables}, 78:183--356, 2001.
+\newblock {\em Atom.~Data Nucl.~Data Tabl.}, 78:183--356, 2001.
 
 \bibitem{ref:DensityScint}
 S.~Mufson.
@@ -495,7 +492,7 @@ M.~Baird.
 L.~Fernandes and M.~Oliveira.
 \newblock Real-time line detection through an improved {Hough} transform voting
   scheme.
-\newblock {\em Pattern Recognition}, 41:299--314, 2008.
+\newblock {\em Pattern Recogn.}, 41:299--314, 2008.
 
 \bibitem{ref:TNHough}
 M.~Baird.
@@ -508,23 +505,23 @@ M.~Baird.
 M.~Gyulassy and M.~Harlander.
 \newblock Elastic tracking and neural network algorithms for complex pattern
   recognition.
-\newblock {\em Computer Physics Communications}, 66:31--46, 1991.
+\newblock {\em \CPC}, 66:31--46, 1991.
 
 \bibitem{ref:RecoElastic2}
 M.~Ohlsson, C.~Peterson, and A.~L. Yuille.
 \newblock Track finding with deformable templates - the elastic arms approach.
-\newblock {\em Computer Physics Communications}, 71:77--98, 1992.
+\newblock {\em \CPC}, 71:77--98, 1992.
 
 \bibitem{ref:RecoElastic3}
 M.~Ohlsson.
 \newblock Extensions and explorations of the elastic arms algorithm.
-\newblock {\em Computer Physics Communications}, 77:19--32, 1993.
+\newblock {\em \CPC}, 77:19--32, 1993.
 
 \bibitem{ref:RecoElastic4}
 R.~Fr\"{u}hwirth and A.~Strandlie.
 \newblock Track fitting with ambiguities and noise: A study of elastic tracking
   and nonlinear filters.
-\newblock {\em Computer Physics Communications}, 120:197--214, 1999.
+\newblock {\em \CPC}, 120:197--214, 1999.
 
 \bibitem{ref:TNElastic}
 M.~Messier.
@@ -544,7 +541,7 @@ E.~Niner.
 J.~C. Dunn.
 \newblock A fuzzy relative of the {ISODATA} process and its use in detecting
   compact well-separated clusters.
-\newblock {\em Journal of Cybernetics}, 3:32--57, 1973.
+\newblock {\em \JCyber}, 3:32--57, 1973.
 
 \bibitem{ref:RecoFuzzy2}
 J.~C. Bezdek.
@@ -554,13 +551,12 @@ J.~C. Bezdek.
 \bibitem{ref:RecoFuzzyExt}
 R.~Krishnapuram and J.~M. Keller.
 \newblock A possibilistic approach to clustering.
-\newblock {\em IEEE Transactions on Fuzzy Systems}, 1:98--110, 1993.
+\newblock {\em IEEE Trans.~Fuzzy Syst.}, 1:98--110, 1993.
 
 \bibitem{ref:Kuiper}
 N.~H. Kuiper.
 \newblock Tests concerning random points on a circle.
-\newblock {\em Proceedings of the Koninklijke Nederlandse Akademie van
-  Wetenschappen, Series A}, 63:38--47, 1960.
+\newblock {\em P.~K.~Ned.~Akad.~Wetensc.~A}, 63:38--47, 1960.
 
 \bibitem{ref:TNKalman}
 N.~Raddatz.
@@ -600,7 +596,7 @@ K.~Bays.
 \bibitem{ref:CVN}
 A.~Aurisano et~al.
 \newblock A convolutional neural network neutrino event classifier.
-\newblock {\em Journal of Instrumentation}, 11:P09001, 2016.
+\newblock {\em \JINST}, 11:P09001, 2016.
 
 \bibitem{ref:GoogLeNet}
 C.~Szegedy et~al.
@@ -764,13 +760,13 @@ A.~Markowitz.
 K.~Abe et~al.
 \newblock Measurement of neutrino oscillation in appearance and disappearance
   channels by the {T2K} experiment with $6.6 \times 10^{20}$ protons on target.
-\newblock {\em Physical Review D}, 91:072010, 2015.
+\newblock {\em \PRD}, 91:072010, 2015.
 
 \bibitem{ref:FC}
 G.~J. Feldman and R.~D. Cousins.
 \newblock Unified approach to the classical statistical analysis of small
   signals.
-\newblock {\em Physical Review D}, 57:3873--3889, 1998.
+\newblock {\em \PRD}, 57:3873--3889, 1998.
 
 \bibitem{ref:FCNotes}
 G.~Feldman.

@@ -24,7 +24,7 @@
 %   . Oscillation Parameters
 %
 % - Documentation
-%   . Horizontal lines
+%   . Journals
 %   . Margin comments
 %   . Hyphenation
 %
@@ -107,118 +107,21 @@
 % Regions
 \newcommand\SR           {\textrm{\footnotesize\sc sr}}
 
-% Super/subscripts
-
-% Standard
-
-% Special
-
-% Fractions
-
-% Efficiencies
-
-% -----------------------------------------------------------------------------
-% Colors
-
-%\definecolor{myWW}{rgb}{0,0,255}
-
-% -----------------------------------------------------------------------------
-% Piechart
-
-\newcommand{\slice}[6]{
-  \pgfmathparse{0.5*#1+0.5*#2}
-  \let\midangle\pgfmathresult
-
-  % slice
-  \ifthenelse{\equal{#2}{0}}{}{
-    \draw[fill=#6] (0,0) -- (#1:1) arc (#1:#2:1) -- cycle;}
-
-  % outer label
-  \node[label=\midangle:#5] at (\midangle:0.95) {};
-
-  % inner label
-  \ifthenelse{#3 < 5}{}{
-    \pgfmathparse{min((#2-#1-20)/110*(-0.3),0)}
-    \let\temp\pgfmathresult
-    \pgfmathparse{max(\temp,-0.4) + 0.8}
-    \let\innerpos\pgfmathresult
-      \node at (\midangle:\innerpos){
-        \ifthenelse{\equal{blue}{#6}}{\color{white} #4}{
-          \ifthenelse{\equal{magenta}{#6}}{\color{white} #4}{
-            \ifthenelse{\equal{cyan}{#6}}{\color{white} #4}{
-              \ifthenelse{\equal{black}{#6}}{\color{white} #4}{
-                #4
-              }
-            }
-          }
-        }
-      };
-  }
-}
-
-% -----------------------------------------------------------------------------
-% Documentation
-
-% Clear two-column page
-\makeatletter
-\newcommand*{\balancecolsandclearpage}{%
-  \close@column@grid
-  \clearpage
-  \twocolumngrid
-}
-\makeatother
-
-% Repeating comments
-\newcommand\HwwTableUpdate{\centering{\color{red}\large THIS TABLE WILL BE UPDATED}\\ }
-\newcommand\HwwPlotUpdate{\centering{\color{red}\large FIGURE STYLE WILL BE UPDATED}\\ }
-\newcommand\HwwPlotDetail[1]{#1 Fig.~\ref{fig:MET} for plotting details}
-\newcommand\HwwPlotSelectionDetail[1]{#1 Figs.~\ref{fig:MET} and~\ref{fig:0j} for plotting details}
-\newcommand\HwwPlotFitDetail[1]{#1 Figs.~\ref{fig:MET} and~\ref{fig:mT_fitDF} for details of plotting and normalizations}
-\newcommand\HwwPlotFitDetailShort[1]{#1 Figs.~\ref{fig:MET} and~\ref{fig:mT_fitDF} for plotting details}
-\newcommand\paper        {paper}
-\newcommand\Paper        {Paper}
-
-% Spacing
-\newcommand\no           {\!\!}
-\newcommand\np           {\no\no}
-\newcommand\nq           {\np\np}
-\newcommand\nqq          {\nq\nq\nq}
-\newcommand\nqqq         {\nq\nq\nq\nq}
-\newcommand\nr           {\phantom{i}\nq}
-\newcommand\zz           {\phantom{..}}
-\newcommand\z            {\phantom{0}}
-\newcommand\Z            {\phantom{.0}}
-\newcommand\QUAD         {~\,}
-
 % Journals
-\newcommand\Note[2]      {Report No.\ #2, \href{#1}{#1}}
-\newcommand\CPC[1]       {Comput.~Phys.~Commun.~{\bf #1}}
-\newcommand\EPJC[1]      {Eur.~Phys.~J.~C {\bf #1}}
-\newcommand\JHEP[1]      {J.~High Energy Phys.~#1}
-\newcommand\JINST[1]     {JINST {\bf #1}}
-\newcommand\JPHYSG[1]    {J.~Phys.~{\bf G~#1}}
-\newcommand\NIMA         {Nucl.~Instrum.~Methods~Phys.~Res.,~Sect.~A~}
-\newcommand\NPhys[1]     {Nucl.~Phys.\ {\bf #1}}
-\newcommand\PLB[1]       {Phys.~Lett.~B {\bf #1}}
-\newcommand\PLett[1]     {Phys.~Lett.\ {\bf #1}}
-\newcommand\PRep[1]      {Phys.~Rep.\ {\bf #1}}
-\newcommand\PRev[1]      {Phys.~Rev.\ {\bf #1}}
-\newcommand\PRD[1]       {Phys.~Rev.~D {\bf #1}}
-\newcommand\PRL[1]       {Phys.~Rev.~Lett.\ {\bf #1}}
-\newcommand\ZPC[1]       {Z.~Phys.~C {\bf #1}}
-\newcommand\arxiv[1]     {\href{http://arxiv.org/abs/#1}{arXiv:#1}}
-\newcommand\hepex[1]     {\href{http://arxiv.org/abs/hep-ex/#1}{hep-ex/#1}}
-\newcommand\hepph[1]     {\href{http://arxiv.org/abs/hep-ph/#1}{hep-ph/#1}}
-
-% Latin
-\newcommand\ie           {i.\,e{.}}
-\newcommand\eg           {e.\,g{.}}
-\newcommand\etal         {{\it et al{.}}}
-\newcommand\ibid         {{\it ibid{.}}}
-\newcommand\insitu       {{\it in situ}}
-\newcommand\cf           {cf{.}}
-
-% Horizontal lines (double line, single line)
-\newcommand\dbline{\noalign{\vskip 0.10truecm\hrule\vskip 0.05truecm\hrule\vskip 0.10truecm}}
-\newcommand\sgline{\noalign{\vskip 0.10truecm\hrule\vskip 0.10truecm}}
-\newcommand\clineskip{\noalign{\vskip 0.10truecm}}
+\newcommand\CPC{Comput.~Phys.~Commun.}
+\newcommand\JCyber{J.~Cybern.}
+\newcommand\JHEP{J.~High Energy Phys.}
+\newcommand\JINST{JINST}
+\newcommand\NIMA{Nucl.~Instrum.~Methods~Phys.~Res.,~Sect.~A}
+\newcommand\NPhys{Nucl.~Phys.}
+\newcommand\NPhysB{Nucl.~Phys.~B}
+\newcommand\PLett{Phys.~Lett.}
+\newcommand\PLB{Phys.~Lett.~B}
+\newcommand\PRep{Phys.~Rep.}
+\newcommand\PRev{Phys.~Rev.}
+\newcommand\PRD{Phys.~Rev.~D}
+\newcommand\PRL{Phys.~Rev.~Lett.}
+\newcommand\ZPC{Z.~Phys.~C}
+\newcommand\arxiv[1]{\href{http://arxiv.org/abs/#1}{arXiv:#1}}
+\newcommand\hepex[1]{\href{http://arxiv.org/abs/hep-ex/#1}{hep-ex/#1}}
+\newcommand\hepph[1]{\href{http://arxiv.org/abs/hep-ph/#1}{hep-ph/#1}}
