@@ -21,24 +21,24 @@ Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
 You've used 128 entries,
             1791 wiz_defined-function locations,
-            1182 strings with 22485 characters,
-and the built_in function-call counts, 19683 in all, are:
-= -- 1834
+            1184 strings with 22949 characters,
+and the built_in function-call counts, 21559 in all, are:
+= -- 2044
 > -- 644
 < -- 1
 + -- 292
 - -- 164
-* -- 883
-:= -- 3539
+* -- 1087
+:= -- 3745
 add.period$ -- 383
 call.type$ -- 128
 change.case$ -- 127
 chr.to.int$ -- 0
 cite$ -- 130
-duplicate$ -- 854
-empty$ -- 1974
+duplicate$ -- 858
+empty$ -- 2180
 format.name$ -- 164
-if$ -- 4278
+if$ -- 4698
 int.to.chr$ -- 0
 int.to.str$ -- 128
 missing$ -- 65
@@ -48,10 +48,10 @@ pop$ -- 149
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 285
+skip$ -- 291
 stack$ -- 0
-substring$ -- 1204
-swap$ -- 76
+substring$ -- 1820
+swap$ -- 80
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0

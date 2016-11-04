@@ -1,7 +1,7 @@
 \chapter{Theory of Neutrino Oscillations}
 \label{ch:Theory}
 
-The idea of neutrino oscillations was first proposed by Pontecorvo in 1957 \cite{ref:Pontecorvo1}, but his proposal described oscillations between neutrinos and anti-neutrinos. In 1962, after the discovery of the muon neutrino, Maki, Nakagawa, and Sakata proposed the theory that described oscillations between neutrino flavors due to differing neutrino flavor and mass eigenstates \cite{ref:MNS}. This chapter describes the modern formalism in detail and uses natural units where $\hbar = c = 1$, except where otherwise noted.
+The idea of neutrino oscillations was first proposed by Pontecorvo in $1957$ \cite{ref:Pontecorvo1}, but his proposal described oscillations between neutrinos and anti-neutrinos. In $1962$, after the discovery of the muon neutrino, Maki, Nakagawa, and Sakata proposed the theory that described oscillations between neutrino flavors due to differing neutrino flavor and mass eigenstates \cite{ref:MNS}. This chapter describes the modern formalism in detail and uses natural units where $\hbar = c = 1$, except where otherwise noted.
 
 \section{The PMNS Matrix}
 \label{sec:TheoryPMNS}
@@ -102,7 +102,7 @@ P(\nu_\alpha \rightarrow \nu_\beta) & = & \sum_{i, j} \Uxy{\alpha}{i} \Ustxy{\be
 \label{eq:nuAB1minus}
 \eeqa
 
-\n The remaining summed term is further simplified making use of two facts. When $i = j$, the complex phase is 0 as $\dmxy{i}{i} = 0$, and thus these terms vanish. Second, the terms with $i < j$ are complex conjugates of those with $i > j$, and $z + z^* = 2\Re(z)$ for any complex number $z$.
+\n The remaining summed term is further simplified making use of two facts. When $i = j$, the complex phase is $0$ as $\dmxy{i}{i} = 0$, and thus these terms vanish. Second, the terms with $i < j$ are complex conjugates of those with $i > j$, and $z + z^* = 2\Re(z)$ for any complex number $z$.
 \beqa
 P(\nu_\alpha \rightarrow \nu_\beta) & = & \delta_{\alpha\beta} + 2\sum_{i > j} \Re \left[ \Uxy{\alpha}{i} \Ustxy{\beta}{i} \Uxy{\beta}{j} \Ustxy{\alpha}{j} (e^{-i \dmxy{j}{i} L/2E} - 1) \right]
 \label{eq:nuABiGrj}
@@ -152,7 +152,7 @@ P(\nu_\alpha \rightarrow \nu_\alpha) & = & 1 - \sin^2 2\theta \sin^2 \left( \fra
 P(\nu_\alpha \nrightarrow \nu_\alpha) & = & \sin^2 2\theta \sin^2 \left( \frac{\Delta m^2 L}{4E} \right) \label{eq:2NuApp}
 \eeqa
 
-\n From these equations it is clear that the mixing matrix parameters control the amplitude of neutrino oscillations. For small angles, most neutrinos will not change flavor, while larger angles can cause most of the neutrinos to change flavor. The case where $\theta = 45^\circ$ is called maximal mixing as at specific baseline lengths the probability of oscillation becomes 1.
+\n From these equations it is clear that the mixing matrix parameters control the amplitude of neutrino oscillations. For small angles, most neutrinos will not change flavor, while larger angles can cause most of the neutrinos to change flavor. The case where $\theta = 45^\circ$ is called maximal mixing as at specific baseline lengths the probability of oscillation becomes $1$.
 
 \section{Standard 3-Flavor Oscillations}
 \label{sec:Theory3}
@@ -163,7 +163,7 @@ The Standard Model includes three neutrinos, so the PMNS matrix is $3 \times 3$ 
 \label{eq:FlavUMass}
 \eeq
 
-\n The PMNS matrix can be parametrized in terms of 3 real mixing angles, $\theta_{ij}$ and a complex phase, $\delta$, called the CP phase. Following the convention from the Particle Data Group \cite{ref:PDG}, the expanded matrix takes the form
+\n The PMNS matrix can be parametrized in terms of $3$ real mixing angles, $\theta_{ij}$ and a complex phase, $\delta$, called the CP phase. Following the convention from the Particle Data Group \cite{ref:PDG}, the expanded matrix takes the form
 \beqa
 U & = & \begin{bmatrix} c_{12} c_{13} & s_{12} c_{13} & s_{13} e^{-i\delta} \\ -s_{12} c_{23} - c_{12} s_{23} s_{13} e^{i\delta} & c_{12} c_{23} - s_{12} s_{23} s_{13} e^{i\delta} & s_{23} c_{13} \\ s_{12} s_{23} - c_{12} c_{23} s_{13} s^{i\delta} & -c_{12} s_{23} - s_{12} c_{23} s_{13} e^{i\delta} & c_{23} c_{13} \end{bmatrix} \nonumber \\
 & = & \begin{bmatrix} 1 & 0 & 0 \\ 0 & c_{23} & s_{23} \\ 0 & -s_{23} & c_{23} \end{bmatrix} \begin{bmatrix} c_{13} & 0 & s_{13} e^{-i\delta} \\ 0 & 1 & 0 \\ -s_{13} e^{i\delta} & 0 & c_{13} \end{bmatrix} \begin{bmatrix} c_{12} & s_{12} & 0 \\ -s_{12} & c_{12} & 0 \\ 0 & 0 & 1 \end{bmatrix}
@@ -172,7 +172,7 @@ U & = & \begin{bmatrix} c_{12} c_{13} & s_{12} c_{13} & s_{13} e^{-i\delta} \\ -
 
 \n where $c_{ij} \equiv \cos\theta_{ij}$ and $s_{ij} \equiv \sin\theta_{ij}$.
 
-With three neutrinos, the expanded forms of equations \ref{eq:nuOsc} and \ref{eq:nuSurv} can still balloon into unwieldy messes. Fortunately, based on current knowledge of the mass splittings, it is usually the case that only one mass splitting scale matters and other terms can be dropped. Figure \ref{fig:MassSplit} shows a schematic of the mass splittings. For historic reasons, $\dmxy{1}{2}$ is known as the solar mass splitting and the larger mass splitting is called the atmospheric mass splitting. The atmospheric mass splitting is about 30 times the solar mass splitting. The sign of the solar mass splitting is known, while that of the atmospheric mass splitting is not. A positive value of $\dmxy{2}{3}$ is called the normal hierarchy; a negative value is called the inverted hierarchy.
+With three neutrinos, the expanded forms of equations \ref{eq:nuOsc} and \ref{eq:nuSurv} can still balloon into unwieldy messes. Fortunately, based on current knowledge of the mass splittings, it is usually the case that only one mass splitting scale matters and other terms can be dropped. Figure \ref{fig:MassSplit} shows a schematic of the mass splittings. For historic reasons, $\dmxy{1}{2}$ is known as the solar mass splitting and the larger mass splitting is called the atmospheric mass splitting. The atmospheric mass splitting is about $30$ times the solar mass splitting. The sign of the solar mass splitting is known, while that of the atmospheric mass splitting is not. A positive value of $\dmxy{2}{3}$ is called the normal hierarchy; a negative value is called the inverted hierarchy.
 
 \begin{figure}[!htb]
   \includegraphics[width=\textwidth]{figures/MassSplitting.png}
@@ -189,9 +189,9 @@ P(\numu \rightarrow \numu) & \approx & 1 - 4\Usqxy{\mu}{3} (\Usqxy{\mu}{1} + \Us
 \label{eq:3MuToMu}
 \eeqa
 
-\n Between equations \ref{eq:3MuToMu2} and \ref{eq:3MuToMu3}, the term proportional to $s^4_{13}$ was dropped using the current knowledge that $s^2_{13}$ is small \cite{ref:PDG}. Note that if $\theta_{13}$ were 0, then equation \ref{eq:3MuToMu} would reduce to equation \ref{eq:2NuSurv}, the two neutrino survival probability.
+\n Between equations \ref{eq:3MuToMu2} and \ref{eq:3MuToMu3}, the term proportional to $s^4_{13}$ was dropped using the current knowledge that $s^2_{13}$ is small \cite{ref:PDG}. Note that if $\theta_{13}$ were $0$, then equation \ref{eq:3MuToMu} would reduce to equation \ref{eq:2NuSurv}, the two neutrino survival probability.
 
-The full 3 flavor electron neutrino appearance from muon neutrino oscillation probability is often written in the form \cite{ref:ThesisEvan}:
+The full $3$ flavor electron neutrino appearance from muon neutrino oscillation probability is often written in the form \cite{ref:ThesisEvan}:
 \beq
 P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P_{atm} + 2\sqrt{P_{atm}}\sqrt{P_{sol}} \left(\cos\delta \cos\Delta_{32}\, \varmp\, \sin\delta \sin\Delta_{32} \right) + P_{sol}
 \label{eq:3MuToE}
@@ -208,7 +208,7 @@ P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P_{atm} + 2\sqrt{P_{atm}}\sqrt{P_{sol}
 \section{Matter Effects}
 \label{sec:TheoryMatter}
 
-So far, the oscillation formalism has been developed only considering neutrinos in a vacuum. However, most neutrino oscillation experiments involve neutrinos traveling through matter, be it the Sun or the Earth. This affects the oscillation probabilities in a process called the Mikheyev-Smirnov-Wolfenstein effect, or MSW effect. The phenomenon was first proposed by Wolfenstein in 1978 \cite{ref:Wolfenstein}; Mikheyev and Smirnov built upon that work in 1985 \cite{ref:MSW} as a possible solution for the solar neutrino problem.
+So far, the oscillation formalism has been developed only considering neutrinos in a vacuum. However, most neutrino oscillation experiments involve neutrinos traveling through matter, be it the Sun or the Earth. This affects the oscillation probabilities in a process called the Mikheyev-Smirnov-Wolfenstein effect, or MSW effect. The phenomenon was first proposed by Wolfenstein in $1978$ \cite{ref:Wolfenstein}; Mikheyev and Smirnov built upon that work in $1985$ \cite{ref:MSW} as a possible solution for the solar neutrino problem.
 
 \begin{figure}[t]
   \begin{center} $
@@ -278,15 +278,15 @@ U_{M} & = & \begin{pmatrix} \cos \theta_{M} & \sin \theta_{M} \\ -\sin \theta_{M
 A_{M} & \equiv & \sqrt{ \left( \cos 2\theta \mp \frac{2EV_e}{\dmxy{1}{2}} \right)^2 + \sin^2 2\theta } \label{eq:AMSW},
 \eeqa
 
-\n and now the negative sign in $A_M$ is for neutrinos and the positive sign for anti-neutrinos. As the electron number density goes to 0, so too does $V_e$ and the vacuum solution is recovered.
+\n and now the negative sign in $A_M$ is for neutrinos and the positive sign for anti-neutrinos. As the electron number density goes to $0$, so too does $V_e$ and the vacuum solution is recovered.
 
-From the form of this solution, it can be seen that the Hamiltonian takes the same form as that in vacuum oscillations, but with modified effective masses. Likewise, $U_M$ has the same form as the 2 neutrino PMNS matrix, so $\theta_M$ can be considered the effective mixing angle. In the absence of neutrino oscillations (when $\theta = 0$), matter effects cannot ``create'' them. However, even for small angles $\theta$, the matter effect can create a resonant effect pushing the effective mixing angle, $\theta_M$, maximally to $45^\circ$. This occurs when the term in parenthesis in the definition of $A_M$ is $0$ (equation \ref{eq:AMSW}).
+From the form of this solution, it can be seen that the Hamiltonian takes the same form as that in vacuum oscillations, but with modified effective masses. Likewise, $U_M$ has the same form as the $2$ neutrino PMNS matrix, so $\theta_M$ can be considered the effective mixing angle. In the absence of neutrino oscillations (when $\theta = 0$), matter effects cannot ``create'' them. However, even for small angles $\theta$, the matter effect can create a resonant effect pushing the effective mixing angle, $\theta_M$, maximally to $45^\circ$. This occurs when the term in parenthesis in the definition of $A_M$ is $0$ (equation \ref{eq:AMSW}).
 \beq
 N_e^{res} = \frac{\dmxy{1}{2} \cos 2\theta}{2\sqrt{2} G_F E}
 \label{eq:MSWres}
 \eeq
 
-In the case of 3 neutrinos, the same procedure is followed to diagonalize the Hamilton and obtain effective values for the various oscillation parameters. The effects are considerably more complicated, but the general effect is the same--matter changes the effective neutrino mass and alters the oscillation probability curves differently for neutrinos and anti-neutrinos. Under the same conditions that were used to calculate $P(\nuanu_\mu \rightarrow \nuanu_e)$ in section \ref{sec:Theory3}, the results can be simplified to a few basic replacements \cite{ref:3NuMatter}.
+In the case of $3$ neutrinos, the same procedure is followed to diagonalize the Hamilton and obtain effective values for the various oscillation parameters. The effects are considerably more complicated, but the general effect is the same--matter changes the effective neutrino mass and alters the oscillation probability curves differently for neutrinos and anti-neutrinos. Under the same conditions that were used to calculate $P(\nuanu_\mu \rightarrow \nuanu_e)$ in section \ref{sec:Theory3}, the results can be simplified to a few basic replacements \cite{ref:3NuMatter}.
 \beq
 P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P^M_{atm} + 2\sqrt{P^M_{atm}}\sqrt{P^M_{sol}} \left(\cos\delta \cos\Delta_{32}\, \varmp\, \sin\delta \sin\Delta_{32} \right) + P^M_{sol}
 \label{eq:3MuToEMSW}
@@ -298,7 +298,7 @@ P(\nuanu_{\mu} \rightarrow\,\nuanu_{e}) = P^M_{atm} + 2\sqrt{P^M_{atm}}\sqrt{P^M
 \sqrt{P_{sol}} & \equiv & \cos \thxy{2}{3} \sin 2\thxy{1}{2} \frac{\sin(aL)}{aL} \Delta_{21} \label{eq:PsolMSW}
 \eeqa
 
-\n Here, $a \equiv \pm G_F N_e / \sqrt{2}$ where the positive sign is for neutrinos and the negative sign for anti-neutrinos. For the Earth, $\vert a \vert \approx 1/3500\, km$.
+\n Here, $a \equiv \pm G_F N_e / \sqrt{2}$ where the positive sign is for neutrinos and the negative sign for anti-neutrinos. For the Earth, $\vert a \vert \approx 1/3500\unit{km}$.
 
 The combined effect that appears in equations \ref{eq:3MuToEMSW}, \ref{eq:PatmMSW}, and \ref{eq:PsolMSW} due to the presence of matter plays an interesting role in the search for CP violation. The MSW effect by itself mimics CP violation as it alters oscillation probabilities for neutrinos and anti-neutrinos differently. Depending on the value of $\delta$ that nature has chosen, the differences in oscillation probabilities due to the CP violation angle and the MSW effect can either compound or cancel out.
 
@@ -307,13 +307,13 @@ The combined effect that appears in equations \ref{eq:3MuToEMSW}, \ref{eq:PatmMS
 
 Most of the free parameters in the PMNS matrix have been measured by various solar, atmospheric, accelerator, and reactor neutrino experiments. However, any given neutrino experiment does not have sensitivity to all of the oscillation parameters. Instead, experiments are sensitive to specific angles based on their baseline and the energies of the neutrinos they observe. Solar neutrino experiments, such as GALLEX, SAGE, Super-K, and SNO, measure neutrinos with energies on the order of several MeV after a very long baseline, and are most sensitive to $\theta_{12}$ and $\dmxy{1}{2}$. Due to the strong MSW effect within the Sun, solar neutrino experiments also determined the ordering of mass states $\nu_1$ and $\nu_2$; $\nu_2$ is defined as the heavier state. Atmospheric neutrino experiments, such as Super-K, SNO, and MINOS, measure neutrinos generated by cosmic ray collisions with the Earth's atmosphere, and are sensitive to $\theta_{23}$ and $\dmxy{2}{3}$.
 
-Reactor neutrino experiments, such as Chooz, Double Chooz, RENO, and Daya Bay, measure $\anue$ generated by nearby nuclear reactors. Like solar neutrinos, reactor neutrinos have energies on the order of a few MeV. By measuring these neutrinos with a short baseline ($O(1 km)$), the 2 neutrino approximation is valid, so the oscillation probability can be approximated as:
+Reactor neutrino experiments, such as Chooz, Double Chooz, RENO, and Daya Bay, measure $\anue$ generated by nearby nuclear reactors. Like solar neutrinos, reactor neutrinos have energies on the order of a few MeV. By measuring these neutrinos with a short baseline ($O(1 km)$), the $2$ neutrino approximation is valid, so the oscillation probability can be approximated as:
 \beq
 P(\anue \rightarrow \anue) \approx 1 - \sin^2 2\theta_{13} \sin^2 \Delta_{31}.
 \label{eq:2NuReactor}
 \eeq
 
-\n Daya Bay made the first nonzero measurement of $\theta_{13}$ in 2012, reporting a value of $\sin^2 2\theta_{13} = 0.092 \pm 0.016\mbox{ (stat)} \pm 0.005\mbox{ (syst)}$ after taking just 55 days of data \cite{ref:DayaBay2012}. This result excluded a zero value for $\theta_{13}$ at $5.2\sigma$ and is shown in figure\ref{fig:DayaBay2012}. Since that result, the limits have only continued to improve, and the leading measurement still comes from Daya Bay.
+\n Daya Bay made the first nonzero measurement of $\theta_{13}$ in $2012$, reporting a value of $\sin^2 2\theta_{13} = 0.092 \pm 0.016\mbox{ (stat)} \pm 0.005\mbox{ (syst)}$ after taking just $55$ days of data \cite{ref:DayaBay2012}. This result excluded a zero value for $\theta_{13}$ at $5.2\sigma$ and is shown in figure\ref{fig:DayaBay2012}. Since that result, the limits have only continued to improve, and the leading measurement still comes from Daya Bay.
 
 \begin{figure}[!htb]
   \centering
@@ -348,7 +348,7 @@ Global fits to the combined data of these (and other) neutrino experiments have 
   \end{center}
 \end{table}
 
-Current and next generation reactor experiments have a great outlook to answer these outstanding questions. Making use of the MSW effect, the $\nue$ and $\anue$ appearance results from experiments like T2K and \nova~could simultaneously measure $\delta$, the mass hierarchy, and $\theta_{23}$ octant. The prospects for \nova to make these measurements are shown in figure \ref{fig:BiProb}. The first analysis results from \nova~\cite{ref:NOvAFANuE, ref:NOvAFANuMu} were published after taking about 10\% of the experiments design statistics and already show promise. The \nova~measurement for $\delta$, shown in figure \ref{fig:NOvAFADelta}, provide a hint toward the normal hierarchy and eliminate portions of $\delta$ space at 90\% confidence.
+Current and next generation reactor experiments have a great outlook to answer these outstanding questions. Making use of the MSW effect, the $\nue$ and $\anue$ appearance results from experiments like T2K and \nova~could simultaneously measure $\delta$, the mass hierarchy, and $\theta_{23}$ octant. The prospects for \nova~to make these measurements are shown in figure \ref{fig:BiProb}. The first analysis results from \nova~\cite{ref:NOvAFANuE, ref:NOvAFANuMu} were published after taking about $10\%$ of the experiments design statistics and already show promise. The \nova~measurement for $\delta$, shown in figure \ref{fig:NOvAFADelta}, provide a hint toward the normal hierarchy and eliminate portions of $\delta$ space at $90\%$ confidence.
 
 \begin{figure}[!htb]
   \centering
@@ -378,7 +378,7 @@ The analysis presented in this dissertation considers sterile neutrinos in a $3 
 
 The experimental evidence discussed in section \ref{sec:SterHist} suggests a mass splitting of $\Delta m^2 \sim O(1\unit{eV}^2)$. If the fourth neutrino mass state were the lightest, then all of the other mass states would have absolute masses $m \gtrsim 1\unit{eV}$. However, the sum of the active neutrino masses is well constrained by cosmology; the most recent Planck results reported $\sum m_\nu < 0.23\unit{eV}$ \cite{ref:Planck}. Consequently, it is assumed that the additional neutrino mass state is heavier than the other three. Furthermore, since $\dmxy{i}{4} \gg \vert \dmxy{i}{j} \vert$ for $i, j < 4$, it is assumed that $\Delta_{41} \approx \Delta_{42} \approx \Delta_{43}$.
 
-As mentioned above, adding a fourth neutrino state expands the PMNS matrix into a $4\times4$ matrix. It can be written as the product of individual (complex) rotation matrices, as in the second line of equation \ref{eq:3NuU}. This adds an additional 3 real rotation angles and 2 complex phases. It is a matter of convention on how exactly to add these mixing angles into the PMNS matrix, but as physical results cannot be affected by a particular parametrization, it is best to choose the most convenient one. Following the parametrization in \cite{ref:GlobalFit}, $U$ takes the form:
+As mentioned above, adding a fourth neutrino state expands the PMNS matrix into a $4\times4$ matrix. It can be written as the product of individual (complex) rotation matrices, as in the second line of equation \ref{eq:3NuU}. This adds an additional $3$ real rotation angles and $2$ complex phases. It is a matter of convention on how exactly to add these mixing angles into the PMNS matrix, but as physical results cannot be affected by a particular parametrization, it is best to choose the most convenient one. Following the parametrization in \cite{ref:GlobalFit}, $U$ takes the form:
 \beq
 U = R_{34} C_{24} R_{23} R_{14} C_{13} C_{12},
 \label{eq:4NuU}
@@ -497,7 +497,7 @@ The effect of each of the oscillation parameters can be seen in the figures belo
       $\delta_{24}$ & $0$ \\
       \hline
     \end{tabular}
-    \caption[Four Flavor Fixed Oscillation Parameters]{The four flavor oscillation parameters assumed for studying the effects of different parameters on the oscillation probabilities.}
+    \caption[Four Flavor Fixed Oscillation Parameters]{The $4$ flavor oscillation parameters assumed for studying the effects of different parameters on the oscillation probabilities.}
     \label{tab:LOverEValues}
   \end{center}
 \end{table}

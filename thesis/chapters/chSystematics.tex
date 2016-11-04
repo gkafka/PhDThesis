@@ -3,7 +3,7 @@
 
 As with any analysis, the NC disappearance analysis is sensitive to a number of systematic effects. \nova\newline\n was designed with two functionally identical detectors, so that Near Detector data can be used to constrain or correct the Far Detector prediction. Since many effects such as beam and cross section uncertainties affect the spectra at both detectors in a similar or the same way, this two detector technique leads to the reduction of these systematic errors. Other effects, such as Near Detector rock event contamination, require a data driven technique to quantify.
 
-The general technique for analyzing systematic errors was to run the full extrapolation chain and generate a predicted spectrum with and without a systematic effect applied. As in chapter \ref{ch:Selection}, the prediction assumed the same three flavor oscillation parameters listed in table \ref{tab:3FlavParams}, and for normalization simplicity, only 14 diblock MC and data were studied. All spectra were then scaled to \pot{6}. Each given systematic effect was used to shift the MC simulation at one or both detectors as appropriate. The resulting difference between the shifted and nominal spectra was quantified as a systematic error.
+The general technique for analyzing systematic errors was to run the full extrapolation chain and generate a predicted spectrum with and without a systematic effect applied. As in chapter \ref{ch:Selection}, the prediction assumed the same three flavor oscillation parameters listed in table \ref{tab:3FlavParams}, and for normalization simplicity, only $14$ diblock MC and data were studied. All spectra were then scaled to \pot{6}. Each given systematic effect was used to shift the MC simulation at one or both detectors as appropriate. The resulting difference between the shifted and nominal spectra was quantified as a systematic error.
 
 The systematic effects analyzed included uncertainties arising from the beam, GENIE simulation, Birks-Chou light yield simulation, calibration, bias from the ND containment, ND rock event contamination, ND data/MC spectrum and hadronic energy differences, noise model, MC statistics, and overall normalization. The rest of this chapter discusses each of these effects in greater detail.
 
@@ -20,13 +20,13 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
   \item Beam spot size varied by $\pm 0.2\,mm$ in both X and Y
   \item Target position varied by $+ 2\, mm$ in Z
   \item Horn current varied $\pm 1\,kA$
-  \item Horn 1 position varied by $\pm 2\,mm$ in both X and Y
-  \item Horn 2 position varied by $\pm 2\,mm$ in both X and Y
+  \item Horn $1$ position varied by $\pm 2\,mm$ in both X and Y
+  \item Horn $2$ position varied by $\pm 2\,mm$ in both X and Y
   \item Horn magnetic field changed from linear to exponential distribution
   \item Changes to MC beamline simulation
   \item Comparison between versions of FLUKA
-  \item Comparison between FLUKA and G4NuMI
-  \item Comparison between FLUKA and NA49
+  \item Comparison between FLUKA and G$4$NuMI
+  \item Comparison between FLUKA and NA$49$
 \end{itemize}
 \end{singlespace}
 \n Hadron production uncertainties were combined in quadrature before being provided as weights, so this is evaluated as single systematic error. The percentage difference due to each systematic is shown in table \ref{tab:SystBeam}, and the full error envelopes for NC signal and background are shown in figure \ref{fig:SystBeam}. The beam systematics had an overall effect of $3.4\%$ on the NC signal and $3.6\%$ on the background.
@@ -41,13 +41,13 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
       Beam Spot Size & $0.2$ & $0.3$ \\
       Target Position & $0.04$ & $0.1$ \\
       Horn Current & $0.1$ & $0.1$ \\
-      Horn 1 Position & $0.6$ & $0.8$ \\
-      Horn 2 Position & $0.2$ & $0.2$ \\
+      Horn $1$ Position & $0.6$ & $0.8$ \\
+      Horn $2$ Position & $0.2$ & $0.2$ \\
       Horn B Field & $0.05$ & $0.05$ \\
       Geometry Simulation Change & $0.4$ & $1.2$ \\
       FLUKA Versions & $0.04$ & $0.4$ \\
-      FLUKA v G4NuMI & $0.4$ & $1.2$ \\
-      FLUKA v NA49 & $3.0$ & $2.6$ \\
+      FLUKA v G$4$NuMI & $0.4$ & $1.2$ \\
+      FLUKA v NA$49$ & $3.0$ & $2.6$ \\
       \hline
       Combined & $3.4$ & $3.6$ \\
       \hline
@@ -101,7 +101,7 @@ The systematic error based on the Birks-Chou light yield simulation was quantifi
 \section{Calibration}
 \label{sec:SystCalib}
 
-The calibration procedure is designed to make a constant energy response both across each detector and between the two, but any problem can introduce a systematic error. This error was evaluated by studying various MC samples with an engineered miscalibration. The effects studied included a miscalibration that varied as a function of the cell length and an overall scale miscalibration. The functional miscalibration was studied separately between the X and Y views of the detector. The scale miscalibration was applied as a 5\% effect both up and down at each detector. These effects are motivated by studying data/MC comparisons for various samples \cite{ref:TNCalib, ref:CalibMESA, ref:CalibPi0SA} and were updated based on the most recent round of data \cite{ref:CalibSA}.
+The calibration procedure is designed to make a constant energy response both across each detector and between the two, but any problem can introduce a systematic error. This error was evaluated by studying various MC samples with an engineered miscalibration. The effects studied included a miscalibration that varied as a function of the cell length and an overall scale miscalibration. The functional miscalibration was studied separately between the X and Y views of the detector. The scale miscalibration was applied as a $5\%$ effect both up and down at each detector. These effects are motivated by studying data/MC comparisons for various samples \cite{ref:TNCalib, ref:CalibMESA, ref:CalibPi0SA} and were updated based on the most recent round of data \cite{ref:CalibSA}.
 
 The systematic error was evaluated in two regimes. The first applied the same miscalibration to the MC at both detectors, and a shifted prediction was then generated using these shifted as inputs into the extrapolation. This procedure was followed for each type of miscalibration, and all of these systematics were added in quadrature at the end. The overall scale miscalibration was also applied as a miscalibration to a single detector to measure the effect of a missed absolute calibration. A shifted prediction was then generated as above, but with this procedure only the maximum overall effect was used as the systematic error that was then added in quadrature with the systematics from above. Table \ref{tab:SystCalib} shows the percentage difference for each of the calibration systematics. The effects of the calibration systematics on the NC signal and CC background spectra are shown in figures \ref{fig:SystCalibAbs} and \ref{fig:SystCalibRel} when applied to both detectors and one detector, respectively. The overall error was $5.8\%$ on the NC signal and $6.0\%$ on the background.
 \begin{table}[htb]
@@ -122,7 +122,7 @@ The systematic error was evaluated in two regimes. The first applied the same mi
       Flat Scale Down, FD & $0.6$ & $2.4$ \\
       \hline
     \end{tabular}
-    \caption[Calibration Systematic Errors]{The percentage difference between the shifted and nominal predictions for the number of FD events due to deliberately applied miscalibrations. For the flat scale miscalibration applied to 1 detector, the largest overall effect from the flat scale down at the ND was taken as the systematic.}
+    \caption[Calibration Systematic Errors]{The percentage difference between the shifted and nominal predictions for the number of FD events due to deliberately applied miscalibrations. For the flat scale miscalibration applied to one detector, the largest overall effect from the flat scale down at the ND was taken as the systematic.}
     \label{tab:SystCalib}
   \end{center}
 \end{table}
@@ -193,8 +193,8 @@ The systematic uncertainties from physics modeling were evaluated by using the G
   Non-resonance background in $\bar{\nu} n$ NC$2\pi$ reactions & $\pm50\%$ & $0.02$ & $0.00$ \\
   $A_{HT}$ higher-twist parameter in BY model scaling \newline variable $\xi_w$ & $\pm25\%$ & $0.01$ & $0.2$ \\
   $B_{HT}$ higher-twist parameter in BY model scaling \newline variable $\xi_w$ & $\pm25\%$ & $0.02$ & $0.3$ \\
-  $C_{V1u}$ u valence GRV98 PDF correction parameter \newline in BY model & $\pm30\%$ & $0.02$ & $0.1$ \\
-  $C_{V2u}$ u valence GRV98 PDF correction parameter \newline in BY model & $\pm40\%$ & $0.01$ & $0.1$ \\
+  $C_{V1u}$ u valence GRV$98$ PDF correction parameter \newline in BY model & $\pm30\%$ & $0.02$ & $0.1$ \\
+  $C_{V2u}$ u valence GRV$98$ PDF correction parameter \newline in BY model & $\pm40\%$ & $0.01$ & $0.1$ \\
 %  Inclusive CC cross-section normalization factor & & $0.00$ & $0.00$ \\
 %  $\bar{\nu}/\nu$ CC ratio & & $0.00$ & $0.00$ \\
 %  DIS nuclear & & $0.00$ & $0.00$ \\
