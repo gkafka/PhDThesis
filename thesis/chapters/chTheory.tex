@@ -593,3 +593,45 @@ The effect of each of the oscillation parameters can be seen in the figures belo
 For the particular analysis presented in the rest of this dissertation, it is assumed that there are no Near Detector oscillations. Thus, the analysis will make measurements of $\theta_{24}$, $\theta_{34}$, and these will be translated into measurements of $\Usqxy{\mu}{4}$ and $\Usqxy{\tau}{4}$, and the results will be valid in the range $0.05 < \dmxy{1}{4} < 0.5\unit{eV}^2$.
 
 To make the above measurements, the analysis presented here considers the rate of Neutral Current (NC) events. The rate of Charged Current (CC) events is obviously affected by neutrino oscillations. Given that standard three flavor oscillations already impact the number of CC events, it would be a difficult task to decouple oscillations between the active neutrino flavors and a fourth, sterile flavor. On the other hand, NC interactions are completely insensitive to the active neutrino flavors, and hence to oscillations between them. In the standard three flavor model, then, the total rate of NC events is only determined by the overall flux of neutrinos. Yet sterile neutrinos do not interact via the weak force at all, so if oscillations occur between active and sterile flavor states, this would also manifest in the NC rate as a deficit of events. Therefore, a NC event deficit would be a clear indication of physics outside the standard three neutrino flavor model, and this dissertation will interpret that in the context of oscillations to an extra, sterile, neutrino flavor state.
+
+\section{Sterile Matter Effect}
+\label{sec:SterileMatter}
+
+In the standard 3 flavor neutrino model, matter effects the oscillation probabilities due to coherent CC forward scattering of electron (anti-)neutrinos from electrons in matter, adding an effective potential $V_e = \pm \sqrt{2} G_F N_e$ to the Hamiltonian. Following the formalism in reference \cite{ref:MatterSterile}, this is written in matrix notation as
+\beq
+V_{CC} = \pm \sqrt{2} G_F N_e \mbox{diag}(1, 0, ...),
+\label{eq:MatterVCC}
+\eeq
+
+\n where the ellipses denote that the remaining elements are $0$. Of course, all neutrino flavors undergo coherent NC forward scattering off all particles in the earth, but this does not affect 3 flavor oscillation probabilities because it affects the neutrino flavors identically. This is no longer true when adding a sterile neutrino, and this effect must now be accounted for. The effective potentials due to the electrons and protons in matter cancel each other out due to equal densities, but the effect of the neutrons remains. This is adds an another piece to the effective potential.
+\beq
+V_{NC} = \mp \frac{\sqrt{2}}{2} G_F N_n \mbox{diag}(1, 1, 1, 0, ...).
+\label{eq:MatterVNC}
+\eeq
+
+\n The total effective potential is
+\beq
+V = \sqrt{2} G_F \left[ \pm N_e \mbox{diag}(1, 0, 0, 0, ...) \mp \frac{1}{2} N_n \mbox{diag} (1, 1, 1, 0, ...) \right].
+\label{eq:MatterVFull}
+\eeq
+
+\n The time evolution of the flavor states is written analogously to equation \ref{eq:2NuSchro}.
+\beq
+i \nu_\alpha = \left[ \frac{1}{2E} U \mbox{diag} ( m^2_i, ... ) U^\dagger + V \right ] \nu_\alpha
+\label{eq:4NuSchro}
+\eeq
+
+As in section \ref{sec:TheoryMatter}, the oscillation probabilities can be worked out by re-diagonalizing the Hamiltonian and finding the effective masses and effective mixing angles. However, with more than $2$ flavors this process becomes quite challenging and tedious to do by hand. Instead, the exact effect can be seen by plotting the active neutrino survival probability for muon neutrinos in vacuum, for muon neutrinos in matter, and for muon anti-neutrinos in matter. These probabilities, and the ratios of the matter affected probabilities to the vacuum probability, are shown in figure \ref{fig:LOverEMatter}.
+
+\begin{figure}[p]
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEPlotMatter.png} \\
+    \\ \\
+    \includegraphics[width=0.95\textwidth]{figures/LOverE/LOverEPlotMatterRatio.png} \\
+  \end{tabular}
+  \caption[The Sterile Matter Effect]{Total active neutrino survival probability demonstrating the size of the sterile matter effect. The probabilities are shown in the top figure, the ratios of the matter affected probabilities to the vacuum probability is shown in the bottom figure. The black line shows the survival probability in vacuum. The solid (dashed) red line shows the survival probability for muon (anti-)neutrinos in matter. The grey bands show the neutrino energy spectra observed by \nova, with darker colors representing a higher intensity of neutrinos. Oscillation parameters are held fixed to values shown in table \ref{tab:LOverEValues}.}
+  \label{fig:LOverEMatter}
+\end{figure}
+
+The maximum size of the effect is less than $2\%$ and occurs at about $1\unit{GeV}$. At the peak sensitivity region for the \nova~Far Detector, the effect is even smaller at about $1\%$. To contrast, the MSW effect for $\nue$ appearance effects the oscillation probabilities by $\sim 20\%$ in \nova~\cite{ref:ThesisEvan}. Nonetheless, the small sterile matter effect is included in the analysis presented here.
