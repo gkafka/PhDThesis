@@ -20,62 +20,62 @@
 \contentsline {section}{\numberline {3.1}The NuMI Beam}{39}{section.3.1}
 \contentsline {section}{\numberline {3.2}Off-Axis Detectors}{42}{section.3.2}
 \contentsline {section}{\numberline {3.3}The NO$\nu $A\nobreakspace {}Detectors}{45}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Far Detector}{50}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Near Detector}{51}{subsection.3.3.2}
-\contentsline {chapter}{\numberline {4}Experiment Simulation}{54}{chapter.4}
-\contentsline {section}{\numberline {4.1}Flux Simulation}{55}{section.4.1}
-\contentsline {section}{\numberline {4.2}Detector Simulation}{56}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Neutrino Interactions}{56}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Photon Propagation}{60}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Electronic Readout}{61}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Simulation Miscellany}{62}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Studying Simulation Files}{63}{section.4.3}
-\contentsline {chapter}{\numberline {5}Event Reconstruction}{66}{chapter.5}
-\contentsline {section}{\numberline {5.1}Calibration}{66}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Relative Calibration}{67}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Absolute Calibration}{71}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Reconstruction Chain}{72}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Event Slicing}{74}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Hough Transform Line Finding}{77}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Elastic Arms Vertex Reconstruction}{78}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Fuzzy K-Means Clustering}{81}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Kalman Tracking}{84}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Particle Identification Algorithms}{86}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}$\nu _{e}$ and $\nu _{\mu }$ CC Specific PIDs}{87}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Cosmic Rejection PID}{88}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}CVN, the All Purpose PID}{89}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{95}{chapter.6}
-\contentsline {section}{\numberline {6.1}A Note on Preselection}{96}{section.6.1}
-\contentsline {section}{\numberline {6.2}Data Quality}{96}{section.6.2}
-\contentsline {section}{\numberline {6.3}Event Quality}{98}{section.6.3}
-\contentsline {section}{\numberline {6.4}Fiducial Volume and Containment}{98}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Far Detector}{100}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Near Detector}{101}{subsection.6.4.2}
-\contentsline {section}{\numberline {6.5}NC Selection}{103}{section.6.5}
-\contentsline {section}{\numberline {6.6}Cosmic Rejection}{105}{section.6.6}
-\contentsline {section}{\numberline {6.7}Summary}{106}{section.6.7}
-\contentsline {chapter}{\numberline {7}Neutral Current Spectrum Prediction}{108}{chapter.7}
-\contentsline {section}{\numberline {7.1}ND Decomposition}{109}{section.7.1}
-\contentsline {section}{\numberline {7.2}Extrapolation}{110}{section.7.2}
-\contentsline {section}{\numberline {7.3}Far Detector Prediction}{114}{section.7.3}
-\contentsline {chapter}{\numberline {8}Systematic Error Analysis}{116}{chapter.8}
-\contentsline {section}{\numberline {8.1}Beam}{117}{section.8.1}
-\contentsline {section}{\numberline {8.2}Birks-Chou Light Yield Simulation}{118}{section.8.2}
-\contentsline {section}{\numberline {8.3}Calibration}{119}{section.8.3}
-\contentsline {section}{\numberline {8.4}GENIE Simulation}{121}{section.8.4}
-\contentsline {section}{\numberline {8.5}ND Containment}{124}{section.8.5}
-\contentsline {section}{\numberline {8.6}ND Rock Event Contamination}{126}{section.8.6}
-\contentsline {section}{\numberline {8.7}ND Data/MC Difference and CC Background}{126}{section.8.7}
-\contentsline {section}{\numberline {8.8}MC Statistics}{129}{section.8.8}
-\contentsline {section}{\numberline {8.9}Noise Model}{129}{section.8.9}
-\contentsline {section}{\numberline {8.10}Overall Normalization}{130}{section.8.10}
-\contentsline {section}{\numberline {8.11}Systematic Error Summary}{130}{section.8.11}
-\contentsline {chapter}{\numberline {9}Analysis Results}{132}{chapter.9}
-\contentsline {section}{\numberline {9.1}Fitting Method}{133}{section.9.1}
-\contentsline {section}{\numberline {9.2}ND Data/MC Comparisons}{134}{section.9.2}
-\contentsline {section}{\numberline {9.3}Sideband Studies}{138}{section.9.3}
-\contentsline {section}{\numberline {9.4}Results}{140}{section.9.4}
-\contentsline {chapter}{\numberline {10}Future Improvements and Conclusions}{149}{chapter.10}
-\contentsline {section}{\numberline {10.1}Future Improvements}{149}{section.10.1}
-\contentsline {section}{\numberline {10.2}Conclusion}{151}{section.10.2}
-\contentsline {chapter}{References}{159}{chapter*.134}
+\contentsline {subsection}{\numberline {3.3.1}Far Detector}{51}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Near Detector}{52}{subsection.3.3.2}
+\contentsline {chapter}{\numberline {4}Experiment Simulation}{55}{chapter.4}
+\contentsline {section}{\numberline {4.1}Flux Simulation}{56}{section.4.1}
+\contentsline {section}{\numberline {4.2}Detector Simulation}{57}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Neutrino Interactions}{57}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Photon Propagation}{61}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Electronic Readout}{62}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Simulation Miscellany}{63}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Studying Simulation Files}{64}{section.4.3}
+\contentsline {chapter}{\numberline {5}Event Reconstruction}{67}{chapter.5}
+\contentsline {section}{\numberline {5.1}Calibration}{67}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Relative Calibration}{68}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Absolute Calibration}{72}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Reconstruction Chain}{73}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Event Slicing}{75}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Hough Transform Line Finding}{78}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Elastic Arms Vertex Reconstruction}{79}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Fuzzy K-Means Clustering}{82}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Kalman Tracking}{85}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Particle Identification Algorithms}{87}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}$\nu _{e}$ and $\nu _{\mu }$ CC Specific PIDs}{88}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Cosmic Rejection PID}{89}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}CVN, the All Purpose PID}{90}{subsection.5.3.3}
+\contentsline {chapter}{\numberline {6}Neutral Current Event Selection}{96}{chapter.6}
+\contentsline {section}{\numberline {6.1}A Note on Preselection}{97}{section.6.1}
+\contentsline {section}{\numberline {6.2}Data Quality}{97}{section.6.2}
+\contentsline {section}{\numberline {6.3}Event Quality}{99}{section.6.3}
+\contentsline {section}{\numberline {6.4}Fiducial Volume and Containment}{99}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Far Detector}{101}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Near Detector}{102}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}NC Selection}{104}{section.6.5}
+\contentsline {section}{\numberline {6.6}Cosmic Rejection}{106}{section.6.6}
+\contentsline {section}{\numberline {6.7}Summary}{107}{section.6.7}
+\contentsline {chapter}{\numberline {7}Neutral Current Spectrum Prediction}{109}{chapter.7}
+\contentsline {section}{\numberline {7.1}ND Decomposition}{110}{section.7.1}
+\contentsline {section}{\numberline {7.2}Extrapolation}{111}{section.7.2}
+\contentsline {section}{\numberline {7.3}Far Detector Prediction}{115}{section.7.3}
+\contentsline {chapter}{\numberline {8}Systematic Error Analysis}{117}{chapter.8}
+\contentsline {section}{\numberline {8.1}Beam}{118}{section.8.1}
+\contentsline {section}{\numberline {8.2}Birks-Chou Light Yield Simulation}{119}{section.8.2}
+\contentsline {section}{\numberline {8.3}Calibration}{120}{section.8.3}
+\contentsline {section}{\numberline {8.4}GENIE Simulation}{122}{section.8.4}
+\contentsline {section}{\numberline {8.5}ND Containment}{125}{section.8.5}
+\contentsline {section}{\numberline {8.6}ND Rock Event Contamination}{127}{section.8.6}
+\contentsline {section}{\numberline {8.7}ND Data/MC Difference and CC Background}{127}{section.8.7}
+\contentsline {section}{\numberline {8.8}MC Statistics}{130}{section.8.8}
+\contentsline {section}{\numberline {8.9}Noise Model}{130}{section.8.9}
+\contentsline {section}{\numberline {8.10}Overall Normalization}{131}{section.8.10}
+\contentsline {section}{\numberline {8.11}Systematic Error Summary}{131}{section.8.11}
+\contentsline {chapter}{\numberline {9}Analysis Results}{133}{chapter.9}
+\contentsline {section}{\numberline {9.1}Fitting Method}{134}{section.9.1}
+\contentsline {section}{\numberline {9.2}ND Data/MC Comparisons}{135}{section.9.2}
+\contentsline {section}{\numberline {9.3}Sideband Studies}{139}{section.9.3}
+\contentsline {section}{\numberline {9.4}Results}{141}{section.9.4}
+\contentsline {chapter}{\numberline {10}Future Improvements and Conclusions}{150}{chapter.10}
+\contentsline {section}{\numberline {10.1}Future Improvements}{150}{section.10.1}
+\contentsline {section}{\numberline {10.2}Conclusion}{152}{section.10.2}
+\contentsline {chapter}{References}{160}{chapter*.134}

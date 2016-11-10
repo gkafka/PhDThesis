@@ -12,43 +12,43 @@ A level-1 auxiliary file: chapters/chAnalysis.aux
 A level-1 auxiliary file: chapters/chSystematics.aux
 A level-1 auxiliary file: chapters/chResults.aux
 A level-1 auxiliary file: chapters/conclusion.aux
-Illegal, another \bibstyle command---line 168 of file dissertation.aux
+Illegal, another \bibstyle command---line 173 of file dissertation.aux
  : \bibstyle
  :          {unsrtnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
 Warning--empty author in ref:TDRNuMI
 Warning--empty booktitle in ref:RecoDBSCAN
-You've used 130 entries,
+You've used 135 entries,
             1791 wiz_defined-function locations,
-            1194 strings with 23151 characters,
-and the built_in function-call counts, 21858 in all, are:
-= -- 2071
-> -- 656
+            1218 strings with 24029 characters,
+and the built_in function-call counts, 22400 in all, are:
+= -- 2119
+> -- 691
 < -- 1
-+ -- 297
-- -- 167
-* -- 1100
-:= -- 3800
-add.period$ -- 389
-call.type$ -- 130
-change.case$ -- 129
++ -- 311
+- -- 176
+* -- 1109
+:= -- 3917
+add.period$ -- 404
+call.type$ -- 135
+change.case$ -- 134
 chr.to.int$ -- 0
-cite$ -- 132
-duplicate$ -- 871
-empty$ -- 2209
-format.name$ -- 167
-if$ -- 4762
+cite$ -- 137
+duplicate$ -- 891
+empty$ -- 2249
+format.name$ -- 176
+if$ -- 4871
 int.to.chr$ -- 0
-int.to.str$ -- 130
+int.to.str$ -- 135
 missing$ -- 66
-newline$ -- 651
-num.names$ -- 129
-pop$ -- 151
+newline$ -- 676
+num.names$ -- 134
+pop$ -- 156
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 296
+skip$ -- 303
 stack$ -- 0
 substring$ -- 1835
 swap$ -- 81
@@ -57,7 +57,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 193
-width$ -- 133
-write$ -- 1308
+while$ -- 198
+width$ -- 138
+write$ -- 1353
 (There was 1 error message)
