@@ -47,10 +47,12 @@ The best fit values were found by calculating the minimum $\chi^2$ value and all
 \eeq
 \n where $\mu_{23}$ and $\sigma_{23}$ are the mean and standard deviation used in the Gaussian constraint on the value of $\theta_{23}$, $\sigma_i^{BF}$ is the number of standard deviations the $i$th systematic error is shifted in the best fit, and $\sigma_i$ is one standard deviation for the $i$th systematic error. Equation \ref{eq:Chisq} is the standard formula for calculating $\chi^2$ with penalty terms, where the first term is the basic value for $\chi^2$, and the second and third terms add a unit for each shift of $\theta_{23}$ and the systematic errors by their respective variances. For one and two dimensional $\chi^2$ surfaces, the remaining angles not shown were profiled.
 
-\section{ND Data/MC Comparisons}
+\section{Robustness Studies}
 \label{sec:ResultsND}
 
-Before diving head first into the FD data, the first necessary analysis benchmark was ND data/MC comparisons. Figure \ref{fig:NDDataMCECal} shows the event energy distributions and figures \ref{fig:NDDataMCFidCont}, \ref{fig:NDDataMCNCSel}, and \ref{fig:NDDataMCCosRej} show the distributions for all of the variables used for selection discussed in chapter \ref{ch:Selection}.
+Before diving head first into the FD data, several studies were performed to test the robustness of the analysis. These included data/MC comparisons of ND distributions, the effect of shifting event energies, and the effect of $\delta_{24}$ on the event distributions.
+
+The first necessary analysis benchmark was ND data/MC comparisons. Figure \ref{fig:NDDataMCECal} shows the event energy distributions and figures \ref{fig:NDDataMCFidCont}, \ref{fig:NDDataMCNCSel}, and \ref{fig:NDDataMCCosRej} show the distributions for all of the variables used for selection discussed in chapter \ref{ch:Selection}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{figures/NDDataMC/ECalNusNDRat.png}
@@ -119,6 +121,31 @@ Two sanity checks were performed to ensure that the data/MC difference would not
   \end{tabular}
   \caption[Angle Sensitivities for Shifted Energy Spectra]{Angle sensitivities after applying an energy shift to either MC or data. Left: $\theta_{24}$, Right: $\theta_{34}$. The fits are statistics only and do not include any systematic errors.}
   \label{fig:1D2434Shift}
+\end{figure}
+
+The final robustness study considered the effect of $\delta_{24}$ on the analysis. Table \ref{tab:Delta24} shows the predicted number of events for various values of $\delta_{24}$. For $\theta_{34} = 35^\circ$, $\theta_{24} = 10^\circ$, changing $\delta_{24}$ from $0$ to one of its extrema can have up to an $8\%$ effect on the absolute event rate. Comparing to the results from the energy shifting studies, this could affect the sensitivity to the real mixing angles by $2-3^\circ$ at the $90\%$ confidence level. However, the observed event rate must be below the predicted number of events under the $3$ flavor model in order to have any effect, otherwise the best fit values for the real mixing angles go to $0$ and the effect of varying $\delta_{24}$ vanishes. Indeed, when the fitting procedure was tested against a spectrum created under the $3$ flavor model, there was no appreciable difference in the fit results between setting $\delta_{24}$ to $0$ or profiling it, as shown in figure \ref{fig:1D34ProfDel24}. Thus, $\delta_{24}$ remained set to $0$ to remove a fit variable, saving computation time.
+\begin{table}[htb]
+  \begin{center}
+    \begin{tabular}{c c c c c c}
+      \hline\hline
+      $\delta_{24}$ & All & NC & $\numu$ CC & $\nue$ CC & Cosmic \\
+      \hline
+      $0$ & $64.3$ & $41.7$ & $4.8$ & $3.1$ & $14.3$ \\
+       $\pi/2$ & $59.5$ & $37.4$ & $4.5$ & $2.9$ & $14.3$ \\
+      $\pi$ & $64.5$ & $42.4$ & $4.3$ & $3.0$ & $14.3$ \\
+      $3\pi/2$ & $69.4$ & $46.7$ & $4.5$ & $3.1$ & $14.3$ \\
+      \hline
+    \end{tabular}
+    \caption[FD Event Rates for Selected Values of $\delta_{24}$]{The number of predicted events at the FD for selected values of $\delta_{24}$. Oscillations parameters were held fixed to the values listed in table \ref{tab:FitFix}, with $\theta_{23} = 45^\circ$, $\theta_{34} = 35^\circ$, and $\theta_{24} = 10^\circ$.}
+    \label{tab:Delta24}
+  \end{center}
+\end{table}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=.47\textwidth]{figures/Delta24Th34.png}
+  \caption[Angle Sensitivity With and Without Profiling $\delta_{24}$]{Sensitivity to $\theta_{34}$ when profiling $\delta_{24}$ versus leaving it set to $0$. The prediction was fit to a spectrum generated under the $3$ flavor model. The sensitivity to $\theta_{24}$ shows the same level of agreement between the two fit methods. The fits are statistics only and do not include any systematic errors.}
+  \label{fig:1D34ProfDel24}
 \end{figure}
 
 \section{Sideband Studies}
