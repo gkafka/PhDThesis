@@ -58,7 +58,7 @@
 \BOOKMARK [1][-]{section.7.1}{ND\040Decomposition}{chapter.7}% 58
 \BOOKMARK [1][-]{section.7.2}{Extrapolation}{chapter.7}% 59
 \BOOKMARK [1][-]{section.7.3}{Far\040Detector\040Prediction}{chapter.7}% 60
-\BOOKMARK [0][-]{chapter.8}{Systematic\040Error\040Analysis}{}% 61
+\BOOKMARK [0][-]{chapter.8}{Systematic\040Uncertainty\040Analysis}{}% 61
 \BOOKMARK [1][-]{section.8.1}{Beam}{chapter.8}% 62
 \BOOKMARK [1][-]{section.8.2}{Birks-Chou\040Light\040Yield\040Simulation}{chapter.8}% 63
 \BOOKMARK [1][-]{section.8.3}{Calibration}{chapter.8}% 64
@@ -69,7 +69,7 @@
 \BOOKMARK [1][-]{section.8.8}{MC\040Statistics}{chapter.8}% 69
 \BOOKMARK [1][-]{section.8.9}{Noise\040Model}{chapter.8}% 70
 \BOOKMARK [1][-]{section.8.10}{Overall\040Normalization}{chapter.8}% 71
-\BOOKMARK [1][-]{section.8.11}{Systematic\040Error\040Summary}{chapter.8}% 72
+\BOOKMARK [1][-]{section.8.11}{Systematic\040Uncertainty\040Summary}{chapter.8}% 72
 \BOOKMARK [0][-]{chapter.9}{Analysis\040Results}{}% 73
 \BOOKMARK [1][-]{section.9.1}{Fitting\040Method}{chapter.9}% 74
 \BOOKMARK [1][-]{section.9.2}{Robustness\040Studies}{chapter.9}% 75

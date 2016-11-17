@@ -180,7 +180,7 @@ The algorithm begins by constructing a Hough map with the parameters of lines be
 \beqa
 w &=& \exp \left( -\frac{(\rho - \rho_0)^2}{2\sigma^2_\rho} \right) \exp \left( -\frac{(\theta - \theta_0)^2}{2\sigma^2_\theta} \right) \label{eq:HoughWeight} \\
 \sigma_\rho &=& \frac{3}{\sqrt{12}} \mbox{[cm]} \\
-\sigma_\rho &=& \frac{3\unit{cm}}{d\sqrt{6}}
+\sigma_\theta &=& \frac{3\unit{cm}}{d\sqrt{6}}
 \eeqa
 
 \n where $d$ is the distance between the two points in cm. There are two restrictions on the pairs of points that are evaluated. Any pairs of points that are farther than $\sqrt{15000}\unit{cm}$ apart are not evaluated together to limit the total number of contributions and limit contributions with very low uncertainties in $\theta$. Pairs of points that have the same X or Y coordinate are not evaluated together unless they are farther than $\sqrt{15000}/4\unit{cm}$ apart to avoid the creation of spurious horizontal or vertical lines. Finally, the Hough map is smoothed using a Gaussian smoothing weight over non-zero bins.
@@ -280,7 +280,7 @@ The results of the fit for the vertex position are summarized in table \ref{tab:
 \subsection{Fuzzy K-Means Clustering}
 \label{sec:RecoFuzzyK}
 
-The reconstructed vertex output by Elastic Arms is used as the input to a clustering algorithm that determines the number of prongs are in the event, or tracks with an angular spread that originate at a single point, and the hits that belong to each prong. This algorithm is a possibilistic Fuzzy-K means clustering algorithm, described in detail in references \cite{ref:TNFuzzyK, ref:ThesisEvan} and summarized here.
+The reconstructed vertex output by Elastic Arms is used as the input to a clustering algorithm that determines the number of prongs that are in the event, or tracks with an angular spread that originate at a single point, and the hits that belong to each prong. This algorithm is a possibilistic Fuzzy-K means clustering algorithm, described in detail in references \cite{ref:TNFuzzyK, ref:ThesisEvan} and summarized here.
 
 The clustering algorithm is a Fuzzy-K Means algorithm extended to deal with an unknown number of clusters and noise. The classic Fuzzy-K Means \cite{ref:RecoFuzzy1, ref:RecoFuzzy2} takes an event origin, or vertex, and assumes that all activity radiating outward with tracks appearing as peaks in angular space. It searches for the optimal placement of $k$ clusters, or prongs, and associates activity, or hits, to them. Each hit is allowed to be associated to multiple prongs leading to the fuzzy nature of the prongs. However, they are subject to the constraint that all association strengths add to $1$, meaning that every hit, including noise, will be associated to at least one prong. An extension of this algorithm \cite{ref:RecoFuzzyExt} removes the association normalization constraint and allows for a changing number of clusters. This allows noise hits to remain unassociated with any cluster, changing the probabilistic nature of the prong association to a possibilistic association.
 
@@ -393,7 +393,7 @@ ReMID, discussed in detail in reference \cite{ref:TNRemID}, is specifically desi
 \subsection{Cosmic Rejection PID}
 \label{sec:PIDcos}
 
-Aside from ReMID, the $\numu$ disappearance analysis also developed a cosmic rejection PID \cite{ref:TNNumuContPID}. This algorithm was originally tuned to distinguish cosmic events from $\numu$ CC events, but was found to have similar separation power for the NC disappearance analysis as well. A boosted decision tree is trained using a considerable number of inputs, largely quantities derived from the Kalman tracks best identified as a muon track by ReMID (referred to as `the track' below). These inputs were:
+Aside from ReMID, the $\numu$ disappearance analysis also developed a cosmic rejection PID \cite{ref:TNNumuContPID}. This algorithm was originally tuned to distinguish cosmic events from $\numu$ CC events, but was found to have similar separation power for the NC disappearance analysis as well. A boosted decision tree (BDT) was trained using a considerable number of inputs, largely quantities derived from the Kalman tracks best identified as a muon track by ReMID (referred to as `the track' below). These inputs were:
 \begin{itemize}
   \item The angle of the track away from the neutrino beam.
   \item Y direction of the track.
@@ -408,7 +408,7 @@ Aside from ReMID, the $\numu$ disappearance analysis also developed a cosmic rej
   \item Minimum Y position of any hit activity.
   \item Total number of $3$D Kalman tracks.
 \end{itemize}
-\n The PID was trained separately for different data taking periods, and the final two items listed were only used for training in later data periods. The separate tunings were done to accommodate the changing detector conditions. This PID was only trained and filled for FD events. The output score distribution from the later periods is shown in figure \ref{fig:PIDCosBDT}.
+\n The BDT was trained separately for different data taking periods, and the final two items listed were only used for training in later data periods. The separate tunings were done to accommodate the changing detector conditions. This PID was only trained and filled for FD events. The output score distribution from the later periods is shown in figure \ref{fig:PIDCosBDT}.
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/CosBDT/BDTPost.png}
@@ -427,7 +427,7 @@ One of the advantages of CNNs is that they do not require a known set of feature
 \label{eq:CVNKernel}
 \eeq
 
-\n where $p$ and $q$ are the output pixel indices, $r$ is the output channel, $k$ is the input channel, and $c$ is the total number of channels. For a traditional image, channels refer to the RGB values of the pixel. In \nova, the pixels are the individual cells and the channels are the two views of the event The energy deposited in a cell is encoded into an $8$-bit integer with $256$ possible values much like the intensities of a standard color are encoded. After the kernel is applied to the full image, the output is called a feature map, and a separate map is created and stored from each of the $r$ kernels in the convolutional layer. 
+\n where $p$ and $q$ are the output pixel indices, $r$ is the output channel, $k$ is the input channel, and $c$ is the total number of channels. For a traditional image, channels refer to the RGB values of the pixel. In \nova, the pixels are the individual cells and the channels are the two views of the event. The energy deposited in a cell is encoded into an $8$-bit integer with $256$ possible values much like the intensities of a standard color are encoded. After the kernel is applied to the full image, the output is called a feature map, and a separate map is created and stored from each of the $r$ kernels in the convolutional layer. 
 
 CNNs contain many layers that perform different functions. Convolutional layers nearest to the input image tend to output feature maps that exaggerate specific features while later layers become more holistic and topological. Other layers down-sample the image using a pooling technique that replaces an $n\times m$ subset of pixels with either the maximum pixel value (max pooling) or the average pixel value (average pooling). Finally, a process called local response normalization (LRN) is used that normalizes the result of a given pixel in a feature map relative that pixel in adjacent maps to avoid local minima.
 

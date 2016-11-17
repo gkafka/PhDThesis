@@ -1,9 +1,9 @@
-\chapter{Systematic Error Analysis}
+\chapter{Systematic Uncertainty Analysis}
 \label{ch:Systs}
 
 As with any analysis, the NC disappearance analysis is sensitive to a number of systematic effects. \nova\newline\n was designed with two functionally identical detectors, so that Near Detector data can be used to constrain or correct the Far Detector prediction. Since many effects such as beam and cross section uncertainties affect the spectra at both detectors in a similar or the same way, this two detector technique leads to the reduction of these systematic errors. Other effects, such as Near Detector rock event contamination, require a data driven technique to quantify.
 
-The general technique for analyzing systematic errors was to run the full extrapolation chain and generate a predicted spectrum with and without a systematic effect applied. As in chapter \ref{ch:Selection}, the prediction assumed the same three flavor oscillation parameters listed in table \ref{tab:3FlavParams}, and for normalization simplicity, only $14$ diblock MC and data were studied. All spectra were then scaled to \pot{6}. Each given systematic effect was used to shift the MC simulation at one or both detectors as appropriate. The resulting difference between the shifted and nominal spectra was quantified as a systematic error.
+The general technique for analyzing systematic uncertainties was to run the full extrapolation chain and generate a predicted spectrum with and without a systematic effect applied. As in chapter \ref{ch:Selection}, the prediction assumed the same three flavor oscillation parameters listed in table \ref{tab:3FlavParams}, and for normalization simplicity, only $14$ diblock MC and data were studied. All spectra were then scaled to \pot{6}. Each given systematic effect was used to shift the MC simulation at one or both detectors as appropriate. The resulting difference between the shifted and nominal spectra was quantified as a systematic uncertainty.
 
 The systematic effects analyzed included uncertainties arising from the beam, GENIE simulation, Birks-Chou light yield simulation, calibration, bias from the ND containment, ND rock event contamination, ND data/MC spectrum and hadronic energy differences, noise model, MC statistics, and overall normalization. The rest of this chapter discusses each of these effects in greater detail.
 
@@ -12,7 +12,7 @@ The systematic effects analyzed included uncertainties arising from the beam, GE
 
 The \nova~MC simulation involves a fully detailed model of the NuMI beam process in an attempt to create the most realistic MC possible, but systematic errors can result from any mismatch between simulation and reality. The \nova~Beam Working Group performed studies to assess the effect that uncertainties in the simulation can have on the neutrino flux \cite{ref:TNBeam}. These studies included the effects of incorrectly modeling various parts of the beam transport and the effects of uncertainties in hadron production arising from fixed target experiments.
 
-To quantify the systematic error caused by these beam uncertainties, a sample flux was generated using a systematic shift and compared to the nominal flux via a simple ratio. Results were generated separately for each neutrino flavor and for each detector. The ratios were used to modify the MC from the full simulation used as inputs to the extrapolated prediction. Finally, the shifted FD prediction was compared to the nominal prediction, with any differences being taken as the systematic error. At the end of this process, the individual errors were added in quadrature. Errors were calculated for the following systematics:
+To quantify the systematic uncertainty caused by these beam uncertainties, a sample flux was generated using a systematic shift and compared to the nominal flux via a simple ratio. Results were generated separately for each neutrino flavor and for each detector. The ratios were used to modify the MC from the full simulation used as inputs to the extrapolated prediction. Finally, the shifted FD prediction was compared to the nominal prediction, with any differences being taken as the systematic uncertainty. At the end of this process, the individual uncertainties were added in quadrature. Uncertainties were calculated for the following systematics:
 \begin{singlespace}
 \begin{itemize}
   \item Beam position on target varied by $\pm 0.5\,mm$ in X
@@ -22,14 +22,14 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
   \item Horn current varied $\pm 1\,kA$
   \item Horn $1$ position varied by $\pm 2\,mm$ in both X and Y
   \item Horn $2$ position varied by $\pm 2\,mm$ in both X and Y
-  \item Horn magnetic field changed from linear to exponential distribution
+  \item Horn magnetic field model changed from linear to exponential distribution
   \item Changes to MC beamline simulation
   \item Comparison between versions of FLUKA
   \item Comparison between FLUKA and G$4$NuMI
   \item Comparison between FLUKA and NA$49$
 \end{itemize}
 \end{singlespace}
-\n Hadron production uncertainties were combined in quadrature before being provided as weights, so this is evaluated as single systematic error. The percentage difference due to each systematic is shown in table \ref{tab:SystBeam}, and the full error envelopes for NC signal and background are shown in figure \ref{fig:SystBeam}. The beam systematics had an overall effect of $3.4\%$ on the NC signal and $3.6\%$ on the background.
+\n Hadron production uncertainties were combined in quadrature before being provided as weights, so this is evaluated as single systematic uncertainty. The percentage difference due to each systematic is shown in table \ref{tab:SystBeam}, and the full uncertainty envelopes for NC signal and background are shown in figure \ref{fig:SystBeam}. The beam systematics had an overall effect of $3.4\%$ on the NC signal and $3.6\%$ on the background.
 \begin{table}[htb]
   \begin{center}
     \begin{tabular}{r c c}
@@ -52,7 +52,7 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
       Combined & $3.4$ & $3.6$ \\
       \hline
     \end{tabular}
-    \caption[Beam Systematic Errors]{The percentage difference between the shifted and nominal predictions for the number of FD events due to beam systematics.}
+    \caption[Beam Systematic Uncertainties]{The percentage difference between the shifted and nominal predictions for the number of FD events due to beam systematics.}
     \label{tab:SystBeam}
   \end{center}
 \end{table}
@@ -63,7 +63,7 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXBeamSysts.png} &
     \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXBeamSysts.png} \\
   \end{tabular}
-  \caption[Beam Systematic Error Envelopes]{Beam systematics error envelope on the NC signal (left) and background (right) event spectra, after extrapolation. The envelope was calculated by adding in quadrature the larger of $\vert +1\sigma \vert$ and $\vert -1\sigma \vert$ for each individual systematic.}
+  \caption[Beam Systematic Uncertainty Envelopes]{Beam systematics uncertainty envelope on the NC signal (left) and background (right) event spectra, after extrapolation. The envelope was calculated by adding in quadrature the larger of $\vert +1\sigma \vert$ and $\vert -1\sigma \vert$ for each individual systematic.}
   \label{fig:SystBeam}
 \end{figure}
 
@@ -72,7 +72,7 @@ To quantify the systematic error caused by these beam uncertainties, a sample fl
 
 As discussed in section \ref{sec:SimGENIE} the MC simulation employs the Birks-Chou Law (equation \ref{eq:BirksChou}) to model the relationship between scintillator light yield and energy deposition. This empirical law depends on several constants dependent on the particular scintillator material. These constants were estimated for the \nova~scintillator via a data driven study \cite{ref:DanBirks}. The results of the study were $k_B = 0.04\unit{cm/MeV}$ and $k_C = -0.0005\unit{(cm/MeV)}^2$.
 
-The systematic error based on the Birks-Chou light yield simulation was quantified by comparing the nominal FD prediction to predicted spectra using alternative Birks-Chou parameter constants. The values reported in the study from reference \cite{ref:DanBirks} were much larger than other typical measurements, so two MC samples were generated with more traditional values, one with $k_B = 0.01\unit{cm/MeV}$ called BirksB, the other with $k_B = 0.02\unit{cm/MeV}$ called BirksC, both with $k_C = 0$. Shifted FD event spectra were predicted by extrapolating the same set of ND data as the nominal prediction, but using the MC with alternative Birks-Chou model parameters. The error was taken as the percentage difference between the nominal and shifted predictions. Table \ref{tab:SystBirks} shows the percentage differences from both MC samples; figure \ref{fig:SystBirks} shows the shifted event spectra compared to nominal. Instead of combining the individual errors in quadrature, the shifted sample with the larger overall difference from the BirksC model taken as the systematic error, which had a $2.4\%$ effect on the NC signal, and a $1.8\%$ effect on the background.
+The systematic uncertainty based on the Birks-Chou light yield simulation was quantified by comparing the nominal FD prediction to predicted spectra using alternative Birks-Chou parameter constants. The values reported in the study from reference \cite{ref:DanBirks} were much larger than other typical measurements, so two MC samples were generated with more traditional values, one with $k_B = 0.01\unit{cm/MeV}$ called BirksB, the other with $k_B = 0.02\unit{cm/MeV}$ called BirksC, both with $k_C = 0$. Shifted FD event spectra were predicted by extrapolating the same set of ND data as the nominal prediction, but using the MC with alternative Birks-Chou model parameters. The uncertainty was taken as the percentage difference between the nominal and shifted predictions. Table \ref{tab:SystBirks} shows the percentage differences from both MC samples; figure \ref{fig:SystBirks} shows the shifted event spectra compared to nominal. Instead of combining the individual uncertainties in quadrature, the shifted sample with the larger overall difference from the BirksC model taken as the systematic uncertainty, which had a $2.4\%$ effect on the NC signal, and a $1.8\%$ effect on the background.
 \begin{table}[htb]
   \begin{center}
     \begin{tabular}{r c c}
@@ -83,7 +83,7 @@ The systematic error based on the Birks-Chou light yield simulation was quantifi
       BirksC & $2.4$ & $1.8$ \\
       \hline
     \end{tabular}
-    \caption[Birks-Chou Systematic Errors]{The percentage difference between the shifted and nominal predictions for the number of FD events due to extrapolation using MC with alternative Birks-Chou model parameters.}
+    \caption[Birks-Chou Systematic Uncertainties]{The percentage difference between the shifted and nominal predictions for the number of FD events due to extrapolation using MC with alternative Birks-Chou model parameters.}
     \label{tab:SystBirks}
   \end{center}
 \end{table}
@@ -103,7 +103,7 @@ The systematic error based on the Birks-Chou light yield simulation was quantifi
 
 The calibration procedure is designed to make a constant energy response both across each detector and between the two, but any problem can introduce a systematic error. This error was evaluated by studying various MC samples with an engineered miscalibration. The effects studied included a miscalibration that varied as a function of the cell length and an overall scale miscalibration. The functional miscalibration was studied separately between the X and Y views of the detector. The scale miscalibration was applied as a $5\%$ effect both up and down at each detector. These effects are motivated by studying data/MC comparisons for various samples \cite{ref:TNCalib, ref:CalibMESA, ref:CalibPi0SA} and were updated based on the most recent round of data \cite{ref:CalibSA}.
 
-The systematic error was evaluated in two regimes. The first applied the same miscalibration to the MC at both detectors, and a shifted prediction was then generated using these shifted as inputs into the extrapolation. This procedure was followed for each type of miscalibration, and all of these systematics were added in quadrature at the end. The overall scale miscalibration was also applied as a miscalibration to a single detector to measure the effect of a missed absolute calibration. A shifted prediction was then generated as above, but with this procedure only the maximum overall effect was used as the systematic error that was then added in quadrature with the systematics from above. Table \ref{tab:SystCalib} shows the percentage difference for each of the calibration systematics. The effects of the calibration systematics on the NC signal and CC background spectra are shown in figures \ref{fig:SystCalibAbs} and \ref{fig:SystCalibRel} when applied to both detectors and one detector, respectively. The overall error was $5.8\%$ on the NC signal and $6.0\%$ on the background.
+The systematic uncertainty was evaluated in two regimes. The first applied the same miscalibration to the MC at both detectors, and a shifted prediction was then generated using these shifted as inputs into the extrapolation. This procedure was followed for each type of miscalibration, and all of these systematics were added in quadrature at the end. The overall scale miscalibration was also applied as a miscalibration to a single detector to measure the effect of a missed absolute calibration. A shifted prediction was then generated as above, but with this procedure only the maximum overall effect was used as the systematic uncertainty that was then added in quadrature with the systematics from above. Table \ref{tab:SystCalib} shows the percentage difference for each of the calibration systematics. The effects of the calibration systematics on the NC signal and CC background spectra are shown in figures \ref{fig:SystCalibAbs} and \ref{fig:SystCalibRel} when applied to both detectors and one detector, respectively. The overall uncertainty was $5.8\%$ on the NC signal and $6.0\%$ on the background.
 \begin{table}[htb]
   \begin{center}
     \begin{tabular}{r c c}
@@ -122,7 +122,7 @@ The systematic error was evaluated in two regimes. The first applied the same mi
       Flat Scale Down, FD & $0.6$ & $2.4$ \\
       \hline
     \end{tabular}
-    \caption[Calibration Systematic Errors]{The percentage difference between the shifted and nominal predictions for the number of FD events due to deliberately applied miscalibrations. For the flat scale miscalibration applied to one detector, the largest overall effect from the flat scale down at the ND was taken as the systematic.}
+    \caption[Calibration Systematic Uncertainties]{The percentage difference between the shifted and nominal predictions for the number of FD events due to deliberately applied miscalibrations. For the flat scale miscalibration applied to one detector, the largest overall effect from the flat scale down at the ND was taken as the systematic.}
     \label{tab:SystCalib}
   \end{center}
 \end{table}
@@ -152,7 +152,7 @@ The systematic error was evaluated in two regimes. The first applied the same mi
 
 Neutrino interactions in the \nova~simulation are generated using GENIE \cite{ref:GENIE}, a generator that involves a detailed physics modeling of cross sections, hadronization, and final state interactions. GENIE includes a plethora of parameters that alter individual physics input quantities, with the parameters themselves acting as systematic uncertainties, either dialing up or down a particular quantity by a standard deviation recommended by the GENIE authors.
 
-The systematic uncertainties from physics modeling were evaluated by using the GENIE parameters as event reweights. Nominal MC was produced using the parameters and weights as provided by the GENIE authors, but also included a table of weights to modify an events `worth' based on how much the different GENIE parameters shifted. Using the reweight table, a nominal FD prediction was produced from the default MC, and a shifted prediction was produced for each of the parameters provided by GENIE. The percentage difference was taken as the systematic error for the particular parameter. Table \ref{tab:SystGENIE} lists all of the parameters considered for the systematic study, and the associated error. Figure \ref{fig:SystGENIE} shows the final systematic error envelope. The combined systematic error, adding the individual contributions in quadrature, was $1.6\%$ for the NC signal and $4.8\%$ for the background.
+The systematic uncertainties from physics modeling were evaluated by using the GENIE parameters as event reweights. Nominal MC was produced using the parameters and weights as provided by the GENIE authors. These files also included a table of weights to modify an events `worth' based on how much the different GENIE parameters shifted. For each parameter provided by GENIE, a shifted prediction was produced by applying the event reweights associated with the given parameter stored in the table to the nominal MC events. The percentage difference was taken as the systematic uncertainty for the particular parameter. Table \ref{tab:SystGENIE} lists all of the parameters considered for the systematic study, and the associated uncertainty. Figure \ref{fig:SystGENIE} shows the final systematic uncertainty envelope. The combined systematic uncertainty, adding the individual contributions in quadrature, was $1.6\%$ for the NC signal and $4.8\%$ for the background.
 
 \singlespacing
 \begin{longtable}{p{3.25in} c c c}
@@ -221,7 +221,7 @@ The systematic uncertainties from physics modeling were evaluated by using the G
   \hline
   Combined & & $1.6$ & $4.8$ \\
   \hline
-  \caption[GENIE Systematic Errors]{The systematic error, in percentage difference, for each GENIE systematic parameter. The description and standard deviations come from reference \cite{ref:GENIE, ref:TNGENIE}. Parameters with a standard deviation marked as `D' are discrete and thus do not have a standard deviation estimate.}
+  \caption[GENIE Systematic Uncertainties]{The systematic uncertainty, in percentage difference, for each GENIE systematic parameter. The description and standard deviations come from reference \cite{ref:GENIE, ref:TNGENIE}. Parameters with a standard deviation marked as `D' are discrete and thus do not have a standard deviation estimate.}
   \label{tab:SystGENIE}
 \end{longtable}
 \doublespacing
@@ -232,14 +232,14 @@ The systematic uncertainties from physics modeling were evaluated by using the G
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXGENIESysts.png} &
     \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXGENIESysts.png} \\
   \end{tabular}
-  \caption[GENIE Systematic Error Envelopes]{GENIE systematics error envelope on the NC signal (left) and background (right) event spectra, after extrapolation. The envelope was calculated by adding in quadrature the larger of $\vert +1\sigma \vert$ and $\vert -1\sigma \vert$ for each individual systematic.}
+  \caption[GENIE Systematic Uncertainty Envelopes]{GENIE systematics uncertainty envelope on the NC signal (left) and background (right) event spectra, after extrapolation. The envelope was calculated by adding in quadrature the larger of $\vert +1\sigma \vert$ and $\vert -1\sigma \vert$ for each individual systematic.}
   \label{fig:SystGENIE}
 \end{figure}
 
 \section{ND Containment}
 \label{sec:SystNDCont}
 
-The ND does not see an effective point source of neutrinos like the FD due to its proximity to the beam source. As a result, the neutrino flux is not uniform across the detector, and so the energy spectrum of neutrinos seen by the two \nova~detectors is slightly different. To study the effect this has on the extrapolated prediction, multiple predicted FD spectra were generated using subsamples of the ND. The fiducial volume of the ND was split in half along each axis, and split into an inner and outer half (the overall containment criteria was left in tact). The extrapolation was performed using each of these `half detectors.' The error was taken as the percentage difference from the shifted prediction to the nominal. Table \ref{tab:SystFidCont} shows the results from each of these extrapolations and figure \ref{fig:SystFidCont} show the shifted spectra. Like the Birks-Chou systematic, the largest overall difference was taken as the systematic error for a $1.0\%$ effect on the NC signal and a $0.6\%$ effect on the background.
+The ND does not see an effective point source of neutrinos like the FD due to its proximity to the beam source. As a result, the neutrino flux is not uniform across the detector, and so the energy spectrum of neutrinos seen by the two \nova~detectors is slightly different. To study the effect this has on the extrapolated prediction, multiple predicted FD spectra were generated using subsamples of the ND. The fiducial volume of the ND was split in half along each axis, and split into an inner and outer half (the overall containment criteria was left in tact). The extrapolation was performed using each of these `half detectors.' The uncertainty was taken as the percentage difference from the shifted prediction to the nominal. Table \ref{tab:SystFidCont} shows the results from each of these extrapolations and figure \ref{fig:SystFidCont} show the shifted spectra. Like the Birks-Chou systematic, the largest overall difference was taken as the systematic uncertainty for a $1.0\%$ effect on the NC signal and a $0.6\%$ effect on the background.
 \begin{table}[htb]
   \begin{center}
     \begin{tabular}{r c c}
@@ -256,7 +256,7 @@ The ND does not see an effective point source of neutrinos like the FD due to it
       Outer (High $\vert$X$\vert$, $\vert$Y$\vert$) & $1.0$ & $0.6$ \\
       \hline
     \end{tabular}
-    \caption[ND Containment Systematic Errors]{The percentage difference between the shifted and nominal predictions for the number of FD events after extrapolation using half of the fiducial volume at the ND.}
+    \caption[ND Containment Systematic Uncertainties]{The percentage difference between the shifted and nominal predictions for the number of FD events after extrapolation using half of the fiducial volume at the ND.}
     \label{tab:SystFidCont}
   \end{center}
 \end{table}
@@ -290,7 +290,7 @@ The systematic error that is incurred due to the rock event contamination was es
 \section{ND Data/MC Difference and CC Background}
 \label{sec:SystDataMC}
 
-To assess the results over the MC simulation, data was compared to MC at the ND, and the event spectra were found to be an imperfect match; see figure \ref{fig:NDDataMC}. The FD prediction is made by decomposing ND data into NC, $\numu$ CC and $\nue$ CC components proportional to the amounts in the MC, so a data/MC difference can cause a systematic effect. This error was treated as a hybrid decomposition and CC background error, and as such, was quantified using a hybrid method.
+To assess the results over the MC simulation, data was compared to MC at the ND, and the event spectra were found to be an imperfect match; see figure \ref{fig:NDDataMC}. The FD prediction is made by decomposing ND data into NC, $\numu$ CC and $\nue$ CC components proportional to the amounts in the MC, so a data/MC difference can cause a systematic effect. This error was treated as a hybrid decomposition and CC background error, and as such, the uncertainty was quantified using a hybrid method.
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/NDDataMC.png}
@@ -298,14 +298,14 @@ To assess the results over the MC simulation, data was compared to MC at the ND,
   \label{fig:NDDataMC}
 \end{figure}
 
-For the first \nova~$\numu$ disappearance and $\nue$ appearance analyses, the two groups used different methods to estimate their background uncertainties. The $\numu$ analysis noted that their backgrounds were small and thus placed a $100\%$ uncertainty on each \cite{ref:NOvAFANuMu}. The $\nue$ analysis assigned any discrepancy between ND data and MC to each of the three ND background components, used each shifted decomposition to perform an extrapolation, compared the shifted predictions to nominal, and took the shift with the largest difference as the systematic error \cite{ref:NOvAFANuE}.
+For the first \nova~$\numu$ disappearance and $\nue$ appearance analyses, the two groups used different methods to estimate their background uncertainties. The $\numu$ analysis noted that their backgrounds were small and thus placed a $100\%$ uncertainty on each \cite{ref:NOvAFANuMu}. The $\nue$ analysis assigned any discrepancy between ND data and MC to each of the three ND background components, used each shifted decomposition to perform an extrapolation, compared the shifted predictions to nominal, and took the shift with the largest difference as the systematic uncertainty \cite{ref:NOvAFANuE}.
 
-The NC disappearance analysis used a combination of the above techniques to evaluate the ND data/\linebreak MC and CC background systematic error. The background from the beam $\nue$ component was calculated to be small, so this component was allowed to vary by $\pm100\%$. The shifted spectrum was used for extrapolation, and the percentage difference between the nominal and shifted predictions was taken as the error. For both the NC and $\numu$ CC components, the error was taken following the same procedure as the $\nue$ analysis. Results from both these two studies were then combined in quadrature. Shifting the beam $\nue$ component up and down produced the same net change in event numbers, albeit in opposite directions. Assigning the data/MC difference to the $\numu$ CC component caused the larger overall difference, compared to assignment to the NC component. The overall error was thus calculated by combining in quadrature the errors from assigning the data/MC difference to the $\numu$ CC component and shifting the beam $\nue$ component by $\vert 100\% \vert$, for a result of a $7.0\%$ effect on the NC signal and a $10.4\%$ effect on the CC background. Table \ref{tab:SystNDDataMC} summarizes the results from these studies, figure \ref{fig:SystNDDataMC} shows the shows the changes in the predicted spectrum due to each systematic shift.
+The NC disappearance analysis used a combination of the above techniques to evaluate the ND data/\linebreak MC and CC background systematic uncertainty. The background from the beam $\nue$ component was calculated to be small, so this component was allowed to vary by $\pm100\%$. The shifted spectrum was used for extrapolation, and the percentage difference between the nominal and shifted predictions was taken as the uncertainty. For both the NC and $\numu$ CC components, the uncertainty was taken following the same procedure as the $\nue$ analysis. Results from both these two studies were then combined in quadrature. Shifting the beam $\nue$ component up and down produced the same net change in event numbers, albeit in opposite directions. Assigning the data/MC difference to the $\numu$ CC component caused the larger overall difference, compared to assignment to the NC component. The overall uncertainty was thus calculated by combining in quadrature the uncertainties from assigning the data/MC difference to the $\numu$ CC component and shifting the beam $\nue$ component by $\vert 100\% \vert$, for a result of a $7.0\%$ effect on the NC signal and a $10.4\%$ effect on the CC background. Table \ref{tab:SystNDDataMC} summarizes the results from these studies, figure \ref{fig:SystNDDataMC} shows the shows the changes in the predicted spectrum due to each systematic shift.
 \begin{table}[htb]
   \begin{center}
     \begin{tabular}{c c c}
       \hline\hline
-      Error Method & NC Difference (\%) & Background Difference (\%) \\
+      Evaluation Method & NC Difference (\%) & Background Difference (\%) \\
       \hline
       Beam $\nue$ $+100\%$ & $0.00$ & $8.2$ \\
       Beam $\nue$ $-100\%$ & $0.00$ & $8.2$ \\
@@ -316,7 +316,7 @@ The NC disappearance analysis used a combination of the above techniques to eval
       Overall & $7.0$ & $10.4$ \\
       \hline
     \end{tabular}
-    \caption[ND Data/MC and CC Background Errors]{Systematic error covering ND data/MC discrepancy and CC backgrounds. The percentage differences were calculated by shifting the ND decomposition using the listed error method, performing an extrapolation, and comparing the predicted results to nominal.}
+    \caption[ND Data/MC and CC Background Uncertainties]{Systematic uncertainty covering ND data/MC discrepancy and CC backgrounds. The percentage differences were calculated by shifting the ND decomposition using the listed evaluation method, performing an extrapolation, and comparing the predicted results to nominal.}
     \label{tab:SystNDDataMC}
   \end{center}
 \end{table}
@@ -327,29 +327,29 @@ The NC disappearance analysis used a combination of the above techniques to eval
     \includegraphics[width=.47\textwidth]{figures/Systs/cNCEXDecompSysts.png} &
     \includegraphics[width=.47\linewidth]{figures/Systs/cBGEXDecompSysts.png} \\
   \end{tabular}
-  \caption[Systematic Error Due to ND Data/MC Discrepancy and CC Background Uncertainty]{Shifted FD predictions from studies to quantify ND data/MC difference and CC background uncertainties.}
+  \caption[Systematic Uncertainty Due to ND Data/MC Discrepancy and CC Background Uncertainty]{Shifted FD predictions from studies to quantify ND data/MC difference and CC background uncertainties.}
   \label{fig:SystNDDataMC}
 \end{figure}
 
 \section{MC Statistics}
 \label{sec:SystMCStats}
 
-In a perfect world, there would be enough MC statistics that this section would be unnecessary, but alas, a perfect world this is not. To estimate the systematic error due to MC statistics, the MC was split into five uniformly sized samples, and each was used to extrapolate the same set of ND data. One of the resultant predicted FD spectra was labeled as nominal, and the other four were compared to this. The bin by bin differences were taken as the error between the nominal spectrum and the `shifted' spectrum. To come up with an overall uncertainty, all of the errors were added in quadrature and the result was divided by the square root of the number of samples, or $\sqrt{4} = 2$. The result was a $2.0\%$ error on the NC signal spectrum and a $4.8\%$ error on the background spectrum.
+In a perfect world, there would be enough MC statistics that this section would be unnecessary, but alas, a perfect world this is not. To estimate the systematic uncertainty due to MC statistics, the MC was split into five uniformly sized samples, and each was used to extrapolate the same set of ND data. One of the resultant predicted FD spectra was labeled as nominal, and the other four were compared to this. The bin by bin differences were taken as the uncertainty between the nominal spectrum and the `shifted' spectrum. To come up with an overall uncertainty, all of the uncertainties were added in quadrature and the result was divided by the square root of the number of samples, or $\sqrt{4} = 2$. The result was a $2.0\%$ uncertainty on the NC signal spectrum and a $4.8\%$ uncertainty on the background spectrum.
 
 \section{Noise Model}
 \label{sec:SystNoise}
 
-A sample of MC was generated for the FD using a different model of noise to study the systematic error caused by the noise model. To quantify the error, the predicted FD event spectra from the nominal and alternative MC samples were compared against each other after applying normal three flavor oscillation weights. The difference seen was $0.9\%$ for the NC signal, and $0.7\%$ for the background. As the shifted sample was only generated for the FD MC and the error was comparatively small, this systematic was added into the overall normalization.
+A sample of MC was generated for the FD using a different model of noise to study the systematic uncertainty caused by the noise model. To quantify the uncertainty, the predicted FD event spectra from the nominal and alternative MC samples were compared against each other after applying normal three flavor oscillation weights. The difference seen was $0.9\%$ for the NC signal, and $0.7\%$ for the background. As the shifted sample was only generated for the FD MC and the uncertainty was comparatively small, this systematic was added into the overall normalization.
 
 \section{Overall Normalization}
 \label{sec:SystNorm}
 
-Several independent effects contributed to an overall normalization systematic error. A $0.5\%$ error on the POT counting came from a small difference in the two toroids that determine the POT in a spill \cite{ref:TNBeam}. Uncertainties in the masses of the various parts of the \nova~detectors contributed another error of $0.7\%$ \cite{ref:MassError}. A study of the reconstruction efficiency between ND data and MC showed a $2.9\%$ difference between the number of events that get fully reconstructed \cite{ref:NDDataMCRecoEff}, which was taken directly as a contribution to the normalization error. Finally, studies of the interaction rate after overlaying cosmic trigger data over MC beam interactions suggested a rate difference of $3.7\%$. These four effects and the noise systematic were combined in quadrature and constituted a systematic error of $4.9\%$ on the NC signal and $4.9\%$ on the background.
+Several independent effects contributed to an overall normalization systematic uncertainty. A $0.5\%$ uncertainty on the POT counting came from a small difference in the two toroids that determine the POT in a spill \cite{ref:TNBeam}. Uncertainties in the masses of the various parts of the \nova~detectors contributed another uncertainty of $0.7\%$ \cite{ref:MassError}. A study of the reconstruction efficiency between ND data and MC showed a $2.9\%$ difference between the number of events that get fully reconstructed \cite{ref:NDDataMCRecoEff}, which was taken directly as a contribution to the normalization uncertainty. Finally, studies of the interaction rate after overlaying cosmic trigger data over MC beam interactions suggested a rate difference of $3.7\%$. These four effects and the noise systematic were combined in quadrature and constituted a systematic uncertainty of $4.9\%$ on the NC signal and $4.9\%$ on the background.
 
-\section{Systematic Error Summary}
+\section{Systematic Uncertainty Summary}
 \label{sec:SystSummary}
 
-Table \ref{tab:SystSummary} shows a summary of all of the systematics, as well as an overall error. The overall error was calculated by summing the error from each row in quadrature. The final systematic error on the NC signal is $12.2\%$ and the error on the background is $15.3\%$.
+Table \ref{tab:SystSummary} shows a summary of all of the systematics, as well as an overall uncertainty. The overall uncertainty was calculated by summing the uncertainty from each row in quadrature. The final systematic uncertainty on the NC signal is $12.2\%$ and the uncertainty on the background is $15.3\%$.
 \begin{table}[htb]
   \begin{center}
     \begin{tabular}{r c c}
@@ -369,19 +369,19 @@ Table \ref{tab:SystSummary} shows a summary of all of the systematics, as well a
       Combined & $12.2$ & $15.3$ \\
       \hline
     \end{tabular}
-    \caption[Systematic Error Summary]{A summary of the individual systematic errors for the NC disappearance analysis. The errors are percentage differences between the nominal and shifted predicted spectra.}
+    \caption[Systematic Uncertainty Summary]{A summary of the individual systematic uncertainties for the NC disappearance analysis. The uncertainties are percentage differences between the nominal and shifted predicted spectra.}
     \label{tab:SystSummary}
   \end{center}
 \end{table}
 
-All of the systematics discussed to this point were also calculated at the ND. Many of these, including the Beam, Birks-Chou, and GENIE, are much larger without mitigation through extrapolation. The combined effects were studied to be certain that any data/MC discrepancy was covered under the full ND systematic error band. The data/MC spectra are shown in figure \ref{fig:NDSystBand}. Note that the systematic error that assesses any data/MC difference to a single component does not contribute to the full band. The technique used for this systematic did not change the total number of events since both the nominal and shifted spectra respected the normalization from the data. As the systematic error band was calculated using all events, by construction this data driven systematic effect does not have an effect on the total error band.
+All of the systematics discussed to this point were also calculated at the ND. Many of these, including the Beam, Birks-Chou, and GENIE, are much larger without mitigation through extrapolation. The combined effects were studied to be certain that any data/MC discrepancy was covered under the full ND systematic uncertainty band. The data/MC spectra are shown in figure \ref{fig:NDSystBand}. Note that the systematic uncertainty that assesses any data/MC difference to a single component does not contribute to the full band. The technique used for this systematic did not change the total number of events since both the nominal and shifted spectra respected the normalization from the data. As the systematic uncertainty band was calculated using all events, by construction this data driven systematic effect does not have an effect on the total uncertainty band.
 \begin{figure}[htb]
   \centering
   \begin{tabular}{c c}
     \includegraphics[width=.44\textwidth]{figures/Systs/cCalENDAll.png} &
     \includegraphics[width=.44\textwidth]{figures/Systs/cNHitNDAll.png} \\
   \end{tabular}
-  \caption[ND Data/MC Spectra with Systematics]{ND Data/MC spectra with full systematic error band. The calorimetric energy spectrum is shown on the left, the number of hits spectrum is shown on the right.}
+  \caption[ND Data/MC Spectra with Systematics]{ND Data/MC spectra with full systematic uncertainty band. The calorimetric energy spectrum is shown on the left, the number of hits spectrum is shown on the right.}
   \label{fig:NDSystBand}
 \end{figure}
 
@@ -407,7 +407,7 @@ All of the systematics discussed to this point were also calculated at the ND. M
 %%\begin{table}[htb]
 %%  \begin{center}
 %    \begin{longtable}{r l c c c}
-%      \caption[GENIE Systematic Errors]{The systematic error, in percentage difference, for each GENIE systematic parameter. The description and standard deviations come from reference \cite{ref:GENIE}.} \tabularnewline
+%      \caption[GENIE Systematic Uncertainties]{The systematic uncertainty, in percentage difference, for each GENIE systematic parameter. The description and standard deviations come from reference \cite{ref:GENIE}.} \tabularnewline
 %      \hline\hline
 %      GENIE Parameter & Description & Parameter Std. Dev. & NC Diff. (\%) & Background Diff. (\%) \endhead \\
 %      \hline

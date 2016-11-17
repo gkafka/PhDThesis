@@ -327,6 +327,13 @@ A.~Waldron.
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=9671}{\nova~Internal
   Document $9671$}.
 
+\bibitem{ref:JETPNC}
+G.~Davies.
+\newblock {NOvA} {NC} {JETP} seminar (draft).
+\newblock
+  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15831}{\nova~Internal
+  Document $15831$}.
+
 \bibitem{ref:NDMass}
 J.~Cooper.
 \newblock {\nova} {Near} {Detector} mass.
@@ -821,12 +828,5 @@ G.~Feldman.
 \newblock
   \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15884}{\nova~Internal
   Document $15884$}.
-
-\bibitem{ref:JETPNC}
-G.~Davies.
-\newblock {NOvA} {NC} {JETP} seminar (draft).
-\newblock
-  \href{http://nova-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=15831}{\nova~Internal
-  Document $15831$}.
 
 \end{thebibliography}
