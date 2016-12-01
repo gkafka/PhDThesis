@@ -123,7 +123,7 @@ Two sanity checks were performed to ensure that the data/MC difference would not
   \label{fig:1D2434Shift}
 \end{figure}
 
-The final robustness study considered the effect of $\delta_{24}$ on the analysis. Table \ref{tab:Delta24} shows the predicted number of events for various values of $\delta_{24}$. For $\theta_{34} = 35^\circ$, $\theta_{24} = 10^\circ$, changing $\delta_{24}$ from $0$ to one of its extrema can have up to an $8\%$ effect on the absolute event rate. Comparing to the results from the energy shifting studies, this could affect the sensitivity to the real mixing angles by $2-3^\circ$ at the $90\%$ confidence level. However, the observed event rate must be below the predicted number of events under the $3$ flavor model in order to have any effect, otherwise the best fit values for the real mixing angles go to $0$ and the effect of varying $\delta_{24}$ vanishes. Indeed, when the fitting procedure was tested against a spectrum created under the $3$ flavor model, there was no appreciable difference in the fit results between setting $\delta_{24}$ to $0$ or profiling it, as shown in figure \ref{fig:1D34ProfDel24}. Thus, $\delta_{24}$ remained set to $0$ to remove a fit variable, saving computation time.
+The final robustness study considered the effect of $\delta_{24}$ on the analysis. Table \ref{tab:Delta24} shows the predicted number of events for various values of $\delta_{24}$. For $\theta_{34} = 35^\circ$, $\theta_{24} = 10^\circ$, changing $\delta_{24}$ from $0$ to one of its extrema can have up to an $8\%$ effect on the absolute event rate. Comparing to the results from the energy shifting studies, this could affect the sensitivity to the real mixing angles by $2-3^\circ$ at the $90\%$ confidence level. However, the observed event rate must be below the predicted number of events under the $3$ flavor model in order to have any effect, otherwise the best fit values for the real mixing angles go to $0$ and the effect of varying $\delta_{24}$ vanishes. Indeed, when the fitting procedure was tested against a spectrum created under the $3$ flavor model, there was no appreciable difference in the fit results between setting $\delta_{24}$ to $0$ or profiling it, as shown in figure \ref{fig:1D34ProfDel24}. Thus, $\delta_{24}$ remained set to a single value to remove a fit variable, saving computation time.
 \begin{table}[htb]
   \begin{center}
     \begin{tabular}{c c c c c c}
@@ -307,12 +307,12 @@ c = \sum_{i | R_i = R_{Max}}^{i | R_i = R_{Data}} P\left(x_i | x_e\left(\vec{\th
 
 \n where $R_i$ is that which includes the nuisance parameters calculated from equation \ref{eq:FCRankLambda}.
 
-The results of the FC corrections are shown in figure \ref{fig:Fit2DFC}, which shows the significance surface and compares the FC corrected $68\%$ and $90\%$ contours to their uncorrected counterparts. The massive improvement is largely an artifact of the assumed numbers of degrees of freedom (DOF). The uncorrected curves were constructed varying $\theta_{34}$ and $\theta_{24}$ in equation \ref{eq:Chisq}, generating a $\Delta\chi^2$, and interpreting the result assuming a separate DOF for each angle. For $2$ DOF, the $68\%$ contour was thus calculated where $\Delta\chi^2 = 2.30$, and the $90\%$ contour at $\Delta\chi^2 = 4.61$. Given that the fits had a single measured number as input, using $2$ DOFs was dubious, though it only resulted in an overly conservative limit. On the other hand, the FC corrected contour only considered a single DOF by construction.
+The results of the FC corrections are shown in figure \ref{fig:Fit2DFC}, which shows the significance surface and compares the FC corrected $68\%$ and $90\%$ contours to their uncorrected counterparts. Given that the number of observed data events was higher than the basic $3$ flavor prediction, the FC corrected contours were generated using $\delta_{24} = 3\pi/2$, as motivated by table \ref{tab:Delta24}. The massive improvement is largely an artifact of the assumed numbers of degrees of freedom (DOF). The uncorrected curves were constructed varying $\theta_{34}$ and $\theta_{24}$ in equation \ref{eq:Chisq}, generating a $\Delta\chi^2$, and interpreting the result assuming a separate DOF for each angle. For $2$ DOF, the $68\%$ contour was thus calculated where $\Delta\chi^2 = 2.30$, and the $90\%$ contour at $\Delta\chi^2 = 4.61$. Given that the fits had a single measured number as input, using $2$ DOFs was dubious, though it only resulted in an overly conservative limit. On the other hand, the FC corrected contour only considered a single DOF by construction.
 \begin{figure}[htbp]
   \centering
   \begin{tabular}{c c}
-    \includegraphics[width=.47\textwidth]{figures/Fits/cFCSig.png} &
-    \includegraphics[width=.47\textwidth]{figures/Fits/2D3424FC.png} \\
+    \includegraphics[width=.47\textwidth]{figures/Fits/cFCSigD243Pi2.png} &
+    \includegraphics[width=.47\textwidth]{figures/Fits/2D3424FCD243Pi2.png} \\
   \end{tabular}
   \caption[FC Corrected Significance Surface and $68\%$ and $90\%$ Contours]{Left: the FC corrected significance surface. The $(\theta_{34}, \theta_{24})$ values are included in a $c\%$ confidence interval if the significance value is $\leq c$. Right: the $68\%$ and $90\%$ FC contours as compared to the uncorrected contours.}
   \label{fig:Fit2DFC}
@@ -322,8 +322,8 @@ The two dimensional surface was profiled to create one dimensional slices of the
 \begin{figure}[htbp]
   \centering
   \begin{tabular}{c c}
-    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh34FC.png} &
-    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh24FC.png} \\
+    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh34FCD243Pi2.png} &
+    \includegraphics[width=.47\textwidth]{figures/Fits/1DTh24FCD243Pi2.png} \\
   \end{tabular}
   \caption[FC Corrected One Dimensional $\theta_{34}$ and $\theta_{24}$ Slices]{One dimensional slices of $\theta_{34}$ and $\theta_{24}$, with the uncorrected slice in black and the FC corrected slice in blue. Left: $\theta_{34}$. Right: $\theta_{24}$.}
   \label{fig:Fit1DFC}
